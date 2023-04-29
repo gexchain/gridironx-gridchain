@@ -13,7 +13,7 @@ type Token struct {
 	WholeName           string         `json:"whole_name" v2:"whole_name"`                       // e.g. "FURY"
 	OriginalTotalSupply sdk.Dec        `json:"original_total_supply" v2:"original_total_supply"` // e.g. 1000000000.00000000
 	Type                int            `json:"type"`                                             //e.g. 1 common token, 2 interest token
-	Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
+	Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. fury1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
 	Mintable            bool           `json:"mintable" v2:"mintable"`                           // e.g. false
 }
 
