@@ -64,17 +64,17 @@ func TestMsgSendToEvm_GetSignBytes(t *testing.T) {
 		},
 		{
 			name:  "sender is error",
-			msg:   MsgSendToEvm{Sender: "ex111", Contract: sdk.AccAddress{0x2}.String(), Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
+			msg:   MsgSendToEvm{Sender: "furyex111", Contract: sdk.AccAddress{0x2}.String(), Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
 			isErr: true,
 		},
 		{
 			name:  "contract is error",
-			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: "ex111", Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
+			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: "furyex111", Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
 			isErr: true,
 		},
 		{
 			name:  "recipient is error",
-			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: sdk.AccAddress{0x2}.String(), Recipient: "ex111", Amount: sdk.NewInt(1)},
+			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: sdk.AccAddress{0x2}.String(), Recipient: "furyex111", Amount: sdk.NewInt(1)},
 			isErr: true,
 		},
 		{
@@ -222,12 +222,12 @@ func TestMsgCallToEvm_GetSignBytes(t *testing.T) {
 		},
 		{
 			name:  "sender is error",
-			msg:   MsgCallToEvm{Sender: "ex111", Evmaddr: sdk.AccAddress{0x2}.String(), Value: sdk.NewInt(1), Calldata: "CALL DATA"},
+			msg:   MsgCallToEvm{Sender: "furyex111", Evmaddr: sdk.AccAddress{0x2}.String(), Value: sdk.NewInt(1), Calldata: "CALL DATA"},
 			isErr: true,
 		},
 		{
 			name:  "contract is error",
-			msg:   MsgCallToEvm{Sender: sdk.AccAddress{0x1}.String(), Evmaddr: "ex111", Value: sdk.NewInt(1), Calldata: "CALL DATA"},
+			msg:   MsgCallToEvm{Sender: sdk.AccAddress{0x1}.String(), Evmaddr: "furyex111", Value: sdk.NewInt(1), Calldata: "CALL DATA"},
 			isErr: true,
 		},
 		{

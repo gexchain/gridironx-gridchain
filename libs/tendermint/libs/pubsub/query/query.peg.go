@@ -559,14 +559,14 @@ func (p *QueryParser) Init() {
 						}
 					l9:
 						{
-							position11, tokenIndex11, depth11 := position, tokenIndex, depth
+							position11, tokenIndex1, depth11 := position, tokenIndex, depth
 							if buffer[position] != rune('d') {
 								goto l12
 							}
 							position++
 							goto l11
 						l12:
-							position, tokenIndex, depth = position11, tokenIndex11, depth11
+							position, tokenIndex, depth = position11, tokenIndex1, depth11
 							if buffer[position] != rune('D') {
 								goto l3
 							}
@@ -582,14 +582,14 @@ func (p *QueryParser) Init() {
 					position++
 				l13:
 					{
-						position14, tokenIndex14, depth14 := position, tokenIndex, depth
+						position14, tokenIndfuryex14, depth14 := position, tokenIndex, depth
 						if buffer[position] != rune(' ') {
 							goto l14
 						}
 						position++
 						goto l13
 					l14:
-						position, tokenIndex, depth = position14, tokenIndex14, depth14
+						position, tokenIndex, depth = position14, tokenIndfuryex14, depth14
 					}
 					if !_rules[rulecondition]() {
 						goto l3
@@ -603,13 +603,13 @@ func (p *QueryParser) Init() {
 				}
 				position++
 				{
-					position15, tokenIndex15, depth15 := position, tokenIndex, depth
+					position15, tokenIndfuryex15, depth15 := position, tokenIndex, depth
 					if !matchDot() {
 						goto l15
 					}
 					goto l0
 				l15:
-					position, tokenIndex, depth = position15, tokenIndex15, depth15
+					position, tokenIndex, depth = position15, tokenIndfuryex15, depth15
 				}
 				depth--
 				add(rulee, position1)
@@ -621,7 +621,7 @@ func (p *QueryParser) Init() {
 		},
 		/* 1 condition <- <(tag ' '* ((le ' '* ((&('D' | 'd') date) | (&('T' | 't') time) | (&('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9') number))) / (ge ' '* ((&('D' | 'd') date) | (&('T' | 't') time) | (&('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9') number))) / ((&('E' | 'e') exists) | (&('=') (equal ' '* ((&('\'') value) | (&('D' | 'd') date) | (&('T' | 't') time) | (&('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9') number)))) | (&('>') (g ' '* ((&('D' | 'd') date) | (&('T' | 't') time) | (&('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9') number)))) | (&('<') (l ' '* ((&('D' | 'd') date) | (&('T' | 't') time) | (&('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9') number)))) | (&('C' | 'c') (contains ' '* value)))))> */
 		func() bool {
-			position16, tokenIndex16, depth16 := position, tokenIndex, depth
+			position16, tokenIndfuryex16, depth16 := position, tokenIndex, depth
 			{
 				position17 := position
 				depth++
@@ -1311,7 +1311,7 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l16:
-			position, tokenIndex, depth = position16, tokenIndex16, depth16
+			position, tokenIndex, depth = position16, tokenIndfuryex16, depth16
 			return false
 		},
 		/* 2 tag <- <<(!((&('<') '<') | (&('>') '>') | (&('=') '=') | (&('\'') '\'') | (&('"') '"') | (&(')') ')') | (&('(') '(') | (&('\\') '\\') | (&('\r') '\r') | (&('\n') '\n') | (&('\t') '\t') | (&(' ') ' ')) .)+>> */
@@ -1408,24 +1408,24 @@ func (p *QueryParser) Init() {
 							position, tokenIndex, depth = position99, tokenIndex99, depth99
 						}
 						{
-							position100, tokenIndex100, depth100 := position, tokenIndex, depth
+							position100, tokenIndfuryex100, depth100 := position, tokenIndex, depth
 							if buffer[position] != rune('.') {
 								goto l100
 							}
 							position++
 						l102:
 							{
-								position103, tokenIndex103, depth103 := position, tokenIndex, depth
+								position103, tokenIndfuryex103, depth103 := position, tokenIndex, depth
 								if !_rules[ruledigit]() {
 									goto l103
 								}
 								goto l102
 							l103:
-								position, tokenIndex, depth = position103, tokenIndex103, depth103
+								position, tokenIndex, depth = position103, tokenIndfuryex103, depth103
 							}
 							goto l101
 						l100:
-							position, tokenIndex, depth = position100, tokenIndex100, depth100
+							position, tokenIndex, depth = position100, tokenIndfuryex100, depth100
 						}
 					l101:
 					}
@@ -1443,7 +1443,7 @@ func (p *QueryParser) Init() {
 		},
 		/* 5 digit <- <[0-9]> */
 		func() bool {
-			position104, tokenIndex104, depth104 := position, tokenIndex, depth
+			position104, tokenIndfuryex104, depth104 := position, tokenIndex, depth
 			{
 				position105 := position
 				depth++
@@ -1456,24 +1456,24 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l104:
-			position, tokenIndex, depth = position104, tokenIndex104, depth104
+			position, tokenIndex, depth = position104, tokenIndfuryex104, depth104
 			return false
 		},
 		/* 6 time <- <(('t' / 'T') ('i' / 'I') ('m' / 'M') ('e' / 'E') ' ' <(year '-' month '-' day 'T' digit digit ':' digit digit ':' digit digit ((('-' / '+') digit digit ':' digit digit) / 'Z'))>)> */
 		func() bool {
-			position106, tokenIndex106, depth106 := position, tokenIndex, depth
+			position106, tokenIndfuryex106, depth106 := position, tokenIndex, depth
 			{
 				position107 := position
 				depth++
 				{
-					position108, tokenIndex108, depth108 := position, tokenIndex, depth
+					position108, tokenIndfuryex108, depth108 := position, tokenIndex, depth
 					if buffer[position] != rune('t') {
 						goto l109
 					}
 					position++
 					goto l108
 				l109:
-					position, tokenIndex, depth = position108, tokenIndex108, depth108
+					position, tokenIndex, depth = position108, tokenIndfuryex108, depth108
 					if buffer[position] != rune('T') {
 						goto l106
 					}
@@ -1481,14 +1481,14 @@ func (p *QueryParser) Init() {
 				}
 			l108:
 				{
-					position110, tokenIndex110, depth110 := position, tokenIndex, depth
+					position110, tokenIndex10, depth110 := position, tokenIndex, depth
 					if buffer[position] != rune('i') {
 						goto l111
 					}
 					position++
 					goto l110
 				l111:
-					position, tokenIndex, depth = position110, tokenIndex110, depth110
+					position, tokenIndex, depth = position110, tokenIndex10, depth110
 					if buffer[position] != rune('I') {
 						goto l106
 					}
@@ -1496,14 +1496,14 @@ func (p *QueryParser) Init() {
 				}
 			l110:
 				{
-					position112, tokenIndex112, depth112 := position, tokenIndex, depth
+					position112, tokenIndex12, depth112 := position, tokenIndex, depth
 					if buffer[position] != rune('m') {
 						goto l113
 					}
 					position++
 					goto l112
 				l113:
-					position, tokenIndex, depth = position112, tokenIndex112, depth112
+					position, tokenIndex, depth = position112, tokenIndex12, depth112
 					if buffer[position] != rune('M') {
 						goto l106
 					}
@@ -1511,14 +1511,14 @@ func (p *QueryParser) Init() {
 				}
 			l112:
 				{
-					position114, tokenIndex114, depth114 := position, tokenIndex, depth
+					position114, tokenIndex14, depth114 := position, tokenIndex, depth
 					if buffer[position] != rune('e') {
 						goto l115
 					}
 					position++
 					goto l114
 				l115:
-					position, tokenIndex, depth = position114, tokenIndex114, depth114
+					position, tokenIndex, depth = position114, tokenIndex14, depth114
 					if buffer[position] != rune('E') {
 						goto l106
 					}
@@ -1580,16 +1580,16 @@ func (p *QueryParser) Init() {
 						goto l106
 					}
 					{
-						position117, tokenIndex117, depth117 := position, tokenIndex, depth
+						position117, tokenIndex17, depth117 := position, tokenIndex, depth
 						{
-							position119, tokenIndex119, depth119 := position, tokenIndex, depth
+							position119, tokenIndex19, depth119 := position, tokenIndex, depth
 							if buffer[position] != rune('-') {
 								goto l120
 							}
 							position++
 							goto l119
 						l120:
-							position, tokenIndex, depth = position119, tokenIndex119, depth119
+							position, tokenIndex, depth = position119, tokenIndex19, depth119
 							if buffer[position] != rune('+') {
 								goto l118
 							}
@@ -1614,7 +1614,7 @@ func (p *QueryParser) Init() {
 						}
 						goto l117
 					l118:
-						position, tokenIndex, depth = position117, tokenIndex117, depth117
+						position, tokenIndex, depth = position117, tokenIndex17, depth117
 						if buffer[position] != rune('Z') {
 							goto l106
 						}
@@ -1629,24 +1629,24 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l106:
-			position, tokenIndex, depth = position106, tokenIndex106, depth106
+			position, tokenIndex, depth = position106, tokenIndfuryex106, depth106
 			return false
 		},
 		/* 7 date <- <(('d' / 'D') ('a' / 'A') ('t' / 'T') ('e' / 'E') ' ' <(year '-' month '-' day)>)> */
 		func() bool {
-			position121, tokenIndex121, depth121 := position, tokenIndex, depth
+			position121, tokenIndfuryex121, depth121 := position, tokenIndex, depth
 			{
 				position122 := position
 				depth++
 				{
-					position123, tokenIndex123, depth123 := position, tokenIndex, depth
+					position123, tokenIndfuryex123, depth123 := position, tokenIndex, depth
 					if buffer[position] != rune('d') {
 						goto l124
 					}
 					position++
 					goto l123
 				l124:
-					position, tokenIndex, depth = position123, tokenIndex123, depth123
+					position, tokenIndex, depth = position123, tokenIndfuryex123, depth123
 					if buffer[position] != rune('D') {
 						goto l121
 					}
@@ -1654,14 +1654,14 @@ func (p *QueryParser) Init() {
 				}
 			l123:
 				{
-					position125, tokenIndex125, depth125 := position, tokenIndex, depth
+					position125, tokenIndfuryex125, depth125 := position, tokenIndex, depth
 					if buffer[position] != rune('a') {
 						goto l126
 					}
 					position++
 					goto l125
 				l126:
-					position, tokenIndex, depth = position125, tokenIndex125, depth125
+					position, tokenIndex, depth = position125, tokenIndfuryex125, depth125
 					if buffer[position] != rune('A') {
 						goto l121
 					}
@@ -1669,14 +1669,14 @@ func (p *QueryParser) Init() {
 				}
 			l125:
 				{
-					position127, tokenIndex127, depth127 := position, tokenIndex, depth
+					position127, tokenIndfuryex127, depth127 := position, tokenIndex, depth
 					if buffer[position] != rune('t') {
 						goto l128
 					}
 					position++
 					goto l127
 				l128:
-					position, tokenIndex, depth = position127, tokenIndex127, depth127
+					position, tokenIndex, depth = position127, tokenIndfuryex127, depth127
 					if buffer[position] != rune('T') {
 						goto l121
 					}
@@ -1684,14 +1684,14 @@ func (p *QueryParser) Init() {
 				}
 			l127:
 				{
-					position129, tokenIndex129, depth129 := position, tokenIndex, depth
+					position129, tokenIndfuryex129, depth129 := position, tokenIndex, depth
 					if buffer[position] != rune('e') {
 						goto l130
 					}
 					position++
 					goto l129
 				l130:
-					position, tokenIndex, depth = position129, tokenIndex129, depth129
+					position, tokenIndex, depth = position129, tokenIndfuryex129, depth129
 					if buffer[position] != rune('E') {
 						goto l121
 					}
@@ -1730,24 +1730,24 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l121:
-			position, tokenIndex, depth = position121, tokenIndex121, depth121
+			position, tokenIndex, depth = position121, tokenIndfuryex121, depth121
 			return false
 		},
 		/* 8 year <- <(('1' / '2') digit digit digit)> */
 		func() bool {
-			position132, tokenIndex132, depth132 := position, tokenIndex, depth
+			position132, tokenIndfuryex132, depth132 := position, tokenIndex, depth
 			{
 				position133 := position
 				depth++
 				{
-					position134, tokenIndex134, depth134 := position, tokenIndex, depth
+					position134, tokenIndfuryex134, depth134 := position, tokenIndex, depth
 					if buffer[position] != rune('1') {
 						goto l135
 					}
 					position++
 					goto l134
 				l135:
-					position, tokenIndex, depth = position134, tokenIndex134, depth134
+					position, tokenIndex, depth = position134, tokenIndfuryex134, depth134
 					if buffer[position] != rune('2') {
 						goto l132
 					}
@@ -1768,24 +1768,24 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l132:
-			position, tokenIndex, depth = position132, tokenIndex132, depth132
+			position, tokenIndex, depth = position132, tokenIndfuryex132, depth132
 			return false
 		},
 		/* 9 month <- <(('0' / '1') digit)> */
 		func() bool {
-			position136, tokenIndex136, depth136 := position, tokenIndex, depth
+			position136, tokenIndfuryex136, depth136 := position, tokenIndex, depth
 			{
 				position137 := position
 				depth++
 				{
-					position138, tokenIndex138, depth138 := position, tokenIndex, depth
+					position138, tokenIndfuryex138, depth138 := position, tokenIndex, depth
 					if buffer[position] != rune('0') {
 						goto l139
 					}
 					position++
 					goto l138
 				l139:
-					position, tokenIndex, depth = position138, tokenIndex138, depth138
+					position, tokenIndex, depth = position138, tokenIndfuryex138, depth138
 					if buffer[position] != rune('1') {
 						goto l136
 					}
@@ -1800,12 +1800,12 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l136:
-			position, tokenIndex, depth = position136, tokenIndex136, depth136
+			position, tokenIndex, depth = position136, tokenIndfuryex136, depth136
 			return false
 		},
 		/* 10 day <- <(((&('3') '3') | (&('2') '2') | (&('1') '1') | (&('0') '0')) digit)> */
 		func() bool {
-			position140, tokenIndex140, depth140 := position, tokenIndex, depth
+			position140, tokenIndfuryex140, depth140 := position, tokenIndex, depth
 			{
 				position141 := position
 				depth++
@@ -1846,7 +1846,7 @@ func (p *QueryParser) Init() {
 			}
 			return true
 		l140:
-			position, tokenIndex, depth = position140, tokenIndex140, depth140
+			position, tokenIndex, depth = position140, tokenIndfuryex140, depth140
 			return false
 		},
 		/* 11 and <- <(('a' / 'A') ('n' / 'N') ('d' / 'D'))> */

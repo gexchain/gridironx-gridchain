@@ -358,8 +358,8 @@ func benchmarkTxIndex(txsCount int64, b *testing.B) {
 	}
 }
 
-func BenchmarkTxIndex1(b *testing.B)     { benchmarkTxIndex(1, b) }
+func BenchmarkTxIndfuryex1(b *testing.B)     { benchmarkTxIndex(1, b) }
 func BenchmarkTxIndex500(b *testing.B)   { benchmarkTxIndex(500, b) }
-func BenchmarkTxIndex1000(b *testing.B)  { benchmarkTxIndex(1000, b) }
+func BenchmarkTxIndfuryex1000(b *testing.B)  { benchmarkTxIndex(1000, b) }
 func BenchmarkTxIndex2000(b *testing.B)  { benchmarkTxIndex(2000, b) }
-func BenchmarkTxIndex10000(b *testing.B) { benchmarkTxIndex(10000, b) }
+func BenchmarkTxIndfuryex10000(b *testing.B) { benchmarkTxIndex(10000, b) }

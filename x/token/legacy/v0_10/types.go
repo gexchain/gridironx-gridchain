@@ -28,7 +28,7 @@ type (
 		WholeName           string         `json:"whole_name" v2:"whole_name"`                       // e.g. "FURY"
 		OriginalTotalSupply sdk.Dec        `json:"original_total_supply" v2:"original_total_supply"` // e.g. 1000000000.00000000
 		TotalSupply         sdk.Dec        `json:"total_supply" v2:"total_supply"`                   // e.g. 1000000000.00000000
-		Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658
+		Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. furyex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658
 		Mintable            bool           `json:"mintable" v2:"mintable"`                           // e.g. false
 	}
 

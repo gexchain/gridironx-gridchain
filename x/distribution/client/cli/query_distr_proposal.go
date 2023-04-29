@@ -25,8 +25,8 @@ func GetCmdQueryDelegatorRewards(queryRoute string, cdc *codec.Codec) *cobra.Com
 			fmt.Sprintf(`Query all rewards earned by a delegator, optionally restrict to rewards from a single validator.
 
 Example:
-$ %s query distr rewards ex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y
-$ %s query distr rewards ex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y exvaloper1pt7xrmxul7sx54ml44lvv403r06clrdkehd8z7
+$ %s query distr rewards furyex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y
+$ %s query distr rewards furyex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y exvaloper1pt7xrmxul7sx54ml44lvv403r06clrdkehd8z7
 `,
 				version.ClientName, version.ClientName,
 			),
@@ -135,7 +135,7 @@ func GetCmdQueryWithdrawAddr(queryRoute string, cdc *codec.Codec) *cobra.Command
 			fmt.Sprintf(`Query delegator's withdraw address.
 
 Example:
-$ %s query distr withdraw-addr ex17kn7d20d85yymu45h79dqs5pxq9m3nyx2mdmcs
+$ %s query distr withdraw-addr furyex17kn7d20d85yymu45h79dqs5pxq9m3nyx2mdmcs
 `,
 				version.ClientName,
 			),

@@ -220,12 +220,12 @@ func TestNewTokenMultiSend(t *testing.T) {
 	fromAddr := sdk.AccAddress(fromPubKey.Address())
 
 	// correct message
-	coinStr := `[{"to":"ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz","amount":"1` + common.NativeToken + `"}]`
+	coinStr := `[{"to":"furyex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz","amount":"1` + common.NativeToken + `"}]`
 	transfers, err := StrToTransfers(coinStr)
 	require.Nil(t, err)
 
 	// coins not positive
-	toAddr0, err := sdk.AccAddressFromBech32("ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz")
+	toAddr0, err := sdk.AccAddressFromBech32("furyex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz")
 	require.Nil(t, err)
 	decCoin0 := sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(0))
 	transfers0 := []TransferUnit{
