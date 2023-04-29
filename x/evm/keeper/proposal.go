@@ -57,7 +57,7 @@ func (k Keeper) CheckMsgSubmitProposal(ctx sdk.Context, msg govTypes.MsgSubmitPr
 		csdb := types.CreateEmptyCommitStateDB(k.GeneratePureCSDBParams(), ctx)
 		// can not delete address is not exist
 		if !content.IsAdded {
-			for i, _ := range content.ContractList {
+			for i := range content.ContractList {
 				bc := csdb.GetContractMethodBlockedByAddress(content.ContractList[i].Address)
 				if bc == nil {
 					return types.ErrBlockedContractMethodIsNotExist(content.ContractList[i].Address, types.ErrorContractMethodBlockedIsNotExist)

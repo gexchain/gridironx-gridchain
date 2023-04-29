@@ -26,4 +26,3 @@ func ProtoMarshalJSON(msg proto.Message, resolver jsonpb.AnyResolver) ([]byte, e
 
 	return buf.Bytes(), nil
 }
-

@@ -218,7 +218,7 @@ func queryParams(ctx sdk.Context, _ abci.RequestQuery, keeper IKeeper) (res []by
 	return res, nil
 }
 
-//queryProductsDelisting query the tokenpair name under dex delisting
+// queryProductsDelisting query the tokenpair name under dex delisting
 func queryProductsDelisting(ctx sdk.Context, keeper IKeeper) (res []byte, err sdk.Error) {
 	var tokenPairNames []string
 	tokenPairs := keeper.GetTokenPairs(ctx)

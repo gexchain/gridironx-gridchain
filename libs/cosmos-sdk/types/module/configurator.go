@@ -24,7 +24,7 @@ type configurator struct {
 	cdc         *codec.Codec
 	msgServer   grpc.Server
 	queryServer grpc.Server
-	migrations map[string]map[uint64]MigrationHandler
+	migrations  map[string]map[uint64]MigrationHandler
 }
 
 // NewConfigurator returns a new Configurator instance

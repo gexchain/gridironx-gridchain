@@ -79,7 +79,7 @@ func (c *Cache) GetBlockedContractMethod(addr string) (contract *types.ContractM
 func (c *Cache) UpdateBlockedContractMethod(cms []*types.ContractMethods) {
 	c.blockedMutex.Lock()
 	c.blockedContractMethodsCache = make(map[string]*types.ContractMethods, len(cms))
-	for i, _ := range cms {
+	for i := range cms {
 		c.blockedContractMethodsCache[cms[i].ContractAddr] = cms[i]
 	}
 	c.needBlockedUpdate = false

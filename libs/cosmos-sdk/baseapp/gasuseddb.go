@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"sync"
 
-	lru "github.com/hashicorp/golang-lru"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	db "github.com/gridironx/gridchain/libs/tm-db"
+	lru "github.com/hashicorp/golang-lru"
 	"github.com/spf13/viper"
 )
 

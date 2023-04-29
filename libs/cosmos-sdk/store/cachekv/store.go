@@ -158,7 +158,7 @@ func (store *Store) Write() {
 	// Not the best, but probably not a bottleneck depending.
 	keys := make([]string, len(store.dirty))
 	index := 0
-	for key, _ := range store.dirty {
+	for key := range store.dirty {
 		keys[index] = key
 		index++
 

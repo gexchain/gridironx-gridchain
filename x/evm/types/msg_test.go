@@ -490,7 +490,7 @@ func TestMsgIbcTxMarshalSignBytes(t *testing.T) {
 
 	fee := authtypes.StdFee{
 		Amount: []sdk.DecCoin{
-			sdk.DecCoin{
+			{
 				Denom:  "test",
 				Amount: sdk.NewDecFromBigInt(big.NewInt(10)),
 			},
@@ -509,7 +509,7 @@ func TestMsgIbcTxMarshalSignBytes(t *testing.T) {
 		bodyBytes,
 	)
 
-	expectedHexResult := "0A09626F64794279746573120D61757468696E666F62797465731A0B6578636861696E2D3130312001"
+	expectedHexResult := "0A09626F64794279746573120D61757468696E666F62797465731A0D67726964636861696E2D3130312001"
 
 	require.Equal(t, expectedHexResult, fmt.Sprintf("%X", signBytes))
 

@@ -12,8 +12,8 @@ import (
 
 const (
 	gridironxPrefix = "gridchain"
-	exPrefix   = "ex"
-	rawPrefix  = "0x"
+	exPrefix        = "ex"
+	rawPrefix       = "0x"
 )
 
 type accAddrToPrefixFunc func(sdk.AccAddress, string) string
@@ -48,8 +48,8 @@ func convertCommand() *cobra.Command {
 			// register func to encode account address to prefix address.
 			toPrefixFunc := map[string]accAddrToPrefixFunc{
 				gridironxPrefix: bech32FromAccAddr,
-				exPrefix:   bech32FromAccAddr,
-				rawPrefix:  hexFromAccAddr,
+				exPrefix:        bech32FromAccAddr,
+				rawPrefix:       hexFromAccAddr,
 			}
 
 			// prefix is "gridchain","ex" or "0x"

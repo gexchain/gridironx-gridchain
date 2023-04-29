@@ -475,7 +475,7 @@ func (suite *MintTestSuite) TestTreasuresProposal() {
 			actual := suite.app.MintKeeper.GetTreasures(suite.ctx)
 			suite.Require().Equal(len(tc.targetTreasures), len(actual), tc.msg)
 
-			for i, _ := range actual {
+			for i := range actual {
 				suite.Require().Equal(tc.targetTreasures[i], actual[i], tc.msg)
 			}
 

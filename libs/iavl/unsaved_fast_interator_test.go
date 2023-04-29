@@ -29,10 +29,10 @@ func TestUnsavedFastIterator(t *testing.T) {
 			},
 			make(map[string]interface{}),
 			[]ExceptedKey{
-				ExceptedKey{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
-				ExceptedKey{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
-				ExceptedKey{"test03", NewFastNode([]byte("test03"), []byte("test03valueold"), 11)},
-				ExceptedKey{"test04", NewFastNode([]byte("test04"), []byte("test04valueold"), 11)},
+				{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
+				{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
+				{"test03", NewFastNode([]byte("test03"), []byte("test03valueold"), 11)},
+				{"test04", NewFastNode([]byte("test04"), []byte("test04valueold"), 11)},
 			},
 			func() *nodeDB {
 				tree, err := getRandDBNameTestTree(0)
@@ -53,8 +53,8 @@ func TestUnsavedFastIterator(t *testing.T) {
 				"test04": NewFastNode([]byte("test04"), []byte("test04value"), 11),
 			},
 			[]ExceptedKey{
-				ExceptedKey{"test01", NewFastNode([]byte("test01"), []byte("test01valueold"), 11)},
-				ExceptedKey{"test02", NewFastNode([]byte("test02"), []byte("test02valueold"), 11)},
+				{"test01", NewFastNode([]byte("test01"), []byte("test01valueold"), 11)},
+				{"test02", NewFastNode([]byte("test02"), []byte("test02valueold"), 11)},
 			},
 			func() *nodeDB {
 				tree, err := getRandDBNameTestTree(0)
@@ -75,10 +75,10 @@ func TestUnsavedFastIterator(t *testing.T) {
 			},
 			make(map[string]interface{}),
 			[]ExceptedKey{
-				ExceptedKey{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
-				ExceptedKey{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
-				ExceptedKey{"test03", NewFastNode([]byte("test03"), []byte("test03valueold"), 11)},
-				ExceptedKey{"test04", NewFastNode([]byte("test04"), []byte("test04valueold"), 11)},
+				{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
+				{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
+				{"test03", NewFastNode([]byte("test03"), []byte("test03valueold"), 11)},
+				{"test04", NewFastNode([]byte("test04"), []byte("test04valueold"), 11)},
 			},
 			func() *nodeDB {
 				tree, err := getRandDBNameTestTree(0)
@@ -102,10 +102,10 @@ func TestUnsavedFastIterator(t *testing.T) {
 				"test04": NewFastNode([]byte("test04"), []byte("test04value"), 11),
 			},
 			[]ExceptedKey{
-				ExceptedKey{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
-				ExceptedKey{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
-				ExceptedKey{"test05", NewFastNode([]byte("test05"), []byte("test05valueold"), 11)},
-				ExceptedKey{"test06", NewFastNode([]byte("test06"), []byte("test06valueold"), 11)},
+				{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
+				{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
+				{"test05", NewFastNode([]byte("test05"), []byte("test05valueold"), 11)},
+				{"test06", NewFastNode([]byte("test06"), []byte("test06valueold"), 11)},
 			},
 			func() *nodeDB {
 				tree, err := getRandDBNameTestTree(0)
@@ -128,8 +128,8 @@ func TestUnsavedFastIterator(t *testing.T) {
 			},
 			map[string]interface{}{},
 			[]ExceptedKey{
-				ExceptedKey{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
-				ExceptedKey{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
+				{"test01", NewFastNode([]byte("test01"), []byte("test01valuenew"), 11)},
+				{"test02", NewFastNode([]byte("test02"), []byte("test02valuenew"), 11)},
 			},
 			func() *nodeDB {
 				tree, err := getRandDBNameTestTree(0)
@@ -143,8 +143,8 @@ func TestUnsavedFastIterator(t *testing.T) {
 			map[string]*FastNode{},
 			map[string]interface{}{},
 			[]ExceptedKey{
-				ExceptedKey{"test01", NewFastNode([]byte("test01"), []byte("test01valueold"), 11)},
-				ExceptedKey{"test02", NewFastNode([]byte("test02"), []byte("test02valueold"), 11)},
+				{"test01", NewFastNode([]byte("test01"), []byte("test01valueold"), 11)},
+				{"test02", NewFastNode([]byte("test02"), []byte("test02valueold"), 11)},
 			},
 			func() *nodeDB {
 				tree, err := getRandDBNameTestTree(0)

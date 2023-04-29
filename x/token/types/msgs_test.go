@@ -100,7 +100,7 @@ func TestNewMsgTokenBurn(t *testing.T) {
 	require.NoError(t, err)
 }
 
-//tokenMintMsg := NewMsgTokenMint("btc", mintNum, testAccounts[0].baseAccount.Address)
+// tokenMintMsg := NewMsgTokenMint("btc", mintNum, testAccounts[0].baseAccount.Address)
 func TestNewMsgTokenMint(t *testing.T) {
 	priKey := secp256k1.GenPrivKey()
 	pubKey := priKey.PubKey()

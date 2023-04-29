@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	lru "github.com/hashicorp/golang-lru"
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	lru "github.com/hashicorp/golang-lru"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 )
@@ -37,7 +37,7 @@ func (al AddressList) String() string {
 	return strings.TrimSpace(b.String())
 }
 
-//BlockedContractList is the list of contract which method or all-method is blocked
+// BlockedContractList is the list of contract which method or all-method is blocked
 type BlockedContractList []BlockedContract
 
 // String returns string which is the list of blocked contract
@@ -90,7 +90,7 @@ func (bl BlockedContractList) ValidateExtra() sdk.Error {
 }
 
 func (bl BlockedContractList) GetBlockedContract(addr sdk.AccAddress) *BlockedContract {
-	for i, _ := range bl {
+	for i := range bl {
 		if addr.Equals(bl[i].Address) {
 			return &bl[i]
 		}
@@ -98,7 +98,7 @@ func (bl BlockedContractList) GetBlockedContract(addr sdk.AccAddress) *BlockedCo
 	return nil
 }
 
-//BlockedContract i the contract which method or all-method is blocked
+// BlockedContract i the contract which method or all-method is blocked
 type BlockedContract struct {
 	//Contract Address
 	Address sdk.AccAddress `json:"address" yaml:"address"`
@@ -150,7 +150,7 @@ func (bc BlockedContract) String() string {
 	return strings.TrimSpace(b.String())
 }
 
-//ContractMethods is the list of blocked contract method
+// ContractMethods is the list of blocked contract method
 type ContractMethods []ContractMethod
 
 func SortContractMethods(cms []ContractMethod) {
@@ -166,7 +166,7 @@ func SortContractMethods(cms []ContractMethod) {
 func (cms ContractMethods) String() string {
 	var b strings.Builder
 	b.WriteString("Method List:\n")
-	for k, _ := range cms {
+	for k := range cms {
 		b.WriteString(cms[k].String())
 		b.WriteByte('\n')
 	}
@@ -177,7 +177,7 @@ func (cms ContractMethods) String() string {
 // ValidateBasic validates the list of blocked contract method
 func (cms ContractMethods) ValidateBasic() sdk.Error {
 	methodMap := make(map[string]ContractMethod)
-	for i, _ := range cms {
+	for i := range cms {
 		if _, ok := methodMap[cms[i].Sign]; ok {
 			return ErrDuplicatedMethod
 		}
@@ -192,7 +192,7 @@ func (cms ContractMethods) ValidateBasic() sdk.Error {
 // ValidateExtra validates the list of blocked contract method
 func (cms ContractMethods) ValidateExtra() sdk.Error {
 	methodMap := make(map[string]ContractMethod)
-	for i, _ := range cms {
+	for i := range cms {
 		if _, ok := methodMap[cms[i].Sign]; ok {
 			return ErrDuplicatedMethod
 		}
@@ -212,7 +212,7 @@ func (cms ContractMethods) ValidateExtra() sdk.Error {
 
 // IsContain return true if the method of contract contains ContractMethods.
 func (cms ContractMethods) IsContain(method string) bool {
-	for i, _ := range cms {
+	for i := range cms {
 		if strings.Compare(method, cms[i].Sign) == 0 {
 			// attempt to check Extra has GuFactor, if got factor,then return false.
 			//because GuFactor is not blocked contract method.
@@ -227,7 +227,7 @@ func (cms ContractMethods) IsContain(method string) bool {
 
 // GetMethod return ContractMethod of method .
 func (cms ContractMethods) GetMethod(method string) *ContractMethod {
-	for i, _ := range cms {
+	for i := range cms {
 		if strings.Compare(method, cms[i].Sign) == 0 {
 			return &cms[i]
 		}
@@ -238,7 +238,7 @@ func (cms ContractMethods) GetMethod(method string) *ContractMethod {
 // GetContractMethodsMap return map which key is method,value is ContractMethod.
 func (cms ContractMethods) GetContractMethodsMap() map[string]ContractMethod {
 	methodMap := make(map[string]ContractMethod)
-	for i, _ := range cms {
+	for i := range cms {
 		methodMap[cms[i].Sign] = cms[i]
 	}
 	return methodMap
@@ -248,12 +248,12 @@ func (cms ContractMethods) GetContractMethodsMap() map[string]ContractMethod {
 // if repeated,methods will cover cms
 func (cms *ContractMethods) InsertContractMethods(methods ContractMethods) (ContractMethods, error) {
 	methodMap := cms.GetContractMethodsMap()
-	for i, _ := range methods {
+	for i := range methods {
 		methodName := methods[i].Sign
 		methodMap[methodName] = methods[i]
 	}
 	result := ContractMethods{}
-	for k, _ := range methodMap {
+	for k := range methodMap {
 		result = append(result, methodMap[k])
 	}
 	SortContractMethods(result)
@@ -264,21 +264,21 @@ func (cms *ContractMethods) InsertContractMethods(methods ContractMethods) (Cont
 // if method is not exist,it can not be panic or error
 func (cms *ContractMethods) DeleteContractMethodMap(methods ContractMethods) (ContractMethods, error) {
 	methodMap := cms.GetContractMethodsMap()
-	for i, _ := range methods {
+	for i := range methods {
 		if _, ok := methodMap[methods[i].Sign]; !ok {
 			return nil, errors.New(fmt.Sprintf("method(%s) is not exist", methods[i].Sign))
 		}
 		delete(methodMap, methods[i].Sign)
 	}
 	result := ContractMethods{}
-	for k, _ := range methodMap {
+	for k := range methodMap {
 		result = append(result, methodMap[k])
 	}
 	SortContractMethods(result)
 	return result, nil
 }
 
-//ContractMethod is the blocked contract method
+// ContractMethod is the blocked contract method
 // Name is method  name
 // Extra is a extend data is useless
 type ContractMethod struct {
@@ -362,7 +362,7 @@ func ContractMethodsIsEqual(src, dst ContractMethods) bool {
 		return false
 	}
 	srcMap := src.GetContractMethodsMap()
-	for i, _ := range dst {
+	for i := range dst {
 		if _, ok := srcMap[dst[i].Sign]; !ok {
 			return false
 		} else {

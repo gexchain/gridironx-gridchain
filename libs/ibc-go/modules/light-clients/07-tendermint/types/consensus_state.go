@@ -2,7 +2,7 @@ package types
 
 import (
 	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
-	clienttypes"github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
 	commitmenttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/23-commitment/types"
 	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
@@ -23,7 +23,6 @@ func NewConsensusState(
 		NextValidatorsHash: nextValsHash,
 	}
 }
-
 
 // ClientType returns Tendermint
 func (ConsensusState) ClientType() string {

@@ -6,9 +6,9 @@ import (
 
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
 
-	"github.com/mosn/holmes"
 	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
 	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
+	"github.com/mosn/holmes"
 	"github.com/spf13/viper"
 )
 

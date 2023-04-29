@@ -16,7 +16,7 @@ func TestMsgSendToEvm_GetSigners(t *testing.T) {
 		{
 			name:   "normal",
 			msg:    MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String()},
-			expect: []sdk.AccAddress{sdk.AccAddress{0x1}},
+			expect: []sdk.AccAddress{{0x1}},
 		},
 		{
 			name:  "sender is empty",
@@ -174,7 +174,7 @@ func TestMsgCallToEvm_GetSigners(t *testing.T) {
 		{
 			name:   "normal",
 			msg:    MsgCallToEvm{Sender: sdk.AccAddress{0x1}.String()},
-			expect: []sdk.AccAddress{sdk.AccAddress{0x1}},
+			expect: []sdk.AccAddress{{0x1}},
 		},
 		{
 			name:  "sender is empty",

@@ -328,7 +328,7 @@ func (cs *State) updateToState(state sm.State) {
 	if cs.vcMsg != nil && cs.vcMsg.Height <= cs.Height {
 		cs.vcMsg = nil
 	}
-	for k, _ := range cs.vcHeight {
+	for k := range cs.vcHeight {
 		if k <= cs.Height {
 			delete(cs.vcHeight, k)
 		}

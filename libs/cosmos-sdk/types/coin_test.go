@@ -763,7 +763,7 @@ func TestMarshalJSONCoins(t *testing.T) {
 	}
 }
 
-func TestConvertWei2OKT(t *testing.T) {
+func TestConvertWei2FURY(t *testing.T) {
 	testCases := []struct {
 		name       string
 		input      CoinAdapter
@@ -777,7 +777,7 @@ func TestConvertWei2OKT(t *testing.T) {
 	for _, ca := range testCases {
 		t.Run(ca.name, func(t *testing.T) {
 			coinAdapters := CoinAdapters{ca.input}
-			coins, err := ConvWei2TOkt(coinAdapters)
+			coins, err := ConvWei2TFury(coinAdapters)
 			if !ca.pass {
 				require.Error(t, err)
 			} else {

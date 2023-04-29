@@ -281,7 +281,7 @@ func QueryContractMethodBlockedListHandlerFn(cliCtx context.CLIContext) http.Han
 		cliCtx.Codec.MustUnmarshalJSON(bz, &blockedList)
 
 		results := make([]utils.ResponseBlockContract, 0)
-		for i, _ := range blockedList {
+		for i := range blockedList {
 			ethAddr := ethcommon.BytesToAddress(blockedList[i].Address.Bytes()).Hex()
 			result := utils.ResponseBlockContract{Address: ethAddr, BlockMethods: blockedList[i].BlockMethods}
 			results = append(results, result)

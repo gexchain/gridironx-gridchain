@@ -9,9 +9,9 @@ import (
 
 	"github.com/gridironx/gridchain/x/gov/types"
 
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	anytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 	GovCli "github.com/gridironx/gridchain/x/gov/client/cli"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 )
 
 var (

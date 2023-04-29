@@ -3,12 +3,12 @@ package bank
 import (
 	"context"
 	"github.com/gorilla/mux"
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	clictx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	anytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/typesadapter"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"
 )
 

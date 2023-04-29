@@ -104,18 +104,27 @@ func execRule3(book *types.DepthBook, offset int, refPrice sdk.Dec, pricePrecisi
 // The best price is found according following rules:
 // rule0: No match, bestPrice = 0, maxExecution=0
 // rule1: Maximum execution volume.
-//        If there are more than one price with the same max execution, following rule2
+//
+//	If there are more than one price with the same max execution, following rule2
+//
 // rule2: Minimum imbalance. We should select the price with minimum absolute value of imbalance.
-//        If more than one price satisfy rule2, following rule3
+//
+//	If more than one price satisfy rule2, following rule3
+//
 // rule3: Market Pressure. There are 3 cases:
 // rule3a: All imbalances are positive. It indicates buy side pressure. Set reference price with
-//         last execute price plus a upper limit percentage(e.g. 5%). Then choose the price
-//         which is closest to reference price.
+//
+//	last execute price plus a upper limit percentage(e.g. 5%). Then choose the price
+//	which is closest to reference price.
+//
 // rule3b: All imbalances are negative. It indicates sell side pressure. Set reference price with
-//         last execute price minus a lower limit percentage(e.g. 5%). Then choose the price
-//         which is closest to reference price.
+//
+//	last execute price minus a lower limit percentage(e.g. 5%). Then choose the price
+//	which is closest to reference price.
+//
 // rule3c: Otherwise, it indicates no one side pressure. Set reference price with last execute
-//         price. Then choose the price which is closest to reference price.
+//
+//	price. Then choose the price which is closest to reference price.
 func periodicAuctionMatchPrice(book *types.DepthBook, pricePrecision int64,
 	refPrice sdk.Dec) (bestPrice sdk.Dec, maxExecution sdk.Dec) {
 

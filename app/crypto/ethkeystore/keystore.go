@@ -128,7 +128,7 @@ func newEthKeyFromECDSA(privateKeyECDSA *ecdsa.PrivateKey) (*keystore.Key, error
 	return key, nil
 }
 
-//keyFileName return the default keystore file name in the ethereum
+// keyFileName return the default keystore file name in the ethereum
 func keyFileName(keyAddr common.Address) string {
 	ts := time.Now().UTC()
 	return fmt.Sprintf("UTC--%s--%s", toISO8601(ts), hex.EncodeToString(keyAddr[:]))

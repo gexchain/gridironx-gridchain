@@ -158,14 +158,14 @@ func migrateEvmFromIavlToMpt(ctx *server.Context) {
 	miragteBloomsToDb(migrationApp, cmCtx, batch)
 
 	/*
-	// 4. save an empty evmlegacy iavl tree in mirgate height
-	upgradedPrefixDb := dbm.NewPrefixDB(migrationApp.GetDB(), []byte(iavlEvmLegacyKey))
-	upgradedTree, err := iavl.NewMutableTreeWithOpts(upgradedPrefixDb, iavlstore.IavlCacheSize, nil)
-	panicError(err)
-	_, version, err := upgradedTree.SaveVersionSync(cmCtx.BlockHeight()-1, false)
-	panicError(err)
-	fmt.Printf("Successfully save an empty evmlegacy iavl tree in %d\n", version)
-	 */
+		// 4. save an empty evmlegacy iavl tree in mirgate height
+		upgradedPrefixDb := dbm.NewPrefixDB(migrationApp.GetDB(), []byte(iavlEvmLegacyKey))
+		upgradedTree, err := iavl.NewMutableTreeWithOpts(upgradedPrefixDb, iavlstore.IavlCacheSize, nil)
+		panicError(err)
+		_, version, err := upgradedTree.SaveVersionSync(cmCtx.BlockHeight()-1, false)
+		panicError(err)
+		fmt.Printf("Successfully save an empty evmlegacy iavl tree in %d\n", version)
+	*/
 }
 
 // 1. migrateContractToMpt Migrates Accounts、Code、Storage
@@ -302,11 +302,11 @@ func migrateEvmLegacyFromIavlToIavl(ctx *server.Context) {
 
 }
 
-func readAllParams(app *app.GRIDIronxChainApp) map[string][]byte{
+func readAllParams(app *app.GRIDIronxChainApp) map[string][]byte {
 	tree := getUpgradedTree(app.GetDB(), []byte(KeyParams), false)
 
 	paramsMap := make(map[string][]byte)
-	tree.IterateRange(nil, nil, true, func(key, value []byte) bool{
+	tree.IterateRange(nil, nil, true, func(key, value []byte) bool {
 		paramsMap[string(key)] = value
 		return false
 	})

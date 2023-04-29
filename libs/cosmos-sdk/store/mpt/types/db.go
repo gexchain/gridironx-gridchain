@@ -14,7 +14,7 @@ const FlagTrieRocksdbBatchSize = "trie.rocksdb-batch-size"
 
 var TrieRocksdbBatchSize uint = 10
 
-//------------------------------------------
+// ------------------------------------------
 type (
 	BackendType string
 
@@ -65,9 +65,11 @@ func CreateKvDB(name string, backend BackendType, dir string) (ethdb.KeyValueSto
 	return dbCreator(name, dir)
 }
 
-//------------------------------------------
+// ------------------------------------------
+//
 //	Register go-ethereum memdb and leveldb
-//------------------------------------------
+//
+// ------------------------------------------
 func init() {
 	levelDBCreator := func(name string, dir string) (ethdb.KeyValueStore, error) {
 		return NewMptLevelDB(name, dir)

@@ -152,7 +152,7 @@ func writeContract(client *ethclient.Client,
 	return nil
 }
 
-func transferOKT(client *ethclient.Client,
+func transferFURY(client *ethclient.Client,
 	fromAddress common.Address,
 	toAddress common.Address,
 	amount *big.Int,
@@ -169,7 +169,7 @@ func transferOKT(client *ethclient.Client,
 
 	fmt.Printf(
 		"==================================================\n"+
-			"Transfer OKT: \n"+
+			"Transfer FURY: \n"+
 			"	from  : <%s>\n"+
 			"	to    : <%s>\n"+
 			"	amount: <%s>\n"+
@@ -331,7 +331,7 @@ func send(client *ethclient.Client, to, privKey string) {
 	toAddress := common.HexToAddress(to)
 
 	// send 0.001fury
-	transferOKT(client, senderAddress, toAddress, str2bigInt("0.001"), privateKey, 0)
+	transferFURY(client, senderAddress, toAddress, str2bigInt("0.001"), privateKey, 0)
 }
 
 func transferOip(client *ethclient.Client, oip20 *Oip20,

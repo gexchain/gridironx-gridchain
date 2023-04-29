@@ -53,7 +53,7 @@ func NewMsgCancelOrder(sender sdk.AccAddress, orderID string) MsgCancelOrders {
 	return msgCancelOrder
 }
 
-//********************MsgNewOrders*************
+// ********************MsgNewOrders*************
 // nolint
 type MsgNewOrders struct {
 	Sender     sdk.AccAddress `json:"sender"` // order maker address

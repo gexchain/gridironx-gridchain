@@ -17,8 +17,8 @@ var (
 )
 
 // AllocateTokens allocates fees from fee_collector
-//1. 25% rewards to validators, equally.
-//2. 75% rewards to validators and candidates, by shares' weight
+// 1. 25% rewards to validators, equally.
+// 2. 75% rewards to validators and candidates, by shares' weight
 func (k Keeper) AllocateTokens(ctx sdk.Context, totalPreviousPower int64,
 	previousProposer sdk.ConsAddress, previousVotes []abci.VoteInfo) {
 	logger := k.Logger(ctx)

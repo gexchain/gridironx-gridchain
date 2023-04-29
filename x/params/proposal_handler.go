@@ -59,7 +59,7 @@ func (k *Keeper) RegisterSignal(handler func()) {
 	k.signals = append(k.signals, handler)
 }
 func (k *Keeper) signalUpdate() {
-	for i, _ := range k.signals {
+	for i := range k.signals {
 		k.signals[i]()
 	}
 }

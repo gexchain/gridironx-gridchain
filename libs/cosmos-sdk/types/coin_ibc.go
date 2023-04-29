@@ -312,9 +312,9 @@ func (coins CoinAdapters) Copy() CoinAdapters {
 	return copyCoins
 }
 
-func ConvWei2TOkt(adapters CoinAdapters) (CoinAdapters, error) {
+func ConvWei2TFury(adapters CoinAdapters) (CoinAdapters, error) {
 	copyAdapters := adapters.Copy()
-	for index, _ := range copyAdapters {
+	for index := range copyAdapters {
 		if copyAdapters[index].Denom == DefaultIbcWei {
 			copyAdapters[index].Denom = DefaultBondDenom
 		} else if strings.ToLower(copyAdapters[index].Denom) == DefaultBondDenom {

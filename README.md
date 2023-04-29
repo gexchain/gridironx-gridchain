@@ -1,4 +1,4 @@
-# OKTChain
+# FURYChain
 The Infrastructure of Decentralized Exchange
 
 ![banner](docs/images/chain.png)
@@ -11,7 +11,7 @@ The Infrastructure of Decentralized Exchange
 [![LoC](https://tokei.rs/b1/github/gridironx/gridchain)](https://github.com/gridx/gridchain)
 [![GolangCI](https://golangci.com/badges/github.com/gridx/gridchain.svg)](https://golangci.com/r/github.com/gridx/gridchain)
 
-This repository hosts `OKTC`, the implementation of the OKTC based on the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
+This repository hosts `FURYC`, the implementation of the FURYC based on the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
 
 **Note**: Requires [Go 1.17](https://golang.org/dl/)
 

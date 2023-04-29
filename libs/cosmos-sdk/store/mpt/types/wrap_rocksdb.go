@@ -10,9 +10,11 @@ import (
 	"github.com/pkg/errors"
 )
 
-//------------------------------------------
+// ------------------------------------------
+//
 //	Register go-ethereum gorocksdb
-//------------------------------------------
+//
+// ------------------------------------------
 func init() {
 	dbCreator := func(name string, dir string) (ethdb.KeyValueStore, error) {
 		return NewWrapRocksDB(name, dir)

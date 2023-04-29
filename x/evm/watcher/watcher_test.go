@@ -19,7 +19,6 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	jsoniter "github.com/json-iterator/go"
 	"github.com/gridironx/gridchain/app"
 	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
 	ethermint "github.com/gridironx/gridchain/app/types"
@@ -31,6 +30,7 @@ import (
 	"github.com/gridironx/gridchain/x/evm/types"
 	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 	"github.com/gridironx/gridchain/x/evm/watcher"
+	jsoniter "github.com/json-iterator/go"
 	"github.com/spf13/viper"
 	"github.com/status-im/keycard-go/hexutils"
 	"github.com/stretchr/testify/require"

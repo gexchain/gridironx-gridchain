@@ -144,7 +144,7 @@ func (m *MsgSubmitTx) GetSignBytes() []byte {
 	panic("MsgSubmitTx messages do not support amino")
 }
 
-//////////
+// ////////
 func (msg MsgRegisterAccount) ValidWithHeight(h int64) error {
 	return common.MsgNotSupportBeforeHeight(&msg, h)
 }

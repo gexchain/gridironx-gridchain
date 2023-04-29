@@ -11,8 +11,6 @@ type (
 	V2Keeper = keeper.Keeper
 )
 
-const ()
-
 var (
 	NewKeeper           = keeper.NewKeeper
 	NewV4Keeper         = keeper.NewV4Keeper

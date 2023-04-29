@@ -10,7 +10,6 @@ import (
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
-
 func (suite *KeeperMptTestSuite) TestCommitStateDB_CommitMpt() {
 	testCase := []struct {
 		name       string

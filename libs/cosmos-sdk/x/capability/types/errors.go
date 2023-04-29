@@ -4,7 +4,6 @@ import sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 
 // DONTCOVER
 
-
 // x/capability module sentinel errors
 var (
 	ErrInvalidCapabilityName    = sdkerrors.Register(ModuleName, 2, "capability name not valid")

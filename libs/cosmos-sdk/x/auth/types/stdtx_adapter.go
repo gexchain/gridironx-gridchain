@@ -151,7 +151,7 @@ func IbcDirectSignBytes(chainID string, accnum uint64,
 
 //////
 
-///////////
+// /////////
 type ProtobufViewMsg struct {
 	TypeStr string `json:"type"`
 	Data    string `json:"data"`

@@ -343,7 +343,7 @@ func (pool *TxPool) broadcastPeriodCore(api *PublicEthereumAPI) {
 	pool.mu.Lock()
 	defer pool.mu.Unlock()
 	blockNrOrHash := rpctypes.BlockNumberOrHashWithNumber(rpctypes.PendingBlockNumber)
-	for address, _ := range pool.addressTxsPool {
+	for address := range pool.addressTxsPool {
 		pCurrentNonce, err := api.GetTransactionCount(address, blockNrOrHash)
 		if err != nil {
 			pool.logger.Error(err.Error())
@@ -359,7 +359,7 @@ func (pool *TxPool) broadcastOnce(api *PublicEthereumAPI) {
 	pool.mu.Lock()
 	defer pool.mu.Unlock()
 	blockNrOrHash := rpctypes.BlockNumberOrHashWithNumber(rpctypes.PendingBlockNumber)
-	for address, _ := range pool.addressTxsPool {
+	for address := range pool.addressTxsPool {
 		pCurrentNonce, err := api.GetTransactionCount(address, blockNrOrHash)
 		if err != nil {
 			continue

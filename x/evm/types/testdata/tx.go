@@ -24,7 +24,6 @@ import (
 //	return key, pub, addr
 //}
 
-
 var _ sdk.Msg = (*TestMsg)(nil)
 
 func (msg *TestMsg) Route() string { return "TestMsg" }

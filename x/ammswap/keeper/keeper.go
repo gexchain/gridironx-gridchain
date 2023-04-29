@@ -174,7 +174,7 @@ func (k Keeper) GetRedeemableAssets(ctx sdk.Context, baseAmountName, quoteAmount
 	return baseAmount, quoteAmount, nil
 }
 
-//CalculateTokenToBuy calculates the amount to buy
+// CalculateTokenToBuy calculates the amount to buy
 func CalculateTokenToBuy(swapTokenPair types.SwapTokenPair, sellToken sdk.SysCoin, buyTokenDenom string, params types.Params) sdk.SysCoin {
 	var inputReserve, outputReserve sdk.Dec
 	if buyTokenDenom < sellToken.Denom {

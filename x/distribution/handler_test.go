@@ -443,7 +443,7 @@ func (suite *HandlerSuite) TestWithdrawDisabled() {
 			communityTax := sdk.NewDecWithPrec(2, 2)
 			ctx, _, _, dk, sk, _, _ := keeper.CreateTestInputAdvanced(suite.T(), false, 1000, communityTax)
 			valOpAddrs, valConsPks, _ := keeper.GetTestAddrs()
-			for i, _ := range valOpAddrs {
+			for i := range valOpAddrs {
 				keeper.DoCreateValidator(suite.T(), ctx, sk, valOpAddrs[i], valConsPks[i])
 			}
 			// end block to bond validator

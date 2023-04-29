@@ -3,7 +3,6 @@ package capability
 import (
 	"encoding/json"
 	"github.com/gorilla/mux"
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	clientCtx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	types2 "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
@@ -17,6 +16,7 @@ import (
 	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/base"
 	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"
 	"math/rand"
 )

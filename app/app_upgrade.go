@@ -111,13 +111,13 @@ func (o *GRIDIronxChainApp) CollectUpgradeModules(m *module.Manager) (map[int64]
 	commitFilters := make([]types.StoreFilter, 0)
 	pruneFilters := make([]types.StoreFilter, 0)
 	versionFilters := make([]types.VersionFilter, 0)
-	for pointerFilter, _ := range commitFiltreMap {
+	for pointerFilter := range commitFiltreMap {
 		commitFilters = append(commitFilters, *pointerFilter)
 	}
-	for pointerFilter, _ := range pruneFilterMap {
+	for pointerFilter := range pruneFilterMap {
 		pruneFilters = append(pruneFilters, *pointerFilter)
 	}
-	for pointerFilter, _ := range versionFilterMap {
+	for pointerFilter := range versionFilterMap {
 		versionFilters = append(versionFilters, *pointerFilter)
 	}
 

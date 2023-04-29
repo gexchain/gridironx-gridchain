@@ -86,7 +86,7 @@ func (c *Cache) UpdateBlockedContractMethod(bcl BlockedContractList, isCheckTx b
 	}
 	c.blockedMutex.Lock()
 	c.blockedContractMethodsCache = make(map[string]BlockedContract, len(bcl))
-	for i, _ := range bcl {
+	for i := range bcl {
 		c.blockedContractMethodsCache[string(bcl[i].Address)] = bcl[i]
 	}
 	c.needBlockedUpdate = false

@@ -22,7 +22,7 @@ var (
 	NewSendNative20ToIbcEventHandler = keeper.NewSendNative20ToIbcEventHandler
 )
 
-//nolint
+// nolint
 type (
 	Keeper       = keeper.Keeper
 	GenesisState = types.GenesisState

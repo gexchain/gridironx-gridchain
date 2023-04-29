@@ -78,7 +78,7 @@ type (
 	ProposalStatus byte
 )
 
-//nolint
+// nolint
 const (
 	StatusNil           ProposalStatus = 0x00
 	StatusDepositPeriod ProposalStatus = 0x01

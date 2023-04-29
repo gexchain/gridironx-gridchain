@@ -9,11 +9,11 @@ import (
 	"github.com/gridironx/gridchain/x/staking/typesadapter"
 
 	"github.com/gorilla/mux"
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	clictx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	anytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/upgrade"
 	params2 "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
@@ -49,7 +49,7 @@ func (am AppModuleBasic) GetQueryCmdV2(cdc *codec.CodecProxy, reg anytypes.Inter
 	return nil
 }
 
-/// appmodule
+// / appmodule
 func (am AppModule) RegisterServices(cfg module.Configurator) {
 	typesadapter.RegisterQueryServer(cfg.QueryServer(), keeper.NewGrpcQuerier(am.keeper))
 }

@@ -88,7 +88,7 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val stakingexported.
 	return rewards
 }
 
-//withdraw rewards according to the specified validator by delegator
+// withdraw rewards according to the specified validator by delegator
 func (k Keeper) withdrawDelegationRewards(ctx sdk.Context, val stakingexported.ValidatorI, delAddress sdk.AccAddress) (sdk.Coins, error) {
 	if !k.CheckDistributionProposalValid(ctx) {
 		return nil, types.ErrCodeNotSupportWithdrawDelegationRewards()
@@ -154,7 +154,7 @@ func (k Keeper) withdrawDelegationRewards(ctx sdk.Context, val stakingexported.V
 	return coins, nil
 }
 
-//initExistedDelegationStartInfo If the delegator existed but no start info, it add shares before distribution proposal, and need to set a new start info
+// initExistedDelegationStartInfo If the delegator existed but no start info, it add shares before distribution proposal, and need to set a new start info
 func (k Keeper) initExistedDelegationStartInfo(ctx sdk.Context, val stakingexported.ValidatorI, del stakingexported.DelegatorI) {
 	if !k.CheckDistributionProposalValid(ctx) {
 		return

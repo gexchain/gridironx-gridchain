@@ -76,7 +76,7 @@ func TestSortTreasures(t *testing.T) {
 
 	treasures := []Treasure{*treasure2, *treasure5, *treasure3, *treasure1, *treasure4}
 	SortTreasures(treasures)
-	for i, _ := range treasures {
+	for i := range treasures {
 		require.Equal(t, sdk.NewDec(int64(i)).Int64(), treasures[i].Proportion.Int64())
 	}
 }

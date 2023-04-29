@@ -233,7 +233,7 @@ func cw20InstantiateMsg(info *AppInfo) ([]sdk.Msg, error) {
 	addr := info.MinterAddr.String()
 	init := cw20InitMsg{
 		Name:     "OK Token",
-		Symbol:   "OKT",
+		Symbol:   "FURY",
 		Decimals: 8,
 		InitialBalances: []balance{
 			{

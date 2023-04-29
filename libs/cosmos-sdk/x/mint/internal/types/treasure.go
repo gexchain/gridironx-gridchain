@@ -8,7 +8,7 @@ import (
 	"sort"
 )
 
-//Treasure is the struct which has address and proportion of mint reward.
+// Treasure is the struct which has address and proportion of mint reward.
 type Treasure struct {
 	//Treasure Address
 	Address sdk.AccAddress `json:"address" yaml:"address"`
@@ -33,7 +33,7 @@ func (t Treasure) ValidateBasic() error {
 
 func ValidateTreasures(treasures []Treasure) error {
 	sumProportion := sdk.ZeroDec()
-	for i, _ := range treasures {
+	for i := range treasures {
 		if err := treasures[i].ValidateBasic(); err != nil {
 			return err
 		}
@@ -53,7 +53,7 @@ func SortTreasures(treasures []Treasure) {
 
 func getMapFromTreasures(treasures []Treasure) map[string]Treasure {
 	temp := make(map[string]Treasure, 0)
-	for i, _ := range treasures {
+	for i := range treasures {
 		temp[treasures[i].Address.String()] = treasures[i]
 	}
 	return temp
@@ -61,7 +61,7 @@ func getMapFromTreasures(treasures []Treasure) map[string]Treasure {
 
 func getTreasuresFromMap(src map[string]Treasure) []Treasure {
 	result := make([]Treasure, 0)
-	for k, _ := range src {
+	for k := range src {
 		result = append(result, src[k])
 	}
 	SortTreasures(result)
@@ -70,7 +70,7 @@ func getTreasuresFromMap(src map[string]Treasure) []Treasure {
 
 func isTreasureDuplicated(treasures []Treasure) bool {
 	temp := make(map[string]Treasure, 0)
-	for i, _ := range treasures {
+	for i := range treasures {
 		key := treasures[i].Address.String()
 		if _, ok := temp[key]; ok {
 			return true
@@ -82,7 +82,7 @@ func isTreasureDuplicated(treasures []Treasure) bool {
 
 func InsertAndUpdateTreasures(src, dst []Treasure) []Treasure {
 	temp := getMapFromTreasures(src)
-	for i, _ := range dst {
+	for i := range dst {
 		key := dst[i].Address.String()
 		temp[key] = dst[i]
 	}
@@ -91,7 +91,7 @@ func InsertAndUpdateTreasures(src, dst []Treasure) []Treasure {
 
 func DeleteTreasures(src, dst []Treasure) ([]Treasure, error) {
 	temp := getMapFromTreasures(src)
-	for i, _ := range dst {
+	for i := range dst {
 		key := dst[i].Address.String()
 		if _, ok := temp[key]; !ok {
 			return nil, errors.New(fmt.Sprintf("can not delete %s,because it's not exist from treasures", key))

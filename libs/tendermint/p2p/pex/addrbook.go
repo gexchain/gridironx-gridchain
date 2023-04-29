@@ -14,12 +14,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/highwayhash"
 	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 	tmmath "github.com/gridironx/gridchain/libs/tendermint/libs/math"
 	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
 	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
 	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/minio/highwayhash"
 )
 
 const (

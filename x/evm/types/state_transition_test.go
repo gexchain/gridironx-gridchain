@@ -45,86 +45,90 @@ var (
 	}
 )
 
-//Call Code ABI
-//[
-//  {
-//    "constant": false,
-//    "inputs": [],
-//    "name": "inc",
-//    "outputs": [],
-//    "payable": false,
-//    "stateMutability": "nonpayable",
-//    "type": "function"
-//  },
-//  {
-//    "constant": false,
-//    "inputs": [],
-//    "name": "onc",
-//    "outputs": [],
-//    "payable": false,
-//    "stateMutability": "nonpayable",
-//    "type": "function"
-//  },
-//]
-//Blocked Code ABI
-//[
-//  {
-//    "constant": false,
-//    "inputs": [
-//      {
-//        "name": "contractAddress",
-//        "type": "address"
-//      }
-//    ],
-//    "name": "inc_call",
-//    "outputs": [],
-//    "payable": false,
-//    "stateMutability": "nonpayable",
-//    "type": "function"
-//  },
-//  {
-//    "constant": false,
-//    "inputs": [
-//      {
-//        "name": "contractAddress",
-//        "type": "address"
-//      }
-//    ],
-//    "name": "inc_call_selfdestruct",
-//    "outputs": [],
-//    "payable": false,
-//    "stateMutability": "nonpayable",
-//    "type": "function"
-//  },
-//  {
-//    "constant": false,
-//    "inputs": [
-//      {
-//        "name": "contractAddress",
-//        "type": "address"
-//      }
-//    ],
-//    "name": "inc_callcode",
-//    "outputs": [],
-//    "payable": false,
-//    "stateMutability": "nonpayable",
-//    "type": "function"
-//  },
-//  {
-//    "constant": false,
-//    "inputs": [
-//      {
-//        "name": "contractAddress",
-//        "type": "address"
-//      }
-//    ],
-//    "name": "inc_delegatecall",
-//    "outputs": [],
-//    "payable": false,
-//    "stateMutability": "nonpayable",
-//    "type": "function"
-//  },
-//]
+// Call Code ABI
+// [
+//
+//	{
+//	  "constant": false,
+//	  "inputs": [],
+//	  "name": "inc",
+//	  "outputs": [],
+//	  "payable": false,
+//	  "stateMutability": "nonpayable",
+//	  "type": "function"
+//	},
+//	{
+//	  "constant": false,
+//	  "inputs": [],
+//	  "name": "onc",
+//	  "outputs": [],
+//	  "payable": false,
+//	  "stateMutability": "nonpayable",
+//	  "type": "function"
+//	},
+//
+// ]
+// Blocked Code ABI
+// [
+//
+//	{
+//	  "constant": false,
+//	  "inputs": [
+//	    {
+//	      "name": "contractAddress",
+//	      "type": "address"
+//	    }
+//	  ],
+//	  "name": "inc_call",
+//	  "outputs": [],
+//	  "payable": false,
+//	  "stateMutability": "nonpayable",
+//	  "type": "function"
+//	},
+//	{
+//	  "constant": false,
+//	  "inputs": [
+//	    {
+//	      "name": "contractAddress",
+//	      "type": "address"
+//	    }
+//	  ],
+//	  "name": "inc_call_selfdestruct",
+//	  "outputs": [],
+//	  "payable": false,
+//	  "stateMutability": "nonpayable",
+//	  "type": "function"
+//	},
+//	{
+//	  "constant": false,
+//	  "inputs": [
+//	    {
+//	      "name": "contractAddress",
+//	      "type": "address"
+//	    }
+//	  ],
+//	  "name": "inc_callcode",
+//	  "outputs": [],
+//	  "payable": false,
+//	  "stateMutability": "nonpayable",
+//	  "type": "function"
+//	},
+//	{
+//	  "constant": false,
+//	  "inputs": [
+//	    {
+//	      "name": "contractAddress",
+//	      "type": "address"
+//	    }
+//	  ],
+//	  "name": "inc_delegatecall",
+//	  "outputs": [],
+//	  "payable": false,
+//	  "stateMutability": "nonpayable",
+//	  "type": "function"
+//	},
+//
+// ]
 func (suite *StateDBTestSuite) TestGetHashFn() {
 	types2.UnittestOnlySetMilestoneMarsHeight(0)
 	testCase := []struct {

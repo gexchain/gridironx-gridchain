@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"github.com/gogo/gateway"
 	"github.com/gogo/protobuf/jsonpb"
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	grpctypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types/grpc"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"net"
 	"net/http"
 	"os"
@@ -177,7 +177,7 @@ func StartRestServer(cdc *codec.CodecProxy, interfaceReg jsonpb.AnyResolver, reg
 	rs := NewRestServer(cdc, interfaceReg, tmNode)
 
 	registerRoutesFn(rs)
-	//rs.registerSwaggerUI() 
+	//rs.registerSwaggerUI()
 	rs.log.Info("start rest server")
 	// Start the rest server and return error if one exists
 	return rs.Start(

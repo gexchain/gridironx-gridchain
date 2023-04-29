@@ -286,13 +286,13 @@ func (suite *JournalTestSuite) TestJournal_createObjectChange_revert() {
 	addr := ethcmn.BytesToAddress([]byte("addr"))
 
 	suite.stateDB.stateObjects = map[ethcmn.Address]*stateObject{
-		addr: &stateObject{
+		addr: {
 			address: addr,
 		},
-		ethcmn.BytesToAddress([]byte("addr1")): &stateObject{
+		ethcmn.BytesToAddress([]byte("addr1")): {
 			address: ethcmn.BytesToAddress([]byte("addr1")),
 		},
-		ethcmn.BytesToAddress([]byte("addr2")): &stateObject{
+		ethcmn.BytesToAddress([]byte("addr2")): {
 			address: ethcmn.BytesToAddress([]byte("addr2")),
 		},
 	}

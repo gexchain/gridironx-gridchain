@@ -195,7 +195,7 @@ func (ar *AddressRecord) GetAddressTxs(address string, max int) types.Txs {
 
 func calculateMaxNonce(data *addrMap) uint64 {
 	maxNonce := uint64(0)
-	for k, _ := range data.items {
+	for k := range data.items {
 		if k > maxNonce {
 			maxNonce = k
 		}

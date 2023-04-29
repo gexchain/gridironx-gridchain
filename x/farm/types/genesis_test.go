@@ -22,32 +22,32 @@ func TestGenesisState(t *testing.T) {
 	}{
 		{
 			pools:     FarmPools{FarmPool{}, FarmPool{}},
-			lockInfos: []LockInfo{LockInfo{}, LockInfo{}},
+			lockInfos: []LockInfo{{}, {}},
 			histories: []PoolHistoricalRewardsRecord{
-				PoolHistoricalRewardsRecord{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
-				PoolHistoricalRewardsRecord{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
+				{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
+				{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
 			},
-			currents: []PoolCurrentRewardsRecord{PoolCurrentRewardsRecord{}, PoolCurrentRewardsRecord{}},
+			currents: []PoolCurrentRewardsRecord{{}, {}},
 			err:      nil,
 		},
 		{
 			pools:     FarmPools{FarmPool{}, FarmPool{}},
-			lockInfos: []LockInfo{LockInfo{}, LockInfo{}},
+			lockInfos: []LockInfo{{}, {}},
 			histories: []PoolHistoricalRewardsRecord{
-				PoolHistoricalRewardsRecord{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
-				PoolHistoricalRewardsRecord{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
+				{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
+				{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
 			},
-			currents: []PoolCurrentRewardsRecord{PoolCurrentRewardsRecord{}},
+			currents: []PoolCurrentRewardsRecord{{}},
 			err:      errors.New(""),
 		},
 		{
 			pools:     FarmPools{FarmPool{}, FarmPool{}},
-			lockInfos: []LockInfo{LockInfo{}, LockInfo{}},
+			lockInfos: []LockInfo{{}, {}},
 			histories: []PoolHistoricalRewardsRecord{
-				PoolHistoricalRewardsRecord{Rewards: PoolHistoricalRewards{ReferenceCount: 1}},
-				PoolHistoricalRewardsRecord{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
+				{Rewards: PoolHistoricalRewards{ReferenceCount: 1}},
+				{Rewards: PoolHistoricalRewards{ReferenceCount: 2}},
 			},
-			currents: []PoolCurrentRewardsRecord{PoolCurrentRewardsRecord{}, PoolCurrentRewardsRecord{}},
+			currents: []PoolCurrentRewardsRecord{{}, {}},
 			err:      errors.New(""),
 		},
 	}

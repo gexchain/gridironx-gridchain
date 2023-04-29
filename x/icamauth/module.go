@@ -12,12 +12,12 @@ import (
 	"github.com/gridironx/gridchain/x/icamauth/client/cli"
 
 	"github.com/gorilla/mux"
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	clictx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	interfacetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
 	"github.com/gridironx/gridchain/x/icamauth/types"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"
 )
 

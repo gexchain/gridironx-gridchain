@@ -496,18 +496,17 @@ func TestLimitedProxy(t *testing.T) {
 
 }
 
-//
 // Context: create 2 delegator(d1,d2) + 1 proxy(p) + 1 validator(v)
 // Operation Group:
-//          setup: v(create), p(deposit), d2(addShares to v)
-//          step1: p  5(regProxy, addShare(v), bind(p), unbind(p), withdrawSome)
-//			step2: d1 4(bind(p), addShare(v), unbind(p), withdrawSome)
-//			step3: d1 4(deposit, bind(p), unbind(p), withdrawSome)
-//          step4: p  5(regProxy, addShare(v), bind(p), unbind(p), withdrawSome)
-//          teardown: p(unReg), v(destroy)
-//          case possibilities: 1 * 1 * 5 * 5 * 4 * 4 = 400
-//          iterate all the possibilities to run delegatorConstraintCheck and validatorConstrainCheck
 //
+//	         setup: v(create), p(deposit), d2(addShares to v)
+//	         step1: p  5(regProxy, addShare(v), bind(p), unbind(p), withdrawSome)
+//				step2: d1 4(bind(p), addShare(v), unbind(p), withdrawSome)
+//				step3: d1 4(deposit, bind(p), unbind(p), withdrawSome)
+//	         step4: p  5(regProxy, addShare(v), bind(p), unbind(p), withdrawSome)
+//	         teardown: p(unReg), v(destroy)
+//	         case possibilities: 1 * 1 * 5 * 5 * 4 * 4 = 400
+//	         iterate all the possibilities to run delegatorConstraintCheck and validatorConstrainCheck
 func TestDelegatorProxyValidatorConstraints4Steps(t *testing.T) {
 	common.InitConfig()
 	params := DefaultParams()
@@ -628,19 +627,18 @@ func generateActionsAndCheckers(stepActions IActions, skipActCnt int) (ResChecke
 	return checkers, caseName
 }
 
-//
 // Context: create 1 delegator(d) + 1 proxy(p) + 1 validator(v)
 // Operation Group:
-//          step1: v 1(create)
-//          step2: p 7(deposit, regProxy, unregProxy, bind(p), unbind(p), addShare, withdraw)
-//			step3: d 5(deposit, bind(p), unbind(p), addShare(v), withdraw)
-//          step4: v 2(nil, destroy)
-//          step5: d 5(nil, deposit, withdraw, bind, unbind)
-//          step6: p 5(nil, deposit, withdraw, bind, unbind)
-//          step7: v 2(nil, destroy)
-//          possibilities: 1 * 5 * 7 * 2 * 5 * 5 * 2 = 3500
-//          iterate all the possibilities an run delegatorConstraintCheck and validatorConstrainCheck
 //
+//	         step1: v 1(create)
+//	         step2: p 7(deposit, regProxy, unregProxy, bind(p), unbind(p), addShare, withdraw)
+//				step3: d 5(deposit, bind(p), unbind(p), addShare(v), withdraw)
+//	         step4: v 2(nil, destroy)
+//	         step5: d 5(nil, deposit, withdraw, bind, unbind)
+//	         step6: p 5(nil, deposit, withdraw, bind, unbind)
+//	         step7: v 2(nil, destroy)
+//	         possibilities: 1 * 5 * 7 * 2 * 5 * 5 * 2 = 3500
+//	         iterate all the possibilities an run delegatorConstraintCheck and validatorConstrainCheck
 func TestDelegatorProxyValidatorShares7Steps(t *testing.T) {
 
 }

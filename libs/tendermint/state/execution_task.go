@@ -15,9 +15,9 @@ import (
 )
 
 type executionResult struct {
-	res *ABCIResponses
+	res      *ABCIResponses
 	duration time.Duration
-	err error
+	err      error
 }
 
 type executionTask struct {
@@ -87,7 +87,7 @@ func (t *executionTask) run() {
 
 	if !t.stopped {
 		t.result = &executionResult{
-			abciResponses, duration,err,
+			abciResponses, duration, err,
 		}
 		trace.GetElapsedInfo().AddInfo(trace.Prerun, fmt.Sprintf("%d", t.index))
 	}
@@ -96,7 +96,7 @@ func (t *executionTask) run() {
 	t.taskResultChan <- t
 }
 
-//========================================================
+// ========================================================
 func (blockExec *BlockExecutor) InitPrerun() {
 	if blockExec.deltaContext.downloadDelta {
 		panic("download delta is not allowed if prerun enabled")

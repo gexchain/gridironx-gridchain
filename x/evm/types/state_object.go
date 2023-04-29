@@ -13,12 +13,12 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
-	lru "github.com/hashicorp/golang-lru"
 	"github.com/gridironx/gridchain/app/types"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
 	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	lru "github.com/hashicorp/golang-lru"
 )
 
 const keccak256HashSize = 100000

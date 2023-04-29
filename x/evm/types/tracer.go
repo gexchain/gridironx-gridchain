@@ -9,8 +9,8 @@ import (
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/eth/tracers"
-	json "github.com/json-iterator/go"
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	json "github.com/json-iterator/go"
 )
 
 type TraceConfig struct {

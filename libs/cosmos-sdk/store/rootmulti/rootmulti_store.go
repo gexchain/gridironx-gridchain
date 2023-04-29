@@ -20,7 +20,6 @@ import (
 	"github.com/gridironx/gridchain/libs/system/trace/persist"
 	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
 
-	jsoniter "github.com/json-iterator/go"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/cachemulti"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/dbadapter"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/flatkv"
@@ -33,6 +32,7 @@ import (
 	iavltree "github.com/gridironx/gridchain/libs/iavl"
 	"github.com/gridironx/gridchain/libs/iavl/config"
 	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	jsoniter "github.com/json-iterator/go"
 
 	//"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
 	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"

@@ -40,7 +40,7 @@ echo $res | jq
 # claim fury from cw4-stake
 res=$(gridchaincli tx wasm store ../cw4-stake/artifacts/cw4_stake.wasm --from $captain $TX_EXTRA)
 code_id=$(echo "$res" | jq '.logs[0].events[1].attributes[0].value' | sed 's/\"//g')
-# native token must be "fury", not "OKT" or tokens with other names
+# native token must be "fury", not "FURY" or tokens with other names
 res=$(gridchaincli tx wasm instantiate "$code_id" '{"denom":{"native":"fury"},"min_bond":"50","tokens_per_weight":"5","unbonding_period":{"height":0}}' --label test1 --admin $captain --from captain $TX_EXTRA)
 contractAddr=$(echo "$res" | jq '.logs[0].events[0].attributes[0].value' | sed 's/\"//g')
 echo "cw4-stake contract address: $contractAddr"

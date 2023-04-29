@@ -158,7 +158,7 @@ func TestMsgUndelegate(t *testing.T) {
 	}
 }
 
-//test to validate if NewMsgCreateValidator implements yaml marshaller
+// test to validate if NewMsgCreateValidator implements yaml marshaller
 func TestMsgMarshalYAML(t *testing.T) {
 	commission1 := NewCommissionRates(sdk.ZeroDec(), sdk.ZeroDec(), sdk.ZeroDec())
 	tc := struct {

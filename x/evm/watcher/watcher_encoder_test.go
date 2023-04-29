@@ -6,9 +6,9 @@ import (
 	"math"
 	"testing"
 
-	jsoniter "github.com/json-iterator/go"
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/gridironx/gridchain/x/evm/types"
+	jsoniter "github.com/json-iterator/go"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/go-amino"
 )

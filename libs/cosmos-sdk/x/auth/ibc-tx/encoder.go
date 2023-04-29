@@ -240,7 +240,7 @@ func (t *TxAdapter) GetSigners() []sdk.AccAddress {
 //	return unpacker.UnpackAny(m.PublicKey, new(cryptotypes.PubKey))
 //}
 
-//TODO add call RegisterInterfaces
+// TODO add call RegisterInterfaces
 // RegisterInterfaces registers the sdk.Tx interface.
 func RegisterInterfaces(registry codectypes.InterfaceRegistry) {
 	registry.RegisterInterface("cosmos.tx.v1beta1.Tx", (*sdk.Tx)(nil))

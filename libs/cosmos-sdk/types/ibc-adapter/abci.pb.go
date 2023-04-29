@@ -5,9 +5,9 @@ package types
 
 import (
 	fmt "fmt"
-	types "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
+	types "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 	types1 "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	//costypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	io "io"

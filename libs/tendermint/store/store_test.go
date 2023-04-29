@@ -730,7 +730,7 @@ func TestCalcKey(t *testing.T) {
 
 	for _, tc := range [][]byte{
 		nil,
-		[]byte{},
+		{},
 		make([]byte, 100),
 		make([]byte, 1024),
 	} {

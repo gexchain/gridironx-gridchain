@@ -1534,7 +1534,7 @@ func TestValidatorSetProtoBuf(t *testing.T) {
 	}
 }
 
-//---------------------
+// ---------------------
 // Sort validators by priority and address
 type validatorsByPriority []*Validator
 
@@ -1558,7 +1558,7 @@ func (valz validatorsByPriority) Swap(i, j int) {
 	valz[j] = it
 }
 
-//-------------------------------------
+// -------------------------------------
 // Sort testVal-s by address.
 type testValsByAddress []testVal
 
@@ -1576,9 +1576,8 @@ func (tvals testValsByAddress) Swap(i, j int) {
 	tvals[j] = it
 }
 
-//-------------------------------------
+// -------------------------------------
 // Benchmark tests
-//
 func BenchmarkUpdates(b *testing.B) {
 	const (
 		n = 100

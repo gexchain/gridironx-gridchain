@@ -48,7 +48,7 @@ func TestSubProcess(t *testing.T) {
 		}
 	}
 
-	for i, _ := range funcs {
+	for i := range funcs {
 		var outb, errb bytes.Buffer
 		cmd := exec.Command(os.Args[0], "-test.run=TestSubProcess")
 		cmd.Env = append(os.Environ(), fmt.Sprintf("SUB_PROCESS=%d", i))

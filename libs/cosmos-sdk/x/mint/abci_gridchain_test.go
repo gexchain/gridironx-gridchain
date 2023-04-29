@@ -18,7 +18,7 @@ const (
 	DeflationEpoch uint64 = 3               // Default epoch, 3 year
 	DeflationRate  string = "0.5"           // Default deflation rate 0.5
 	FarmProportion string = "0.5"           // Default farm proportion 0.5
-	Denom          string = "fury"           // OKT
+	Denom          string = "fury"          // FURY
 	FeeAccountName string = "fee_collector" // Fee account
 
 	InitStartBlock    int64  = 17601985 // Current mainnet block,  17601985

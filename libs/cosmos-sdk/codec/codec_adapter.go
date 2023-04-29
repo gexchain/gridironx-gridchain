@@ -130,7 +130,7 @@ type (
 	}
 )
 
-/////////
+// ///////
 var (
 	_ CdcAbstraction = (*CodecProxy)(nil)
 )

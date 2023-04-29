@@ -55,7 +55,6 @@ $ gridchaincli query erc20 params
 	}
 }
 
-//
 func GetCmdQueryTokenMapping(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "token-mapping",

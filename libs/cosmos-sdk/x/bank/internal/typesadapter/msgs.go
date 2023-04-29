@@ -118,7 +118,7 @@ func (msg *MsgMultiSend) ValidateBasic() error {
 
 func (m *MsgMultiSend) GetSigners() []types.AccAddress {
 	froms := make([]types.AccAddress, 0)
-	for i, _ := range m.Inputs {
+	for i := range m.Inputs {
 		from, err := types.AccAddressFromBech32(m.Inputs[i].Address)
 		if err != nil {
 			panic(err)
@@ -160,6 +160,7 @@ func (in Input) ValidateBasic() error {
 }
 
 // NewInput - create a transaction input, used with MsgMultiSend
+//
 //nolint:interfacer
 func NewInput(addr sdk.AccAddress, coins sdk.Coins) Input {
 	return Input{
@@ -187,6 +188,7 @@ func (out Output) ValidateBasic() error {
 }
 
 // NewOutput - create a transaction output, used with MsgMultiSend
+//
 //nolint:interfacer
 func NewOutput(addr sdk.AccAddress, coins sdk.Coins) Output {
 	return Output{

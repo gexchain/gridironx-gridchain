@@ -43,7 +43,7 @@ func GetDelegatorWithdrawInfoAddress(key []byte) (delAddr sdk.AccAddress) {
 	return sdk.AccAddress(addr)
 }
 
-//GetValidatorAccumulatedCommissionAddress returns the address from a validator's accumulated commission key
+// GetValidatorAccumulatedCommissionAddress returns the address from a validator's accumulated commission key
 func GetValidatorAccumulatedCommissionAddress(key []byte) (valAddr sdk.ValAddress) {
 	addr := key[1:]
 	if len(addr) != sdk.AddrLen {

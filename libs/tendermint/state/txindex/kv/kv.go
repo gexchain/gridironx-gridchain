@@ -21,8 +21,8 @@ import (
 
 const (
 	tagKeySeparator = "/"
-	defaultTimeOut = 5 * time.Second
-	maxQueryRange = 256
+	defaultTimeOut  = 5 * time.Second
+	maxQueryRange   = 256
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

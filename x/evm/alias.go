@@ -24,7 +24,7 @@ var (
 	NewMultiEvmHooks     = keeper.NewMultiEvmHooks
 )
 
-//nolint
+// nolint
 type (
 	Keeper        = keeper.Keeper
 	GenesisState  = types.GenesisState

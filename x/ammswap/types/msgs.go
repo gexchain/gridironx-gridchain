@@ -203,7 +203,7 @@ type MsgTokenToToken struct {
 	Sender               sdk.AccAddress `json:"sender"`                  // Sender
 }
 
-// NewMsgTokenToToken is a constructor function for MsgTokenOKTSwap
+// NewMsgTokenToToken is a constructor function for MsgTokenFURYSwap
 func NewMsgTokenToToken(
 	soldTokenAmount, minBoughtTokenAmount sdk.SysCoin, deadline int64, recipient, sender sdk.AccAddress,
 ) MsgTokenToToken {

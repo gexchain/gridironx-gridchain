@@ -6,9 +6,9 @@ import (
 )
 
 const (
-	AccStore    = "acc"
-	EvmStore    = "evm"
-	MptStore    = "mpt"       // new store for acc module, will use mpt instead of iavl as store engine
+	AccStore = "acc"
+	EvmStore = "evm"
+	MptStore = "mpt" // new store for acc module, will use mpt instead of iavl as store engine
 )
 
 func evmAccStoreFilter(sName string, ver int64, forceFilter ...bool) bool {

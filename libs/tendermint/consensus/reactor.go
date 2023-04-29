@@ -123,7 +123,7 @@ func (conR *Reactor) updateRoundStateRoutine() {
 	t := time.NewTicker(100 * time.Microsecond)
 	defer t.Stop()
 
-	for _ = range t.C {
+	for range t.C {
 		rs := conR.conS.GetRoundState()
 		conR.mtx.Lock()
 		conR.rs = rs

@@ -40,7 +40,7 @@ const (
 	RPCNullData  = "null"
 )
 
-//gasPrice: to get "minimum-gas-prices" config or to get ethermint.DefaultGasPrice
+// gasPrice: to get "minimum-gas-prices" config or to get ethermint.DefaultGasPrice
 func ParseGasPrice() *hexutil.Big {
 	gasPrices, err := sdk.ParseDecCoins(viper.GetString(server.FlagMinGasPrices))
 	if err == nil && gasPrices != nil && len(gasPrices) > 0 {
@@ -179,9 +179,9 @@ func TransformDataError(err error, method string) error {
 	}
 }
 
-//Preprocess error string, the string of realErr.Log is most like:
-//`["execution reverted","message","HexData","0x00000000000"];some failed information`
-//we need marshalled json slice from realErr.Log and using segment tag `[` and `]` to cut it
+// Preprocess error string, the string of realErr.Log is most like:
+// `["execution reverted","message","HexData","0x00000000000"];some failed information`
+// we need marshalled json slice from realErr.Log and using segment tag `[` and `]` to cut it
 func preProcessError(realErr *cosmosError, origErrorMsg string) (map[string]string, error) {
 	var logs []string
 	lastSeg := strings.LastIndexAny(realErr.Log, "]")

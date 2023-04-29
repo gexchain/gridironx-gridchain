@@ -119,7 +119,7 @@ func (k Keeper) AllocateTokenToTreasure(ctx sdk.Context, fees sdk.Coins) (remain
 	treasures := k.GetTreasures(ctx)
 	remain = sdk.NewCoins()
 	remain = remain.Add(fees...)
-	for i, _ := range treasures {
+	for i := range treasures {
 		allocated := fees.MulDecTruncate(treasures[i].Proportion)
 		if err = k.supplyKeeper.SendCoinsFromModuleToAccount(ctx, types.ModuleName, treasures[i].Address, allocated); err != nil {
 			return

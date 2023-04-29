@@ -7,7 +7,6 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
@@ -16,6 +15,7 @@ import (
 	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
 	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
 	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"
 
 	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"

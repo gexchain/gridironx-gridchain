@@ -24,7 +24,7 @@ var (
 			return func(callback cosmost.VersionCallback) {}
 		}
 		return func(callback cosmost.VersionCallback) {
-			for name, _ := range ibcV4Map {
+			for name := range ibcV4Map {
 				hh := tmtypes.GetVenus4Height()
 				callback(name, hh)
 			}

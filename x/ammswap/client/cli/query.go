@@ -38,7 +38,7 @@ func GetQueryCmd(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return swapQueryCmd
 }
 
-//GetCmdSwapTokenPair query exchange with token name
+// GetCmdSwapTokenPair query exchange with token name
 func GetCmdSwapTokenPair(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "pool [base-token] [quote-token]",
@@ -139,7 +139,7 @@ $ %s query swap params
 	}
 }
 
-//GetCmdAllSwapTokenPairs lists all info of pools
+// GetCmdAllSwapTokenPairs lists all info of pools
 func GetCmdAllSwapTokenPairs(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "pools",
@@ -169,7 +169,7 @@ $ gridchaincli query swap pools
 	}
 }
 
-//GetCmdRedeemableAssets query redeemable assets by specifying the number of lpt
+// GetCmdRedeemableAssets query redeemable assets by specifying the number of lpt
 func GetCmdRedeemableAssets(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "redeemable-assets [base-token] [quote-token] [pool-token-amount]",

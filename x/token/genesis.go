@@ -24,14 +24,14 @@ type GenesisState struct {
 func defaultGenesisState() GenesisState {
 	return GenesisState{
 		Params:       types.DefaultParams(),
-		Tokens:       []types.Token{defaultGenesisStateOKT()},
+		Tokens:       []types.Token{defaultGenesisStateFURY()},
 		LockedAssets: nil,
 		LockedFees:   nil,
 	}
 }
 
 // default fury information
-func defaultGenesisStateOKT() types.Token {
+func defaultGenesisStateFURY() types.Token {
 	addr, err := sdk.AccAddressFromBech32(DefaultTokenOwner)
 	if err != nil {
 		panic(err)
@@ -42,7 +42,7 @@ func defaultGenesisStateOKT() types.Token {
 		Description:         "OK Group Global Utility Token",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		WholeName:           "OKT",
+		WholeName:           "FURY",
 		OriginalTotalSupply: totalSupply,
 		Owner:               addr,
 		Mintable:            true,

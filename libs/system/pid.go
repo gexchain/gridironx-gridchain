@@ -6,6 +6,7 @@ import (
 )
 
 const ChainName = "GRIDC"
+
 var once sync.Once
 var pid int
 

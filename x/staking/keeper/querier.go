@@ -490,7 +490,7 @@ func delegationsToDelegationResponses(
 	return resp, nil
 }
 
-/////
+// ///
 // utils
 func delegationToDelegationResponse(ctx sdk.Context, k Keeper, del stakingtypes.Delegation) (stakingtypes.DelegationResponse, error) {
 	val, found := k.GetValidator(ctx, del.ValidatorAddress)

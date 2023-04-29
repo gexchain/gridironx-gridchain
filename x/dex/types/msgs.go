@@ -199,7 +199,7 @@ func (msg MsgTransferOwnership) GetSigners() []sdk.AccAddress {
 	return []sdk.AccAddress{msg.FromAddress}
 }
 
-//MsgConfirmOwnership - high level transaction of the coin module
+// MsgConfirmOwnership - high level transaction of the coin module
 type MsgConfirmOwnership struct {
 	Product string         `json:"product"`
 	Address sdk.AccAddress `json:"new_owner"`

@@ -19,7 +19,6 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rpc"
-	lru "github.com/hashicorp/golang-lru"
 	"github.com/gridironx/gridchain/app/config"
 	appconfig "github.com/gridironx/gridchain/app/config"
 	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
@@ -53,6 +52,7 @@ import (
 	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 	"github.com/gridironx/gridchain/x/evm/watcher"
 	"github.com/gridironx/gridchain/x/vmbridge"
+	lru "github.com/hashicorp/golang-lru"
 	"github.com/spf13/viper"
 )
 

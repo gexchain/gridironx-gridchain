@@ -8,7 +8,6 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	jsoniter "github.com/json-iterator/go"
 	"github.com/gridironx/gridchain/app/rpc/namespaces/eth/state"
 	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
@@ -19,6 +18,7 @@ import (
 	tmstate "github.com/gridironx/gridchain/libs/tendermint/state"
 	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	jsoniter "github.com/json-iterator/go"
 	"github.com/spf13/viper"
 	"github.com/tendermint/go-amino"
 )
@@ -354,7 +354,7 @@ func (w *Watcher) CommitWatchData(data WatchData) {
 
 	if w.checkWd {
 		keys := make([][]byte, len(data.Batches))
-		for i, _ := range data.Batches {
+		for i := range data.Batches {
 			keys[i] = data.Batches[i].Key
 		}
 		w.CheckWatchDB(keys, "consumer")
@@ -401,7 +401,7 @@ func (w *Watcher) commitBatch(batch []WatchMessage) {
 	}
 	if w.checkWd {
 		keys := make([][]byte, len(batch))
-		for i, _ := range batch {
+		for i := range batch {
 			keys[i] = batch[i].GetKey()
 		}
 		w.CheckWatchDB(keys, "producer")
@@ -598,7 +598,7 @@ func filterDirtyList(datas [][]byte) [][]byte {
 	return ret
 }
 
-/////////// job
+// ///////// job
 func (w *Watcher) jobRoutine() {
 	if !w.Enabled() {
 		return

@@ -111,7 +111,8 @@ func HasSufficientCoins(addr sdk.AccAddress, availableCoins, amt sdk.Coins) (err
 // (described in http://gitlab.gridcoin-inc.com/dex/gridchain/issues/472)
 // if System environment variables "SYS_TEST_ALL" is set to 1, all of the system test will be enable. \n
 // if System environment variables "ORM_MYSQL_SYS_TEST" is set to 1,
-// 				all of the system test in orm_mysql_sys_test.go will be enble.
+//
+//	all of the system test in orm_mysql_sys_test.go will be enble.
 func SkipSysTestChecker(t *testing.T) {
 	_, fname, _, ok := runtime.Caller(0)
 	enable := ok

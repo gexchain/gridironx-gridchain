@@ -11,11 +11,11 @@ import (
 var (
 	_      upgrade.UpgradeModule = (*BaseIBCUpgradeModule)(nil)
 	ibcMap                       = map[string]struct{}{
-		"ibc":            struct{}{},
-		"mem_capability": struct{}{},
-		"capability":     struct{}{},
-		"transfer":       struct{}{},
-		"erc20":          struct{}{},
+		"ibc":            {},
+		"mem_capability": {},
+		"capability":     {},
+		"transfer":       {},
+		"erc20":          {},
 	}
 
 	defaultIBCVersionFilter cosmost.VersionFilter = func(h int64) func(cb func(name string, version int64)) {
@@ -24,7 +24,7 @@ var (
 		}
 
 		return func(cb func(name string, version int64)) {
-			for name, _ := range ibcMap {
+			for name := range ibcMap {
 				hh := types.GetVenus1Height()
 				cb(name, hh)
 			}
