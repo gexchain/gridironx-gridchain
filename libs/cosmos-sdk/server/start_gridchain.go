@@ -44,7 +44,7 @@ const (
 )
 
 var (
-	ChainID = "gridchain-66"
+	ChainID = "clockend-666"
 )
 
 //module hook

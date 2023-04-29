@@ -114,7 +114,7 @@ ifeq ($(WITH_ROCKSDB),true)
 endif
 
 ifeq ($(MAKECMDGOALS),testnet)
-  ldflags += -X github.com/gridironx/gridchain/libs/cosmos-sdk/server.ChainID=gridchain-65
+  ldflags += -X github.com/gridironx/gridchain/libs/cosmos-sdk/server.ChainID=clockend-420
 endif
 
 ifeq ($(LINK_STATICALLY),true)
