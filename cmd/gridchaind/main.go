@@ -44,7 +44,7 @@ import (
 )
 
 const flagInvCheckPeriod = "inv-check-period"
-const GridcEnvPrefix = "GRIDIRONXCHAIN"
+const GridcEnvPrefix = "GRIDIronxChainApp"
 
 var invCheckPeriod uint
 
@@ -71,7 +71,7 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:               "gridchaind",
-		Short:             "ExChain App Daemon (server)",
+		Short:             "GridChain App Daemon (server)",
 		PersistentPreRunE: preRun(ctx),
 	}
 	// CLI commands to initialize the chain
