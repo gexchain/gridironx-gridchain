@@ -229,7 +229,7 @@ func (m *Commission) GetUpdateTime() time.Time {
 type Description struct {
 	// moniker defines a human-readable name for the validator.
 	Moniker string `protobuf:"bytes,1,opt,name=moniker,proto3" json:"moniker,omitempty"`
-	// identity defines an optional identity signature (ex. UPort or Keybase).
+	// identity defines an optional identity signature (did:fury:ex. UPort or Keybase).
 	Identity string `protobuf:"bytes,2,opt,name=identity,proto3" json:"identity,omitempty"`
 	// website defines an optional website link.
 	Website string `protobuf:"bytes,3,opt,name=website,proto3" json:"website,omitempty"`

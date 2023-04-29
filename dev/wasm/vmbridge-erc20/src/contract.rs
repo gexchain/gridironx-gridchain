@@ -16,7 +16,7 @@ pub const PREFIX_ALLOWANCES: &[u8] = b"allowances";
 
 pub const KEY_CONSTANTS: &[u8] = b"constants";
 pub const KEY_TOTAL_SUPPLY: &[u8] = b"total_supply";
-const EVM_CONTRACT_ADDR: &str = "ex19yaqyv090mjenkenw3d7lxlucvstg00p2r45pk";
+const EVM_CONTRACT_ADDR: &str = "did:fury:ex19yaqyv090mjenkenw3d7lxlucvstg00p2r45pk";
 pub const REPLY_ID_ERROR: u64 = 0;
 pub const REPLY_ID_SUCCESS: u64 = 1;
 

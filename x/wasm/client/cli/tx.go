@@ -113,7 +113,7 @@ func NewExecuteContractCmd(m *codec.CodecProxy, reg codectypes.InterfaceRegistry
 	cmd := &cobra.Command{
 		Use:     "execute [contract_addr_bech32] [json_encoded_send_args] --amount [coins,optional]",
 		Short:   "Execute a command on a wasm contract",
-		Aliases: []string{"run", "call", "exec", "ex", "e"},
+		Aliases: []string{"run", "call", "exec", "did:fury:ex", "e"},
 		Args:    cobra.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			inBuf := bufio.NewReader(cmd.InOrStdin())

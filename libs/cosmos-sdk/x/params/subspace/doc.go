@@ -8,6 +8,6 @@ Consumer modules must take a Subspace (via Keeper.Subspace), not the keeper
 itself. This isolates each modules from the others and make them modify their
 respective parameters safely. Keeper can be treated as master permission for all
 Subspaces (via Keeper.GetSubspace), so should be passed to proper modules
-(ex. x/governance).
+(did:fury:ex. x/governance).
 */
 package subspace

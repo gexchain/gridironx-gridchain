@@ -18,7 +18,7 @@ func initConfig() {
 
 func TestHasSufCoins(t *testing.T) {
 	initConfig()
-	addr, err := sdk.AccAddressFromBech32("ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658")
+	addr, err := sdk.AccAddressFromBech32("did:fury:ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658")
 	require.Nil(t, err)
 
 	availDecCoins, err := sdk.ParseDecCoins(fmt.Sprintf("%d%s,%d%s",
@@ -54,7 +54,7 @@ func TestBlackHoleAddress(t *testing.T) {
 	addr := BlackHoleAddress()
 	a := addr.String()
 	fmt.Println(a)
-	require.Equal(t, "ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2", addr.String())
+	require.Equal(t, "did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2", addr.String())
 }
 
 func TestGetFixedLengthRandomString(t *testing.T) {

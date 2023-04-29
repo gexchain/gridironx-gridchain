@@ -200,7 +200,7 @@ func contractHandlerFnV2(cliCtx context.CLIContext) http.HandlerFunc {
 			comm.HandleErrorMsg(w, cliCtx, comm.CodeUnMarshalJSONFailed, err.Error())
 			return
 		}
-		// convert ex to 0x
+		// convert did:fury:ex to 0x
 		if addr, err := sdk.AccAddressFromBech32(result.FeeSplit.DeployerAddress); err == nil {
 			result.FeeSplit.DeployerAddress = ethcmn.BytesToAddress(addr.Bytes()).String()
 		}
@@ -256,7 +256,7 @@ func deployerHandlerFnV2(cliCtx context.CLIContext) http.HandlerFunc {
 			comm.HandleErrorMsg(w, cliCtx, comm.CodeUnMarshalJSONFailed, err.Error())
 			return
 		}
-		// convert ex to 0x
+		// convert did:fury:ex to 0x
 		for i, fs := range result.FeeSplits {
 			if addr, err := sdk.AccAddressFromBech32(fs.DeployerAddress); err == nil {
 				result.FeeSplits[i].DeployerAddress = ethcmn.BytesToAddress(addr.Bytes()).String()

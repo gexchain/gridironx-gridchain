@@ -10,13 +10,13 @@ import (
 )
 
 const (
-	addr           = "ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+	addr           = "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
 	addr1          = "0x83D83497431C2D3FEab296a9fba4e5FaDD2f7eD0"
 	expectedOutput = `Address List:
-ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc
-ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc`
+did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc
+did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc`
 	expectedBlockListOutput = `BlockedContractList List:
-Address: ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc
+Address: did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc
 Method List:
 Sign: aaaaExtra: aaaa()`
 )

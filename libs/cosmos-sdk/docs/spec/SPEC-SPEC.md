@@ -22,7 +22,7 @@ element as a part of a larger description.
 The following generalized file structure should be used to breakdown
 specifications for modules. With the exception of README.md, `XX` at the
 beginning of the file name should be replaced with a number to indicate
-document flow (ex. read `01_state.md` before `02_state_transitions.md`). The
+document flow (did:fury:ex. read `01_state.md` before `02_state_transitions.md`). The
 following list is nonbinding and all files are optional.
 
 - `README.md` - overview of the module

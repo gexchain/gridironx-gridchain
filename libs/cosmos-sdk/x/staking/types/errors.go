@@ -51,7 +51,7 @@ var (
 	ErrBadRedelegationDst              = sdkerrors.Register(ModuleName, 38, "redelegation destination validator not found")
 	ErrTransitiveRedelegation          = sdkerrors.Register(ModuleName, 39, "redelegation to this validator already in progress; first redelegation to this validator must complete before next redelegation")
 	ErrMaxRedelegationEntries          = sdkerrors.Register(ModuleName, 40, "too many redelegation entries for (delegator, src-validator, dst-validator) tuple")
-	ErrDelegatorShareExRateInvalid     = sdkerrors.Register(ModuleName, 41, "cannot delegate to validators with invalid (zero) ex-rate")
+	ErrDelegatorShareExRateInvalid     = sdkerrors.Register(ModuleName, 41, "cannot delegate to validators with invalid (zero) did:fury:ex-rate")
 	ErrBothShareMsgsGiven              = sdkerrors.Register(ModuleName, 42, "both shares amount and shares percent provided")
 	ErrNeitherShareMsgsGiven           = sdkerrors.Register(ModuleName, 43, "neither shares amount nor shares percent provided")
 	ErrInvalidHistoricalInfo           = sdkerrors.Register(ModuleName, 44, "invalid historical info")

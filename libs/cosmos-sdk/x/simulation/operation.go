@@ -31,7 +31,7 @@ const (
 	QueuedMsgEntryKind  = "queued_msg"
 )
 
-// OperationEntry - an operation entry for logging (ex. BeginBlock, EndBlock, XxxMsg, etc)
+// OperationEntry - an operation entry for logging (did:fury:ex. BeginBlock, EndBlock, XxxMsg, etc)
 type OperationEntry struct {
 	EntryKind string          `json:"entry_kind" yaml:"entry_kind"`
 	Height    int64           `json:"height" yaml:"height"`

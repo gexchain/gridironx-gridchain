@@ -438,7 +438,7 @@ const DoNotModifyDesc = "[do-not-modify]"
 // Description - description fields for a validator
 type Description struct {
 	Moniker  string `json:"moniker" yaml:"moniker"`   // name
-	Identity string `json:"identity" yaml:"identity"` // optional identity signature (ex. UPort or Keybase)
+	Identity string `json:"identity" yaml:"identity"` // optional identity signature (did:fury:ex. UPort or Keybase)
 	Website  string `json:"website" yaml:"website"`   // optional website link
 	Details  string `json:"details" yaml:"details"`   // optional details
 }

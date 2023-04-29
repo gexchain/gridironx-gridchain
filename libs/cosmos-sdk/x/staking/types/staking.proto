@@ -62,7 +62,7 @@ message Description {
 
   // moniker defines a human-readable name for the validator.
   string moniker = 1;
-  // identity defines an optional identity signature (ex. UPort or Keybase).
+  // identity defines an optional identity signature (did:fury:ex. UPort or Keybase).
   string identity = 2;
   // website defines an optional website link.
   string website = 3;

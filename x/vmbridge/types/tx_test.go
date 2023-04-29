@@ -64,17 +64,17 @@ func TestMsgSendToEvm_GetSignBytes(t *testing.T) {
 		},
 		{
 			name:  "sender is error",
-			msg:   MsgSendToEvm{Sender: "ex111", Contract: sdk.AccAddress{0x2}.String(), Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
+			msg:   MsgSendToEvm{Sender: "did:fury:ex111", Contract: sdk.AccAddress{0x2}.String(), Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
 			isErr: true,
 		},
 		{
 			name:  "contract is error",
-			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: "ex111", Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
+			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: "did:fury:ex111", Recipient: sdk.AccAddress{0x3}.String(), Amount: sdk.NewInt(1)},
 			isErr: true,
 		},
 		{
 			name:  "recipient is error",
-			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: sdk.AccAddress{0x2}.String(), Recipient: "ex111", Amount: sdk.NewInt(1)},
+			msg:   MsgSendToEvm{Sender: sdk.AccAddress{0x1}.String(), Contract: sdk.AccAddress{0x2}.String(), Recipient: "did:fury:ex111", Amount: sdk.NewInt(1)},
 			isErr: true,
 		},
 		{
@@ -222,12 +222,12 @@ func TestMsgCallToEvm_GetSignBytes(t *testing.T) {
 		},
 		{
 			name:  "sender is error",
-			msg:   MsgCallToEvm{Sender: "ex111", Evmaddr: sdk.AccAddress{0x2}.String(), Value: sdk.NewInt(1), Calldata: "CALL DATA"},
+			msg:   MsgCallToEvm{Sender: "did:fury:ex111", Evmaddr: sdk.AccAddress{0x2}.String(), Value: sdk.NewInt(1), Calldata: "CALL DATA"},
 			isErr: true,
 		},
 		{
 			name:  "contract is error",
-			msg:   MsgCallToEvm{Sender: sdk.AccAddress{0x1}.String(), Evmaddr: "ex111", Value: sdk.NewInt(1), Calldata: "CALL DATA"},
+			msg:   MsgCallToEvm{Sender: sdk.AccAddress{0x1}.String(), Evmaddr: "did:fury:ex111", Value: sdk.NewInt(1), Calldata: "CALL DATA"},
 			isErr: true,
 		},
 		{
@@ -288,7 +288,7 @@ func TestMsgCallToEvm_ValidateBasic(t *testing.T) {
 			isErr: true,
 		},
 		{
-			name:  "sender is ex",
+			name:  "sender is did:fury:ex",
 			msg:   MsgCallToEvm{Sender: addrEx, Evmaddr: addr0x, Value: sdk.NewInt(1), Calldata: "CALL DATA"},
 			isErr: false,
 		},
@@ -308,7 +308,7 @@ func TestMsgCallToEvm_ValidateBasic(t *testing.T) {
 			isErr: true,
 		},
 		{
-			name:  "contract is ex ",
+			name:  "contract is did:fury:ex ",
 			msg:   MsgCallToEvm{Sender: addr0x, Evmaddr: addrEx, Value: sdk.NewInt(1), Calldata: "CALL DATA"},
 			isErr: false,
 		},

@@ -38,7 +38,7 @@ var (
 func init() {
 	FsPk.String(FlagPubKey, "", "The Bech32 encoded PubKey of the validator")
 	fsDescriptionCreate.String(FlagMoniker, "", "The validator's name")
-	fsDescriptionCreate.String(FlagIdentity, "", "The optional identity signature (ex. UPort or Keybase)")
+	fsDescriptionCreate.String(FlagIdentity, "", "The optional identity signature (did:fury:ex. UPort or Keybase)")
 	fsDescriptionCreate.String(FlagWebsite, "", "The validator's (optional) website")
 	fsDescriptionCreate.String(FlagDetails, "", "The validator's (optional) details")
 	//fsCommissionUpdate.String(FlagCommissionRate, "", "The new commission rate percentage")
@@ -49,7 +49,7 @@ func init() {
 	//	"The minimum self delegation required on the validator")
 	fsDescriptionEdit.String(FlagMoniker, types.DoNotModifyDesc, "The validator's name")
 	fsDescriptionEdit.String(FlagIdentity, types.DoNotModifyDesc,
-		"The (optional) identity signature (ex. UPort or Keybase)")
+		"The (optional) identity signature (did:fury:ex. UPort or Keybase)")
 	fsDescriptionEdit.String(FlagWebsite, types.DoNotModifyDesc, "The validator's (optional) website")
 	fsDescriptionEdit.String(FlagDetails, types.DoNotModifyDesc, "The validator's (optional) details")
 }

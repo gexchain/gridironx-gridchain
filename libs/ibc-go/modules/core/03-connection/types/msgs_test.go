@@ -24,7 +24,7 @@ import (
 
 var (
 	//signer = "cosmos1ckgw5d7jfj7wwxjzs9fdrdev9vc8dzcw3n2lht"
-	signer = "ex15nnhqdf9sds0s063kaaretxj3ftlnzrguhfdeq"
+	signer = "did:fury:ex15nnhqdf9sds0s063kaaretxj3ftlnzrguhfdeq"
 
 	emptyPrefix = commitmenttypes.MerklePrefix{}
 	emptyProof  = []byte{}

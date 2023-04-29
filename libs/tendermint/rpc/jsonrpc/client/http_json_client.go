@@ -54,7 +54,7 @@ func (u *parsedURL) SetDefaultSchemeHTTP() {
 	case protoHTTP, protoHTTPS, protoWS, protoWSS:
 		// known protocols not changed
 	default:
-		// default to http for unknown protocols (ex. tcp)
+		// default to http for unknown protocols (did:fury:ex. tcp)
 		u.Scheme = protoHTTP
 	}
 }

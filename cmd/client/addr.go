@@ -12,7 +12,7 @@ import (
 
 const (
 	gridironxPrefix = "gridchain"
-	exPrefix        = "ex"
+	exPrefix        = "did:fury:ex"
 	rawPrefix       = "0x"
 )
 
@@ -25,7 +25,7 @@ func AddrCommands() *cobra.Command {
 		Short: "opreate all kind of address in the " + system.ChainName + " network",
 		Long: ` Address is a identification for join in the ` + system.ChainName + ` network.
 
-	The address in ` + system.ChainName + ` network begins with "ex" or "0x"`,
+	The address in ` + system.ChainName + ` network begins with "did:fury:ex" or "0x"`,
 	}
 	cmd.AddCommand(convertCommand())
 	return cmd
@@ -36,7 +36,7 @@ func convertCommand() *cobra.Command {
 	return &cobra.Command{
 		Use:   "convert [sourceAddr]",
 		Short: "convert source address to all kind of address in the " + system.ChainName + " network",
-		Long: `sourceAddr must be begin with "gridchain","ex" or "0x".
+		Long: `sourceAddr must be begin with "gridchain","did:fury:ex" or "0x".
 	
 	When input one of these address, we will convert to the other kinds.`,
 		Args: cobra.ExactArgs(1),
@@ -52,7 +52,7 @@ func convertCommand() *cobra.Command {
 				rawPrefix:       hexFromAccAddr,
 			}
 
-			// prefix is "gridchain","ex" or "0x"
+			// prefix is "gridchain","did:fury:ex" or "0x"
 			// convert srcAddr to accAddr
 			var accAddr sdk.AccAddress
 			var err error

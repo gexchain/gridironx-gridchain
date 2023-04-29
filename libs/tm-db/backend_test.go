@@ -255,7 +255,7 @@ func testDBIterator(t *testing.T, backend BackendType) {
 
 	ritr, err = db.ReverseIterator(int642Bytes(10), nil)
 	require.NoError(t, err)
-	verifyIterator(t, ritr, []int64(nil), "reverse iterator from 10 (ex)")
+	verifyIterator(t, ritr, []int64(nil), "reverse iterator from 10 (did:fury:ex)")
 
 	itr, err = db.Iterator(int642Bytes(0), nil)
 	require.NoError(t, err)
@@ -268,17 +268,17 @@ func testDBIterator(t *testing.T, backend BackendType) {
 	ritr, err = db.ReverseIterator(nil, int642Bytes(10))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64{9, 8, 7, 5, 4, 3, 2, 1, 0}, "reverse iterator from 10 (ex)")
+		[]int64{9, 8, 7, 5, 4, 3, 2, 1, 0}, "reverse iterator from 10 (did:fury:ex)")
 
 	ritr, err = db.ReverseIterator(nil, int642Bytes(9))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64{8, 7, 5, 4, 3, 2, 1, 0}, "reverse iterator from 9 (ex)")
+		[]int64{8, 7, 5, 4, 3, 2, 1, 0}, "reverse iterator from 9 (did:fury:ex)")
 
 	ritr, err = db.ReverseIterator(nil, int642Bytes(8))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64{7, 5, 4, 3, 2, 1, 0}, "reverse iterator from 8 (ex)")
+		[]int64{7, 5, 4, 3, 2, 1, 0}, "reverse iterator from 8 (did:fury:ex)")
 
 	itr, err = db.Iterator(int642Bytes(5), int642Bytes(6))
 	require.NoError(t, err)
@@ -306,30 +306,30 @@ func testDBIterator(t *testing.T, backend BackendType) {
 
 	ritr, err = db.ReverseIterator(int642Bytes(4), int642Bytes(5))
 	require.NoError(t, err)
-	verifyIterator(t, ritr, []int64{4}, "reverse iterator from 5 (ex) to 4")
+	verifyIterator(t, ritr, []int64{4}, "reverse iterator from 5 (did:fury:ex) to 4")
 
 	ritr, err = db.ReverseIterator(int642Bytes(4), int642Bytes(6))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64{5, 4}, "reverse iterator from 6 (ex) to 4")
+		[]int64{5, 4}, "reverse iterator from 6 (did:fury:ex) to 4")
 
 	ritr, err = db.ReverseIterator(int642Bytes(4), int642Bytes(7))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64{5, 4}, "reverse iterator from 7 (ex) to 4")
+		[]int64{5, 4}, "reverse iterator from 7 (did:fury:ex) to 4")
 
 	ritr, err = db.ReverseIterator(int642Bytes(5), int642Bytes(6))
 	require.NoError(t, err)
-	verifyIterator(t, ritr, []int64{5}, "reverse iterator from 6 (ex) to 5")
+	verifyIterator(t, ritr, []int64{5}, "reverse iterator from 6 (did:fury:ex) to 5")
 
 	ritr, err = db.ReverseIterator(int642Bytes(5), int642Bytes(7))
 	require.NoError(t, err)
-	verifyIterator(t, ritr, []int64{5}, "reverse iterator from 7 (ex) to 5")
+	verifyIterator(t, ritr, []int64{5}, "reverse iterator from 7 (did:fury:ex) to 5")
 
 	ritr, err = db.ReverseIterator(int642Bytes(6), int642Bytes(7))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64(nil), "reverse iterator from 7 (ex) to 6")
+		[]int64(nil), "reverse iterator from 7 (did:fury:ex) to 6")
 
 	ritr, err = db.ReverseIterator(int642Bytes(10), nil)
 	require.NoError(t, err)
@@ -347,7 +347,7 @@ func testDBIterator(t *testing.T, backend BackendType) {
 
 	ritr, err = db.ReverseIterator(int642Bytes(8), int642Bytes(9))
 	require.NoError(t, err)
-	verifyIterator(t, ritr, []int64{8}, "reverse iterator from 9 (ex) to 8")
+	verifyIterator(t, ritr, []int64{8}, "reverse iterator from 9 (did:fury:ex) to 8")
 
 	// verifyIterator(t, db.Iterator(int642Bytes(2), int642Bytes(4)), []int64{2, 3}, "forward iterator from 2 to 4")
 	// verifyIterator(t, db.Iterator(int642Bytes(4), int642Bytes(2)), []int64(nil), "forward iterator from 4 to 2")
@@ -355,12 +355,12 @@ func testDBIterator(t *testing.T, backend BackendType) {
 	ritr, err = db.ReverseIterator(int642Bytes(2), int642Bytes(4))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64{3, 2}, "reverse iterator from 4 (ex) to 2")
+		[]int64{3, 2}, "reverse iterator from 4 (did:fury:ex) to 2")
 
 	ritr, err = db.ReverseIterator(int642Bytes(4), int642Bytes(2))
 	require.NoError(t, err)
 	verifyIterator(t, ritr,
-		[]int64(nil), "reverse iterator from 2 (ex) to 4")
+		[]int64(nil), "reverse iterator from 2 (did:fury:ex) to 4")
 }
 
 func testDBIteratorBlankKey(t *testing.T, backend BackendType) {

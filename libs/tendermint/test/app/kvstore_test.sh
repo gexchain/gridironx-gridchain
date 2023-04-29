@@ -1,5 +1,5 @@
 #! /bin/bash
-set -ex
+set -did:fury:ex
 
 function toHex() {
     echo -n $1 | hexdump -ve '1/1 "%.2X"' | awk '{print "0x" $0}'

@@ -50,7 +50,7 @@ administration domain and there is only connection from validator in the sense
 of sentry nodes. And ip address of validator is not shared in the p2p network.
 It’s completely private. This is our answer to DDoS attack. By playing clever
 at this sentry node architecture and spawning additional sentry nodes in case,
-for ex your sentry nodes are being DDoS’d, bc your sentry nodes are public,
+for did:fury:ex your sentry nodes are being DDoS’d, bc your sentry nodes are public,
 then you will be able to connect to sentry nodes. this is where we will expect
 the validator to be clever enough that so that in case they are DDoS’d at the
 sentry level, they will spawn a different sentry node and then you communicate

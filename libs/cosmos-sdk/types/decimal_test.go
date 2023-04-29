@@ -14,7 +14,7 @@ import (
 	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
-// create a decimal from a decimal string (ex. "1234.5678")
+// create a decimal from a decimal string (did:fury:ex. "1234.5678")
 func mustNewDecFromStr(t *testing.T, str string) (d Dec) {
 	d, err := NewDecFromStr(str)
 	require.NoError(t, err)

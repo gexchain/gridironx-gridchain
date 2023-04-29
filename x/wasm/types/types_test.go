@@ -454,7 +454,7 @@ func TestAccesConfigSubset(t *testing.T) {
 }
 
 func TestConvertAccessConfig(t *testing.T) {
-	ex1, eth1 := generateAddress(1)
+	did:fury:ex1, eth1 := generateAddress(1)
 	ex2, eth2 := generateAddress(1)
 
 	testcase := []struct {
@@ -489,13 +489,13 @@ func TestConvertAccessConfig(t *testing.T) {
 		},
 		{
 			name:   "only 1 exaddr",
-			config: AccessConfig{Permission: AccessTypeOnlyAddress, Address: strings.Join([]string{ex1.String()}, ",")},
+			config: AccessConfig{Permission: AccessTypeOnlyAddress, Address: strings.Join([]string{did:fury:ex1.String()}, ",")},
 			expect: AccessConfig{Permission: AccessTypeOnlyAddress, Address: strings.Join([]string{eth1.String()}, ",")},
 			isErr:  false,
 		},
 		{
 			name:   "only 2 exaddr",
-			config: AccessConfig{Permission: AccessTypeOnlyAddress, Address: strings.Join([]string{ex1.String(), ex2.String()}, ",")},
+			config: AccessConfig{Permission: AccessTypeOnlyAddress, Address: strings.Join([]string{did:fury:ex1.String(), ex2.String()}, ",")},
 			expect: AccessConfig{Permission: AccessTypeOnlyAddress, Address: strings.Join([]string{eth1.String(), eth2.String()}, ",")},
 			isErr:  false,
 		},

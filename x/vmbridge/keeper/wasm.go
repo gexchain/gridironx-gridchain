@@ -14,7 +14,7 @@ import (
 )
 
 func (k Keeper) SendToWasm(ctx sdk.Context, caller sdk.AccAddress, wasmContractAddr, recipient string, amount sdk.Int) error {
-	// must check recipient is ex address
+	// must check recipient is did:fury:ex address
 	if !sdk.IsGRIDCAddress(recipient) {
 		return types.ErrIsNotGRIDCAddr
 	}

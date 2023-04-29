@@ -20,27 +20,27 @@ const (
  Type:                	ManageContractDeploymentWhitelist
  IsAdded:				true
  DistributorAddrs:
-						ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
-						ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc`
+						did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
+						did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc`
 	expectedManageContractBlockedListProposalString = `ManageContractBlockedListProposal:
  Title:					default title
  Description:        	default description
  Type:                	ManageContractBlockedList
  IsAdded:				true
  ContractAddrs:
-						ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
-						ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc`
+						did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
+						did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc`
 	expectedManageContractMethodBlockedListProposalString = `ManageContractMethodBlockedListProposal:
  Title:					default title
  Description:        	default description
  Type:                	ManageContractMethodBlockedList
  IsAdded:				true
  ContractList:
-						Address: ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
+						Address: did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
 Method List:
 Sign: 0x11111111Extra: TEST1
 Sign: 0x22222222Extra: TEST2
-						Address: ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc
+						Address: did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc
 Method List:
 Sign: 0x33333333Extra: TEST3
 Sign: 0x44444444Extra: TEST4`
@@ -412,7 +412,7 @@ func (suite *ProposalTestSuite) TestProposal_ManageSysContractAddressProposal() 
  Title:					default title
  Description:        	default description
  Type:                	ManageSysContractAddress
- ContractAddr:          ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
+ ContractAddr:          did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2
  IsAdded:				true`
 
 	proposal := NewManageSysContractAddressProposal(

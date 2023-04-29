@@ -1,5 +1,5 @@
 #! /bin/bash
-set -ex
+set -did:fury:ex
 
 #- kvstore over socket, curl
 #- counter over socket, curl

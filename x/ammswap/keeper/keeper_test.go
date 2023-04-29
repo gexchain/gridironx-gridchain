@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-const addrTest = "ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658"
+const addrTest = "did:fury:ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658"
 
 func TestKeeper_GetPoolTokenInfo(t *testing.T) {
 	mapp, _ := GetTestInput(t, 1)

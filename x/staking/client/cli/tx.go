@@ -154,7 +154,7 @@ func CreateValidatorMsgHelpers(ipDefault string) (fs *flag.FlagSet, nodeIDFlag, 
 	fsCreateValidator.String(FlagNodeID, "", "The node's NodeID")
 	fsCreateValidator.String(FlagWebsite, "", "The validator's (optional) website")
 	fsCreateValidator.String(FlagDetails, "", "The validator's (optional) details")
-	fsCreateValidator.String(FlagIdentity, "", "The (optional) identity signature (ex. UPort or Keybase)")
+	fsCreateValidator.String(FlagIdentity, "", "The (optional) identity signature (did:fury:ex. UPort or Keybase)")
 	//fsCreateValidator.AddFlagSet(FsCommissionCreate)
 	//fsCreateValidator.AddFlagSet(FsMinSelfDelegation)
 	//fsCreateValidator.AddFlagSet(FsAmount)

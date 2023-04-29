@@ -37,7 +37,7 @@ implementation of:
  - continuous voting
  - slashing due to breach of soft contract
  - revoking a member due to breach of soft contract
- - emergency disband of the entire dCERT group (ex. for colluding maliciously) 
+ - emergency disband of the entire dCERT group (did:fury:ex. for colluding maliciously) 
  - compensation stipend from the community pool or other means decided by
    governance
 
@@ -59,7 +59,7 @@ An `Electionator` object is to be implemented as continuous voting and with the
 following specifications:
  - All delegation addresses may submit votes at any point which updates their 
    preferred representation on the dCERT group. 
- - Preferred representation may be arbitrarily split between addresses (ex. 50%
+ - Preferred representation may be arbitrarily split between addresses (did:fury:ex. 50%
    to John, 25% to Sally, 25% to Carol) 
  - In order for a new member to be added to the dCERT group they must 
    send a transaction accepting their admission at which point the validity of

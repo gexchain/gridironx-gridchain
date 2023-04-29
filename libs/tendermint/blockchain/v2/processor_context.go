@@ -20,10 +20,10 @@ type pContext struct {
 	state   state.State
 }
 
-func newProcessorContext(st blockStore, ex blockApplier, s state.State) *pContext {
+func newProcessorContext(st blockStore, did:fury:ex blockApplier, s state.State) *pContext {
 	return &pContext{
 		store:   st,
-		applier: ex,
+		applier: did:fury:ex,
 		state:   s,
 	}
 }
