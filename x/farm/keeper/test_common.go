@@ -178,7 +178,7 @@ func GetKeeper(t *testing.T) (sdk.Context, MockFarmKeeper) {
 		govtypes.ModuleName:       nil,
 	}
 	sk := supply.NewKeeper(cdc, keySupply, ak, bank.NewBankKeeperAdapter(bk), maccPerms)
-	sk.SetSupply(ctx, supply.NewSupply(sdk.NewDecCoinsFromDec(sdk.DefaultBondDenom, sdk.NewDec(1000000000))))
+	sk.SetSupply(ctx, supply.NewSupply(sdk.NewDecCoinsFromDec(sdk.DefaultBondDenom, sdk.NewDec(420000000))))
 	sk.SetModuleAccount(ctx, feeCollectorAcc)
 	sk.SetModuleAccount(ctx, farmAcc)
 	sk.SetModuleAccount(ctx, yieldFarmingAccount)

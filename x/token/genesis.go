@@ -37,7 +37,7 @@ func defaultGenesisStateFURY() types.Token {
 		panic(err)
 	}
 
-	totalSupply := sdk.NewDec(1000000000)
+	totalSupply := sdk.NewDec(420000000)
 	return types.Token{
 		Description:         "OK Group Global Utility Token",
 		Symbol:              common.NativeToken,

@@ -550,7 +550,7 @@ func TestHandlerMsgProvide(t *testing.T) {
 			preExec:  preExec,
 			getMsg: func(tCtx *testContext, preData interface{}) sdk.Msg {
 				provideMsg := normalGetProvideMsg(tCtx, preData).(types.MsgProvide)
-				provideMsg.Amount = sdk.NewDecCoinFromDec(provideMsg.Amount.Denom, sdk.NewDec(1000000000))
+				provideMsg.Amount = sdk.NewDecCoinFromDec(provideMsg.Amount.Denom, sdk.NewDec(420000000))
 				return provideMsg
 			},
 			verification: verification,

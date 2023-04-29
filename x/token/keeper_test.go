@@ -97,7 +97,7 @@ func TestKeeper_LockCoins(t *testing.T) {
 
 	genAccs, testAccounts := CreateGenAccounts(1,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
@@ -133,7 +133,7 @@ func TestKeeper_UnlockCoins(t *testing.T) {
 
 	genAccs, testAccounts := CreateGenAccounts(1,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
@@ -182,7 +182,7 @@ func TestKeeper_BurnLockedCoins(t *testing.T) {
 	mapp.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{Height: 2}})
 	ctx := mapp.BaseApp.NewContext(false, abci.Header{})
 
-	initCoins := sdk.SysCoins{sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000))}
+	initCoins := sdk.SysCoins{sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000))}
 	genAccs, testAccounts := CreateGenAccounts(1, initCoins)
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 	mapp.supplyKeeper.SetSupply(ctx, supply.NewSupply(initCoins))

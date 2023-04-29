@@ -80,7 +80,7 @@ func TestToken(t *testing.T) {
 			Symbol:              common.NativeToken,
 			OriginalSymbol:      common.NativeToken,
 			WholeName:           "ok coin",
-			OriginalTotalSupply: sdk.NewDec(1000000000),
+			OriginalTotalSupply: sdk.NewDec(420000000),
 			Type:                0,
 			Owner:               addr,
 			Mintable:            true,

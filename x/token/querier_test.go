@@ -19,14 +19,14 @@ func TestQueryOrder(t *testing.T) {
 
 	_, testAccounts := CreateGenAccounts(2,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 
 	token := types.Token{
 		Description:         "okblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		OriginalTotalSupply: sdk.NewDec(1000000000),
+		OriginalTotalSupply: sdk.NewDec(420000000),
 		Owner:               testAccounts[0].baseAccount.Address,
 		Mintable:            true,
 	}
@@ -58,14 +58,14 @@ func TestQueryTokens(t *testing.T) {
 
 	_, testAccounts := CreateGenAccounts(2,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 
 	token := types.Token{
 		Description:         "okblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		OriginalTotalSupply: sdk.NewDec(1000000000),
+		OriginalTotalSupply: sdk.NewDec(420000000),
 		Owner:               testAccounts[0].baseAccount.Address,
 		Mintable:            true,
 	}
@@ -123,8 +123,8 @@ func TestQueryTokens(t *testing.T) {
 		Description:         "okblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		OriginalTotalSupply: sdk.NewDec(1000000000),
-		//TotalSupply:         sdk.NewDec(1000000000),
+		OriginalTotalSupply: sdk.NewDec(420000000),
+		//TotalSupply:         sdk.NewDec(420000000),
 		Owner:    []byte("abc"),
 		Mintable: true,
 	}
@@ -144,14 +144,14 @@ func TestQueryUserTokens(t *testing.T) {
 
 	_, testAccounts := CreateGenAccounts(2,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 
 	token := types.Token{
 		Description:         "okblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		OriginalTotalSupply: sdk.NewDec(1000000000),
+		OriginalTotalSupply: sdk.NewDec(420000000),
 		Owner:               testAccounts[0].baseAccount.Address,
 		Mintable:            true,
 	}
@@ -183,27 +183,27 @@ func TestQueryCurrency(t *testing.T) {
 
 	_, testAccounts := CreateGenAccounts(2,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 
 	token := types.Token{
 		Description:         "okblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		OriginalTotalSupply: sdk.NewDec(1000000000),
+		OriginalTotalSupply: sdk.NewDec(420000000),
 		Owner:               testAccounts[0].baseAccount.Address,
 		Mintable:            true,
 	}
 
 	keeper.NewToken(ctx, token)
-	keeper.supplyKeeper.MintCoins(ctx, types.ModuleName, sdk.NewDecCoinsFromDec(common.NativeToken, sdk.NewDec(1000000000)))
+	keeper.supplyKeeper.MintCoins(ctx, types.ModuleName, sdk.NewDecCoinsFromDec(common.NativeToken, sdk.NewDec(420000000)))
 
 	//var originTokens []types.Token
 	originalTokens := []types.Currency{
 		{
 			Description: "okblockchain coin",
 			Symbol:      common.NativeToken,
-			TotalSupply: sdk.NewDec(1000000000),
+			TotalSupply: sdk.NewDec(420000000),
 		},
 	}
 
@@ -224,7 +224,7 @@ func TestQueryAccount(t *testing.T) {
 
 	genAccs, testAccounts := CreateGenAccounts(1,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
@@ -232,7 +232,7 @@ func TestQueryAccount(t *testing.T) {
 		Description:         "okblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		OriginalTotalSupply: sdk.NewDec(1000000000),
+		OriginalTotalSupply: sdk.NewDec(420000000),
 		Owner:               testAccounts[0].baseAccount.Address,
 		Mintable:            true,
 	}
@@ -313,7 +313,7 @@ func TestQueryAccount_ShowAll(t *testing.T) {
 
 	genAccs, testAccounts := CreateGenAccounts(1,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
@@ -322,7 +322,7 @@ func TestQueryAccount_ShowAll(t *testing.T) {
 			Description:         "okblockchain coin",
 			Symbol:              common.NativeToken,
 			OriginalSymbol:      common.NativeToken,
-			OriginalTotalSupply: sdk.NewDec(1000000000),
+			OriginalTotalSupply: sdk.NewDec(420000000),
 			Owner:               testAccounts[0].baseAccount.Address,
 			Mintable:            true,
 		},
@@ -375,7 +375,7 @@ func TestQueryParameters(t *testing.T) {
 
 	genAccs, _ := CreateGenAccounts(1,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
@@ -403,7 +403,7 @@ func TestQueryKeysNum(t *testing.T) {
 
 	genAccs, _ := CreateGenAccounts(1,
 		sdk.SysCoins{
-			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1000000000)),
+			sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(420000000)),
 		})
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
