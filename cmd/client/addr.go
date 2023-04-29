@@ -12,7 +12,7 @@ import (
 
 const (
 	gridironxPrefix = "gridchain"
-	exPrefix        = "ex"
+	exPrefix        = "did:fury:gridex"
 	rawPrefix       = "0x"
 )
 

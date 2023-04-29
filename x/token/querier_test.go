@@ -23,7 +23,7 @@ func TestQueryOrder(t *testing.T) {
 		})
 
 	token := types.Token{
-		Description:         "okblockchain coin",
+		Description:         "gridblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
 		OriginalTotalSupply: sdk.NewDec(1000000000),
@@ -62,7 +62,7 @@ func TestQueryTokens(t *testing.T) {
 		})
 
 	token := types.Token{
-		Description:         "okblockchain coin",
+		Description:         "gridblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
 		OriginalTotalSupply: sdk.NewDec(1000000000),
@@ -120,7 +120,7 @@ func TestQueryTokens(t *testing.T) {
 
 	//query with invalid address
 	token = types.Token{
-		Description:         "okblockchain coin",
+		Description:         "gridblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
 		OriginalTotalSupply: sdk.NewDec(1000000000),
@@ -148,7 +148,7 @@ func TestQueryUserTokens(t *testing.T) {
 		})
 
 	token := types.Token{
-		Description:         "okblockchain coin",
+		Description:         "gridblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
 		OriginalTotalSupply: sdk.NewDec(1000000000),
@@ -187,7 +187,7 @@ func TestQueryCurrency(t *testing.T) {
 		})
 
 	token := types.Token{
-		Description:         "okblockchain coin",
+		Description:         "gridblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
 		OriginalTotalSupply: sdk.NewDec(1000000000),
@@ -201,7 +201,7 @@ func TestQueryCurrency(t *testing.T) {
 	//var originTokens []types.Token
 	originalTokens := []types.Currency{
 		{
-			Description: "okblockchain coin",
+			Description: "gridblockchain coin",
 			Symbol:      common.NativeToken,
 			TotalSupply: sdk.NewDec(1000000000),
 		},
@@ -229,7 +229,7 @@ func TestQueryAccount(t *testing.T) {
 	mock.SetGenesis(mapp.App, types.DecAccountArrToBaseAccountArr(genAccs))
 
 	token := types.Token{
-		Description:         "okblockchain coin",
+		Description:         "gridblockchain coin",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
 		OriginalTotalSupply: sdk.NewDec(1000000000),
@@ -319,7 +319,7 @@ func TestQueryAccount_ShowAll(t *testing.T) {
 
 	tokens := []types.Token{
 		{
-			Description:         "okblockchain coin",
+			Description:         "gridblockchain coin",
 			Symbol:              common.NativeToken,
 			OriginalSymbol:      common.NativeToken,
 			OriginalTotalSupply: sdk.NewDec(1000000000),

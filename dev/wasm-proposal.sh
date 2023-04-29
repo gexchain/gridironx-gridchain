@@ -2,9 +2,9 @@
 set -o errexit -o nounset -o pipefail
 
 # cw20
-# ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
+# did:fury:gridex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
 # cw4-stake
-# ex1fyr2mptjswz4w6xmgnpgm93x0q4s4wdl6srv3rtz3utc4f6fmxeqn3c0pp
+# did:fury:gridex1fyr2mptjswz4w6xmgnpgm93x0q4s4wdl6srv3rtz3utc4f6fmxeqn3c0pp
 
 DEPOSIT1="frozen sign movie blade hundred engage hour remember analyst island churn jealous"
 DEPOSIT2="embrace praise essay heavy rule inner foil mask silk lava mouse still"
@@ -881,7 +881,7 @@ fi
 
 # update whitelist
 echo "## update deployment whitelist and store wasm code"
-res=$(gridchaincli tx gov submit-proposal update-wasm-deployment-whitelist "ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v,ex15nnhqdf9sds0s063kaaretxj3ftlnzrguhfdeq" --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
+res=$(gridchaincli tx gov submit-proposal update-wasm-deployment-whitelist "did:fury:gridex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v,did:fury:gridex15nnhqdf9sds0s063kaaretxj3ftlnzrguhfdeq" --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
 proposal_id=$(echo "$res" | jq '.logs[0].events[1].attributes[1].value' | sed 's/\"//g')
 echo "proposal_id: $proposal_id"
 proposal_vote "$proposal_id"

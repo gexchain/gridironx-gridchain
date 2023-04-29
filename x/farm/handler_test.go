@@ -363,7 +363,7 @@ func TestHandlerMsgDestroyPool(t *testing.T) {
 				return destroyPoolMsg
 			},
 			verification: verification,
-			expectedErr:  types.ErrInvalidPoolOwner("ex15ky9du8a2wlstz6fpx3p4mqpjyrm5cgp83ahy9", "abc"),
+			expectedErr:  types.ErrInvalidPoolOwner("did:fury:gridex15ky9du8a2wlstz6fpx3p4mqpjyrm5cgp83ahy9", "abc"),
 		},
 		{
 			caseName: "failed. insufficient fee coins",
@@ -721,7 +721,7 @@ func TestHandlerMsgUnlock(t *testing.T) {
 			},
 			getMsg:       normalGetUnlockMsg,
 			verification: verification,
-			expectedErr:  types.ErrNoLockInfoFound("ex15ky9du8a2wlstz6fpx3p4mqpjyrm5cgq68fzeh", "abc"),
+			expectedErr:  types.ErrNoLockInfoFound("did:fury:gridex15ky9du8a2wlstz6fpx3p4mqpjyrm5cgq68fzeh", "abc"),
 		},
 		{
 			caseName: "failed. The coin name should be %s, not %s",

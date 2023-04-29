@@ -6,7 +6,7 @@ contract Exchange is ERC20 {
     address public constant moduleAddress =
     address(0xc63cf6c8E1f3DF41085E9d8Af49584dae1432b4f);
 
-    string public wasmContractAddress = "ex14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s6fqu27";
+    string public wasmContractAddress = "did:fury:gridex14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s6fqu27";
 
     event __GRIDCSendToWasm(string wasmAddr, string recipient, uint256 amount);
 

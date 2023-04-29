@@ -10,7 +10,7 @@ import (
 )
 
 // default owner of fury
-const DefaultTokenOwner = "ex10q0rk5qnyag7wfvvt7rtphlw589m7frs3hvqmf"
+const DefaultTokenOwner = "did:fury:gridex10q0rk5qnyag7wfvvt7rtphlw589m7frs3hvqmf"
 
 // all state that must be provided in genesis file
 type GenesisState struct {
