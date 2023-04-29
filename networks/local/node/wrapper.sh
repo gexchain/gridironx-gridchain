@@ -9,11 +9,11 @@ LOG=${LOG:-gridchaind.log}
 ##
 ## Run binary with all parameters
 ##
-export EXCHAINDHOME="/gridchaind/node${ID}/gridchaind"
+export GRIDCHAINDHOME="/gridchaind/node${ID}/gridchaind"
 
-if [ -d "$(dirname "${EXCHAINDHOME}"/"${LOG}")" ]; then
-  gridchaind --chain-id gridchain-1 --home "${EXCHAINDHOME}" "$@" | tee "${EXCHAINDHOME}/${LOG}"
+if [ -d "$(dirname "${GRIDCHAINDHOME}"/"${LOG}")" ]; then
+  gridchaind --chain-id gridchain-1 --home "${GRIDCHAINDHOME}" "$@" | tee "${GRIDCHAINDHOME}/${LOG}"
 else
-  gridchaind --chain-id gridchain-1 --home "${EXCHAINDHOME}" "$@"
+  gridchaind --chain-id gridchain-1 --home "${GRIDCHAINDHOME}" "$@"
 fi
 
