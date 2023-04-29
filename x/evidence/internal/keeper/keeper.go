@@ -3,16 +3,16 @@ package keeper
 import (
 	"fmt"
 
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/types"
-	"github.com/okex/exchain/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/x/evidence/exported"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/x/params"
 )
 
 // Keeper defines the evidence module's keeper. The keeper is responsible for

@@ -1,8 +1,8 @@
 package exported
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 )
 
 // DelegatorI expected delegator functions

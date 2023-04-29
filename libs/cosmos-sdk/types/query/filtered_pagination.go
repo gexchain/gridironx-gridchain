@@ -2,7 +2,7 @@ package query
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 // FilteredPaginate does pagination of all the results in the PrefixStore based on the

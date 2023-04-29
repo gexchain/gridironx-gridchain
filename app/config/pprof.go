@@ -1,14 +1,14 @@
 package config
 
 import (
-	"github.com/okex/exchain/libs/system/trace"
+	"github.com/gridironx/gridchain/libs/system/trace"
 	"path"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
 
 	"github.com/mosn/holmes"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
 	"github.com/spf13/viper"
 )
 

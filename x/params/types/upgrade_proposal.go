@@ -4,18 +4,18 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkgovtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkgovtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 type UpgradeStatus uint32
 
 const (
-	ProposalTypeUpgrade = "oKCUpgrade"
-	UpgradeRouterKey    = "okcUpgrade"
+	ProposalTypeUpgrade = "gridcUpgrade"
+	UpgradeRouterKey    = "gridcUpgrade"
 
-	QueryUpgrade = "okcUpgrade"
+	QueryUpgrade = "gridcUpgrade"
 
 	maxNameLength = 140
 
@@ -29,7 +29,7 @@ var _ govtypes.Content = UpgradeProposal{}
 
 func init() {
 	govtypes.RegisterProposalType(ProposalTypeUpgrade)
-	govtypes.RegisterProposalTypeCodec(UpgradeProposal{}, "okexchain/params/UpgradeProposal")
+	govtypes.RegisterProposalTypeCodec(UpgradeProposal{}, "gridchain/params/UpgradeProposal")
 }
 
 // UpgradeProposal is the struct of param change proposal

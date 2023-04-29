@@ -2,10 +2,10 @@ package types
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 	"strings"
 )
 
@@ -23,8 +23,8 @@ const (
 func init() {
 	govtypes.RegisterProposalType(proposalTypeManageTreasures)
 	govtypes.RegisterProposalType(proposalTypeModifyNextBlockUpdate)
-	govtypes.RegisterProposalTypeCodec(ManageTreasuresProposal{}, "okexchain/mint/ManageTreasuresProposal")
-	govtypes.RegisterProposalTypeCodec(ModifyNextBlockUpdateProposal{}, "okexchain/mint/ModifyNextBlockUpdateProposal")
+	govtypes.RegisterProposalTypeCodec(ManageTreasuresProposal{}, "gridchain/mint/ManageTreasuresProposal")
+	govtypes.RegisterProposalTypeCodec(ModifyNextBlockUpdateProposal{}, "gridchain/mint/ModifyNextBlockUpdateProposal")
 }
 
 var (

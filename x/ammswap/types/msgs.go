@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 // PoolSwap message types and routes
@@ -76,7 +76,7 @@ func (msg MsgAddLiquidity) GetSwapTokenPairName() string {
 	return GetSwapTokenPairName(msg.MaxBaseAmount.Denom, msg.QuoteAmount.Denom)
 }
 
-// MsgRemoveLiquidity burns pool tokens to withdraw okt and Tokens at current ratio.
+// MsgRemoveLiquidity burns pool tokens to withdraw fury and Tokens at current ratio.
 type MsgRemoveLiquidity struct {
 	Liquidity      sdk.Dec        `json:"liquidity"`        // Amount of pool token burned.
 	MinBaseAmount  sdk.SysCoin    `json:"min_base_amount"`  // Minimum base amount.

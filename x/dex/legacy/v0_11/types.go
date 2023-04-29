@@ -3,9 +3,9 @@ package v0_11
 import (
 	"time"
 
-	"github.com/okex/exchain/x/dex/legacy/v0_10"
+	"github.com/gridironx/gridchain/x/dex/legacy/v0_10"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 const (
@@ -29,7 +29,7 @@ type (
 		TransferOwnershipFee sdk.SysCoin `json:"transfer_ownership_fee"`
 		RegisterOperatorFee  sdk.SysCoin `json:"register_operator_fee"`
 
-		//  maximum period for okt holders to deposit on a dex delist proposal
+		//  maximum period for fury holders to deposit on a dex delist proposal
 		DelistMaxDepositPeriod time.Duration `json:"delist_max_deposit_period"`
 		//  minimum deposit for a critical dex delist proposal to enter voting period
 		DelistMinDeposit sdk.SysCoins `json:"delist_min_deposit"`

@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/x/token/client/cli"
-	"github.com/okex/exchain/x/token/client/rest"
-	tokenTypes "github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/x/token/client/cli"
+	"github.com/gridironx/gridchain/x/token/client/rest"
+	tokenTypes "github.com/gridironx/gridchain/x/token/types"
 )
 
 var (

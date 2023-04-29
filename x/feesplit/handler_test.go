@@ -8,15 +8,15 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/feesplit"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/feesplit"
+	"github.com/gridironx/gridchain/x/feesplit/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -25,7 +25,7 @@ type FeeSplitTestSuite struct {
 
 	ctx     sdk.Context
 	handler sdk.Handler
-	app     *app.OKExChainApp
+	app     *app.GRIDIronxChainApp
 }
 
 func TestFeeSplitTestSuite(t *testing.T) {

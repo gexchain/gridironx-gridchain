@@ -3,11 +3,11 @@ package token
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/token/types"
 )
 
 func queryAccountV2(ctx sdk.Context, path []string, req abci.RequestQuery, keeper Keeper) ([]byte, sdk.Error) {

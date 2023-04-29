@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"fmt"
 
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
+	tmkv "github.com/gridironx/gridchain/libs/tendermint/libs/kv"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
 )
 
 // DecodeStore unmarshals the KVPair's Value to the corresponding staking type

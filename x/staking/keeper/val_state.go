@@ -3,10 +3,10 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 // KickOutAndReturnValidatorSetUpdates shows the main logic when a validator is kicked out of validator-set in an epoch

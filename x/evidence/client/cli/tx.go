@@ -1,10 +1,10 @@
 package cli
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
 
 	"github.com/spf13/cobra"
 )

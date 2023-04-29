@@ -1,8 +1,8 @@
 package core
 
 import (
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
 )
 
 // Health gets node health. Returns empty result (200 OK) on success, no

@@ -1,9 +1,9 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 // ExportMetadata exports all the consensus metadata in the client store so they can be included in clients genesis

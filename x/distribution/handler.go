@@ -1,12 +1,12 @@
 package distribution
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/distribution/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/distribution/keeper"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // NewHandler manages all distribution tx

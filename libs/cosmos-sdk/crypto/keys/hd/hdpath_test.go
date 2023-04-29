@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
 	bip39 "github.com/cosmos/go-bip39"
 )

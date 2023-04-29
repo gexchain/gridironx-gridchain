@@ -10,16 +10,16 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 )
 
 // GetSignCommand returns the sign command

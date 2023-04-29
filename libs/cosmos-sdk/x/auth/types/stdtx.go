@@ -9,13 +9,13 @@ import (
 	"github.com/tendermint/go-amino"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	cryptoamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	cryptoamino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
 )
 
 var (

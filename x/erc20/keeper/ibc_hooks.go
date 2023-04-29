@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	trensferTypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	"github.com/okex/exchain/x/erc20/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	trensferTypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	"github.com/gridironx/gridchain/x/erc20/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 )
 
 var (

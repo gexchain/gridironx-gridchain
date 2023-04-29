@@ -3,11 +3,11 @@ package types_test
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evidence/exported"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/require"
 )
 

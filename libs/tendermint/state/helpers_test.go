@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"time"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 )
 
 type paramsChangeTestCase struct {

@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	db "github.com/okex/exchain/libs/tm-db"
+	db "github.com/gridironx/gridchain/libs/tm-db"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/kv"
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/kv"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/state/txindex"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 func TestTxIndex(t *testing.T) {

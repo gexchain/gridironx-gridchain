@@ -8,11 +8,11 @@ import (
 
 	"github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/behaviour"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/behaviour"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 //-------------------------------------

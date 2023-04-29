@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
@@ -888,7 +888,7 @@ func TestProposalJsonSignBytes(t *testing.T) {
 			src: &InstantiateContractProposal{Msg: RawContractMessage(myInnerMsg)},
 			exp: `
 {
-	"type":"okexchain/gov/MsgSubmitProposal",
+	"type":"gridchain/gov/MsgSubmitProposal",
 	"value":{"content":{"type":"wasm/InstantiateContractProposal","value":{"funds":[],"msg":{"foo":"bar"}}},"initial_deposit":[],"proposer":""}
 }`,
 		},
@@ -896,7 +896,7 @@ func TestProposalJsonSignBytes(t *testing.T) {
 			src: &MigrateContractProposal{Msg: RawContractMessage(myInnerMsg)},
 			exp: `
 {
-	"type":"okexchain/gov/MsgSubmitProposal",
+	"type":"gridchain/gov/MsgSubmitProposal",
 	"value":{"content":{"type":"wasm/MigrateContractProposal","value":{"msg":{"foo":"bar"}}},"initial_deposit":[],"proposer":""}
 }`,
 		},
@@ -904,7 +904,7 @@ func TestProposalJsonSignBytes(t *testing.T) {
 			src: &UpdateDeploymentWhitelistProposal{DistributorAddrs: []string{"ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02", "ex10q0rk5qnyag7wfvvt7rtphlw589m7frs3hvqmf"}},
 			exp: `
 {	
-	"type":"okexchain/gov/MsgSubmitProposal",
+	"type":"gridchain/gov/MsgSubmitProposal",
 	"value":{"content":{"type":"wasm/UpdateDeploymentWhitelistProposal","value":{"distributorAddrs":["ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02","ex10q0rk5qnyag7wfvvt7rtphlw589m7frs3hvqmf"]}},"initial_deposit":[],"proposer":""}
 }`,
 		},

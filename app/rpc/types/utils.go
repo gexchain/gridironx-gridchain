@@ -11,17 +11,17 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	clientcontext "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	clientcontext "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 )
 
 var (

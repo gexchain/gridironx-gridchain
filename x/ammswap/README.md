@@ -1,4 +1,4 @@
 
-## OKExChain PoolSwap Module
+## GRIDIronxChain PoolSwap Module
 
-OKExChain PoolSwap Protocol.
+GRIDIronxChain PoolSwap Protocol.

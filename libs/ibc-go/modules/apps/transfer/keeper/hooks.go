@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
 )
 
 // SetHooks sets the hooks for the IBC transfer module

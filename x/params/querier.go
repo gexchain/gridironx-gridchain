@@ -2,12 +2,12 @@ package params
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/params/types"
+	"github.com/gridironx/gridchain/x/params/types"
 )
 
 // NewQuerier returns all query handlers

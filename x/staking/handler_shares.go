@@ -3,9 +3,9 @@ package staking
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/staking/keeper"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/staking/keeper"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 func handleMsgBindProxy(ctx sdk.Context, msg types.MsgBindProxy, k keeper.Keeper) (*sdk.Result, error) {
@@ -30,7 +30,7 @@ func handleMsgBindProxy(ctx sdk.Context, msg types.MsgBindProxy, k keeper.Keeper
 		return types.ErrProxyNotFound(msg.ProxyAddress.String()).Result()
 	}
 
-	// double proxy is denied on okexchain
+	// double proxy is denied on gridchain
 	if delegator.IsProxy {
 		return types.ErrDoubleProxy(delegator.DelegatorAddress.String()).Result()
 	}

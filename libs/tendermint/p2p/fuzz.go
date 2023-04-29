@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/config"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/config"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
 )
 
 // FuzzedConnection wraps any net.Conn and depending on the mode either delays

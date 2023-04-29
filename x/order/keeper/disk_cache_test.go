@@ -5,10 +5,10 @@ package keeper
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/order/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -76,7 +76,7 @@ func TestKeeper_StoreOrderIDsMap(t *testing.T) {
 	ctx := testInput.Ctx
 
 	orderIDs := []string{"ID0000000010-1", "ID0000000010-2", "ID0000000010-3"}
-	//key xxb_okt:10.00000000:BUY
+	//key xxb_fury:10.00000000:BUY
 	keeper.StoreOrderIDsMap(ctx, "xxb_"+common.NativeToken+":10.00000000:BUY", orderIDs)
 
 	require.EqualValues(t, 0, len(keeper.diskCache.orderIDsMap.Data))

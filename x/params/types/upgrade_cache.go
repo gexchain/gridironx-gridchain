@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 )
 
 var (

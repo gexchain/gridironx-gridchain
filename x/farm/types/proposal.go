@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (
@@ -15,7 +15,7 @@ const (
 
 func init() {
 	govtypes.RegisterProposalType(proposalTypeManageWhiteList)
-	govtypes.RegisterProposalTypeCodec(ManageWhiteListProposal{}, "okexchain/farm/ManageWhiteListProposal")
+	govtypes.RegisterProposalTypeCodec(ManageWhiteListProposal{}, "gridchain/farm/ManageWhiteListProposal")
 }
 
 var _ govtypes.Content = (*ManageWhiteListProposal)(nil)

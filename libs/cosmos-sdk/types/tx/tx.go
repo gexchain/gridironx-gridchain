@@ -4,11 +4,11 @@ import (
 	"errors"
 
 	"github.com/golang/protobuf/ptypes/wrappers"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	anytypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdktypes "github.com/okex/exchain/libs/cosmos-sdk/types"
-	types "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	anytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdktypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	types "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
 )
 
 var (
@@ -28,7 +28,7 @@ func (t *BroadcastTxRequest) GetData() []byte {
 
 func (t *BroadcastTxResponse) HandleResponse(codec *codec.CodecProxy, data interface{}) interface{} {
 	resp := data.(sdktypes.TxResponse)
-	logs := convOkcLogs2Proto(resp.Logs)
+	logs := convGridcLogs2Proto(resp.Logs)
 	t.TxResponse = &types.TxResponse{
 		Height:    resp.Height,
 		TxHash:    resp.TxHash,
@@ -54,7 +54,7 @@ func (t *BroadcastTxResponse) HandleResponse(codec *codec.CodecProxy, data inter
 	return t
 }
 
-func convOkcLogs2Proto(ls sdktypes.ABCIMessageLogs) types.ABCIMessageLogs {
+func convGridcLogs2Proto(ls sdktypes.ABCIMessageLogs) types.ABCIMessageLogs {
 	logs := make(types.ABCIMessageLogs, 0)
 	for _, l := range ls {
 		es := make(types.StringEvents, 0)

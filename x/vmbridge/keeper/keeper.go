@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/x/vmbridge/types"
+	"github.com/gridironx/gridchain/x/vmbridge/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 )
 
 type Keeper struct {

@@ -8,13 +8,13 @@ package client
 import (
 	"fmt"
 
-	log "github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/lite"
-	lerr "github.com/okex/exchain/libs/tendermint/lite/errors"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	rpchttp "github.com/okex/exchain/libs/tendermint/rpc/client/http"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	log "github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/lite"
+	lerr "github.com/gridironx/gridchain/libs/tendermint/lite/errors"
+	rpcclient "github.com/gridironx/gridchain/libs/tendermint/rpc/client"
+	rpchttp "github.com/gridironx/gridchain/libs/tendermint/rpc/client/http"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // SignStatusClient combines a SignClient and StatusClient.

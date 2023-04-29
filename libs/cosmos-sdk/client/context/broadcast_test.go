@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/mempool"
-	"github.com/okex/exchain/libs/tendermint/rpc/client/mock"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/mempool"
+	"github.com/gridironx/gridchain/libs/tendermint/rpc/client/mock"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 type MockClient struct {

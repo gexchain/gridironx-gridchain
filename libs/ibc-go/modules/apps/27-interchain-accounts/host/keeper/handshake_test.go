@@ -1,11 +1,11 @@
 package keeper_test
 
 import (
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	icatypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	ibctesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
 )
 
 func (suite *KeeperTestSuite) TestOnChanOpenTry() {

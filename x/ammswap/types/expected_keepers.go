@@ -1,9 +1,9 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params"
-	token "github.com/okex/exchain/x/token/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/params"
+	token "github.com/gridironx/gridchain/x/token/types"
 )
 
 // ParamSubspace defines the expected Subspace interface

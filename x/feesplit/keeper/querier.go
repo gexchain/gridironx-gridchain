@@ -6,13 +6,13 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/query"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/feesplit/types"
 )
 
 // NewQuerier is the module level router for state queries

@@ -4,11 +4,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/require"
 )
 

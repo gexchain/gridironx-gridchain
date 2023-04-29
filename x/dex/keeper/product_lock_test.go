@@ -5,7 +5,7 @@ package keeper
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

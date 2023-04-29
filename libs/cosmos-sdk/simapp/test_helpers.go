@@ -4,20 +4,20 @@ import (
 	"os"
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
+	bam "github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/helpers"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
 )
 
 // Setup initializes a new SimApp. A Nop logger is set in SimApp.

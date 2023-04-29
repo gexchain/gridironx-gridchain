@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	paramtypes "github.com/okex/exchain/x/params"
+	paramtypes "github.com/gridironx/gridchain/x/params"
 )
 
 const (

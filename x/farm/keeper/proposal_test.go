@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/farm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/farm/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 	"github.com/stretchr/testify/require"
 )
 

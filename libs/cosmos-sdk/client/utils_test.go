@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
 )
 
 func TestPaginate(t *testing.T) {

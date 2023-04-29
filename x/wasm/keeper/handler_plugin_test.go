@@ -2,22 +2,22 @@ package keeper
 
 import (
 	"encoding/json"
-	ibcadapter "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
+	ibcadapter "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
 	"testing"
 
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	ibcexported "github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	ibcexported "github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/wasm/keeper/wasmtesting"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/keeper/wasmtesting"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 func TestMessageHandlerChainDispatch(t *testing.T) {

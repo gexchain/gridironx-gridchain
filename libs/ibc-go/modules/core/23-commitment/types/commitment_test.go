@@ -1,11 +1,11 @@
 package types_test
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/iavl"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/rootmulti"
-	storetypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/iavl"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/rootmulti"
+	storetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"testing"
 
 	"github.com/stretchr/testify/suite"

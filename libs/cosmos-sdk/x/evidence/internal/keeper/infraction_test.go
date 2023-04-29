@@ -3,11 +3,11 @@ package keeper_test
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 )
 
 func newTestMsgCreateValidator(address sdk.ValAddress, pubKey crypto.PubKey, amt sdk.Int) staking.MsgCreateValidator {

@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/tendermint/libs/protoio"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/protoio"
+	tmproto "github.com/gridironx/gridchain/libs/tendermint/proto/types"
 )
 
 // CanonicalizeVote transforms the given Proposal to a CanonicalProposal.

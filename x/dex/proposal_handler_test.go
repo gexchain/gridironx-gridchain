@@ -5,12 +5,12 @@ package dex
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/dex/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/dex/types"
+	govTypes "github.com/gridironx/gridchain/x/gov/types"
+	ordertypes "github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -50,7 +50,7 @@ func TestProposal_NewProposalHandler(t *testing.T) {
 	saveErr := mApp.dexKeeper.SaveTokenPair(ctx, tokenPair)
 	require.Nil(t, saveErr)
 
-	// error case : fail to withdraw deposits because deposits is not okt
+	// error case : fail to withdraw deposits because deposits is not fury
 	err = proposalHandler(ctx, &proposal)
 	require.Error(t, err)
 

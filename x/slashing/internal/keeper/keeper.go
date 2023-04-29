@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/slashing/internal/types"
 )
 
 // Keeper of the slashing store

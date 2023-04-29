@@ -4,13 +4,13 @@ import (
 	fmt "fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/common"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
 	proto "github.com/gogo/protobuf/proto"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 var (

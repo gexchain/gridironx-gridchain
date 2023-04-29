@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/dex/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/dex/types"
 	"github.com/stretchr/testify/require"
 	amino "github.com/tendermint/go-amino"
 )

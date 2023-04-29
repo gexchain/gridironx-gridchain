@@ -12,10 +12,10 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
 	"github.com/ethereum/go-ethereum/trie"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 func (csdb *CommitStateDB) CommitMpt(prefetcher *mpt.TriePrefetcher) (ethcmn.Hash, error) {

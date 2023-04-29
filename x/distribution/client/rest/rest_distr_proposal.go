@@ -3,15 +3,15 @@ package rest
 import (
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
 
-	comm "github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/gov"
-	govrest "github.com/okex/exchain/x/gov/client/rest"
+	comm "github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/gov"
+	govrest "github.com/gridironx/gridchain/x/gov/client/rest"
 )
 
 // ChangeDistributionTypeProposalRESTHandler returns a ChangeDistributionTypeProposal that exposes the change distribution type REST handler with a given sub-route.

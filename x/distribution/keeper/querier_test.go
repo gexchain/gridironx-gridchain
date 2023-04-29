@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/go-amino"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/distribution/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 func TestQueryParams(t *testing.T) {

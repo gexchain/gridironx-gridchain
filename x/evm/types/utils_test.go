@@ -12,10 +12,10 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -358,7 +358,7 @@ func BenchmarkEthAddressStringer(b *testing.B) {
 			_ = addr.String()
 		}
 	})
-	b.Run("okc stringer", func(b *testing.B) {
+	b.Run("gridc stringer", func(b *testing.B) {
 		b.ReportAllocs()
 		for i := 0; i < b.N; i++ {
 			_ = EthAddressStringer(addr).String()
@@ -376,7 +376,7 @@ func BenchmarkEthHashStringer(b *testing.B) {
 			_ = h.String()
 		}
 	})
-	b.Run("okc stringer", func(b *testing.B) {
+	b.Run("gridc stringer", func(b *testing.B) {
 		b.ReportAllocs()
 		for i := 0; i < b.N; i++ {
 			_ = EthHashStringer(h).String()

@@ -3,9 +3,9 @@ package v1
 import (
 	"sort"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // BlockPool keeps track of the fast sync peers, block requests and block responses.

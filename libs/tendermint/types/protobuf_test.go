@@ -10,11 +10,11 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/libs/tendermint/version"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/version"
 )
 
 func TestABCIPubKey(t *testing.T) {

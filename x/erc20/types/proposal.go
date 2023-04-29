@@ -6,8 +6,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (
@@ -26,9 +26,9 @@ func init() {
 	govtypes.RegisterProposalType(proposalTypeTokenMapping)
 	govtypes.RegisterProposalType(proposalTypeProxyContractRedirect)
 	govtypes.RegisterProposalType(proposalTypeContractTemplate)
-	govtypes.RegisterProposalTypeCodec(TokenMappingProposal{}, "okexchain/erc20/TokenMappingProposal")
-	govtypes.RegisterProposalTypeCodec(ProxyContractRedirectProposal{}, "okexchain/erc20/ProxyContractRedirectProposal")
-	govtypes.RegisterProposalTypeCodec(ContractTemplateProposal{}, "okexchain/erc20/ContractTemplateProposal")
+	govtypes.RegisterProposalTypeCodec(TokenMappingProposal{}, "gridchain/erc20/TokenMappingProposal")
+	govtypes.RegisterProposalTypeCodec(ProxyContractRedirectProposal{}, "gridchain/erc20/ProxyContractRedirectProposal")
+	govtypes.RegisterProposalTypeCodec(ContractTemplateProposal{}, "gridchain/erc20/ContractTemplateProposal")
 }
 
 var (

@@ -1,8 +1,8 @@
 package evidence
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/internal/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/internal/types"
 )
 
 // nolint

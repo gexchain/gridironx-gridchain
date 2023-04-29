@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strings"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	"github.com/okex/exchain/libs/tendermint/libs/automation"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	cstypes "github.com/gridironx/gridchain/libs/tendermint/consensus/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/automation"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // SetProposal inputs a proposal.

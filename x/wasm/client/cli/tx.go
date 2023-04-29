@@ -10,17 +10,17 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/x/wasm/ioutils"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	clientCtx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/x/wasm/ioutils"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 const (

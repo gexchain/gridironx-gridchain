@@ -1,9 +1,9 @@
 package rootmulti
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/iavl"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/dbadapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/iavl"
 )
 
 var commithash = []byte("FAKE_HASH")

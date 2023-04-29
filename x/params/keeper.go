@@ -3,11 +3,11 @@ package params
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/params/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkparams "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/params/types"
 )
 
 // Keeper is the struct of params keeper

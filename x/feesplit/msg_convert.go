@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/feesplit/types"
 )
 
 var (
@@ -21,9 +21,9 @@ func init() {
 
 func RegisterConvert() {
 	enableHeight := tmtypes.GetVenus3Height()
-	baseapp.RegisterCmHandle("okexchain/MsgRegisterFeeSplit", baseapp.NewCMHandle(ConvertRegisterFeeSplitMsg, enableHeight))
-	baseapp.RegisterCmHandle("okexchain/MsgUpdateFeeSplit", baseapp.NewCMHandle(ConvertUpdateFeeSplitMsg, enableHeight))
-	baseapp.RegisterCmHandle("okexchain/MsgCancelFeeSplit", baseapp.NewCMHandle(ConvertCancelFeeSplitMsg, enableHeight))
+	baseapp.RegisterCmHandle("gridchain/MsgRegisterFeeSplit", baseapp.NewCMHandle(ConvertRegisterFeeSplitMsg, enableHeight))
+	baseapp.RegisterCmHandle("gridchain/MsgUpdateFeeSplit", baseapp.NewCMHandle(ConvertUpdateFeeSplitMsg, enableHeight))
+	baseapp.RegisterCmHandle("gridchain/MsgCancelFeeSplit", baseapp.NewCMHandle(ConvertCancelFeeSplitMsg, enableHeight))
 }
 
 func ConvertRegisterFeeSplitMsg(data []byte, signers []sdk.AccAddress) (sdk.Msg, error) {

@@ -3,10 +3,10 @@ package types
 import (
 	"sort"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 // HistoricalInfo contains the historical information that gets stored at each height

@@ -3,11 +3,11 @@ package types
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/token"
-	tokentypes "github.com/okex/exchain/x/token/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/token"
+	tokentypes "github.com/gridironx/gridchain/x/token/types"
 )
 
 // nolint

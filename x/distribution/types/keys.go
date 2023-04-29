@@ -1,6 +1,6 @@
 package types
 
-import sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+import sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
 const (
 	// ModuleName is the module name constant used in many places
@@ -15,7 +15,7 @@ const (
 	// QuerierRoute is the querier route for distribution
 	QuerierRoute = ModuleName
 
-	// ShortUseByCli added for exchaincli
+	// ShortUseByCli added for gridchaincli
 	ShortUseByCli = "distr"
 )
 

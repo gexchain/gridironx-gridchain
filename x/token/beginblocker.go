@@ -1,9 +1,9 @@
 package token
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/token/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common/perf"
+	"github.com/gridironx/gridchain/x/token/types"
 )
 
 // BeginBlocker is called when dapp handles with abci::BeginBlock

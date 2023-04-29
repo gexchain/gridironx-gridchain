@@ -1,17 +1,17 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
 // ModuleCdc defines the erc20 module's codec
 var ModuleCdc = codec.New()
 
 const (
-	TokenMappingProposalName          = "okexchain/erc20/TokenMappingProposal"
-	ProxyContractRedirectProposalName = "okexchain/erc20/ProxyContractRedirectProposal"
-	ContractTemplateProposalName      = "okexchain/erc20/ContractTemplateProposal"
-	CompiledContractProposalName      = "okexchain/erc20/Contract"
+	TokenMappingProposalName          = "gridchain/erc20/TokenMappingProposal"
+	ProxyContractRedirectProposalName = "gridchain/erc20/ProxyContractRedirectProposal"
+	ContractTemplateProposalName      = "gridchain/erc20/ContractTemplateProposal"
+	CompiledContractProposalName      = "gridchain/erc20/Contract"
 )
 
 // RegisterCodec registers all the necessary types and interfaces for the

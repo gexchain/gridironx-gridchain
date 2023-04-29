@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmstrings "github.com/okex/exchain/libs/tendermint/libs/strings"
-	"github.com/okex/exchain/libs/tendermint/version"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	tmstrings "github.com/gridironx/gridchain/libs/tendermint/libs/strings"
+	"github.com/gridironx/gridchain/libs/tendermint/version"
 )
 
 const (

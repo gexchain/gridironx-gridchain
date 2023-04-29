@@ -9,9 +9,9 @@ import (
 	"github.com/ethereum/go-ethereum/core/rawdb"
 	ethstate "github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/trie"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/spf13/viper"
 )
 

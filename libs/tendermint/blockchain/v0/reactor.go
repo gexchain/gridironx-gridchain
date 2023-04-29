@@ -9,11 +9,11 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/store"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 const (

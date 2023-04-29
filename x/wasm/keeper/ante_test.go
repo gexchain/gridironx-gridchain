@@ -4,20 +4,20 @@ import (
 	"testing"
 	"time"
 
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/wasm/keeper"
+	"github.com/gridironx/gridchain/x/wasm/keeper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 func TestCountTxDecorator(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	"github.com/okex/exchain/libs/tendermint/libs/compress"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/compress"
 	"github.com/tendermint/go-amino"
 )
 

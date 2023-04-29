@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/helpers"
+	simappparams "github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
 )
 
 // Simulation operation weights constants

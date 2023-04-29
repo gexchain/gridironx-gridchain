@@ -72,7 +72,7 @@
           "type": "uint256"
         }
       ],
-      "name": "__OKCSendToIbc",
+      "name": "__GRIDCSendToIbc",
       "type": "event"
     },
     {
@@ -97,7 +97,7 @@
           "type": "uint256"
         }
       ],
-      "name": "__OKCSendToWasm",
+      "name": "__GRIDCSendToWasm",
       "type": "event"
     },
     {
@@ -180,7 +180,7 @@
           "type": "uint256"
         }
       ],
-      "name": "burn_by_okc_module",
+      "name": "burn_by_gridc_module",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -277,7 +277,7 @@
           "type": "uint256"
         }
       ],
-      "name": "mint_by_okc_module",
+      "name": "mint_by_gridc_module",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"

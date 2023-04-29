@@ -2,7 +2,7 @@ package types
 
 import (
 	"github.com/gogo/protobuf/proto"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 type Any struct {

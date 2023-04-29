@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking/exported"
-	stakingexported "github.com/okex/exchain/x/staking/exported"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/staking/exported"
+	stakingexported "github.com/gridironx/gridchain/x/staking/exported"
 )
 
 var (

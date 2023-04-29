@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 const (

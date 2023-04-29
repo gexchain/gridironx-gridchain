@@ -8,13 +8,13 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibcclienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/erc20/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	ibctransfertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	ibcclienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/erc20/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 )
 
 // OnMintVouchers after minting vouchers on this chain
@@ -51,7 +51,7 @@ func (k Keeper) ConvertVouchers(ctx sdk.Context, from string, vouchers sdk.SysCo
 
 	params := k.GetParams(ctx)
 	for _, c := range vouchers {
-		// okc1:xxb----->okc2:ibc/xxb---->okc2:erc20/xxb
+		// gridc1:xxb----->gridc2:ibc/xxb---->gridc2:erc20/xxb
 		if err := k.ConvertVoucherToERC20(ctx, fromAddr, c, params.EnableAutoDeployment); err != nil {
 			return err
 		}
@@ -73,7 +73,7 @@ func (k Keeper) ConvertNatives(ctx sdk.Context, from string, vouchers sdk.SysCoi
 	for _, c := range vouchers {
 		// if there is a contract associated with this native coin,
 		// the native coin come from native erc20
-		// okc1:erc20/xxb----->okc2:ibc/xxb---->okc1:ibc/yyb---->okc2:erc20/xxb
+		// gridc1:erc20/xxb----->gridc2:ibc/xxb---->gridc1:ibc/yyb---->gridc2:erc20/xxb
 		if contract, found := k.GetContractByDenom(ctx, c.Denom); found {
 			if err := k.ConvertNativeToERC20(ctx, fromAddr, c, contract); err != nil {
 				return err
@@ -344,7 +344,7 @@ func (k Keeper) IbcTransferVouchers(ctx sdk.Context, from, to string, vouchers s
 		if _, found := k.GetContractByDenom(ctx, c.Denom); !found {
 			return fmt.Errorf("coin %s is not supported", c.Denom)
 		}
-		// okc2:erc20/xxb----->okc2:ibc/xxb---ibc--->okc1:xxb
+		// gridc2:erc20/xxb----->gridc2:ibc/xxb---ibc--->gridc1:xxb
 		if err := k.ibcSendTransfer(ctx, fromAddr, to, c); err != nil {
 			return err
 		}
@@ -372,7 +372,7 @@ func (k Keeper) IbcTransferNative20(ctx sdk.Context, from, to string, native20s 
 		if _, found := k.GetContractByDenom(ctx, c.Denom); !found {
 			return fmt.Errorf("coin %s is not supported", c.Denom)
 		}
-		// okc2:erc20/xxb----->okc2:ibc/xxb---ibc--->okc1:xxb
+		// gridc2:erc20/xxb----->gridc2:ibc/xxb---ibc--->gridc1:xxb
 		if err := k.ibcSendTransferWithChannel(ctx, fromAddr, to, c, portID, channelID); err != nil {
 			return err
 		}

@@ -5,13 +5,13 @@ import (
 	"sync"
 	"time"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/consensus"
-	clist "github.com/okex/exchain/libs/tendermint/libs/clist"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/consensus"
+	clist "github.com/gridironx/gridchain/libs/tendermint/libs/clist"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // Pool maintains a pool of valid evidence

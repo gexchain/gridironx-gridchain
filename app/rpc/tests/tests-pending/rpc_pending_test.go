@@ -19,27 +19,27 @@ import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	gorpc "github.com/ethereum/go-ethereum/rpc"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/app/rpc"
-	"github.com/okex/exchain/app/rpc/backend"
-	util "github.com/okex/exchain/app/rpc/tests"
-	cosmos_context "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	cmserver "github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	apptesting "github.com/okex/exchain/libs/ibc-go/testing"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	"github.com/gridironx/gridchain/app/rpc"
+	"github.com/gridironx/gridchain/app/rpc/backend"
+	util "github.com/gridironx/gridchain/app/rpc/tests"
+	cosmos_context "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	cmserver "github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	apptesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmamino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/suite"
 )
 
 const (
 	addrAStoreKey      = 0
-	defaultMinGasPrice = "0.000000001okt"
+	defaultMinGasPrice = "0.000000001fury"
 	latestBlockNumber  = "latest"
 	pendingBlockNumber = "pending"
 )
@@ -101,16 +101,16 @@ func commitBlock(suite *RPCPendingTestSuite) {
 	mck.CommitBlock()
 }
 func (suite *RPCPendingTestSuite) SetupTest() {
-	// set exchaincli path
-	cliDir, err := ioutil.TempDir("", ".exchaincli")
+	// set gridchaincli path
+	cliDir, err := ioutil.TempDir("", ".gridchaincli")
 	if err != nil {
 		panic(err)
 	}
 	defer os.RemoveAll(cliDir)
 	viper.Set(cmserver.FlagUlockKeyHome, cliDir)
 
-	// set exchaind path
-	serverDir, err := ioutil.TempDir("", ".exchaind")
+	// set gridchaind path
+	serverDir, err := ioutil.TempDir("", ".gridchaind")
 	if err != nil {
 		panic(err)
 	}
@@ -118,7 +118,7 @@ func (suite *RPCPendingTestSuite) SetupTest() {
 	viper.Set(flags.FlagHome, serverDir)
 	viper.Set(rpc.FlagPersonalAPI, true)
 
-	chainId := apptesting.GetOKChainID(1)
+	chainId := apptesting.GetGRIDChainID(1)
 	suite.coordinator = apptesting.NewEthCoordinator(suite.T(), 1)
 	suite.chain = suite.coordinator.GetChain(chainId)
 	suite.chain.App().SetOption(abci.RequestSetOption{

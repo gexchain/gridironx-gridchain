@@ -2,16 +2,16 @@ package cli
 
 import (
 	"fmt"
-	client "github.com/okex/exchain/libs/cosmos-sdk/client/flags"
+	client "github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/gridironx/gridchain/x/dex/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module
@@ -135,7 +135,7 @@ func GetCmdQueryParams(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query all the modifiable parameters of gov proposal",
 		Long: strings.TrimSpace(`Query the all the parameters for the governance process:
 
-$ exchaincli query dex params
+$ gridchaincli query dex params
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {
@@ -162,7 +162,7 @@ func GetCmdQueryProductsUnderDelisting(queryRoute string, cdc *codec.Codec) *cob
 		Long: strings.TrimSpace(`
 		Query all the products' names involved in dex delisting:
 
-$ exchaincli query dex products-delisting`),
+$ gridchaincli query dex products-delisting`),
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
 			res, _, err := cliCtx.QueryWithData(fmt.Sprintf("custom/%s/%s", queryRoute, types.QueryProductsDelisting), nil)

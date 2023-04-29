@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"net/http"
 
-	comm "github.com/okex/exchain/x/common"
+	comm "github.com/gridironx/gridchain/x/common"
 
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
 
-	"github.com/okex/exchain/x/distribution/client/common"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/distribution/client/common"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 func registerTxRoutes(cliCtx context.CLIContext, r *mux.Router, _ string) {

@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	tmamino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bech32"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bech32"
 )
 
 const (
@@ -102,7 +102,7 @@ func IsETHAddress(addr string) bool {
 	return strings.HasPrefix(addr, "0x")
 }
 
-func IsOKCAddress(addr string) bool {
+func IsGRIDCAddress(addr string) bool {
 	return strings.HasPrefix(addr, GetConfig().GetBech32AccountAddrPrefix())
 }
 

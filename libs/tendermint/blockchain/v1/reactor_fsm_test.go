@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmmath "github.com/gridironx/gridchain/libs/tendermint/libs/math"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 type lastBlockRequestT struct {

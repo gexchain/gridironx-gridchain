@@ -3,7 +3,7 @@ package iavl
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/iavl"
+	"github.com/gridironx/gridchain/libs/iavl"
 )
 
 var (

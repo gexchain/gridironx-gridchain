@@ -1,13 +1,13 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/gov/types"
-	paramstypes "github.com/okex/exchain/x/params/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/common"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/gov/types"
+	paramstypes "github.com/gridironx/gridchain/x/params/types"
 )
 
 func cm45QueryProposal(ctx sdk.Context, path []string, req abci.RequestQuery, keeper Keeper) ([]byte, sdk.Error) {
@@ -23,7 +23,7 @@ func cm45QueryProposal(ctx sdk.Context, path []string, req abci.RequestQuery, ke
 	}
 
 	// Here is for compatibility with the standard cosmos REST API.
-	// Note: The Height field in OKC's ParameterChangeProposal will be discarded.
+	// Note: The Height field in GRIDC's ParameterChangeProposal will be discarded.
 	if pcp, ok := proposal.Content.(paramstypes.ParameterChangeProposal); ok {
 		innerContent := pcp.GetParameterChangeProposal()
 		newProposal := types.WrapProposalForCosmosAPI(proposal, innerContent)
@@ -55,7 +55,7 @@ func cm45QueryProposals(ctx sdk.Context, path []string, req abci.RequestQuery, k
 	for _, proposal := range proposals {
 		if pcp, ok := proposal.Content.(paramstypes.ParameterChangeProposal); ok {
 			// Here is for compatibility with the standard cosmos REST API.
-			// Note: The Height field in OKC's ParameterChangeProposal will be discarded.
+			// Note: The Height field in GRIDC's ParameterChangeProposal will be discarded.
 			innerContent := pcp.GetParameterChangeProposal()
 			newProposal := types.WrapProposalForCosmosAPI(proposal, innerContent)
 			cosmosProposals = append(cosmosProposals, newProposal)

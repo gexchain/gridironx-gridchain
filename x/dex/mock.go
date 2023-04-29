@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mock"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/common"
+	ordertypes "github.com/gridironx/gridchain/x/order/types"
 )
 
 type mockTokenKeeper struct {

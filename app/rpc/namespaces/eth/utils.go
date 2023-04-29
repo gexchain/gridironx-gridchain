@@ -13,17 +13,17 @@ import (
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/spf13/viper"
 
-	ethermint "github.com/okex/exchain/app/types"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerror "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/token"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	clientCtx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerror "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/token"
+	wasmkeeper "github.com/gridironx/gridchain/x/wasm/keeper"
+	wasmtypes "github.com/gridironx/gridchain/x/wasm/types"
 )
 
 const (

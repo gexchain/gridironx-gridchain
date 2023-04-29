@@ -3,10 +3,10 @@ package proxy
 import (
 	"sync"
 
-	abcicli "github.com/okex/exchain/libs/tendermint/abci/client"
-	"github.com/okex/exchain/libs/tendermint/abci/example/counter"
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	"github.com/okex/exchain/libs/tendermint/abci/types"
+	abcicli "github.com/gridironx/gridchain/libs/tendermint/abci/client"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/example/counter"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/example/kvstore"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/types"
 )
 
 // NewABCIClient returns newly connected client

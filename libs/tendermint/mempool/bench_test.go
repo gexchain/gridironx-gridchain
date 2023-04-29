@@ -2,8 +2,8 @@ package mempool
 
 import (
 	"encoding/binary"
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	"github.com/okex/exchain/libs/tendermint/proxy"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/example/kvstore"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
 	"testing"
 )
 

@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common"
 
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/x/farm/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/x/farm/types"
 )
 
 func registerQueryRoutes(cliCtx context.CLIContext, r *mux.Router) {

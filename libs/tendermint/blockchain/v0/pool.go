@@ -8,11 +8,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	flow "github.com/okex/exchain/libs/tendermint/libs/flowrate"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	flow "github.com/gridironx/gridchain/libs/tendermint/libs/flowrate"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 /*

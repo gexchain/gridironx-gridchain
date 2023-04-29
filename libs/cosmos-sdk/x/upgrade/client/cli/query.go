@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	upgrade "github.com/okex/exchain/libs/cosmos-sdk/x/upgrade/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	upgrade "github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade/internal/types"
 )
 
 // GetPlanCmd returns the query upgrade plan command

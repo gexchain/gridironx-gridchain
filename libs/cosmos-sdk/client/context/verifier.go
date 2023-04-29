@@ -3,10 +3,10 @@ package context
 import (
 	"path/filepath"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmlite "github.com/okex/exchain/libs/tendermint/lite"
-	tmliteproxy "github.com/okex/exchain/libs/tendermint/lite/proxy"
-	rpchttp "github.com/okex/exchain/libs/tendermint/rpc/client/http"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmlite "github.com/gridironx/gridchain/libs/tendermint/lite"
+	tmliteproxy "github.com/gridironx/gridchain/libs/tendermint/lite/proxy"
+	rpchttp "github.com/gridironx/gridchain/libs/tendermint/rpc/client/http"
 	"github.com/pkg/errors"
 )
 

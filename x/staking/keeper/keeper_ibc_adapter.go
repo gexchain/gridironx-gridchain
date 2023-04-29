@@ -1,11 +1,11 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	outtypes "github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/query"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
+	outtypes "github.com/gridironx/gridchain/x/staking/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

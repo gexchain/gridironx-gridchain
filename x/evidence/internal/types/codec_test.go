@@ -3,13 +3,13 @@ package types_test
 import (
 	"testing"
 
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evidence/exported"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
 )
 
 var _ exported.Evidence = (*testEvidence)(nil)

@@ -3,11 +3,11 @@ package types_test
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	ibctesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,13 +3,13 @@ package types
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 	"strings"
 
 	"github.com/gogo/protobuf/jsonpb"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	paramtypes "github.com/okex/exchain/x/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	paramtypes "github.com/gridironx/gridchain/x/params"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )

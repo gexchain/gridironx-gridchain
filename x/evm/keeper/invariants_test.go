@@ -3,11 +3,11 @@ package keeper_test
 import (
 	"math/big"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	ethermint "github.com/gridironx/gridchain/app/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 )

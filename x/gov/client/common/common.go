@@ -3,9 +3,9 @@ package common
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 // QueryParams actually queries gov params

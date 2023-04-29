@@ -3,20 +3,20 @@ package dex
 import (
 	"encoding/json"
 
-	"github.com/okex/exchain/x/dex/keeper"
+	"github.com/gridironx/gridchain/x/dex/keeper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/dex/types"
 
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/x/dex/client/cli"
-	"github.com/okex/exchain/x/dex/client/rest"
+	"github.com/gridironx/gridchain/x/dex/client/cli"
+	"github.com/gridironx/gridchain/x/dex/client/rest"
 )
 
 var (

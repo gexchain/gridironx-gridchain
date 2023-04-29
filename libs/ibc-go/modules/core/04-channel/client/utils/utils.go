@@ -4,14 +4,14 @@ package utils
 import (
 	"context"
 	"encoding/binary"
-	clictx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/client/utils"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/client"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	clictx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/client/utils"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	ibcclient "github.com/gridironx/gridchain/libs/ibc-go/modules/core/client"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 // QueryChannel returns a channel end.

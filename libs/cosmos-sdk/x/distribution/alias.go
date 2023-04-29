@@ -1,9 +1,9 @@
 package distribution
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution/types"
 )
 
 // nolint

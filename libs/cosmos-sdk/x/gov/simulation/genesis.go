@@ -7,12 +7,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
 )
 
 // Simulation parameter constants

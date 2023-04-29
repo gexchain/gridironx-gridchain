@@ -3,12 +3,12 @@ package fee
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/keeper"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/keeper"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

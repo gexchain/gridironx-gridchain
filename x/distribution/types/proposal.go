@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	govtypes "github.com/okex/exchain/x/gov/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (
@@ -22,10 +22,10 @@ func init() {
 	govtypes.RegisterProposalType(ProposalTypeChangeDistributionType)
 	govtypes.RegisterProposalType(ProposalTypeWithdrawRewardEnabled)
 	govtypes.RegisterProposalType(ProposalTypeRewardTruncatePrecision)
-	govtypes.RegisterProposalTypeCodec(CommunityPoolSpendProposal{}, "okexchain/distribution/CommunityPoolSpendProposal")
-	govtypes.RegisterProposalTypeCodec(ChangeDistributionTypeProposal{}, "okexchain/distribution/ChangeDistributionTypeProposal")
-	govtypes.RegisterProposalTypeCodec(WithdrawRewardEnabledProposal{}, "okexchain/distribution/WithdrawRewardEnabledProposal")
-	govtypes.RegisterProposalTypeCodec(RewardTruncatePrecisionProposal{}, "okexchain/distribution/RewardTruncatePrecisionProposal")
+	govtypes.RegisterProposalTypeCodec(CommunityPoolSpendProposal{}, "gridchain/distribution/CommunityPoolSpendProposal")
+	govtypes.RegisterProposalTypeCodec(ChangeDistributionTypeProposal{}, "gridchain/distribution/ChangeDistributionTypeProposal")
+	govtypes.RegisterProposalTypeCodec(WithdrawRewardEnabledProposal{}, "gridchain/distribution/WithdrawRewardEnabledProposal")
+	govtypes.RegisterProposalTypeCodec(RewardTruncatePrecisionProposal{}, "gridchain/distribution/RewardTruncatePrecisionProposal")
 }
 
 // CommunityPoolSpendProposal spends from the community pool

@@ -1,12 +1,12 @@
 package staking
 
 import (
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
 )
 
 // nolint:deadcode,unused,varcheck

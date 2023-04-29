@@ -1,9 +1,9 @@
 package ante
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 )
 
 // AccountBlockedVerificationDecorator check whether signer is blocked.

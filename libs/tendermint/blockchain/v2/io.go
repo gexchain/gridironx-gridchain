@@ -3,9 +3,9 @@ package v2
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 type iIO interface {

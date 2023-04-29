@@ -1,11 +1,11 @@
 package types
 
 import (
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 // message types for the IBC client

@@ -1,9 +1,9 @@
 package rootmulti
 
 import (
-	storetypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	storetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 )
 
 func queryIbcProof(res *abci.ResponseQuery, info *commitInfo, storeName string) {

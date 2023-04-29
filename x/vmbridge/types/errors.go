@@ -2,8 +2,8 @@ package types
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 var (
@@ -21,7 +21,7 @@ var (
 	ErrEvmExecuteFailed = sdkerrors.Register(ModuleName, 7, "the evm execute")
 
 	ErrVMBridgeEnable = sdkerrors.Register(ModuleName, 8, "the vmbridge is disable")
-	ErrIsNotOKCAddr   = sdkerrors.Register(ModuleName, 9, "the address prefix must be ex")
+	ErrIsNotGRIDCAddr   = sdkerrors.Register(ModuleName, 9, "the address prefix must be ex")
 	ErrIsNotETHAddr   = sdkerrors.Register(ModuleName, 10, "the address prefix must be 0x")
 )
 

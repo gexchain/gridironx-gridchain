@@ -2,12 +2,12 @@ package types
 
 import (
 	"fmt"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	types "github.com/okex/exchain/libs/cosmos-sdk/x/upgrade/typesadapter"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	exchaingov "github.com/okex/exchain/x/gov/types"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	govtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
+	types "github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade/typesadapter"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
+	gridchaingov "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (
@@ -26,7 +26,7 @@ func init() {
 	govtypes.RegisterProposalType(ProposalTypeClientUpdate)
 	govtypes.RegisterProposalType(ProposalTypeUpgrade)
 
-	exchaingov.RegisterProposalType(ProposalTypeClientUpdate)
+	gridchaingov.RegisterProposalType(ProposalTypeClientUpdate)
 }
 
 // NewClientUpdateProposal creates a new client update proposal.

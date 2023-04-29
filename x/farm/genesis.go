@@ -2,9 +2,9 @@ package farm
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/farm/keeper"
+	"github.com/gridironx/gridchain/x/farm/types"
 )
 
 // InitGenesis initialize default parameters and the keeper's address to pubkey map

@@ -1,14 +1,14 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // GovKeeper defines the expected gov Keeper

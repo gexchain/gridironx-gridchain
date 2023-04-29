@@ -4,16 +4,16 @@ import (
 	"math"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
 
-	"github.com/okex/exchain/libs/tendermint/types/time"
+	"github.com/gridironx/gridchain/libs/tendermint/types/time"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

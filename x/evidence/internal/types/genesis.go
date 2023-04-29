@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/x/evidence/exported"
+	"github.com/gridironx/gridchain/x/evidence/exported"
 )
 
 // DONTCOVER

@@ -3,11 +3,11 @@ package types
 import (
 	"encoding/json"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
 )
 
 // StakingKeeper defines the expected staking keeper (noalias)

@@ -1,8 +1,8 @@
 package v018
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/legacy/v0_16"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evm/legacy/v0_16"
 )
 
 type (

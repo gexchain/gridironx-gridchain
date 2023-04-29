@@ -29,34 +29,34 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/app/rpc/backend"
-	cosmos_context "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	cmserver "github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	"github.com/gridironx/gridchain/app/rpc/backend"
+	cosmos_context "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	cmserver "github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	cosmost "github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 
-	"github.com/okex/exchain/app/rpc"
-	"github.com/okex/exchain/app/rpc/types"
-	apptesting "github.com/okex/exchain/libs/ibc-go/testing"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/app/rpc"
+	"github.com/gridironx/gridchain/app/rpc/types"
+	apptesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmamino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 )
 
 const (
 	addrAStoreKey          = 0
 	defaultProtocolVersion = 65
 	defaultChainID         = 65
-	defaultMinGasPrice     = "0.0000000001okt"
-	safeLowGP              = "0.0000000001okt"
-	avgGP                  = "0.0000000001okt"
-	fastestGP              = "0.00000000015okt"
+	defaultMinGasPrice     = "0.0000000001fury"
+	safeLowGP              = "0.0000000001fury"
+	avgGP                  = "0.0000000001fury"
+	fastestGP              = "0.00000000015fury"
 	latestBlockNumber      = "latest"
 	pendingBlockNumber     = "pending"
 )
@@ -95,23 +95,23 @@ func (suite *RPCTestSuite) SetupTest() {
 
 	viper.Set(rpc.FlagDebugAPI, true)
 	viper.Set(cmserver.FlagPruning, cosmost.PruningOptionNothing)
-	// set exchaincli path
-	cliDir, err := ioutil.TempDir("", ".exchaincli")
+	// set gridchaincli path
+	cliDir, err := ioutil.TempDir("", ".gridchaincli")
 	if err != nil {
 		panic(err)
 	}
 	defer os.RemoveAll(cliDir)
 	viper.Set(cmserver.FlagUlockKeyHome, cliDir)
 
-	// set exchaind path
-	serverDir, err := ioutil.TempDir("", ".exchaind")
+	// set gridchaind path
+	serverDir, err := ioutil.TempDir("", ".gridchaind")
 	if err != nil {
 		panic(err)
 	}
 	defer os.RemoveAll(serverDir)
 	viper.Set(flags.FlagHome, serverDir)
 
-	chainId := apptesting.GetOKChainID(1)
+	chainId := apptesting.GetGRIDChainID(1)
 	suite.coordinator = apptesting.NewEthCoordinator(suite.T(), 1)
 	suite.chain = suite.coordinator.GetChain(chainId)
 	suite.chain.App().SetOption(abci.RequestSetOption{
@@ -205,7 +205,7 @@ func commitBlock(suite *RPCTestSuite) {
 	mck.CommitBlock()
 }
 func (suite *RPCTestSuite) TestEth_GetBalance() {
-	// initial balance of hexAddr2 is 1000000000okt in test.sh
+	// initial balance of hexAddr2 is 1000000000fury in test.sh
 	initialBalance := suite.chain.SenderAccount().GetCoins()[0]
 	genesisAcc := ethcmn.BytesToAddress(suite.chain.SenderAccount().GetAddress().Bytes()).String()
 
@@ -385,7 +385,7 @@ func (suite *RPCTestSuite) TestEth_GasPrice() {
 	var gasPrice hexutil.Big
 	suite.Require().NoError(json.Unmarshal(rpcRes.Result, &gasPrice))
 
-	// min gas price in test.sh is "0.000000001okt"
+	// min gas price in test.sh is "0.000000001fury"
 	mgp, err := sdk.ParseDecCoin(defaultMinGasPrice)
 	suite.Require().NoError(err)
 
@@ -474,7 +474,7 @@ func (suite *RPCTestSuite) TestEth_SendTransaction_Transfer() {
 	receipt := WaitForReceipt(suite.T(), suite.addr, hash)
 	suite.Require().NotNil(receipt)
 	suite.Require().Equal("0x1", receipt["status"].(string))
-	//suite.T().Logf("%s transfers %sokt to %s successfully\n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
+	//suite.T().Logf("%s transfers %sfury to %s successfully\n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
 
 	// TODO: logic bug, fix it later
 	// ignore gas price -> default 'ethermint.DefaultGasPrice' on node -> successfully
@@ -485,7 +485,7 @@ func (suite *RPCTestSuite) TestEth_SendTransaction_Transfer() {
 	//receipt = WaitForReceipt(suite.T(), hash)
 	//suite.Require().NotNil(receipt)
 	//suite.Require().Equal("0x1", receipt["status"].(string))
-	//suite.T().Logf("%s transfers %sokt to %s successfully with nil gas price \n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
+	//suite.T().Logf("%s transfers %sfury to %s successfully with nil gas price \n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
 
 	// error check
 	// sender is not unlocked on the node
@@ -951,7 +951,7 @@ func (suite *RPCTestSuite) TestEth_GetBlockByHash() {
 	hash := sendTestTransaction(suite.T(), suite.addr, senderAddr, receiverAddr, 1024)
 	expectedBlockHash := getBlockHashFromTxHash(suite.T(), suite.addr, hash)
 
-	// TODO: OKExChain only supports the block query with txs' hash inside no matter what the second bool argument is.
+	// TODO: GRIDIronxChain only supports the block query with txs' hash inside no matter what the second bool argument is.
 	// 		eth rpc: 	false -> txs' hash inside
 	//				  	true  -> txs full content
 
@@ -987,7 +987,7 @@ func (suite *RPCTestSuite) TestEth_GetBlockByNumber() {
 
 	expectedHeight := getBlockHeightFromTxHash(suite.T(), suite.addr, hash)
 
-	// TODO: OKExChain only supports the block query with txs' hash inside no matter what the second bool argument is.
+	// TODO: GRIDIronxChain only supports the block query with txs' hash inside no matter what the second bool argument is.
 	// 		eth rpc: 	false -> txs' hash inside
 	rpcRes := Call(suite.T(), suite.addr, "eth_getBlockByNumber", []interface{}{expectedHeight, false})
 	var res map[string]interface{}

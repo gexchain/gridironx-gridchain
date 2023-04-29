@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	"github.com/okex/exchain/libs/tendermint/state/indexer"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	"github.com/gridironx/gridchain/libs/tendermint/state/indexer"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 var _ indexer.BlockIndexer = (*BlockerIndexer)(nil)

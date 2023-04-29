@@ -8,31 +8,31 @@ import (
 	"strings"
 	"testing"
 
-	ibcfee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	ibcfee "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
 	"encoding/hex"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/common/math"
-	okexchaincodec "github.com/okex/exchain/app/codec"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	ibctxdecode "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	ibctxdecode "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	ibctransfer "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 )
 
 func newSdkAddress() sdk.AccAddress {
@@ -445,8 +445,8 @@ func newProxyDecoder() *codec.CodecProxy {
 		ibctransfer.AppModuleBasic{},
 		ibcfee.AppModuleBasic{},
 	)
-	cdc := okexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := okexchaincodec.MakeIBC(ModuleBasics)
+	cdc := gridchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := gridchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 	return codecProxy
@@ -481,7 +481,7 @@ func TestMsgIBCTxValidate(t *testing.T) {
 }
 
 func TestMsgIbcTxMarshalSignBytes(t *testing.T) {
-	chainID := "exchain-101"
+	chainID := "gridchain-101"
 	accnum := 1
 	sequence := 0
 	memo := "memo"

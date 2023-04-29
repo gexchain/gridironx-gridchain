@@ -2,7 +2,7 @@ package types
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 // LockInfo is locked info of an address

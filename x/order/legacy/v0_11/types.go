@@ -1,8 +1,8 @@
 package v0_11
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/order/legacy/v0_10"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/order/legacy/v0_10"
 )
 
 const (

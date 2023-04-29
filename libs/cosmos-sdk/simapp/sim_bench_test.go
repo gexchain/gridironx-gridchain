@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
 )
 
 // Profile with:

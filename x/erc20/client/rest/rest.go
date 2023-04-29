@@ -6,11 +6,11 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	comm "github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/erc20/types"
-	govRest "github.com/okex/exchain/x/gov/client/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	comm "github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/erc20/types"
+	govRest "github.com/gridironx/gridchain/x/gov/client/rest"
 )
 
 // RegisterRoutes - Central function to define routes that get registered by the main application

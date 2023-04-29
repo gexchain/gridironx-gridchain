@@ -1,10 +1,10 @@
 package keeperadapter
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/types"
 )
 
 var (
@@ -36,7 +36,7 @@ func (adapter BankKeeperAdapter) IsSendEnabledCoins(ctx sdk.Context, coins ...sd
 	if !adapter.Keeper.GetSendEnabled(ctx) {
 		return sdkerrors.Wrapf(types.ErrSendDisabled, "transfers are currently disabled")
 	}
-	// todo weather allow different form okt coin send enable
+	// todo weather allow different form fury coin send enable
 	return nil
 }
 

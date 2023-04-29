@@ -1,18 +1,18 @@
 package keeper_test
 
 import (
-	"github.com/okex/exchain/x/wasm"
-	"github.com/okex/exchain/x/wasm/keeper"
+	"github.com/gridironx/gridchain/x/wasm"
+	"github.com/gridironx/gridchain/x/wasm/keeper"
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -24,19 +24,19 @@ import (
 //	"io/ioutil"
 //	"testing"
 //
-//	"github.com/okex/exchain/libs/cosmos-sdk/x/params/client/utils"
+//	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/client/utils"
 //
 //	wasmvm "github.com/CosmWasm/wasmvm"
 //
-//	"github.com/okex/exchain/x/wasm/keeper/wasmtesting"
+//	"github.com/gridironx/gridchain/x/wasm/keeper/wasmtesting"
 //
-//	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-//	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-//	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types/proposal"
+//	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+//	govtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
+//	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/types/proposal"
 //	"github.com/stretchr/testify/assert"
 //	"github.com/stretchr/testify/require"
 //
-//	"github.com/okex/exchain/x/wasm/types"
+//	"github.com/gridironx/gridchain/x/wasm/types"
 //)
 //
 //func TestStoreCodeProposal(t *testing.T) {
@@ -876,7 +876,7 @@ type ProposalTestSuite struct {
 
 	ctx         sdk.Context
 	wasmHandler govtypes.Handler
-	app         *app.OKExChainApp
+	app         *app.GRIDIronxChainApp
 	codec       *codec.Codec
 }
 
@@ -925,7 +925,7 @@ func (suite *ProposalTestSuite) TestModifyNextBlockUpdateProposal() {
 			govProposal.Content = &proposal
 
 			err := suite.wasmHandler(suite.ctx, &govProposal)
-			suite.app.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "exchain-67", Height: 1, Time: time.Now()}})
+			suite.app.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "gridchain-67", Height: 1, Time: time.Now()}})
 			suite.Require().Equal(tc.expectError, err)
 
 			gasFactor := suite.app.WasmKeeper.GetGasFactor(suite.ctx)

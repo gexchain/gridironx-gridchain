@@ -8,17 +8,17 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
-	token "github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/dex"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/types"
+	token "github.com/gridironx/gridchain/x/token/types"
 )
 
 func TestEndBlockerPeriodicMatch(t *testing.T) {

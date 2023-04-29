@@ -8,13 +8,13 @@ import (
 	"strconv"
 	"strings"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/tendermint/state/indexer"
+	"github.com/gridironx/gridchain/libs/tendermint/state/indexer"
 
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
 	"github.com/google/orderedcode"
 )

@@ -2,14 +2,14 @@ package cli
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/x/token/types"
 	"github.com/spf13/cobra"
 )
 
@@ -86,7 +86,7 @@ func getCmdQueryParams(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query the parameters of the token process",
 		Long: strings.TrimSpace(`Query the all the parameters for the governance process:
 
-$ exchaincli query token params
+$ gridchaincli query token params
 `),
 		Args: cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {

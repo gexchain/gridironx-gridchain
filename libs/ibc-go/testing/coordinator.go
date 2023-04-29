@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -54,7 +54,7 @@ func NewEthCoordinator(t *testing.T, n int) *Coordinator {
 	}
 
 	for i := 1; i <= n; i++ {
-		chainID := GetOKChainID(i)
+		chainID := GetGRIDChainID(i)
 		chains[chainID] = NewTestEthChain(t, coord, chainID)
 	}
 	coord.Chains = chains
@@ -197,7 +197,7 @@ func GetChainID(index int) string {
 }
 
 // GetChainID returns the chainID used for the provided index.
-func GetOKChainID(index int) string {
+func GetGRIDChainID(index int) string {
 	return ChainIDPrefix + "-" + strconv.Itoa(index)
 }
 

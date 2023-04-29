@@ -2,13 +2,13 @@ package staking
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/staking/keeper"
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	types2 "github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/staking/keeper"
+	"github.com/gridironx/gridchain/x/staking/types"
 	"time"
 )
 

@@ -6,26 +6,26 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 
-	"github.com/okex/exchain/libs/tendermint/global"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
 
 	lru "github.com/hashicorp/golang-lru"
 
-	coretypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
+	coretypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
 
 	"github.com/spf13/viper"
 
 	"golang.org/x/time/rate"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 
-	rpctypes "github.com/okex/exchain/app/rpc/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	rpctypes "github.com/gridironx/gridchain/app/rpc/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 
-	clientcontext "github.com/okex/exchain/libs/cosmos-sdk/client/context"
+	clientcontext "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/bitutil"
@@ -33,8 +33,8 @@ import (
 	"github.com/ethereum/go-ethereum/core/bloombits"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 )
 
 const (

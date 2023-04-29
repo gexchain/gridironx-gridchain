@@ -3,9 +3,9 @@ package types
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	"github.com/okex/exchain/x/params"
+	"github.com/gridironx/gridchain/x/params"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,11 +5,11 @@ import (
 	"errors"
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/x/vmbridge/keeper"
-	"github.com/okex/exchain/x/vmbridge/types"
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/x/vmbridge/keeper"
+	"github.com/gridironx/gridchain/x/vmbridge/types"
+	wasmtypes "github.com/gridironx/gridchain/x/wasm/types"
 	"math/big"
 )
 
@@ -72,7 +72,7 @@ func (suite *KeeperTestSuite) TestKeeper_SendToWasm() {
 				suite.Require().NoError(err)
 				suite.Require().Equal("{\"balance\":\"1\"}", string(result))
 			},
-			types.ErrIsNotOKCAddr,
+			types.ErrIsNotGRIDCAddr,
 		},
 		{
 			"recipient is wasmaddr",
@@ -98,7 +98,7 @@ func (suite *KeeperTestSuite) TestKeeper_SendToWasm() {
 				suite.Require().NoError(err)
 				suite.Require().Equal("{\"balance\":\"1\"}", string(result))
 			},
-			types.ErrIsNotOKCAddr,
+			types.ErrIsNotGRIDCAddr,
 		},
 		{
 			"normal topic,amount is zero",
@@ -543,7 +543,7 @@ func (suite *KeeperTestSuite) TestKeeper_CallToWasm() {
 				balance = suite.queryCoins(sdk.WasmToAccAddress(suite.freeCallWasmContract))
 				suite.Require().Equal(sdk.Coins{sdk.NewInt64Coin(sdk.DefaultBondDenom, 1)}.String(), balance.String())
 			},
-			errors.New("insufficient funds: insufficient account funds; 1.000000000000000000okt < 2.000000000000000000okt"),
+			errors.New("insufficient funds: insufficient account funds; 1.000000000000000000fury < 2.000000000000000000fury"),
 		},
 		{
 			"caller(20),wasmContract(ex 20),value(-1 negative),calldata(normal)",

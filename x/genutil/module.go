@@ -3,14 +3,14 @@ package genutil
 import (
 	"encoding/json"
 
-	"github.com/okex/exchain/x/genutil/types"
+	"github.com/gridironx/gridchain/x/genutil/types"
 
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	"github.com/spf13/cobra"
 )
 

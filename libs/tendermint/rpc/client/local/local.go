@@ -7,16 +7,16 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmpubsub "github.com/okex/exchain/libs/tendermint/libs/pubsub"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	nm "github.com/okex/exchain/libs/tendermint/node"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	"github.com/okex/exchain/libs/tendermint/rpc/core"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmpubsub "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub"
+	tmquery "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	nm "github.com/gridironx/gridchain/libs/tendermint/node"
+	rpcclient "github.com/gridironx/gridchain/libs/tendermint/rpc/client"
+	"github.com/gridironx/gridchain/libs/tendermint/rpc/core"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 /*

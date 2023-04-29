@@ -13,7 +13,7 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 )
 
 //-------------------------------------

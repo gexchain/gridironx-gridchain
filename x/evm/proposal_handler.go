@@ -1,12 +1,12 @@
 package evm
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
+	govTypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // NewManageContractDeploymentWhitelistProposalHandler handles "gov" type message in "evm"

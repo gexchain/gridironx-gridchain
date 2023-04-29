@@ -1,10 +1,10 @@
 package ante
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/types"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/evm/types"
+	wasmkeeper "github.com/gridironx/gridchain/x/wasm/keeper"
 )
 
 type WrapWasmCountTXDecorator struct {

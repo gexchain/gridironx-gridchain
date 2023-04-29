@@ -1,12 +1,12 @@
 package keeper_test
 
 import (
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
 )
 
 func createTestApp() *simapp.SimApp {

@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/okex/exchain/libs/system/trace"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 type GPOConfig struct {

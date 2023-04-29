@@ -1,12 +1,12 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
 const (
-	ManageTreasuresProposalName       = "okexchain/mint/ManageTreasuresProposal"
-	ModifyNextBlockUpdateProposalName = "okexchain/mint/ModifyNextBlockUpdateProposal"
+	ManageTreasuresProposalName       = "gridchain/mint/ManageTreasuresProposal"
+	ModifyNextBlockUpdateProposalName = "gridchain/mint/ModifyNextBlockUpdateProposal"
 )
 
 // ModuleCdc is a generic sealed codec to be used throughout this module

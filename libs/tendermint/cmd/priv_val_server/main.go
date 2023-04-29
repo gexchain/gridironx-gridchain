@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmnet "github.com/okex/exchain/libs/tendermint/libs/net"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmnet "github.com/gridironx/gridchain/libs/tendermint/libs/net"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
 
-	"github.com/okex/exchain/libs/tendermint/privval"
+	"github.com/gridironx/gridchain/libs/tendermint/privval"
 )
 
 func main() {

@@ -1,9 +1,9 @@
 package infura
 
 import (
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/common/monitor"
-	evm "github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/common/monitor"
+	evm "github.com/gridironx/gridchain/x/evm/watcher"
 )
 
 // nolint

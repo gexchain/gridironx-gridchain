@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	tcrypto "github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 )
 
 type byter interface {

@@ -11,10 +11,10 @@ import (
 
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
 	"github.com/spf13/viper"
 )
 
@@ -84,8 +84,8 @@ func exportAccounts(ctx sdk.Context, keeper Keeper) (filePath string) {
 		}
 
 		//account.SpendableCoins()
-		oktBalance := account.GetCoins().AmountOf(sdk.DefaultBondDenom)
-		if !oktBalance.GT(sdk.ZeroDec()) {
+		furyBalance := account.GetCoins().AmountOf(sdk.DefaultBondDenom)
+		if !furyBalance.GT(sdk.ZeroDec()) {
 			return false
 		}
 
@@ -97,7 +97,7 @@ func exportAccounts(ctx sdk.Context, keeper Keeper) (filePath string) {
 		csvStr := fmt.Sprintf("%s,%d,%s,%d,%s",
 			ethAcc.EthAddress().String(),
 			accType,
-			oktBalance.String(),
+			furyBalance.String(),
 			ctx.BlockHeight(),
 			pt,
 		)

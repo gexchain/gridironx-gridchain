@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // GovKeeper defines the expected gov Keeper

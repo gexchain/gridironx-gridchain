@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
 )
 
 const (

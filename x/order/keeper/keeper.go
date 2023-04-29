@@ -6,14 +6,14 @@ import (
 
 	"github.com/willf/bitset"
 
-	"github.com/okex/exchain/x/common/monitor"
+	"github.com/gridironx/gridchain/x/common/monitor"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/params"
 
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/order/types"
 )
 
 var onStartUp sync.Once

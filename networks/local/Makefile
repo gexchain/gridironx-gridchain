@@ -1,6 +1,6 @@
-# Makefile for the "exchainnode" docker image.
+# Makefile for the "gridchainnode" docker image.
 
 all:
-	docker build --tag exchain/node -f node/Dockerfile ../../../exchain
+	docker build --tag gridchain/node -f node/Dockerfile ../../../gridchain
 
 .PHONY: all

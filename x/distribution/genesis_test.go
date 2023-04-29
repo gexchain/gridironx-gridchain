@@ -3,9 +3,9 @@ package distribution
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/distribution/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/distribution/keeper"
+	"github.com/gridironx/gridchain/x/distribution/types"
 	"github.com/stretchr/testify/require"
 )
 

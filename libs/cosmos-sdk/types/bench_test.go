@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 var coinStrs = []string{

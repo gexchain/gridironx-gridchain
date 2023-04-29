@@ -9,18 +9,18 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/store"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 )
 
 var config *cfg.Config

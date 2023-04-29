@@ -1,8 +1,8 @@
 package evidence
 
 import (
-	"github.com/okex/exchain/x/evidence/internal/keeper"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/x/evidence/internal/keeper"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
 )
 
 // nolint

@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmnet "github.com/okex/exchain/libs/tendermint/libs/net"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmnet "github.com/gridironx/gridchain/libs/tendermint/libs/net"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 var (

@@ -2,10 +2,10 @@ package types
 
 import (
 	"fmt"
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/params"
 )
 
 // Default parameter namespace

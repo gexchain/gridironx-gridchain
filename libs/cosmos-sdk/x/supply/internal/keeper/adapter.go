@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/internal/types"
 )
 
 var (

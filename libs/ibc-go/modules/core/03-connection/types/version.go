@@ -3,8 +3,8 @@ package types
 import (
 	"strings"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 var (

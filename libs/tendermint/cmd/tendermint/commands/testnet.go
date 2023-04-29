@@ -11,13 +11,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/privval"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/privval"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 )
 
 var (

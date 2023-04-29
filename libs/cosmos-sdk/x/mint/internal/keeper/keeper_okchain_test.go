@@ -4,12 +4,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint/internal/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	evm_types "github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint/internal/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	evm_types "github.com/gridironx/gridchain/x/evm/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -17,7 +17,7 @@ type TreasuresTestSuite struct {
 	suite.Suite
 
 	ctx     sdk.Context
-	app     *app.OKExChainApp
+	app     *app.GRIDIronxChainApp
 	stateDB *evm_types.CommitStateDB
 	codec   *codec.Codec
 

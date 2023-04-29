@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
 
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 // GetDistributionAccount returns the distribution ModuleAccount

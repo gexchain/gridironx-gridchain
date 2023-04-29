@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis"
-	distr "github.com/okex/exchain/libs/cosmos-sdk/x/distribution"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis"
+	distr "github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
 )
 
 var (

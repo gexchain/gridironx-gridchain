@@ -1,10 +1,10 @@
 package fss
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/iavl"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/iavl"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/spf13/cobra"
 )
 

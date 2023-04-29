@@ -9,17 +9,17 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server/grpc/gogoreflection"
-	reflection "github.com/okex/exchain/libs/cosmos-sdk/server/grpc/reflection/v2alpha1"
-	app2 "github.com/okex/exchain/libs/cosmos-sdk/server/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/node"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server/grpc/gogoreflection"
+	reflection "github.com/gridironx/gridchain/libs/cosmos-sdk/server/grpc/reflection/v2alpha1"
+	app2 "github.com/gridironx/gridchain/libs/cosmos-sdk/server/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/node"
 )
 
 // ServerStartTime defines the time duration that the server need to stay running after startup

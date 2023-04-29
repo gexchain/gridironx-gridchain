@@ -2,8 +2,8 @@ package types
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkErrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkErrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 // Codes for wasm contract errors

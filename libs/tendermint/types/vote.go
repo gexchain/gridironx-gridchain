@@ -8,9 +8,9 @@ import (
 
 	"github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	tmproto "github.com/gridironx/gridchain/libs/tendermint/proto/types"
 )
 
 const (

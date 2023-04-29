@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex/types"
-	"github.com/okex/exchain/x/gov"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/dex/types"
+	"github.com/gridironx/gridchain/x/gov"
+	govTypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // GetMinDeposit returns min deposit

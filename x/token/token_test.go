@@ -7,21 +7,21 @@ import (
 	"strings"
 	"testing"
 
-	app "github.com/okex/exchain/app/types"
+	app "github.com/gridironx/gridchain/app/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mock"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/token/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -291,7 +291,7 @@ type TestAccounts []*testAccount
 func GenTx(msgs []sdk.Msg, accnums []uint64, seq []uint64, priv ...crypto.PrivKey) *auth.StdTx {
 	// Make the transaction free
 	fee := auth.StdFee{
-		// just for test - 0.01okt as fixed fee
+		// just for test - 0.01fury as fixed fee
 		Amount: sdk.NewDecCoinsFromDec(sdk.DefaultBondDenom, sdk.MustNewDecFromStr("0.01")),
 		Gas:    200000,
 	}
@@ -386,11 +386,11 @@ func TestMsgTokenChown(t *testing.T) {
 	}
 
 	//issue token to FromAddress
-	tokenIssueMsg := types.NewMsgTokenIssue(common.NativeToken, common.NativeToken, common.NativeToken, "okcoin", "1000", testAccounts[0].baseAccount.Address, true)
+	tokenIssueMsg := types.NewMsgTokenIssue(common.NativeToken, common.NativeToken, common.NativeToken, "gridcoin", "1000", testAccounts[0].baseAccount.Address, true)
 	TokenIssue = append(TokenIssue, createTokenMsg(t, app, ctx, testAccounts[0], tokenIssueMsg))
 
 	//test error supply coin issue(TotalSupply > (9*1e10))
-	MsgErrorSupply := types.NewMsgTokenIssue("okc", "okc", "okc", "okccc", strconv.FormatInt(int64(10*1e10), 10), testAccounts[0].baseAccount.Address, true)
+	MsgErrorSupply := types.NewMsgTokenIssue("gridc", "gridc", "gridc", "gridccc", strconv.FormatInt(int64(10*1e10), 10), testAccounts[0].baseAccount.Address, true)
 	TokenIssue = append(TokenIssue, createTokenMsg(t, app, ctx, testAccounts[0], MsgErrorSupply))
 
 	//test error tokenDesc (length > 256)
@@ -398,7 +398,7 @@ func TestMsgTokenChown(t *testing.T) {
 ok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-b
 ok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-b
 ok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-bok-b`,
-		common.NativeToken, common.NativeToken, "okcoin", "2100", testAccounts[0].baseAccount.Address, true)
+		common.NativeToken, common.NativeToken, "gridcoin", "2100", testAccounts[0].baseAccount.Address, true)
 	TokenIssue = append(TokenIssue, createTokenMsg(t, app, ctx, testAccounts[0], MsgErrorName))
 
 	ctx = mockApplyBlock(t, app, TokenIssue, 3)
@@ -442,19 +442,19 @@ func TestHandleMsgTokenIssueFails(t *testing.T) {
 	}{
 		{
 			"Error Get Decimal From Decimal String",
-			types.NewMsgTokenIssue("", common.NativeToken, common.NativeToken, "okcoin", "", testAccounts[0].baseAccount.Address, true),
+			types.NewMsgTokenIssue("", common.NativeToken, common.NativeToken, "gridcoin", "", testAccounts[0].baseAccount.Address, true),
 			"create a decimal from an input decimal string failed: create a decimal from an input decimal string failed: decimal string cannot be empty",
 			false,
 		},
 		{
 			"Error Invalid Coins",
-			types.NewMsgTokenIssue("", common.NativeToken, "a.b", "okcoin", "9999", testAccounts[0].baseAccount.Address, true),
+			types.NewMsgTokenIssue("", common.NativeToken, "a.b", "gridcoin", "9999", testAccounts[0].baseAccount.Address, true),
 			"invalid coins: invalid coins: a.b",
 			false,
 		},
 		{
 			"Error Mint Coins Failed",
-			types.NewMsgTokenIssue("", common.NativeToken, common.NativeToken, "okcoin", "9999", testAccounts[0].baseAccount.Address, true),
+			types.NewMsgTokenIssue("", common.NativeToken, common.NativeToken, "gridcoin", "9999", testAccounts[0].baseAccount.Address, true),
 			"not have permission to mint should panic",
 			true,
 		},
@@ -976,7 +976,7 @@ func TestTxFailedFeeTable(t *testing.T) {
 		balance string
 		msg     *auth.StdTx
 	}{
-		// 0.01okt as fixed fee in each stdTx
+		// 0.01fury as fixed fee in each stdTx
 		{"fail to issue : 0.01", "9.990000000000000000", createTokenMsg(t, app, ctx, testAccounts[0], failedIssueMsg)},
 		{"fail to mint  : 0.01", "9.980000000000000000", createTokenMsg(t, app, ctx, testAccounts[0], failedMintMsg)},
 		{"fail to burn  : 0.01", "9.970000000000000000", createTokenMsg(t, app, ctx, testAccounts[0], failedBurnMsg)},
@@ -1031,7 +1031,7 @@ func TestTxSuccessFeeTable(t *testing.T) {
 		msg         sdk.Msg
 		account     *testAccount
 	}{
-		// 0.01okt as fixed fee in each stdTx
+		// 0.01fury as fixed fee in each stdTx
 		{"success to issue : 2500+0.01", "27499.990000000000000000", successfulIssueMsg, testAccounts[0]},
 		{"success to mint  : 10+0.01", "27489.980000000000000000", successfulMintMsg, testAccounts[0]},
 		{"success to burn  : 10+0.01", "27479.970000000000000000", successfulBurnMsg, testAccounts[0]},
@@ -1081,7 +1081,7 @@ func TestBlockedAddrSend(t *testing.T) {
 		msg         sdk.Msg
 		account     *testAccount
 	}{
-		// 0.01okt as fixed fee in each stdTx
+		// 0.01fury as fixed fee in each stdTx
 		{"success to send  : 50+0.01", "29949.990000000000000000", successfulSendMsg, testAccounts[0]},
 		{"fail to send  : 0.01", "29949.980000000000000000", failedSendMsg, testAccounts[0]},
 		{"success to multi-send  : 100+0.01", "29849.970000000000000000", successfulMultiSendMsg, testAccounts[0]},

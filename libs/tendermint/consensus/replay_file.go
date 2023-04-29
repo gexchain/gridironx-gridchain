@@ -9,17 +9,17 @@ import (
 	"strconv"
 	"strings"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/pkg/errors"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
+	"github.com/gridironx/gridchain/libs/tendermint/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/store"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 const (

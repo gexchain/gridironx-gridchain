@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 func BenchmarkAccountMapperGetAccountFound(b *testing.B) {

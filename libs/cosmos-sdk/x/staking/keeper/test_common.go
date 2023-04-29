@@ -7,26 +7,26 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
 )
 
 // dummy addresses used for testing

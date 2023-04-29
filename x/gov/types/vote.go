@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 // Vote

@@ -6,15 +6,15 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/gridironx/gridchain/x/dex/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/x/common"
-	govRest "github.com/okex/exchain/x/gov/client/rest"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/x/common"
+	govRest "github.com/gridironx/gridchain/x/gov/client/rest"
 
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
 )
 
 // RegisterRoutes - Central function to define routes that get registered by the main application

@@ -3,14 +3,14 @@ package rest
 import (
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/gov"
-	govrest "github.com/okex/exchain/x/gov/client/rest"
-	paramscutils "github.com/okex/exchain/x/params/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/x/gov"
+	govrest "github.com/gridironx/gridchain/x/gov/client/rest"
+	paramscutils "github.com/gridironx/gridchain/x/params/client/utils"
 )
 
 // ProposalRESTHandler returns a ProposalRESTHandler that exposes the param change REST handler with a given sub-route

@@ -2,9 +2,9 @@ package consensus
 
 import (
 	"fmt"
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	"github.com/okex/exchain/libs/tendermint/libs/automation"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cstypes "github.com/gridironx/gridchain/libs/tendermint/consensus/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/automation"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // Enter: `timeoutPrevote` after any +2/3 prevotes.

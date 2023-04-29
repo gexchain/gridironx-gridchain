@@ -13,7 +13,7 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/okex/exchain-ethereum-compatible/utils"
+	"github.com/gridironx/gridchain-ethereum-compatible/utils"
 
 	"io/ioutil"
 	"log"
@@ -22,11 +22,11 @@ import (
 )
 
 const (
-	//RpcUrl          = "https://exchaintestrpc.okex.org"
+	//RpcUrl          = "https://gridchaintestrpc.gridironx.org"
 	RpcUrl        = "http://127.0.0.1:8545"
-	ChainId int64 = 67 //  okc
-	//RpcUrl          = "https://exchainrpc.okex.org"
-	//ChainId int64   = 66 //  okc
+	ChainId int64 = 67 //  gridc
+	//RpcUrl          = "https://gridchainrpc.gridironx.org"
+	//ChainId int64   = 66 //  gridc
 	GasPrice int64  = 100000000 // 0.1 gwei
 	GasLimit uint64 = 3000000
 )
@@ -330,7 +330,7 @@ func send(client *ethclient.Client, to, privKey string) {
 	privateKey, senderAddress := initKey(privKey)
 	toAddress := common.HexToAddress(to)
 
-	// send 0.001okt
+	// send 0.001fury
 	transferOKT(client, senderAddress, toAddress, str2bigInt("0.001"), privateKey, 0)
 }
 

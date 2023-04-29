@@ -3,14 +3,14 @@ package v0_36
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
-	v034distr "github.com/okex/exchain/libs/cosmos-sdk/x/distribution/legacy/v0_34"
-	v034accounts "github.com/okex/exchain/libs/cosmos-sdk/x/genaccounts/legacy/v0_34"
-	v034gov "github.com/okex/exchain/libs/cosmos-sdk/x/gov/legacy/v0_34"
-	v034staking "github.com/okex/exchain/libs/cosmos-sdk/x/staking/legacy/v0_34"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	v034distr "github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution/legacy/v0_34"
+	v034accounts "github.com/gridironx/gridchain/libs/cosmos-sdk/x/genaccounts/legacy/v0_34"
+	v034gov "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/legacy/v0_34"
+	v034staking "github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/legacy/v0_34"
 
 	"github.com/stretchr/testify/require"
 )

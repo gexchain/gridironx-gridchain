@@ -4,12 +4,12 @@ import (
 	"fmt"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethermint "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/evm/types"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/evm/types"
 	"github.com/spf13/viper"
 )
 

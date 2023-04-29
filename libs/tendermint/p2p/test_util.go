@@ -7,14 +7,14 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmnet "github.com/okex/exchain/libs/tendermint/libs/net"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmnet "github.com/gridironx/gridchain/libs/tendermint/libs/net"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
 
-	"github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p/conn"
 )
 
 const testCh = 0x01

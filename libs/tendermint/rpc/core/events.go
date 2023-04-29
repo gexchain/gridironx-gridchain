@@ -6,10 +6,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	tmpubsub "github.com/okex/exchain/libs/tendermint/libs/pubsub"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	tmpubsub "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub"
+	tmquery "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 func TestSetWithdrawAddr(t *testing.T) {

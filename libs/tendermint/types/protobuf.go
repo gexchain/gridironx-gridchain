@@ -5,11 +5,11 @@ import (
 	"reflect"
 	"time"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/libs/tendermint/crypto/sr25519"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/sr25519"
 )
 
 //-------------------------------------------------------

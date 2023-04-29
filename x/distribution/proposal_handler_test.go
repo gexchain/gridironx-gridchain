@@ -5,12 +5,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/distribution/keeper"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 var (

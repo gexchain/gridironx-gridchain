@@ -4,8 +4,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

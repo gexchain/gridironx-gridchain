@@ -3,10 +3,10 @@ package common
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 // QueryDelegatorValidators returns delegator's list of validators

@@ -3,10 +3,10 @@ package types_test
 import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	ethermint "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/stretchr/testify/suite"
 	"testing"
 )

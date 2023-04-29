@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
 var (
@@ -772,7 +772,7 @@ func TestConvertWei2OKT(t *testing.T) {
 		cm40StrOut string
 	}{
 		{"invalid coin", NewCoinAdapter(DefaultBondDenom, NewInt(1)), false, "", ""},
-		{"valid coin with specific output", NewCoinAdapter(DefaultIbcWei, NewInt(1)), true, "0.000000000000000001okt", "1okt"},
+		{"valid coin with specific output", NewCoinAdapter(DefaultIbcWei, NewInt(1)), true, "0.000000000000000001fury", "1fury"},
 	}
 	for _, ca := range testCases {
 		t.Run(ca.name, func(t *testing.T) {

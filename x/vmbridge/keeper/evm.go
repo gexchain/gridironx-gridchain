@@ -4,14 +4,14 @@ import (
 	"encoding/hex"
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	erc20types "github.com/okex/exchain/x/erc20/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
-	"github.com/okex/exchain/x/vmbridge/types"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	erc20types "github.com/gridironx/gridchain/x/erc20/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/x/vmbridge/types"
 	"math/big"
 )
 
@@ -57,7 +57,7 @@ func (h SendToWasmEventHandler) Handle(ctx sdk.Context, contract common.Address,
 	return h.Keeper.SendToWasm(ctx, caller, wasmAddr, recipient, amount)
 }
 
-// event __OKCCallToWasm(string wasmAddr,uint256 value, string calldata)
+// event __GRIDCCallToWasm(string wasmAddr,uint256 value, string calldata)
 type CallToWasmEventHandler struct {
 	Keeper
 }

@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/dex/types"
+	govTypes "github.com/gridironx/gridchain/x/gov/types"
+	ordertypes "github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

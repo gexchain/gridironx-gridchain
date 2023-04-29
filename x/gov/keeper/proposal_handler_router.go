@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 var (

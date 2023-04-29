@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/types/time"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types/time"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/dex"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

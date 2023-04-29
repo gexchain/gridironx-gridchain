@@ -3,12 +3,12 @@ package core
 import (
 	"time"
 
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // Status returns Tendermint status including node info, pubkey, latest block

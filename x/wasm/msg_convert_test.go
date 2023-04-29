@@ -3,13 +3,13 @@ package wasm
 import (
 	"encoding/json"
 	"fmt"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 var (

@@ -8,11 +8,11 @@ import (
 	"github.com/tendermint/go-amino"
 	"gopkg.in/yaml.v2"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
@@ -28,7 +28,7 @@ func init() {
 }
 
 // ----------------------------------------------------------------------------
-// Main OKExChain account
+// Main GRIDIronxChain account
 // ----------------------------------------------------------------------------
 
 // EthAccount implements the auth.Account interface and embeds an

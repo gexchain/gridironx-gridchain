@@ -1,8 +1,8 @@
 package staking
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // BeginBlocker will persist the current header and validator set as a historical entry

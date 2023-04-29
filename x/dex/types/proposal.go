@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (
@@ -14,7 +14,7 @@ const (
 
 func init() {
 	govtypes.RegisterProposalType(proposalTypeDelist)
-	govtypes.RegisterProposalTypeCodec(DelistProposal{}, "okexchain/dex/DelistProposal")
+	govtypes.RegisterProposalTypeCodec(DelistProposal{}, "gridchain/dex/DelistProposal")
 
 }
 

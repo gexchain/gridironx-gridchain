@@ -4,14 +4,14 @@ package keys
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/hd"
-	"github.com/okex/exchain/libs/cosmos-sdk/tests"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys/hd"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/tests"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 func TestLazyKeyManagementKeyRing(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"encoding/hex"
 	"fmt"
 	ethcommon "github.com/ethereum/go-ethereum/common"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
 	"math/big"
 	"os"
 	"strings"
@@ -14,23 +14,23 @@ import (
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	"github.com/okex/exchain/x/evm"
-	"github.com/okex/exchain/x/evm/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"
+	"github.com/gridironx/gridchain/x/evm"
+	"github.com/gridironx/gridchain/x/evm/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 	"github.com/spf13/viper"
 	"github.com/status-im/keycard-go/hexutils"
 	"github.com/stretchr/testify/require"
@@ -55,7 +55,7 @@ func calcHash(kvs []KV) []byte {
 
 type WatcherTestSt struct {
 	ctx     sdk.Context
-	app     *app.OKExChainApp
+	app     *app.GRIDIronxChainApp
 	handler sdk.Handler
 }
 
@@ -471,7 +471,7 @@ func TestDeliverRealTx(t *testing.T) {
 	privKey, _ := ethsecp256k1.GenerateKey()
 	err := tx.Sign(big.NewInt(3), privKey.ToECDSA())
 	require.NoError(t, err)
-	codecProxy, _ := okexchaincodec.MakeCodecSuit(module.NewBasicManager())
+	codecProxy, _ := gridchaincodec.MakeCodecSuit(module.NewBasicManager())
 	w.app.EvmKeeper.Watcher.RecordTxAndFailedReceipt(tx, nil, evm.TxDecoder(codecProxy))
 }
 

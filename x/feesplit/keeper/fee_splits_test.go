@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/feesplit/types"
 )
 
 func (suite *KeeperTestSuite) TestGetFees() {

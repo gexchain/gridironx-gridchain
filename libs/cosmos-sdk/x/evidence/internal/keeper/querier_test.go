@@ -3,10 +3,10 @@ package keeper_test
 import (
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/internal/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 )
 
 const (

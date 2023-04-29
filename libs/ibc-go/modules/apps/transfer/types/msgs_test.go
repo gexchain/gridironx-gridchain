@@ -2,15 +2,15 @@ package types
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 	"math/big"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 
-	//"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/secp256k1"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
+	//"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys/secp256k1"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
 )
 
 // define constants used for testing

@@ -3,15 +3,15 @@ package keeper_test
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp"
 
 	// sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	ibctesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
 )
 
 // test sending from chainA to chainB using both coin that orignate on
@@ -68,7 +68,7 @@ func (suite *KeeperTestSuite) TestSendTransfer() {
 
 		// createOutgoingPacket tests
 		// - source chain
-		// okc demom not validate will panic will return error
+		// gridc demom not validate will panic will return error
 		//{"send coin failed",
 		//	func() {
 		//		suite.coordinator.CreateTransferChannels(path)

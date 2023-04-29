@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 var (
@@ -21,7 +21,7 @@ func init() {
 
 func RegisterConvert() {
 	enableHeight := tmtypes.GetVenus3Height()
-	baseapp.RegisterCmHandle("okexchain/distribution/MsgWithdrawDelegatorAllRewards", baseapp.NewCMHandle(ConvertWithdrawDelegatorAllRewardsMsg, enableHeight))
+	baseapp.RegisterCmHandle("gridchain/distribution/MsgWithdrawDelegatorAllRewards", baseapp.NewCMHandle(ConvertWithdrawDelegatorAllRewardsMsg, enableHeight))
 }
 
 func ConvertWithdrawDelegatorAllRewardsMsg(data []byte, signers []sdk.AccAddress) (sdk.Msg, error) {

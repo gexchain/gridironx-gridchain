@@ -6,8 +6,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	outtypes "github.com/okex/exchain/x/distribution/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	outtypes "github.com/gridironx/gridchain/x/distribution/types"
 )
 
 // ValidatorCommission queries accumulated commission for a validator

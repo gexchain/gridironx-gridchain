@@ -6,10 +6,10 @@ import (
 
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 var (
@@ -194,7 +194,7 @@ func TestMsgMarshalYAML(t *testing.T) {
   validatoraddress: %s
   pubkey: %s
   value:
-    denom: okt
+    denom: fury
     amount: "1000.000000000000000000"
 `, msg.DelegatorAddress, msg.ValidatorAddress, bechifiedPub)
 

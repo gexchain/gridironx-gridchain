@@ -1,10 +1,10 @@
 package crisis
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis/internal/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis/internal/types"
 )
 
 // RouterKey

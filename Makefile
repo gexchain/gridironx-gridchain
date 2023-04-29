@@ -17,9 +17,9 @@ Version=v1.7.0
 CosmosSDK=v0.39.2
 Tendermint=v0.33.9
 Iavl=v0.14.3
-Name=exchain
-ServerName=exchaind
-ClientName=exchaincli
+Name=gridchain
+ServerName=gridchaind
+ClientName=gridchaincli
 # the height of the 1st block is GenesisHeight+1
 GenesisHeight=0
 MercuryHeight=1
@@ -89,43 +89,43 @@ endif
 build_tags += $(BUILD_TAGS)
 build_tags := $(strip $(build_tags))
 
-ldflags = -X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.Version=$(Version) \
-	-X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.Name=$(Name) \
-  -X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.ServerName=$(ServerName) \
-  -X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.ClientName=$(ClientName) \
-  -X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.Commit=$(COMMIT) \
-  -X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.CosmosSDK=$(CosmosSDK) \
-  -X $(GithubTop)/okex/exchain/libs/cosmos-sdk/version.Tendermint=$(Tendermint) \
-  -X "$(GithubTop)/okex/exchain/libs/cosmos-sdk/version.BuildTags=$(build_tags)" \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_GENESIS_HEIGHT=$(GenesisHeight) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_MERCURY_HEIGHT=$(MercuryHeight) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_VENUS_HEIGHT=$(VenusHeight) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_VENUS1_HEIGHT=$(Venus1Height) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_VENUS2_HEIGHT=$(Venus2Height) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_VENUS3_HEIGHT=$(Venus3Height) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_VENUS4_HEIGHT=$(Venus4Height) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_VENUS5_HEIGHT=$(Venus5Height) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_EARTH_HEIGHT=$(EarthHeight) \
-  -X $(GithubTop)/okex/exchain/libs/tendermint/types.MILESTONE_MARS_HEIGHT=$(MarsHeight)
+ldflags = -X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.Version=$(Version) \
+	-X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.Name=$(Name) \
+  -X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.ServerName=$(ServerName) \
+  -X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.ClientName=$(ClientName) \
+  -X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.Commit=$(COMMIT) \
+  -X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.CosmosSDK=$(CosmosSDK) \
+  -X $(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.Tendermint=$(Tendermint) \
+  -X "$(GithubTop)/gridironx/gridchain/libs/cosmos-sdk/version.BuildTags=$(build_tags)" \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_GENESIS_HEIGHT=$(GenesisHeight) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_MERCURY_HEIGHT=$(MercuryHeight) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_VENUS_HEIGHT=$(VenusHeight) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_VENUS1_HEIGHT=$(Venus1Height) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_VENUS2_HEIGHT=$(Venus2Height) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_VENUS3_HEIGHT=$(Venus3Height) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_VENUS4_HEIGHT=$(Venus4Height) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_VENUS5_HEIGHT=$(Venus5Height) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_EARTH_HEIGHT=$(EarthHeight) \
+  -X $(GithubTop)/gridironx/gridchain/libs/tendermint/types.MILESTONE_MARS_HEIGHT=$(MarsHeight)
 
 
 ifeq ($(WITH_ROCKSDB),true)
-  ldflags += -X github.com/okex/exchain/libs/tendermint/types.DBBackend=rocksdb
+  ldflags += -X github.com/gridironx/gridchain/libs/tendermint/types.DBBackend=rocksdb
 endif
 
 ifeq ($(MAKECMDGOALS),testnet)
-  ldflags += -X github.com/okex/exchain/libs/cosmos-sdk/server.ChainID=exchain-65
+  ldflags += -X github.com/gridironx/gridchain/libs/cosmos-sdk/server.ChainID=gridchain-65
 endif
 
 ifeq ($(LINK_STATICALLY),true)
 	ldflags += -linkmode=external -extldflags "-Wl,-z,muldefs -static"
 endif
 
-ifeq ($(OKCMALLOC),tcmalloc)
+ifeq ($(GRIDCMALLOC),tcmalloc)
   ldflags += -extldflags "-ltcmalloc_minimal"
 endif
 
-ifeq ($(OKCMALLOC),jemalloc)
+ifeq ($(GRIDCMALLOC),jemalloc)
   ldflags += -extldflags "-ljemalloc"
 endif
 
@@ -137,19 +137,19 @@ endif
 
 all: install
 
-install: exchain
+install: gridchain
 
 
-exchain: check_version
-	$(cgo_flags) go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/exchaind
-	$(cgo_flags) go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/exchaincli
+gridchain: check_version
+	$(cgo_flags) go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/gridchaind
+	$(cgo_flags) go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/gridchaincli
 
 check_version:
 	@sh $(shell pwd)/libs/check/check-version.sh $(GO_VERSION) $(ROCKSDB_VERSION)
 
-mainnet: exchain
+mainnet: gridchain
 
-testnet: exchain
+testnet: gridchain
 
 test-unit:
 	@VERSION=$(VERSION) go test -mod=readonly -tags='ledger test_ledger_mock' ./app/...
@@ -186,21 +186,21 @@ go.sum: go.mod
 	@go mod tidy
 
 cli:
-	go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/exchaincli
+	go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/gridchaincli
 
 server:
-	go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/exchaind
+	go install -v $(BUILD_FLAGS) -tags "$(build_tags)" ./cmd/gridchaind
 
 format:
 	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./client/lcd/statik/statik.go" | xargs gofmt -w -s
 
 build:
 ifeq ($(OS),Windows_NT)
-	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/exchaind.exe ./cmd/exchaind
-	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/exchaincli.exe ./cmd/exchaincli
+	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/gridchaind.exe ./cmd/gridchaind
+	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/gridchaincli.exe ./cmd/gridchaincli
 else
-	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/exchaind ./cmd/exchaind
-	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/exchaincli ./cmd/exchaincli
+	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/gridchaind ./cmd/gridchaind
+	go build $(BUILD_FLAGS) -tags "$(build_tags)" -o build/gridchaincli ./cmd/gridchaincli
 endif
 
 
@@ -232,12 +232,12 @@ testibc:
 build-linux:
 	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
 
-build-docker-exchainnode:
+build-docker-gridchainnode:
 	$(MAKE) -C networks/local
 
 # Run a 4-node testnet locally
 localnet-start: localnet-stop
-	@if ! [ -f build/node0/exchaind/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/exchaind:Z exchain/node testnet --v 4 -o . --starting-ip-address 192.168.10.2 --keyring-backend=test ; fi
+	@if ! [ -f build/node0/gridchaind/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/gridchaind:Z gridchain/node testnet --v 4 -o . --starting-ip-address 192.168.10.2 --keyring-backend=test ; fi
 	docker-compose up -d
 
 # Stop testnet

@@ -6,11 +6,11 @@ import (
 	"sort"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 // NewWasmProposalHandler creates a new governance Handler for wasm proposals

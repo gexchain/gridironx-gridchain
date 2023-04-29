@@ -5,12 +5,12 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/types"
 )
 
 // RegisterRoutes - Central function to define routes that get registered by the main application

@@ -6,21 +6,21 @@ package keeper_test
 //	"testing"
 //	"time"
 //
-//	"github.com/okex/exchain/x/wasm/types"
+//	"github.com/gridironx/gridchain/x/wasm/types"
 //
 //	"github.com/stretchr/testify/assert"
 //
-//	cryptocodec "github.com/okex/exchain/libs/cosmos-sdk/crypto/codec"
-//	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/ed25519"
-//	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-//	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-//	banktypes "github.com/okex/exchain/libs/cosmos-sdk/x/bank/types"
+//	cryptocodec "github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/codec"
+//	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys/ed25519"
+//	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+//	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+//	banktypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/types"
 //	"github.com/stretchr/testify/require"
 //	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 //	tmtypes "github.com/tendermint/tendermint/types"
 //
-//	"github.com/okex/exchain/app"
-//	"github.com/okex/exchain/x/wasm/keeper"
+//	"github.com/gridironx/gridchain/app"
+//	"github.com/gridironx/gridchain/x/wasm/keeper"
 //)
 //
 //func TestSnapshotter(t *testing.T) {

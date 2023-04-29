@@ -7,13 +7,13 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	"github.com/okex/exchain/libs/tendermint/libs/tempfile"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/tempfile"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 )
 
 // TODO: type ?

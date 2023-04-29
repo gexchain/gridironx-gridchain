@@ -6,17 +6,17 @@ package keeper_test
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 	"strings"
 
 	// "github.com/tendermint/tendermint/crypto"
 
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 	// sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	ibctesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
 )
 
 type TlaBalance struct {

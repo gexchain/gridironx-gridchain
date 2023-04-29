@@ -3,14 +3,14 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/ammswap/types"
-	tokentypes "github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/ammswap/types"
+	tokentypes "github.com/gridironx/gridchain/x/token/types"
 )
 
 // Keeper of the swap store

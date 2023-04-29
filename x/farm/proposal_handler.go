@@ -1,10 +1,10 @@
 package farm
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/farm/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/farm/types"
+	govTypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // NewManageWhiteListProposalHandler handles "gov" type message in "farm"

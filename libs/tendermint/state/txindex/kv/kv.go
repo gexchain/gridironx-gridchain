@@ -11,12 +11,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	tmstring "github.com/okex/exchain/libs/tendermint/libs/strings"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	tmstring "github.com/gridironx/gridchain/libs/tendermint/libs/strings"
+	"github.com/gridironx/gridchain/libs/tendermint/state/txindex"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 const (

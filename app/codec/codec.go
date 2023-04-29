@@ -1,16 +1,16 @@
 package codec
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	cosmoscryptocodec "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/vesting"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	cosmoscryptocodec "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/vesting"
 
-	cryptocodec "github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
+	cryptocodec "github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	ethermint "github.com/gridironx/gridchain/app/types"
 )
 
 // MakeCodec registers the necessary types and interfaces for an sdk.App. This

@@ -1,11 +1,11 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 // ValidatorSetSource is a subset of the staking keeper

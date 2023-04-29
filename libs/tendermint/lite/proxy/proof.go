@@ -1,7 +1,7 @@
 package proxy
 
 import (
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
 )
 
 func defaultProofRuntime() *merkle.ProofRuntime {

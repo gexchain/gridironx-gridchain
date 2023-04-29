@@ -17,21 +17,21 @@ import (
 
 	"sort"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	mempl "github.com/okex/exchain/libs/tendermint/mempool"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/privval"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/libs/tendermint/version"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/example/kvstore"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	mempl "github.com/gridironx/gridchain/libs/tendermint/mempool"
+	"github.com/gridironx/gridchain/libs/tendermint/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/privval"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/version"
 )
 
 func TestMain(m *testing.M) {

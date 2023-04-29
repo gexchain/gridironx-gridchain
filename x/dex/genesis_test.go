@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/dex/types"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/dex/types"
+	ordertypes "github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -27,7 +27,7 @@ func TestInitGenesis(t *testing.T) {
 	operators = append(operators, types.DEXOperator{
 		Address:            tokenPair.Owner,
 		HandlingFeeAddress: tokenPair.Owner,
-		Website:            "http://www.okexchain.com/operator.json",
+		Website:            "http://www.gridchain.com/operator.json",
 		InitHeight:         100,
 	})
 

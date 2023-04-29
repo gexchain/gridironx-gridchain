@@ -3,16 +3,16 @@ package sanity
 import (
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/app/config"
-	apptype "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/consensus"
-	"github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/watcher"
-	"github.com/okex/exchain/x/infura"
+	"github.com/gridironx/gridchain/app/config"
+	apptype "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	cosmost "github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/consensus"
+	"github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/x/infura"
 )
 
 // CheckStart check start command's flags. if user set conflict flags return error.

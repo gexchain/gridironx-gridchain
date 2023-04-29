@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 )
 
 const (

@@ -3,10 +3,10 @@ package distribution
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/distribution/keeper"
+	"github.com/gridironx/gridchain/x/distribution/types"
 	"github.com/stretchr/testify/require"
 )
 

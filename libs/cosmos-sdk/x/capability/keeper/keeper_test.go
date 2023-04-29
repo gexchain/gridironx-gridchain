@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"testing"
 
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	stakingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	stakingtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -28,7 +28,7 @@ func (suite *KeeperTestSuite) SetupTest() {
 	checkTx := false
 	app := simapp.Setup(checkTx)
 	//cdc := app.Codec()
-	codecProxy, _ := okexchaincodec.MakeCodecSuit(simapp.ModuleBasics)
+	codecProxy, _ := gridchaincodec.MakeCodecSuit(simapp.ModuleBasics)
 	// create new keeper so we can define custom scoping before init and seal
 	keeper := keeper.NewKeeper(codecProxy, app.GetKey(types.StoreKey), app.GetMemKey(types.MemStoreKey))
 

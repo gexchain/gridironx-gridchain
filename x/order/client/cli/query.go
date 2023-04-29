@@ -2,11 +2,11 @@ package cli
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	client "github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	client "github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"strings"
@@ -61,9 +61,9 @@ func GetCmdDepthBook(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query the depth book of a trading pair",
 		Long: strings.TrimSpace(`Query the depth book of a trading pair:
 
-$ exchaincli query depthbook mytoken_okt
+$ gridchaincli query depthbook mytoken_fury
 
-The 'product' is a trading pair in full name of the tokens: ${base-asset-symbol}_${quote-asset-symbol}, for example 'mytoken_okt'.
+The 'product' is a trading pair in full name of the tokens: ${base-asset-symbol}_${quote-asset-symbol}, for example 'mytoken_fury'.
 `),
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -150,7 +150,7 @@ func GetCmdQueryParams(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query the parameters of the order process",
 		Long: strings.TrimSpace(`Query the all the parameters for the governance process:
 
-$ exchaincli query order params
+$ gridchaincli query order params
 `),
 		Args: cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {

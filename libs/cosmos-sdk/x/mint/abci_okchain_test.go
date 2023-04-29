@@ -3,12 +3,12 @@ package mint_test
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint"
-	internaltypes "github.com/okex/exchain/libs/cosmos-sdk/x/mint/internal/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint"
+	internaltypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint/internal/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 )
@@ -18,7 +18,7 @@ const (
 	DeflationEpoch uint64 = 3               // Default epoch, 3 year
 	DeflationRate  string = "0.5"           // Default deflation rate 0.5
 	FarmProportion string = "0.5"           // Default farm proportion 0.5
-	Denom          string = "okt"           // OKT
+	Denom          string = "fury"           // OKT
 	FeeAccountName string = "fee_collector" // Fee account
 
 	InitStartBlock    int64  = 17601985 // Current mainnet block,  17601985
@@ -41,15 +41,15 @@ func createTestApp() (*simapp.SimApp, sdk.Context) {
 	return app, ctx
 }
 
-type AbciOkchainSuite struct {
+type AbciGridchainSuite struct {
 	suite.Suite
 }
 
-func TestAbciOkchainSuite(t *testing.T) {
-	suite.Run(t, new(AbciOkchainSuite))
+func TestAbciGridchainSuite(t *testing.T) {
+	suite.Run(t, new(AbciGridchainSuite))
 }
 
-func (suite *AbciOkchainSuite) TestNormalMint() {
+func (suite *AbciGridchainSuite) TestNormalMint() {
 	testCases := []struct {
 		title          string
 		phase          uint64
@@ -146,11 +146,11 @@ func (suite *AbciOkchainSuite) TestNormalMint() {
 	}
 }
 
-func (suite *AbciOkchainSuite) TestDateAndSupply() {
+func (suite *AbciGridchainSuite) TestDateAndSupply() {
 	// TODO Check expected date and total supply
 }
 
-func (suite *AbciOkchainSuite) TestFakeUpdateNextBlock() {
+func (suite *AbciGridchainSuite) TestFakeUpdateNextBlock() {
 	simApp, ctx := createTestApp()
 	allRewards := sdk.NewDec(InitStartSupply)
 
@@ -165,7 +165,7 @@ func (suite *AbciOkchainSuite) TestFakeUpdateNextBlock() {
 	suite.LoopDeflation(&ctx, simApp, &allRewards)
 }
 
-func (suite *AbciOkchainSuite) step1(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step1(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// Upgrade the main network code, wait N height to take effect.
 	ctx.SetBlockHeight(InitStartBlock)
 	coins := []sdk.Coin{sdk.NewCoin(sdk.DefaultBondDenom, sdk.NewInt(InitStartSupply))}
@@ -188,7 +188,7 @@ func (suite *AbciOkchainSuite) step1(expectReward sdk.Dec, ctx *sdk.Context, sim
 	types.UnittestOnlySetMilestoneVenus5Height(InitStartBlock + 1000)
 }
 
-func (suite *AbciOkchainSuite) step2(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step2(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	//System: block height N+1
 	for i := int64(1); i <= 1000+1; i++ {
 		// Execution block.
@@ -208,7 +208,7 @@ func (suite *AbciOkchainSuite) step2(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+1000+1, ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) step3(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step3(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// Send change BlocksPerYear proposal (effective immediately), first proposal.
 	params := simApp.MintKeeper.GetParams(*ctx)
 	params.BlocksPerYear = BlocksPerYearNew
@@ -234,7 +234,7 @@ func (suite *AbciOkchainSuite) step3(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+1000*2+1, ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) step4(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step4(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// Send change DeflationEpoch proposal (effective immediately) from 3 to 9, second proposal.
 	params := simApp.MintKeeper.GetParams(*ctx)
 	params.DeflationEpoch = DeflationEpochNew
@@ -259,7 +259,7 @@ func (suite *AbciOkchainSuite) step4(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+1000*3+1, ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) step5(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step5(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// Send forced changes to the NextBlockUpdate proposal, third proposal.
 	minter := simApp.MintKeeper.GetMinterCustom(*ctx)
 	minter.NextBlockToUpdate = uint64(ctx.BlockHeight() + 1000)
@@ -283,7 +283,7 @@ func (suite *AbciOkchainSuite) step5(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+1000*4, ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) step6(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step6(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// System code triggers halving: 0.5->0.25
 	ctx.SetBlockHeight(ctx.BlockHeight() + 1)
 	mint.BeginBlocker(*ctx, simApp.MintKeeper)
@@ -300,7 +300,7 @@ func (suite *AbciOkchainSuite) step6(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+1000*4+1, ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) step7(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step7(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// Send forced changes to the NextBlockUpdate proposal, fourth proposal.
 	minter := simApp.MintKeeper.GetMinterCustom(*ctx)
 	minter.NextBlockToUpdate = uint64(ctx.BlockHeight()) + Target24DayBlock - 4000
@@ -325,7 +325,7 @@ func (suite *AbciOkchainSuite) step7(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+int64(Target24DayBlock), ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) step8(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) step8(expectReward sdk.Dec, ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	// System code triggers halving: 0.25->0.125
 	ctx.SetBlockHeight(ctx.BlockHeight() + 1)
 	mint.BeginBlocker(*ctx, simApp.MintKeeper)
@@ -342,7 +342,7 @@ func (suite *AbciOkchainSuite) step8(expectReward sdk.Dec, ctx *sdk.Context, sim
 	require.Equal(suite.T(), InitStartBlock+int64(Target24DayBlock)+1, ctx.BlockHeight())
 }
 
-func (suite *AbciOkchainSuite) LoopDeflation(ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
+func (suite *AbciGridchainSuite) LoopDeflation(ctx *sdk.Context, simApp *simapp.SimApp, allRewards *sdk.Dec) {
 	testCases := []struct {
 		title          string
 		phase          uint64

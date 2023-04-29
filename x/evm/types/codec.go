@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	"github.com/tendermint/go-amino"
 )
 
@@ -13,8 +13,8 @@ const (
 	ChainConfigName   = "ethermint/ChainConfig"
 	TxDataName        = "ethermint/TxData"
 
-	ManageContractDeploymentWhitelistProposalName = "okexchain/evm/ManageContractDeploymentWhitelistProposal"
-	ManageContractBlockedListProposalName         = "okexchain/evm/ManageContractBlockedListProposal"
+	ManageContractDeploymentWhitelistProposalName = "gridchain/evm/ManageContractDeploymentWhitelistProposal"
+	ManageContractBlockedListProposalName         = "gridchain/evm/ManageContractBlockedListProposal"
 )
 
 // RegisterCodec registers all the necessary types and interfaces for the
@@ -25,9 +25,9 @@ func RegisterCodec(cdc *codec.Codec) {
 	cdc.RegisterConcrete(ChainConfig{}, ChainConfigName, nil)
 	cdc.RegisterConcrete(ManageContractDeploymentWhitelistProposal{}, ManageContractDeploymentWhitelistProposalName, nil)
 	cdc.RegisterConcrete(ManageContractBlockedListProposal{}, ManageContractBlockedListProposalName, nil)
-	cdc.RegisterConcrete(ManageContractMethodBlockedListProposal{}, "okexchain/evm/ManageContractMethodBlockedListProposal", nil)
-	cdc.RegisterConcrete(ManageSysContractAddressProposal{}, "okexchain/evm/ManageSysContractAddressProposal", nil)
-	cdc.RegisterConcrete(ManageContractByteCodeProposal{}, "okexchain/evm/ManageContractBytecode", nil)
+	cdc.RegisterConcrete(ManageContractMethodBlockedListProposal{}, "gridchain/evm/ManageContractMethodBlockedListProposal", nil)
+	cdc.RegisterConcrete(ManageSysContractAddressProposal{}, "gridchain/evm/ManageSysContractAddressProposal", nil)
+	cdc.RegisterConcrete(ManageContractByteCodeProposal{}, "gridchain/evm/ManageContractBytecode", nil)
 
 	cdc.RegisterConcreteUnmarshaller(ChainConfigName, func(c *amino.Codec, bytes []byte) (interface{}, int, error) {
 		var cc ChainConfig

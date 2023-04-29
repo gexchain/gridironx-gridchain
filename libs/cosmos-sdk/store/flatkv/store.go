@@ -4,7 +4,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/spf13/viper"
 )
 

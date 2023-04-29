@@ -4,12 +4,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/feesplit/keeper"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/feesplit/keeper"
+	"github.com/gridironx/gridchain/x/feesplit/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -27,7 +27,7 @@ type KeeperTestSuite struct {
 	suite.Suite
 
 	ctx sdk.Context
-	app *app.OKExChainApp
+	app *app.GRIDIronxChainApp
 
 	querier sdk.Querier
 }

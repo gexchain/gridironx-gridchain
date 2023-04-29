@@ -1,10 +1,10 @@
 package client
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	ibctmtypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/keeper"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
+	ibctmtypes "github.com/gridironx/gridchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
 )
 
 // BeginBlocker updates an existing localhost client with the latest block height.

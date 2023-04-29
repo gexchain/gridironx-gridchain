@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	client "github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/x/farm/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	client "github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/x/farm/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module
@@ -188,9 +188,9 @@ $ %s query farm params
 func GetCmdQueryWhitelist(storeName string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "whitelist",
-		Short: "query the whitelist of pools to farm okt",
+		Short: "query the whitelist of pools to farm fury",
 		Long: strings.TrimSpace(
-			fmt.Sprintf(`Query the current whitelist of pools which are approved to farm okt.
+			fmt.Sprintf(`Query the current whitelist of pools which are approved to farm fury.
 
 Example:
 $ %s query farm whitelist

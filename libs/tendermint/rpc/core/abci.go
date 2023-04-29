@@ -1,11 +1,11 @@
 package core
 
 import (
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
 )
 
 // ABCIQuery queries the application for some information.

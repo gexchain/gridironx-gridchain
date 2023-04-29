@@ -11,10 +11,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	db "github.com/okex/exchain/libs/tm-db"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	db "github.com/gridironx/gridchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 /*

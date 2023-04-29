@@ -10,12 +10,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmpubsub "github.com/okex/exchain/libs/tendermint/libs/pubsub"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	p2pmock "github.com/okex/exchain/libs/tendermint/p2p/mock"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cstypes "github.com/gridironx/gridchain/libs/tendermint/consensus/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmpubsub "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	p2pmock "github.com/gridironx/gridchain/libs/tendermint/p2p/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 /*

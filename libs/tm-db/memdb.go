@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/google/btree"
-	"github.com/okex/exchain/libs/tm-db/common"
+	"github.com/gridironx/gridchain/libs/tm-db/common"
 )
 
 const (

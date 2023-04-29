@@ -7,13 +7,13 @@ import (
 	"strconv"
 	"sync"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/pkg/errors"
 	"github.com/tendermint/go-amino"
 
-	cryptoAmino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/lite2/store"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cryptoAmino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/lite2/store"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 var (

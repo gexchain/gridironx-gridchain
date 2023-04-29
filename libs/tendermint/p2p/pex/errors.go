@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
 )
 
 type ErrAddrBookNonRoutable struct {

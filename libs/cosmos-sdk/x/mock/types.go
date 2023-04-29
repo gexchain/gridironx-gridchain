@@ -1,13 +1,13 @@
 package mock
 
 import (
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
 )
 
 // DummySupplyKeeper defines a supply keeper used only for testing to avoid

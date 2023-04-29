@@ -3,12 +3,12 @@ package staking
 import (
 	"fmt"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
 )
 
 // InitGenesis sets the pool and parameters for the provided keeper.  For each

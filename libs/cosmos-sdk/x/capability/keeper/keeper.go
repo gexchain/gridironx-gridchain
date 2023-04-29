@@ -5,14 +5,14 @@ import (
 	"strings"
 	"sync"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 )
 
 // initialized is a global variable used by GetCapability to ensure that the memory store

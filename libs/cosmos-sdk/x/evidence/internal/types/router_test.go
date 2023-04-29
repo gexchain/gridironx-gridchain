@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/internal/types"
 )
 
 func testHandler(sdk.Context, exported.Evidence) error { return nil }

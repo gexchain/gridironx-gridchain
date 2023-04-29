@@ -3,11 +3,11 @@ package keeper
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/staking"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/go-amino"
 )

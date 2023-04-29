@@ -1,12 +1,12 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
 
-	dex "github.com/okex/exchain/x/dex/types"
-	"github.com/okex/exchain/x/order/types"
-	token "github.com/okex/exchain/x/token/types"
+	dex "github.com/gridironx/gridchain/x/dex/types"
+	"github.com/gridironx/gridchain/x/order/types"
+	token "github.com/gridironx/gridchain/x/token/types"
 )
 
 // TokenKeeper : expected token keeper

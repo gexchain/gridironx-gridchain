@@ -2,9 +2,9 @@ package consensus
 
 import (
 	"fmt"
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	cstypes "github.com/gridironx/gridchain/libs/tendermint/consensus/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 )
 
 //-----------------------------------------------------------------------------

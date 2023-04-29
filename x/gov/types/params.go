@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params/subspace"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/params/subspace"
 )
 
 // Parameter store key
@@ -29,7 +29,7 @@ func ParamKeyTable() subspace.KeyTable {
 // Param around deposits for governance
 type DepositParams struct {
 	MinDeposit       sdk.SysCoins  `json:"min_deposit,omitempty" yaml:"min_deposit,omitempty"`               //  Minimum deposit for a proposal to enter voting period.
-	MaxDepositPeriod time.Duration `json:"max_deposit_period,omitempty" yaml:"max_deposit_period,omitempty"` //  Maximum period for okt holders to deposit on a proposal. Initial value: 2 months
+	MaxDepositPeriod time.Duration `json:"max_deposit_period,omitempty" yaml:"max_deposit_period,omitempty"` //  Maximum period for fury holders to deposit on a proposal. Initial value: 2 months
 }
 
 // NewDepositParams creates a new DepositParams object
@@ -41,7 +41,7 @@ func NewDepositParams(minDeposit sdk.SysCoins, maxDepositPeriod time.Duration) D
 }
 
 func DefaultDepositParams() DepositParams {
-	return NewDepositParams(sdk.NewDecCoins(sdk.NewDecCoin("okt", sdk.NewInt(0))), 0)
+	return NewDepositParams(sdk.NewDecCoins(sdk.NewDecCoin("fury", sdk.NewInt(0))), 0)
 }
 
 func (p DepositParams) ToCM45DepositParams() CM45DepositParams {

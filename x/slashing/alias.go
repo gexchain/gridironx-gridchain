@@ -3,8 +3,8 @@ package slashing
 // nolint
 
 import (
-	"github.com/okex/exchain/x/slashing/internal/keeper"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	"github.com/gridironx/gridchain/x/slashing/internal/keeper"
+	"github.com/gridironx/gridchain/x/slashing/internal/types"
 )
 
 const (

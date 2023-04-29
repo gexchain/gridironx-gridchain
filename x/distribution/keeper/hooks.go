@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	stakingtypes "github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	stakingtypes "github.com/gridironx/gridchain/x/staking/types"
 )
 
 // Hooks is struct of keepers from other module

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 // GetValidator gets a single validator
@@ -268,7 +268,7 @@ func (k Keeper) UnbondAllMatureValidatorQueue(ctx sdk.Context) {
 				panic("unexpected validator in unbonding queue; status was not unbonding")
 			}
 			val = k.unbondingToUnbonded(ctx, val)
-			// required by okexchain
+			// required by gridchain
 			//if val.GetDelegatorShares().IsZero() {
 			//	k.RemoveValidator(ctx, val.OperatorAddress)
 			//}

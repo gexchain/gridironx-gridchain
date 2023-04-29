@@ -6,13 +6,13 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/dbadapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 	"github.com/spf13/viper"
 )
 

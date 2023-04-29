@@ -7,24 +7,24 @@ import (
 	"path/filepath"
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	genutilcli "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/client/cli"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	genutilcli "github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil/client/cli"
 
-	tcmd "github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	tcmd "github.com/gridironx/gridchain/libs/tendermint/cmd/tendermint/commands"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/tests"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/tests"
 )
 
 // custom tx codec

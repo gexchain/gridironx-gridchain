@@ -3,10 +3,10 @@ package farm
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/farm/keeper"
+	"github.com/gridironx/gridchain/x/farm/types"
 )
 
 // BeginBlocker allocates the native token to the pools in PoolsYieldNativeToken

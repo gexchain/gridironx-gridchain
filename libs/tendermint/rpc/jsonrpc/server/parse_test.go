@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	types "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	types "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
 )
 
 func TestParseJSONMap(t *testing.T) {

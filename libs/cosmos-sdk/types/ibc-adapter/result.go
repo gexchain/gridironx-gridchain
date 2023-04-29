@@ -7,12 +7,12 @@ import (
 	"strings"
 
 	"github.com/gogo/protobuf/proto"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	costypes "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	costypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 var cdc = codec.New()

@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/x/common"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/x/common"
 	"github.com/stretchr/testify/require"
 )
 
@@ -165,8 +165,8 @@ func TestNewTokenMsgSend(t *testing.T) {
 	}
 
 	Errorcoins := sdk.SysCoins{
-		sdk.NewDecCoinFromDec("okc", sdk.NewDec(100)),
-		sdk.NewDecCoinFromDec("okc", sdk.NewDec(100)),
+		sdk.NewDecCoinFromDec("gridc", sdk.NewDec(100)),
+		sdk.NewDecCoinFromDec("gridc", sdk.NewDec(100)),
 		sdk.NewDecCoinFromDec("oke", sdk.NewDec(100)),
 	}
 
@@ -185,7 +185,7 @@ func TestNewTokenMsgSend(t *testing.T) {
 	}{
 		{NewMsgTokenSend(fromAddr, toAddr, coins), nil},
 		{NewMsgTokenSend(fromAddr, toAddr, sdk.SysCoins{}), common.ErrInsufficientCoins(DefaultParamspace, "")},
-		{NewMsgTokenSend(fromAddr, toAddr, Errorcoins), ErrInvalidCoins("100.000000000000000000okc,100.000000000000000000okc,100.000000000000000000oke")},
+		{NewMsgTokenSend(fromAddr, toAddr, Errorcoins), ErrInvalidCoins("100.000000000000000000gridc,100.000000000000000000gridc,100.000000000000000000oke")},
 		{NewMsgTokenSend(sdk.AccAddress{}, toAddr, coins), ErrAddressIsRequired()},
 		{NewMsgTokenSend(fromAddr, sdk.AccAddress{}, coins), ErrAddressIsRequired()},
 		{NewMsgTokenSend(fromAddr, toAddr, notValidCoins), ErrInvalidCoins("100.000000000000000000")},
@@ -251,7 +251,7 @@ func TestNewTokenMultiSend(t *testing.T) {
 		{NewMsgMultiSend(fromAddr, transfers), nil},
 		{NewMsgMultiSend(sdk.AccAddress{}, transfers), ErrAddressIsRequired()},
 		{NewMsgMultiSend(fromAddr, make([]TransferUnit, MultiSendLimit+1)), ErrMsgTransfersAmountBiggerThanSendLimit()},
-		{NewMsgMultiSend(fromAddr, transfers0), ErrInvalidCoins("0.000000000000000000okt")},
+		{NewMsgMultiSend(fromAddr, transfers0), ErrInvalidCoins("0.000000000000000000fury")},
 		{NewMsgMultiSend(fromAddr, transfers1), ErrAddressIsRequired()},
 	}
 	for _, msgCase := range testCase {

@@ -1,8 +1,8 @@
 package types
 
-import sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+import sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-const DefaultTestFeeAmountPerBlock = "0.000001" // okt
+const DefaultTestFeeAmountPerBlock = "0.000001" // fury
 
 var DefaultTestFeePerBlock = sdk.NewDecCoinFromDec(DefaultFeeDenomPerBlock, sdk.MustNewDecFromStr(DefaultTestFeeAmountPerBlock))
 

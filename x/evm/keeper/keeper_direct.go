@@ -2,9 +2,9 @@ package keeper
 
 import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evm/types"
 )
 
 // SetCodeDirectly commit code into db with no cache

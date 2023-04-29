@@ -1,10 +1,10 @@
 package farm
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/farm/keeper"
+	"github.com/gridironx/gridchain/x/farm/types"
 )
 
 func handleMsgCreatePool(ctx sdk.Context, k keeper.Keeper, msg types.MsgCreatePool) (*sdk.Result, error) {

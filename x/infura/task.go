@@ -3,7 +3,7 @@ package infura
 import (
 	"encoding/json"
 
-	"github.com/okex/exchain/x/infura/types"
+	"github.com/gridironx/gridchain/x/infura/types"
 )
 
 type TaskConst int

@@ -6,46 +6,46 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	ibcmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	ibc_tx "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	types2 "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	ibcmsg "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	ibc_tx "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	//cryptotypes "github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	//cryptotypes "github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
 
-	//banktypes "github.com/okex/exchain/libs/cosmos-sdk/x/bank/types"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
+	//banktypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/types"
+	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
 
-	stakingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmproto "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	tmprototypes "github.com/okex/exchain/libs/tendermint/proto/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	tmprotoversion "github.com/okex/exchain/libs/tendermint/version"
-	tmversion "github.com/okex/exchain/libs/tendermint/version"
+	stakingtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmproto "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"
+	tmprototypes "github.com/gridironx/gridchain/libs/tendermint/proto/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	tmprotoversion "github.com/gridironx/gridchain/libs/tendermint/version"
+	tmversion "github.com/gridironx/gridchain/libs/tendermint/version"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	apptypes "github.com/okex/exchain/app/types"
-	okcapptypes "github.com/okex/exchain/app/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/types"
-	ibctmtypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/mock"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	apptypes "github.com/gridironx/gridchain/app/types"
+	gridcapptypes "github.com/gridironx/gridchain/app/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	commitmenttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/23-commitment/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/types"
+	ibctmtypes "github.com/gridironx/gridchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/mock"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp"
 )
 
 type TestChainI interface {
@@ -195,7 +195,7 @@ func NewTestChain(t *testing.T, coord *Coordinator, chainID string) TestChainI {
 
 	//fromBalance := suite.App().AccountKeeper.GetAccount(suite.ctx, cmFrom).GetCoins()
 	//var account *apptypes.EthAccount
-	//balance = sdk.NewCoins(okexchaintypes.NewPhotonCoin(amount))
+	//balance = sdk.NewCoins(gridchaintypes.NewPhotonCoin(amount))
 	//addr := sdk.AccAddress(pubKey.Address())
 	//baseAcc := auth.NewBaseAccount(addr, balance, pubKey, 10, 50)
 	//account = &apptypes.EthAccount{
@@ -269,7 +269,7 @@ func NewTestEthChain(t *testing.T, coord *Coordinator, chainID string) *TestChai
 	require.True(t, ok)
 	balance := sdk.NewCoins(apptypes.NewPhotonCoin(i))
 
-	genesisAcc := &okcapptypes.EthAccount{
+	genesisAcc := &gridcapptypes.EthAccount{
 		BaseAccount: auth.NewBaseAccount(ethPubkey.Address().Bytes(), balance, ethPubkey, 0, 0),
 		CodeHash:    []byte{},
 	}

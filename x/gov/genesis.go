@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 // GenesisState - all staking state that must be provided at genesis

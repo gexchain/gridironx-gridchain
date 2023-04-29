@@ -6,14 +6,14 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/tests"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/tests"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 func Test_multiSigKey_Properties(t *testing.T) {

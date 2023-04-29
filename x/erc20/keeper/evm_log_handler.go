@@ -8,10 +8,10 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/erc20/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/erc20/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 )
 
 var (
@@ -19,17 +19,17 @@ var (
 )
 
 const (
-	SendToIbcEventName         = "__OKCSendToIbc"
-	SendNative20ToIbcEventName = "__OKCSendNative20ToIbc"
-	SendToWasmEventName        = "__OKCSendToWasm"
+	SendToIbcEventName         = "__GRIDCSendToIbc"
+	SendNative20ToIbcEventName = "__GRIDCSendNative20ToIbc"
+	SendToWasmEventName        = "__GRIDCSendToWasm"
 )
 
 // SendToIbcEvent represent the signature of
-// `event __OKCSendToIbc(string recipient, uint256 amount)`
+// `event __GRIDCSendToIbc(string recipient, uint256 amount)`
 var SendToIbcEvent abi.Event
 
 // SendNative20ToIbcEvent represent the signature of
-// `event __OKCSendNative20ToIbc(string recipient, uint256 amount, string portID, string channelID)`
+// `event __GRIDCSendNative20ToIbc(string recipient, uint256 amount, string portID, string channelID)`
 var SendNative20ToIbcEvent abi.Event
 
 func init() {
@@ -104,7 +104,7 @@ func (h SendToIbcEventHandler) Handle(ctx sdk.Context, contract common.Address, 
 		return nil
 	}
 	// first confirm that the contract address and denom are registered,
-	// to avoid unpacking any contract '__OKCSendToIbc' event, which consumes performance
+	// to avoid unpacking any contract '__GRIDCSendToIbc' event, which consumes performance
 	denom, found := h.Keeper.GetDenomByContract(ctx, contract)
 	if !found {
 		return fmt.Errorf("contract %s is not connected to native token", contract)
@@ -167,7 +167,7 @@ func (h SendNative20ToIbcEventHandler) Handle(ctx sdk.Context, contract common.A
 		return nil
 	}
 	// first confirm that the contract address and denom are registered,
-	// to avoid unpacking any contract '__OKCSendNative20ToIbc' event, which consumes performance
+	// to avoid unpacking any contract '__GRIDCSendNative20ToIbc' event, which consumes performance
 	denom, found := h.Keeper.GetDenomByContract(ctx, contract)
 	if !found {
 		return fmt.Errorf("contract %s is not connected to native token", contract)

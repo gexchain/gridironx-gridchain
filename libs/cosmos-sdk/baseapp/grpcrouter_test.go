@@ -2,22 +2,22 @@ package baseapp_test
 
 import (
 	"context"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	simapp2 "github.com/okex/exchain/libs/ibc-go/testing/simapp"
-	"github.com/okex/exchain/x/evm"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	simapp2 "github.com/gridironx/gridchain/libs/ibc-go/testing/simapp"
+	"github.com/gridironx/gridchain/x/evm"
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	//"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/types/testdata"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	//"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evm/types/testdata"
 )
 
 func TestGRPCGatewayRouter(t *testing.T) {
@@ -58,7 +58,7 @@ func TestRegisterQueryServiceTwice(t *testing.T) {
 	// Setup baseapp.
 	db := dbm.NewMemDB()
 	encCfg := simapp2.MakeTestEncodingConfig()
-	codecProxy, _ := okexchaincodec.MakeCodecSuit(simapp.ModuleBasics)
+	codecProxy, _ := gridchaincodec.MakeCodecSuit(simapp.ModuleBasics)
 	app := baseapp.NewBaseApp("test", log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, evm.TxDecoder(codecProxy))
 	app.SetInterfaceRegistry(encCfg.InterfaceRegistry)
 	testdata.RegisterInterfaces(encCfg.InterfaceRegistry)

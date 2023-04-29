@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/evidence/exported"
 )
 
 // DONTCOVER

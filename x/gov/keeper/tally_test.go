@@ -4,13 +4,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/staking"
+	"github.com/gridironx/gridchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/staking"
 )
 
 func newTallyResult(t *testing.T, totalVoted, yes, abstain, no, veto, totalVoting string) types.TallyResult {
@@ -261,7 +261,7 @@ func TestTallyDelegatorInherit(t *testing.T) {
 	err, _ = keeper.AddVote(ctx, proposal.ProposalID, Addrs[2], types.OptionYes)
 	require.Nil(t, err)
 
-	// there are 3 validators with 1 voting power for each one (0.001okt -> 1 power)
+	// there are 3 validators with 1 voting power for each one (0.001fury -> 1 power)
 	//  2 vals -> OptionNo
 	//  1 val -> OptionYes
 	expectedTallyResult := newTallyResult(t, "11003", "11001", "0.0", "2", "0.0", "11003")

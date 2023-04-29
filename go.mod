@@ -1,4 +1,4 @@
-module github.com/okex/exchain
+module github.com/gridironx/gridchain
 
 go 1.17
 

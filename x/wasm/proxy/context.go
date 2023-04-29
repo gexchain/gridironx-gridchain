@@ -1,21 +1,21 @@
 package proxy
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 	"sync"
 	"time"
 
 	"github.com/ethereum/go-ethereum/common"
-	clientcontext "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmlog "github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	evmwatcher "github.com/okex/exchain/x/evm/watcher"
+	clientcontext "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmlog "github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	evmwatcher "github.com/gridironx/gridchain/x/evm/watcher"
 )
 
 var clientCtx clientcontext.CLIContext

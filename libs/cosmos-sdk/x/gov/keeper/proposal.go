@@ -3,10 +3,10 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
 )
 
 // SubmitProposal create new proposal given a content

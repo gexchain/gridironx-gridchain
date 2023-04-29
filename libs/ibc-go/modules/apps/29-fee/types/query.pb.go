@@ -10,9 +10,9 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	github_com_cosmos_cosmos_sdk_types "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	github_com_cosmos_cosmos_sdk_types "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/query"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
 
 	_ "github.com/gogo/protobuf/gogoproto"
 	grpc1 "github.com/gogo/protobuf/grpc"

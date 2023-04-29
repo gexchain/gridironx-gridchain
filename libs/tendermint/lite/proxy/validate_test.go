@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/okex/exchain/libs/tendermint/lite/proxy"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/lite/proxy"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 var (

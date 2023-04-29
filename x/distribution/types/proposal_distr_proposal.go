@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (

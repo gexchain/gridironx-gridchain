@@ -5,9 +5,9 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmpubsub "github.com/okex/exchain/libs/tendermint/libs/pubsub"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmpubsub "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub"
+	tmquery "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

@@ -4,15 +4,15 @@ import (
 	"errors"
 	"fmt"
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	ibcadapter "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	ibcadapter "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 // msgEncoder is an extension point to customize encodings

@@ -1,8 +1,8 @@
 package state
 
 import (
-	"github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/libs/tendermint/version"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/version"
 )
 
 func (v Version) UpgradeToIBCVersion() Version {

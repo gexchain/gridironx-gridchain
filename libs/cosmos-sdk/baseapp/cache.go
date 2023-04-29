@@ -3,7 +3,7 @@ package baseapp
 import (
 	"sync"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/tendermint/go-amino"
 )
 

@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 )
 
 // Keeper defines the IBC connection keeper

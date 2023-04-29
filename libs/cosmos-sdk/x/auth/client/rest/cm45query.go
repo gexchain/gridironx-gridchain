@@ -6,13 +6,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	genutilrest "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/client/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/query"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	genutilrest "github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil/client/rest"
 )
 
 func CM45QueryTxsRequestHandlerFn(cliCtx context.CLIContext) http.HandlerFunc {

@@ -5,19 +5,19 @@ import (
 	"fmt"
 	"strings"
 
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	porttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
+	porttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	ibcexported "github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/keeper"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	ibcexported "github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 var (

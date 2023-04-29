@@ -3,14 +3,14 @@ package ibc
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	connectiontypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/03-connection/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/keeper"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // NewHandler defines the IBC handler

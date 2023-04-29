@@ -1,10 +1,10 @@
 package mock
 
 import (
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
 )
 
 var _ tmtypes.PrivValidator = PV{}

@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/gogo/protobuf/proto"
-	"github.com/okex/exchain/libs/tendermint/libs/protoio"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/protoio"
+	tmproto "github.com/gridironx/gridchain/libs/tendermint/proto/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 	"time"
 )
 

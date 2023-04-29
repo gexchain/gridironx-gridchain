@@ -1,13 +1,13 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
 // RegisterCodec registers concrete types on the Amino codec
 func RegisterCodec(cdc *codec.Codec) {
-	cdc.RegisterConcrete(MsgNewOrders{}, "okexchain/order/MsgNew", nil)
-	cdc.RegisterConcrete(MsgCancelOrders{}, "okexchain/order/MsgCancel", nil)
+	cdc.RegisterConcrete(MsgNewOrders{}, "gridchain/order/MsgNew", nil)
+	cdc.RegisterConcrete(MsgCancelOrders{}, "gridchain/order/MsgCancel", nil)
 }
 
 // ModuleCdc generic sealed codec to be used throughout this module

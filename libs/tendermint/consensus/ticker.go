@@ -3,8 +3,8 @@ package consensus
 import (
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
 )
 
 var (

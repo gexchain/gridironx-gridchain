@@ -3,13 +3,13 @@ package gov
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/cli/flags"
-	"github.com/okex/exchain/x/staking"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli/flags"
+	"github.com/gridironx/gridchain/x/staking"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 func TestNewHandler(t *testing.T) {

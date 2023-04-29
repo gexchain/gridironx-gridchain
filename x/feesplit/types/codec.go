@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
 // ModuleCdc defines the feesplit module's codec
@@ -9,10 +9,10 @@ var ModuleCdc = codec.New()
 
 const (
 	// Amino names
-	registerFeeSplitName = "okexchain/MsgRegisterFeeSplit"
-	updateFeeSplitName   = "okexchain/MsgUpdateFeeSplit"
-	cancelFeeSplitName   = "okexchain/MsgCancelFeeSplit"
-	sharesProposalName   = "okexchain/feesplit/SharesProposal"
+	registerFeeSplitName = "gridchain/MsgRegisterFeeSplit"
+	updateFeeSplitName   = "gridchain/MsgUpdateFeeSplit"
+	cancelFeeSplitName   = "gridchain/MsgCancelFeeSplit"
+	sharesProposalName   = "gridchain/feesplit/SharesProposal"
 )
 
 // NOTE: This is required for the GetSignBytes function

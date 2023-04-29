@@ -3,20 +3,20 @@ package ibc_tx
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/unknownproto"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	ibctx "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx/internal/adapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec/unknownproto"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	ibctx "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/tx/signing"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx/internal/adapter"
 	"google.golang.org/protobuf/encoding/protowire"
 
-	//"github.com/okex/exchain/libs/cosmos-sdk/codec/unknownproto"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	//"github.com/gridironx/gridchain/libs/cosmos-sdk/codec/unknownproto"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	tx "github.com/okex/exchain/libs/cosmos-sdk/types/tx"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	tx "github.com/gridironx/gridchain/libs/cosmos-sdk/types/tx"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 )
 
 func CM40TxDecoder(cdc codec.ProtoCodecMarshaler) func(txBytes []byte) (ibctx.Tx, error) {
@@ -213,10 +213,10 @@ func constructMsgs(ibcTx *tx.Tx) ([]sdk.Msg, []sdk.Msg, error) {
 		var newMsg sdk.Msg
 		switch msg := m.(type) {
 		case DenomAdapterMsg:
-			// ibc transfer okt is not allowed,should do filter
+			// ibc transfer fury is not allowed,should do filter
 			newMsg, err = msg.RulesFilter()
 			if err != nil {
-				return nil, nil, sdkerrors.Wrap(sdkerrors.ErrTxDecode, "ibc tx decoder not support okt amount")
+				return nil, nil, sdkerrors.Wrap(sdkerrors.ErrTxDecode, "ibc tx decoder not support fury amount")
 			}
 		default:
 			newMsg = m

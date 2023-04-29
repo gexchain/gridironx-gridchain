@@ -13,19 +13,19 @@ import (
 
 	wasmvm "github.com/CosmWasm/wasmvm"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/wasm/keeper"
+	"github.com/gridironx/gridchain/x/wasm/keeper"
 
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	clientCtx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 // NewQueryCmd returns the query commands for wasm

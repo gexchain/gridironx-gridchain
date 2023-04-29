@@ -4,22 +4,22 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	types3 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	ibcmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx"
-	ibc_tx "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	types4 "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/mock"
-	helpers2 "github.com/okex/exchain/libs/ibc-go/testing/simapp/helpers"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/types/testdata"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	types3 "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/helpers"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	ibcmsg "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/tx"
+	ibc_tx "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	types4 "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/mock"
+	helpers2 "github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/helpers"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/evm/types/testdata"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/encoding/protowire"
 )
@@ -56,7 +56,7 @@ func TestIbcTxDecoderSignMode(t *testing.T) {
 			msgs,
 			sdk.CoinAdapters{sdk.NewCoinAdapter(sdk.DefaultIbcWei, sdk.NewIntFromBigInt(big.NewInt(0)))},
 			helpers.DefaultGenTxGas,
-			"exchain-101",
+			"gridchain-101",
 			[]uint64{0}, //[]uint64{acc.GetAccountNumber()},
 			[]uint64{0}, //[]uint64{acc.GetSequence()},
 			2,
@@ -69,7 +69,7 @@ func TestIbcTxDecoderSignMode(t *testing.T) {
 		msgs,
 		sdk.CoinAdapters{sdk.NewCoinAdapter(sdk.DefaultIbcWei, sdk.NewIntFromBigInt(big.NewInt(0)))},
 		helpers.DefaultGenTxGas,
-		"exchain-101",
+		"gridchain-101",
 		[]uint64{0}, //[]uint64{acc.GetAccountNumber()},
 		[]uint64{0}, //[]uint64{acc.GetSequence()},
 		1,
@@ -287,7 +287,7 @@ func TestHeightSensitive(t *testing.T) {
 		msgs,
 		sdk.CoinAdapters{sdk.NewCoinAdapter(sdk.DefaultIbcWei, sdk.NewIntFromBigInt(big.NewInt(0)))},
 		helpers.DefaultGenTxGas,
-		"exchain-101",
+		"gridchain-101",
 		[]uint64{0}, //[]uint64{acc.GetAccountNumber()},
 		[]uint64{0}, //[]uint64{acc.GetSequence()},
 		1,

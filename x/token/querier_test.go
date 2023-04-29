@@ -3,12 +3,12 @@ package token
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/x/token/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mock"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/common"
 	"github.com/stretchr/testify/require"
 )
 

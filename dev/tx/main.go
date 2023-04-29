@@ -12,8 +12,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/mempool"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/mempool"
 	"github.com/tendermint/go-amino"
 )
 
@@ -21,7 +21,7 @@ const (
 	abiFile = "../client/contracts/counter/counter.abi"
 	binFile = "../client/contracts/counter/counter.bin"
 
-	ChainId  int64  = 67        //  okc
+	ChainId  int64  = 67        //  gridc
 	GasPrice int64  = 100000000 // 0.1 gwei
 	GasLimit uint64 = 3000000
 )

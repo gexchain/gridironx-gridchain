@@ -7,14 +7,14 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
+	tmcrypto "github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 const (

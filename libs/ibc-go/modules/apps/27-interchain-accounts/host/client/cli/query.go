@@ -4,19 +4,19 @@ import (
 	"fmt"
 	"strconv"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	icatypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
 	"github.com/spf13/cobra"
 )
 

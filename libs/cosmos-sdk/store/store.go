@@ -1,11 +1,11 @@
 package store
 
 import (
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/cache"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/rootmulti"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/cache"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/rootmulti"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 )
 
 func NewCommitMultiStore(db dbm.DB) types.CommitMultiStore {

@@ -12,18 +12,18 @@ import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/evm"
-	"github.com/okex/exchain/x/evm/keeper"
-	"github.com/okex/exchain/x/evm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	auth "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/evm"
+	"github.com/gridironx/gridchain/x/evm/keeper"
+	"github.com/gridironx/gridchain/x/evm/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 	"github.com/status-im/keycard-go/hexutils"
 	"github.com/stretchr/testify/suite"
 )
@@ -39,7 +39,7 @@ type EvmTestSuite struct {
 	handler    sdk.Handler
 	govHandler govtypes.Handler
 	querier    sdk.Querier
-	app        *app.OKExChainApp
+	app        *app.GRIDIronxChainApp
 	stateDB    *types.CommitStateDB
 	codec      *codec.Codec
 }
@@ -778,7 +778,7 @@ type EvmContractBlockedListTestSuite struct {
 
 	ctx     sdk.Context
 	handler sdk.Handler
-	app     *app.OKExChainApp
+	app     *app.GRIDIronxChainApp
 	stateDB *types.CommitStateDB
 
 	// global data for test

@@ -11,31 +11,31 @@ import (
 	"runtime/pprof"
 	"time"
 
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 
 	"github.com/gogo/protobuf/jsonpb"
-	"github.com/okex/exchain/app/config"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/app/utils/appstatus"
-	"github.com/okex/exchain/app/utils/sanity"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/iavl"
-	"github.com/okex/exchain/libs/system/trace"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tcmd "github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/node"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/app/config"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/app/utils/appstatus"
+	"github.com/gridironx/gridchain/app/utils/sanity"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/lcd"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/iavl"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tcmd "github.com/gridironx/gridchain/libs/tendermint/cmd/tendermint/commands"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	"github.com/gridironx/gridchain/libs/tendermint/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/node"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/store"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -165,7 +165,7 @@ func replayBlock(ctx *server.Context, originDataDir string, tmNode *node.Node) {
 		state = sm.LoadState(stateStoreDB)
 	}
 	//cache chain epoch
-	err = okexchain.SetChainId(genDoc.ChainID)
+	err = gridchain.SetChainId(genDoc.ChainID)
 	if err != nil {
 		panicError(err)
 	}
@@ -179,7 +179,7 @@ func replayBlock(ctx *server.Context, originDataDir string, tmNode *node.Node) {
 }
 
 func registerReplayFlags(cmd *cobra.Command) *cobra.Command {
-	cmd.Flags().StringP(replayedBlockDir, "d", ".exchaind/data", "Directory of block data to be replayed")
+	cmd.Flags().StringP(replayedBlockDir, "d", ".gridchaind/data", "Directory of block data to be replayed")
 	cmd.Flags().StringP(pprofAddrFlag, "p", "0.0.0.0:26661", "Address and port of pprof HTTP server listening")
 	cmd.Flags().BoolVarP(&sm.IgnoreSmbCheck, "ignore-smb", "i", false, "ignore state machine broken")
 	cmd.Flags().Bool(runWithPprofFlag, false, "Dump the pprof of the entire replay process")

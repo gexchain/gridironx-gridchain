@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/staking/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -31,7 +31,7 @@ func TestConvertDepositMsg(t *testing.T) {
 		fnCheck func(msg sdk.Msg, err error, res types.MsgDeposit)
 	}{
 		{
-			msgstr: fmt.Sprintf("{\"delegator_address\": \"%s\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"1000\"}}", addr.String()),
+			msgstr: fmt.Sprintf("{\"delegator_address\": \"%s\",\"quantity\": {\"denom\": \"fury\",\"amount\": \"1000\"}}", addr.String()),
 			res:    NewMsgDeposit(testMustAccAddressFromBech32(addr.String()), newTestSysCoin(1000, 0)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.NoError(t, err)
@@ -39,7 +39,7 @@ func TestConvertDepositMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "0xB2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "1000"}}`,
+			msgstr: `{"delegator_address": "0xB2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "1000"}}`,
 			res:    NewMsgDeposit(testMustAccAddressFromBech32("0xB2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(1000, 0)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.NoError(t, err)
@@ -47,7 +47,7 @@ func TestConvertDepositMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "1000"}}`,
+			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "1000"}}`,
 			res:    NewMsgDeposit(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(1000, 0)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.NoError(t, err)
@@ -55,7 +55,7 @@ func TestConvertDepositMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "1.5"}}`,
+			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "1.5"}}`,
 			res:    NewMsgDeposit(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(15, 1)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.NoError(t, err)
@@ -63,7 +63,7 @@ func TestConvertDepositMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "0.5"}}`,
+			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "0.5"}}`,
 			res:    NewMsgDeposit(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(5, 1)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.NoError(t, err)
@@ -79,14 +79,14 @@ func TestConvertDepositMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: fmt.Sprintf("{\"delegator_address\": \"\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"0.5\"}}"),
+			msgstr: fmt.Sprintf("{\"delegator_address\": \"\",\"quantity\": {\"denom\": \"fury\",\"amount\": \"0.5\"}}"),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.Error(t, err)
 				require.Nil(t, msg)
 			},
 		},
 		{
-			msgstr: fmt.Sprintf("{\"delegator_address\": \"889Fb79ac5Ec9C1Ee86Db2D3f3857Dd3D4af0C2E\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"0.5\"}}"),
+			msgstr: fmt.Sprintf("{\"delegator_address\": \"889Fb79ac5Ec9C1Ee86Db2D3f3857Dd3D4af0C2E\",\"quantity\": {\"denom\": \"fury\",\"amount\": \"0.5\"}}"),
 			res:    NewMsgDeposit(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(5, 1)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgDeposit) {
 				require.Equal(t, ErrCheckSignerFail, err)
@@ -110,7 +110,7 @@ func TestConvertWithdrawMsg(t *testing.T) {
 		fnCheck func(msg sdk.Msg, err error, res types.MsgWithdraw)
 	}{
 		{
-			msgstr: fmt.Sprintf("{\"delegator_address\": \"%s\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"1000\"}}", addr.String()),
+			msgstr: fmt.Sprintf("{\"delegator_address\": \"%s\",\"quantity\": {\"denom\": \"fury\",\"amount\": \"1000\"}}", addr.String()),
 			res:    NewMsgWithdraw(testMustAccAddressFromBech32(addr.String()), newTestSysCoin(1000, 0)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.NoError(t, err)
@@ -118,7 +118,7 @@ func TestConvertWithdrawMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "0xB2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "1000"}}`,
+			msgstr: `{"delegator_address": "0xB2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "1000"}}`,
 			res:    NewMsgWithdraw(testMustAccAddressFromBech32("0xB2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(1000, 0)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.NoError(t, err)
@@ -126,7 +126,7 @@ func TestConvertWithdrawMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "1000"}}`,
+			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "1000"}}`,
 			res:    NewMsgWithdraw(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(1000, 0)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.NoError(t, err)
@@ -134,7 +134,7 @@ func TestConvertWithdrawMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "1.5"}}`,
+			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "1.5"}}`,
 			res:    NewMsgWithdraw(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(15, 1)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.NoError(t, err)
@@ -142,7 +142,7 @@ func TestConvertWithdrawMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "okt","amount": "0.5"}}`,
+			msgstr: `{"delegator_address": "B2910E22Bb23D129C02d122B77B462ceB0E89Db9","quantity": {"denom": "fury","amount": "0.5"}}`,
 			res:    NewMsgWithdraw(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(5, 1)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.NoError(t, err)
@@ -158,14 +158,14 @@ func TestConvertWithdrawMsg(t *testing.T) {
 			},
 		},
 		{
-			msgstr: fmt.Sprintf("{\"delegator_address\": \"\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"0.5\"}}"),
+			msgstr: fmt.Sprintf("{\"delegator_address\": \"\",\"quantity\": {\"denom\": \"fury\",\"amount\": \"0.5\"}}"),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.Error(t, err)
 				require.Nil(t, msg)
 			},
 		},
 		{
-			msgstr: fmt.Sprintf("{\"delegator_address\": \"889Fb79ac5Ec9C1Ee86Db2D3f3857Dd3D4af0C2E\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"0.5\"}}"),
+			msgstr: fmt.Sprintf("{\"delegator_address\": \"889Fb79ac5Ec9C1Ee86Db2D3f3857Dd3D4af0C2E\",\"quantity\": {\"denom\": \"fury\",\"amount\": \"0.5\"}}"),
 			res:    NewMsgWithdraw(testMustAccAddressFromBech32("B2910E22Bb23D129C02d122B77B462ceB0E89Db9"), newTestSysCoin(5, 1)),
 			fnCheck: func(msg sdk.Msg, err error, res types.MsgWithdraw) {
 				require.Equal(t, ErrCheckSignerFail, err)

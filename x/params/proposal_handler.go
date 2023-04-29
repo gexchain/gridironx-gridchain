@@ -5,12 +5,12 @@ import (
 	"math"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/common"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/params/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	sdkparams "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/x/common"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/params/types"
 )
 
 // NewParamChangeProposalHandler returns the rollback function of the param proposal handler

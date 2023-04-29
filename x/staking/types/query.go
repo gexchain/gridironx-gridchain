@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/query"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
 )
 
 // note: it should act like protobuf ,but for now ,we only need the `pure struct`

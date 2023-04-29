@@ -11,34 +11,34 @@ import (
 	"sync"
 	"time"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
 
-	sdkmaps "github.com/okex/exchain/libs/cosmos-sdk/store/internal/maps"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mem"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	"github.com/okex/exchain/libs/system/trace"
-	"github.com/okex/exchain/libs/system/trace/persist"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
+	sdkmaps "github.com/gridironx/gridchain/libs/cosmos-sdk/store/internal/maps"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mem"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	"github.com/gridironx/gridchain/libs/system/trace/persist"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/cachemulti"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/flatkv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/iavl"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/tracekv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/transient"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	iavltree "github.com/okex/exchain/libs/iavl"
-	"github.com/okex/exchain/libs/iavl/config"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/cachemulti"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/dbadapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/flatkv"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/iavl"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/tracekv"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/transient"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	iavltree "github.com/gridironx/gridchain/libs/iavl"
+	"github.com/gridironx/gridchain/libs/iavl/config"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	//"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	tmlog "github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	//"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"
+	tmlog "github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 )
@@ -468,7 +468,7 @@ func (rs *Store) loadVersion(ver int64, upgrades *types.StoreUpgrades) error {
 	if len(rs.pruneHeights) > maxPruneHeightsLength {
 		return fmt.Errorf("Pruned heights length <%d> exceeds <%d>, "+
 			"need to prune them with command "+
-			"<exchaind data prune-compact all --home your_exchaind_home_directory> before running exchaind",
+			"<gridchaind data prune-compact all --home your_gridchaind_home_directory> before running gridchaind",
 			len(rs.pruneHeights), maxPruneHeightsLength)
 	}
 	return nil

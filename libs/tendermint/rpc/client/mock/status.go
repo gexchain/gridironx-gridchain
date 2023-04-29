@@ -1,8 +1,8 @@
 package mock
 
 import (
-	"github.com/okex/exchain/libs/tendermint/rpc/client"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
+	"github.com/gridironx/gridchain/libs/tendermint/rpc/client"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
 )
 
 // StatusMock returns the result specified by the Call

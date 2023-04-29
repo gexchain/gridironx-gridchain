@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 	"io"
 	"path/filepath"
 	"testing"
@@ -12,18 +12,18 @@ import (
 
 	"github.com/pkg/errors"
 
-	db "github.com/okex/exchain/libs/tm-db"
+	db "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/privval"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/example/kvstore"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/privval"
+	"github.com/gridironx/gridchain/libs/tendermint/proxy"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/store"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a

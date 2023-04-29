@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	tmkv "github.com/gridironx/gridchain/libs/tendermint/libs/kv"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/slashing/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/slashing/internal/types"
 )
 
 // DecodeStore unmarshals the KVPair's Value to the corresponding slashing type

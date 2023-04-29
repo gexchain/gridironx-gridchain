@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abcicli "github.com/okex/exchain/libs/tendermint/abci/client"
-	"github.com/okex/exchain/libs/tendermint/abci/types"
+	abcicli "github.com/gridironx/gridchain/libs/tendermint/abci/client"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/types"
 )
 
 //----------------------------------------

@@ -12,15 +12,15 @@ import (
 	"github.com/ethereum/go-ethereum/ethdb"
 	"github.com/ethereum/go-ethereum/rlp"
 	"github.com/ethereum/go-ethereum/trie"
-	"github.com/okex/exchain/app"
-	apptypes "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/iavl"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/app"
+	apptypes "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/iavl"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 	"github.com/spf13/cobra"
 )
 
@@ -169,7 +169,7 @@ func migrateEvmFromIavlToMpt(ctx *server.Context) {
 }
 
 // 1. migrateContractToMpt Migrates Accounts、Code、Storage
-func migrateContractToMpt(migrationApp *app.OKExChainApp, cmCtx sdk.Context, evmMptDb ethstate.Database, evmTrie ethstate.Trie) {
+func migrateContractToMpt(migrationApp *app.GRIDIronxChainApp, cmCtx sdk.Context, evmMptDb ethstate.Database, evmTrie ethstate.Trie) {
 	committedHeight := cmCtx.BlockHeight() - 1
 	count := 0
 	itr := trie.NewIterator(evmTrie.NodeIterator(nil))
@@ -206,7 +206,7 @@ func migrateContractToMpt(migrationApp *app.OKExChainApp, cmCtx sdk.Context, evm
 }
 
 // 2. miragteBlockHashesToDb Migrates BlockHash/HeightHash
-func miragteBlockHashesToDb(migrationApp *app.OKExChainApp, cmCtx sdk.Context, batch ethdb.Batch) {
+func miragteBlockHashesToDb(migrationApp *app.GRIDIronxChainApp, cmCtx sdk.Context, batch ethdb.Batch) {
 	count := 0
 	migrationApp.EvmKeeper.IterateBlockHash(cmCtx, func(key []byte, value []byte) bool {
 		count++
@@ -224,7 +224,7 @@ func miragteBlockHashesToDb(migrationApp *app.OKExChainApp, cmCtx sdk.Context, b
 }
 
 // 3. miragteBloomsToDb Migrates Bloom
-func miragteBloomsToDb(migrationApp *app.OKExChainApp, cmCtx sdk.Context, batch ethdb.Batch) {
+func miragteBloomsToDb(migrationApp *app.GRIDIronxChainApp, cmCtx sdk.Context, batch ethdb.Batch) {
 	count := 0
 	migrationApp.EvmKeeper.IterateBlockBloom(cmCtx, func(key []byte, value []byte) bool {
 		count++
@@ -302,7 +302,7 @@ func migrateEvmLegacyFromIavlToIavl(ctx *server.Context) {
 
 }
 
-func readAllParams(app *app.OKExChainApp) map[string][]byte{
+func readAllParams(app *app.GRIDIronxChainApp) map[string][]byte{
 	tree := getUpgradedTree(app.GetDB(), []byte(KeyParams), false)
 
 	paramsMap := make(map[string][]byte)

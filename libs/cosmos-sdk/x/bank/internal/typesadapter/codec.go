@@ -1,11 +1,11 @@
 package typesadapter
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
-	txmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/msgservice"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	txmsg "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/msgservice"
 )
 
 var (

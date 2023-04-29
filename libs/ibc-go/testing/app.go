@@ -5,34 +5,34 @@ import (
 	"testing"
 	"time"
 
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
 
-	//cryptocodec "github.com/okex/exchain/app/crypto/ethsecp256k1"
+	//cryptocodec "github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
 
-	//authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	//authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	stakingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/evm"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	stakingkeeper "github.com/okex/exchain/x/staking"
+	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	stakingtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	"github.com/gridironx/gridchain/x/evm"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	stakingkeeper "github.com/gridironx/gridchain/x/staking"
 	"github.com/stretchr/testify/require"
 
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/keeper"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	bam "github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/keeper"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp"
 )
 
 var DefaultTestingAppInit func() (TestingApp, map[string]json.RawMessage) = SetupTestingApp

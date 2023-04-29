@@ -6,11 +6,11 @@ import (
 	"fmt"
 	ethcmn "github.com/ethereum/go-ethereum/common"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/etherhash"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/etherhash"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"
+	tmbytes "github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
 	"github.com/tendermint/go-amino"
 )
 

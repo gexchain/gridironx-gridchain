@@ -4,12 +4,12 @@ import (
 	"errors"
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/token/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/token/types"
 )
 
-// default owner of okt
+// default owner of fury
 const DefaultTokenOwner = "ex10q0rk5qnyag7wfvvt7rtphlw589m7frs3hvqmf"
 
 // all state that must be provided in genesis file
@@ -30,7 +30,7 @@ func defaultGenesisState() GenesisState {
 	}
 }
 
-// default okt information
+// default fury information
 func defaultGenesisStateOKT() types.Token {
 	addr, err := sdk.AccAddressFromBech32(DefaultTokenOwner)
 	if err != nil {

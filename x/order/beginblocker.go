@@ -1,12 +1,12 @@
 package order
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
-	//"github.com/okex/exchain/x/common/version"
+	"github.com/gridironx/gridchain/x/common/perf"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/types"
+	//"github.com/gridironx/gridchain/x/common/version"
 )
 
 // BeginBlocker runs the logic of BeginBlocker with version 0.

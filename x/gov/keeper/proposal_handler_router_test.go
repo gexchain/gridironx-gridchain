@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 func TestProposalHandlerRouter_AddRoute(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 // DefaultMaxCharacterLength defines the default maximum character length used

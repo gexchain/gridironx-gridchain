@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bytes"
+	tmproto "github.com/gridironx/gridchain/libs/tendermint/proto/types"
+	tmtime "github.com/gridironx/gridchain/libs/tendermint/types/time"
 )
 
 var (

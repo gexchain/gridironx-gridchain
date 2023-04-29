@@ -3,11 +3,11 @@ package wasm
 import (
 	"encoding/json"
 	"errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 var (

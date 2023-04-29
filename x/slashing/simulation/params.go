@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/x/slashing/internal/types"
 )
 
 const (

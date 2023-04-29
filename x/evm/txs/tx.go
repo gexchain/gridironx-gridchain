@@ -1,11 +1,11 @@
 package txs
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	bam "github.com/okex/exchain/libs/system/trace"
-	"github.com/okex/exchain/x/evm/txs/base"
-	"github.com/okex/exchain/x/evm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	bam "github.com/gridironx/gridchain/libs/system/trace"
+	"github.com/gridironx/gridchain/x/evm/txs/base"
+	"github.com/gridironx/gridchain/x/evm/types"
 )
 
 type Tx interface {

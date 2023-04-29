@@ -5,8 +5,8 @@ package keeper
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/dex/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -23,28 +23,28 @@ func TestModuleAccountInvariant(t *testing.T) {
 	err := keeper.SaveTokenPair(ctx, builtInTP)
 	require.Nil(t, err)
 
-	// deposit xxb_okt 100 okt
+	// deposit xxb_fury 100 fury
 	depositMsg := types.NewMsgDeposit(builtInTP.Name(),
 		sdk.NewDecCoin(builtInTP.QuoteAssetSymbol, sdk.NewInt(100)), accounts[0])
 
 	err = keeper.Deposit(ctx, builtInTP.Name(), depositMsg.Depositor, depositMsg.Amount)
 	require.Nil(t, err)
 
-	// module acount balance 100okt
-	// xxb_okt deposits 100 okt. withdraw info 0 okt
+	// module acount balance 100fury
+	// xxb_fury deposits 100 fury. withdraw info 0 fury
 	invariant := ModuleAccountInvariant(keeper, keeper.supplyKeeper)
 	_, broken := invariant(ctx)
 	require.False(t, broken)
 
-	// withdraw xxb_okt 50 okt
+	// withdraw xxb_fury 50 fury
 	WithdrawMsg := types.NewMsgWithdraw(builtInTP.Name(),
 		sdk.NewDecCoin(builtInTP.QuoteAssetSymbol, sdk.NewInt(50)), accounts[0])
 
 	err = keeper.Withdraw(ctx, builtInTP.Name(), WithdrawMsg.Depositor, WithdrawMsg.Amount)
 	require.Nil(t, err)
 
-	// module acount balance 100okt
-	// xxb_okt deposits 50 okt. withdraw info 50 okt
+	// module acount balance 100fury
+	// xxb_fury deposits 50 fury. withdraw info 50 fury
 	invariant = ModuleAccountInvariant(keeper, keeper.supplyKeeper)
 	_, broken = invariant(ctx)
 	require.False(t, broken)

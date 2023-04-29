@@ -6,14 +6,14 @@ import (
 
 	"github.com/gorilla/mux"
 
-	govrest "github.com/okex/exchain/libs/cosmos-sdk/x/gov/client/rest"
+	govrest "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/client/rest"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade/internal/types"
 )
 
 func registerTxRoutes(cliCtx context.CLIContext, r *mux.Router) {

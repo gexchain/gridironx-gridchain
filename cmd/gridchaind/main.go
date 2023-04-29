@@ -7,44 +7,44 @@ import (
 	"os"
 	"strings"
 
-	"github.com/okex/exchain/app/logevents"
-	"github.com/okex/exchain/cmd/exchaind/fss"
-	"github.com/okex/exchain/cmd/exchaind/mpt"
+	"github.com/gridironx/gridchain/app/logevents"
+	"github.com/gridironx/gridchain/cmd/gridchaind/fss"
+	"github.com/gridironx/gridchain/cmd/gridchaind/mpt"
 
-	"github.com/okex/exchain/app/rpc"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/app/rpc"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmamino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	clientkeys "github.com/okex/exchain/libs/cosmos-sdk/client/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	clientkeys "github.com/gridironx/gridchain/libs/cosmos-sdk/client/keys"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/cmd/client"
-	"github.com/okex/exchain/x/genutil"
-	genutilcli "github.com/okex/exchain/x/genutil/client/cli"
-	genutiltypes "github.com/okex/exchain/x/genutil/types"
-	"github.com/okex/exchain/x/staking"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/codec"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/cmd/client"
+	"github.com/gridironx/gridchain/x/genutil"
+	genutilcli "github.com/gridironx/gridchain/x/genutil/client/cli"
+	genutiltypes "github.com/gridironx/gridchain/x/genutil/types"
+	"github.com/gridironx/gridchain/x/staking"
 )
 
 const flagInvCheckPeriod = "inv-check-period"
-const OkcEnvPrefix = "OKEXCHAIN"
+const GridcEnvPrefix = "GRIDIRONXCHAIN"
 
 var invCheckPeriod uint
 
@@ -63,14 +63,14 @@ func main() {
 	clientkeys.KeysCdc = codecProxy.GetCdc()
 
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	gridchain.SetBech32Prefixes(config)
+	gridchain.SetBip44CoinType(config)
 	config.Seal()
 
 	ctx := server.NewDefaultContext()
 
 	rootCmd := &cobra.Command{
-		Use:               "exchaind",
+		Use:               "gridchaind",
 		Short:             "ExChain App Daemon (server)",
 		PersistentPreRunE: preRun(ctx),
 	}
@@ -112,7 +112,7 @@ func main() {
 	preCheckLongFlagSyntax()
 
 	// prepare and add flags
-	executor := cli.PrepareBaseCmd(rootCmd, OkcEnvPrefix, app.DefaultNodeHome)
+	executor := cli.PrepareBaseCmd(rootCmd, GridcEnvPrefix, app.DefaultNodeHome)
 	rootCmd.PersistentFlags().UintVar(&invCheckPeriod, flagInvCheckPeriod,
 		0, "Assert registered invariants every N blocks")
 	rootCmd.PersistentFlags().Bool(server.FlagGops, false, "Enable gops metrics collection")
@@ -133,7 +133,7 @@ func initEnv() {
 }
 
 func checkSetEnv(envName string, value string) {
-	realEnvName := OkcEnvPrefix + "_" + strings.ToUpper(envName)
+	realEnvName := GridcEnvPrefix + "_" + strings.ToUpper(envName)
 	_, ok := os.LookupEnv(realEnvName)
 	if !ok {
 		_ = os.Setenv(realEnvName, value)
@@ -142,7 +142,7 @@ func checkSetEnv(envName string, value string) {
 
 func closeApp(iApp abci.Application) {
 	fmt.Println("Close App")
-	app := iApp.(*app.OKExChainApp)
+	app := iApp.(*app.GRIDIronxChainApp)
 	app.StopBaseApp()
 	evmtypes.CloseIndexer()
 	rpc.CloseEthBackend()
@@ -155,7 +155,7 @@ func newApp(logger log.Logger, db dbm.DB, traceStore io.Writer) abci.Application
 		panic(err)
 	}
 
-	return app.NewOKExChainApp(
+	return app.NewGRIDIronxChainApp(
 		logger,
 		db,
 		traceStore,
@@ -171,15 +171,15 @@ func newApp(logger log.Logger, db dbm.DB, traceStore io.Writer) abci.Application
 func exportAppStateAndTMValidators(
 	logger log.Logger, db dbm.DB, traceStore io.Writer, height int64, forZeroHeight bool, jailWhiteList []string,
 ) (json.RawMessage, []tmtypes.GenesisValidator, error) {
-	var ethermintApp *app.OKExChainApp
+	var ethermintApp *app.GRIDIronxChainApp
 	if height != -1 {
-		ethermintApp = app.NewOKExChainApp(logger, db, traceStore, false, map[int64]bool{}, 0)
+		ethermintApp = app.NewGRIDIronxChainApp(logger, db, traceStore, false, map[int64]bool{}, 0)
 
 		if err := ethermintApp.LoadHeight(height); err != nil {
 			return nil, nil, err
 		}
 	} else {
-		ethermintApp = app.NewOKExChainApp(logger, db, traceStore, true, map[int64]bool{}, 0)
+		ethermintApp = app.NewGRIDIronxChainApp(logger, db, traceStore, true, map[int64]bool{}, 0)
 	}
 
 	return ethermintApp.ExportAppStateAndValidators(forZeroHeight, jailWhiteList)

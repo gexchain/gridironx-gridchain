@@ -1,11 +1,11 @@
 package typesadapter
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	txmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	okc_types "github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	txmsg "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	gridc_types "github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/types"
 )
 
 var (
@@ -86,7 +86,7 @@ func (m *MsgSend) RulesFilter() (sdk.Msg, error) {
 		if amount.Denom == sdk.DefaultIbcWei {
 			msgSend.Amount[i].Denom = sdk.DefaultBondDenom
 		} else if amount.Denom == sdk.DefaultBondDenom {
-			return nil, sdkerrors.Wrap(sdkerrors.ErrInvalidCoins, "MsgSend not support okt denom")
+			return nil, sdkerrors.Wrap(sdkerrors.ErrInvalidCoins, "MsgSend not support fury denom")
 		}
 	}
 	return &msgSend, nil
@@ -97,7 +97,7 @@ func (m *MsgSend) Swap(ctx sdk.Context) (sdk.Msg, error) {
 		if amount.Denom == sdk.DefaultIbcWei {
 			m.Amount[i].Denom = sdk.DefaultBondDenom
 		} else if amount.Denom == sdk.DefaultBondDenom {
-			return nil, sdkerrors.Wrap(sdkerrors.ErrInvalidCoins, "MsgSend not support okt denom")
+			return nil, sdkerrors.Wrap(sdkerrors.ErrInvalidCoins, "MsgSend not support fury denom")
 		}
 	}
 
@@ -108,10 +108,10 @@ func (msg *MsgMultiSend) ValidateBasic() error {
 	// this just makes sure all the inputs and outputs are properly formatted,
 	// not that they actually have the money inside
 	if len(msg.Inputs) == 0 {
-		return okc_types.ErrNoInputs
+		return gridc_types.ErrNoInputs
 	}
 	if len(msg.Outputs) == 0 {
-		return okc_types.ErrNoOutputs
+		return gridc_types.ErrNoOutputs
 	}
 	return ValidateInputsOutputs(msg.Inputs, msg.Outputs)
 }
@@ -220,7 +220,7 @@ func ValidateInputsOutputs(inputs []Input, outputs []Output) error {
 
 	// make sure inputs and outputs match
 	if !totalIn.IsEqual(totalOut) {
-		return okc_types.ErrInputOutputMismatch
+		return gridc_types.ErrInputOutputMismatch
 	}
 
 	return nil

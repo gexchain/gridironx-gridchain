@@ -1,10 +1,10 @@
 package bank
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/types"
 )
 
 // NewHandler returns a handler for "bank" type messages.

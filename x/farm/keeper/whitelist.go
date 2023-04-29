@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	swaptypes "github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/farm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	swaptypes "github.com/gridironx/gridchain/x/ammswap/types"
+	"github.com/gridironx/gridchain/x/farm/types"
 )
 
 // GetWhitelist gets the whole whitelist currently

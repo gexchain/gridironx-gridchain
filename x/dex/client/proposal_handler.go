@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/okex/exchain/x/dex/client/cli"
-	"github.com/okex/exchain/x/dex/client/rest"
-	govclient "github.com/okex/exchain/x/gov/client"
+	"github.com/gridironx/gridchain/x/dex/client/cli"
+	"github.com/gridironx/gridchain/x/dex/client/rest"
+	govclient "github.com/gridironx/gridchain/x/gov/client"
 )
 
 // param change proposal handler

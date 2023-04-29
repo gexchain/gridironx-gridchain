@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	"github.com/stretchr/testify/assert"
 )
 

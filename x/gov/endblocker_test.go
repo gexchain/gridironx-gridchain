@@ -4,13 +4,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/params"
-	paramsTypes "github.com/okex/exchain/x/params/types"
-	"github.com/okex/exchain/x/staking"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/params"
+	paramsTypes "github.com/gridironx/gridchain/x/params/types"
+	"github.com/gridironx/gridchain/x/staking"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -9,14 +9,14 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/rlp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	token "github.com/okex/exchain/x/token/types"
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	token "github.com/gridironx/gridchain/x/token/types"
+	wasmtypes "github.com/gridironx/gridchain/x/wasm/types"
 	"github.com/stretchr/testify/require"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 )
@@ -144,7 +144,7 @@ func BenchmarkTxSending(b *testing.B) {
 				_ = os.RemoveAll("./data")
 				_ = os.RemoveAll("./wasm")
 			}()
-			appInfo := InitializeOKXApp(b, db, tc.numAccounts)
+			appInfo := InitializeGRIDXApp(b, db, tc.numAccounts)
 			err := deployOip20(&appInfo)
 			require.NoError(b, err)
 			err = deployCw20(&appInfo)
@@ -159,7 +159,7 @@ func BenchmarkTxSending(b *testing.B) {
 
 			for i := 0; i < b.N; {
 				if i%blockSize == 0 {
-					appInfo.App.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "exchain-67", Height: height, Time: time.Now()}})
+					appInfo.App.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "gridchain-67", Height: height, Time: time.Now()}})
 				}
 				//res := appInfo.App.CheckTx(abci.RequestCheckTx{
 				//	Tx: txs[idx],

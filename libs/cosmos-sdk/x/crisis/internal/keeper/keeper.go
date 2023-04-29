@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis/internal/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
 )
 
 // Keeper - crisis keeper

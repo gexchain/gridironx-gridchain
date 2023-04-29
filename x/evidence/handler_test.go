@@ -3,12 +3,12 @@ package evidence_test
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evidence"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -22,7 +22,7 @@ type HandlerTestSuite struct {
 
 func (suite *HandlerTestSuite) SetupTest() {
 	checkTx := false
-	app := MakeOKEXApp()
+	app := MakeGRIDIRONXApp()
 	// get the app's codec and register custom testing types
 	cdc := app.Codec()
 	cdc.RegisterConcrete(types.TestEquivocationEvidence{}, "test/TestEquivocationEvidence", nil)

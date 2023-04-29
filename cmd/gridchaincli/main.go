@@ -3,35 +3,35 @@ package main
 import (
 	"fmt"
 
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
+	interfacetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
 
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/cmd/client"
-	sdkclient "github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	clientkeys "github.com/okex/exchain/libs/cosmos-sdk/client/keys"
-	clientrpc "github.com/okex/exchain/libs/cosmos-sdk/client/rpc"
-	sdkcodec "github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authcmd "github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/cli"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/x/dex"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/order"
-	tokencmd "github.com/okex/exchain/x/token/client/cli"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/codec"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/cmd/client"
+	sdkclient "github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	clientkeys "github.com/gridironx/gridchain/libs/cosmos-sdk/client/keys"
+	clientrpc "github.com/gridironx/gridchain/libs/cosmos-sdk/client/rpc"
+	sdkcodec "github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authcmd "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/cli"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	tmamino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	"github.com/gridironx/gridchain/x/dex"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/order"
+	tokencmd "github.com/gridironx/gridchain/x/token/client/cli"
 	"github.com/spf13/cobra"
 )
 
@@ -53,13 +53,13 @@ func main() {
 
 	// Read in the configuration file for the sdk
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	gridchain.SetBech32Prefixes(config)
+	gridchain.SetBip44CoinType(config)
 	config.Seal()
 
 	rootCmd := &cobra.Command{
-		Use:   "exchaincli",
-		Short: "Command line interface for interacting with exchaind",
+		Use:   "gridchaincli",
+		Short: "Command line interface for interacting with gridchaind",
 	}
 
 	// Add --chain-id to persistent flags and mark it required
@@ -84,8 +84,8 @@ func main() {
 		flags.NewCompletionCmd(rootCmd, true),
 	)
 
-	// Add flags and prefix all env exposed with OKEXCHAIN
-	executor := cli.PrepareMainCmd(rootCmd, "OKEXCHAIN", app.DefaultCLIHome)
+	// Add flags and prefix all env exposed with GRIDIRONXCHAIN
+	executor := cli.PrepareMainCmd(rootCmd, "GRIDIRONXCHAIN", app.DefaultCLIHome)
 
 	err := executor.Execute()
 	if err != nil {

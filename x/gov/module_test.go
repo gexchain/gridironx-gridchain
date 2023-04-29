@@ -1,21 +1,21 @@
 package gov
 
 import (
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	interfacetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	ibctransfer "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	cliLcd "github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/gov/client"
-	"github.com/okex/exchain/x/gov/client/rest"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	cliLcd "github.com/gridironx/gridchain/libs/cosmos-sdk/client/lcd"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/gov/client"
+	"github.com/gridironx/gridchain/x/gov/client/rest"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/gov/types"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 )
@@ -47,8 +47,8 @@ func TestNewAppModuleBasic(t *testing.T) {
 		ibc.AppModuleBasic{},
 		ibctransfer.AppModuleBasic{},
 	)
-	//cdc := okexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := okexchaincodec.MakeIBC(ModuleBasics)
+	//cdc := gridchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := gridchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 

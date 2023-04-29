@@ -2,8 +2,8 @@ package consensus
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/system/trace"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 	"sync"
 	"time"
 )

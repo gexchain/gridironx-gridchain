@@ -3,8 +3,8 @@ package simulation
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
 	"math/rand"
 )
 

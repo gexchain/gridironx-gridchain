@@ -5,12 +5,12 @@ import (
 
 	//"github.com/armon/go-metrics"
 	//"github.com/cosmos/cosmos-sdk/telemetry"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	porttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	connectiontypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/03-connection/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	porttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
 )
 
 var _ clienttypes.MsgServer = Keeper{}

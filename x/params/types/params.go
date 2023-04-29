@@ -2,13 +2,13 @@ package types
 
 import (
 	"fmt"
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/subspace"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkparams "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
 )
 
 const (

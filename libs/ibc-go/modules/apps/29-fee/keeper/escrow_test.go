@@ -3,12 +3,12 @@ package keeper_test
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	transfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/mock"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/types"
+	transfertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/mock"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 )
 
 func (suite *KeeperTestSuite) TestDistributeFee() {

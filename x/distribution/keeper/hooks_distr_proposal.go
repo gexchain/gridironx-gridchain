@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/distribution/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 func (h Hooks) afterValidatorRemovedForDistributionProposal(ctx sdk.Context, _ sdk.ConsAddress, valAddr sdk.ValAddress) {

@@ -1,8 +1,8 @@
 package rootmulti
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 const (

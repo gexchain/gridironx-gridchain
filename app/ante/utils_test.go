@@ -6,46 +6,46 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	ibcmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	ibc_tx "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/mock"
-	helpers2 "github.com/okex/exchain/libs/ibc-go/testing/simapp/helpers"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	types2 "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/helpers"
+	ibcmsg "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	ibc_tx "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/mock"
+	helpers2 "github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/helpers"
 
 	"github.com/stretchr/testify/suite"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
 
-	"github.com/okex/exchain/app"
-	ante "github.com/okex/exchain/app/ante"
-	appconfig "github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	okexchain "github.com/okex/exchain/app/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/app"
+	ante "github.com/gridironx/gridchain/app/ante"
+	appconfig "github.com/gridironx/gridchain/app/config"
+	"github.com/gridironx/gridchain/app/crypto/ethsecp256k1"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmcrypto "github.com/gridironx/gridchain/libs/tendermint/crypto"
 )
 
 type AnteTestSuite struct {
 	suite.Suite
 
 	ctx         sdk.Context
-	app         *app.OKExChainApp
+	app         *app.GRIDIronxChainApp
 	anteHandler sdk.AnteHandler
 }
 
 func (suite *AnteTestSuite) SetupTest() {
 	checkTx := false
-	chainId := "okexchain-3"
+	chainId := "gridchain-3"
 
 	suite.app = app.Setup(checkTx)
 	suite.app.Codec().RegisterConcrete(&sdk.TestMsg{}, "test/TestMsg", nil)
@@ -55,7 +55,7 @@ func (suite *AnteTestSuite) SetupTest() {
 
 	suite.anteHandler = ante.NewAnteHandler(suite.app.AccountKeeper, suite.app.EvmKeeper, suite.app.SupplyKeeper, nil, suite.app.WasmHandler, suite.app.IBCKeeper, suite.app.StakingKeeper, suite.app.ParamsKeeper)
 
-	err := okexchain.SetChainId(chainId)
+	err := gridchain.SetChainId(chainId)
 	suite.Nil(err)
 
 	appconfig.RegisterDynamicConfig(suite.app.Logger())
@@ -70,11 +70,11 @@ func newTestMsg(addrs ...sdk.AccAddress) *sdk.TestMsg {
 }
 
 func newTestCoins() sdk.Coins {
-	return sdk.NewCoins(okexchain.NewPhotonCoinInt64(500000000))
+	return sdk.NewCoins(gridchain.NewPhotonCoinInt64(500000000))
 }
 
 func newTestStdFee() auth.StdFee {
-	return auth.NewStdFee(220000, sdk.NewCoins(okexchain.NewPhotonCoinInt64(150)))
+	return auth.NewStdFee(220000, sdk.NewCoins(gridchain.NewPhotonCoinInt64(150)))
 }
 
 // GenerateAddress generates an Ethereum address.
@@ -109,7 +109,7 @@ func newTestSDKTx(
 }
 
 func newTestEthTx(ctx sdk.Context, msg *evmtypes.MsgEthereumTx, priv tmcrypto.PrivKey) (sdk.Tx, error) {
-	chainIDEpoch, err := okexchain.ParseChainID(ctx.ChainID())
+	chainIDEpoch, err := gridchain.ParseChainID(ctx.ChainID())
 	if err != nil {
 		return nil, err
 	}

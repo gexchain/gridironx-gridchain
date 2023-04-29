@@ -1,9 +1,9 @@
 package ante
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 	"strconv"
 	"strings"
 )

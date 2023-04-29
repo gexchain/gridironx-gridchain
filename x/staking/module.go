@@ -4,27 +4,27 @@ import (
 	"encoding/json"
 	"math/rand"
 
-	sim "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/staking/simulation"
+	sim "github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/x/staking/simulation"
 
-	"github.com/okex/exchain/x/staking/keeper"
+	"github.com/gridironx/gridchain/x/staking/keeper"
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/x/staking/client/cli"
-	"github.com/okex/exchain/x/staking/client/rest"
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/x/staking/client/cli"
+	"github.com/gridironx/gridchain/x/staking/client/rest"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 var (
@@ -118,7 +118,7 @@ func NewAppModule(keeper Keeper, accKeeper types.AccountKeeper,
 
 // RegisterInvariants registers invariants
 func (am AppModule) RegisterInvariants(ir sdk.InvariantRegistry) {
-	// required by okexchain
+	// required by gridchain
 	keeper.RegisterInvariantsCustom(ir, am.keeper)
 }
 

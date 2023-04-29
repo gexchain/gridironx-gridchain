@@ -8,7 +8,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/tmhash"
 )
 
 type RangeProof struct {

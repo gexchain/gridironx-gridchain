@@ -1,9 +1,9 @@
 package ante
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/mock"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/tendermint/mock"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"

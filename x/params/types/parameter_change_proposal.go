@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/types"
 
-	govtypes "github.com/okex/exchain/x/gov/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkparams "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
 )
 
 // Assert ParameterChangeProposal implements govtypes.Content at compile-time
@@ -17,7 +17,7 @@ var _ govtypes.Content = ParameterChangeProposal{}
 
 func init() {
 	govtypes.RegisterProposalType(sdkparams.ProposalTypeChange)
-	govtypes.RegisterProposalTypeCodec(ParameterChangeProposal{}, "okexchain/params/ParameterChangeProposal")
+	govtypes.RegisterProposalTypeCodec(ParameterChangeProposal{}, "gridchain/params/ParameterChangeProposal")
 }
 
 // ParameterChangeProposal is the struct of param change proposal

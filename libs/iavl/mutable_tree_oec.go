@@ -6,10 +6,10 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/okex/exchain/libs/iavl/config"
+	"github.com/gridironx/gridchain/libs/iavl/config"
 
-	"github.com/okex/exchain/libs/system/trace"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 )
 
 const (

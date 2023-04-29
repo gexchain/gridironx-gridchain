@@ -6,130 +6,130 @@ import (
 	"os"
 	"sync"
 
-	"github.com/okex/exchain/x/vmbridge"
+	"github.com/gridironx/gridchain/x/vmbridge"
 
-	ica "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts"
-	icacontroller "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller"
-	icahost "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/common"
-	"github.com/okex/exchain/x/icamauth"
+	ica "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts"
+	icacontroller "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller"
+	icahost "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/common"
+	"github.com/gridironx/gridchain/x/icamauth"
 
-	ibccommon "github.com/okex/exchain/libs/ibc-go/modules/core/common"
+	ibccommon "github.com/gridironx/gridchain/libs/ibc-go/modules/core/common"
 
-	icacontrollertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
-	icahosttypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
-	icamauthtypes "github.com/okex/exchain/x/icamauth/types"
+	icacontrollertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
+	icahosttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	icamauthtypes "github.com/gridironx/gridchain/x/icamauth/types"
 
-	icacontrollerkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/keeper"
-	icahostkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/keeper"
-	icamauthkeeper "github.com/okex/exchain/x/icamauth/keeper"
+	icacontrollerkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/keeper"
+	icahostkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/keeper"
+	icamauthkeeper "github.com/gridironx/gridchain/x/icamauth/keeper"
 
-	ibcfeekeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/keeper"
+	ibcfeekeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/keeper"
 
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	ibcfeetypes "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
+	icatypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	ibcfeetypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/types"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc/encoding"
 	"google.golang.org/grpc/encoding/proto"
 
-	ibcfee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
+	ibcfee "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee"
 
-	"github.com/okex/exchain/app/utils/appstatus"
+	"github.com/gridironx/gridchain/app/utils/appstatus"
 
-	"github.com/okex/exchain/app/ante"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	appconfig "github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/app/refund"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/app/utils/sanity"
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	upgradetypes "github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	capabilityModule "github.com/okex/exchain/libs/cosmos-sdk/x/capability"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint"
-	govclient "github.com/okex/exchain/libs/cosmos-sdk/x/mint/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade"
-	"github.com/okex/exchain/libs/iavl"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	ibctransferkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/keeper"
-	ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/client"
-	ibcclienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	ibcporttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	ibchost "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/system"
-	"github.com/okex/exchain/libs/system/trace"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/ammswap"
-	commonversion "github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/dex"
-	dexclient "github.com/okex/exchain/x/dex/client"
-	distr "github.com/okex/exchain/x/distribution"
-	"github.com/okex/exchain/x/erc20"
-	erc20client "github.com/okex/exchain/x/erc20/client"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evm"
-	evmclient "github.com/okex/exchain/x/evm/client"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/farm"
-	farmclient "github.com/okex/exchain/x/farm/client"
-	"github.com/okex/exchain/x/feesplit"
-	fsclient "github.com/okex/exchain/x/feesplit/client"
-	"github.com/okex/exchain/x/genutil"
-	"github.com/okex/exchain/x/gov"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/infura"
-	"github.com/okex/exchain/x/order"
-	"github.com/okex/exchain/x/params"
-	paramsclient "github.com/okex/exchain/x/params/client"
-	paramstypes "github.com/okex/exchain/x/params/types"
-	"github.com/okex/exchain/x/slashing"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/token"
-	"github.com/okex/exchain/x/wasm"
-	wasmclient "github.com/okex/exchain/x/wasm/client"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	"github.com/gridironx/gridchain/app/ante"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	appconfig "github.com/gridironx/gridchain/app/config"
+	"github.com/gridironx/gridchain/app/refund"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/app/utils/sanity"
+	bam "github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	upgradetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types/upgrade"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	capabilityModule "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability"
+	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint"
+	govclient "github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade"
+	"github.com/gridironx/gridchain/libs/iavl"
+	ibctransfer "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer"
+	ibctransferkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/keeper"
+	ibctransfertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
+	ibcclient "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/client"
+	ibcclienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	ibcporttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
+	ibchost "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/system"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	"github.com/gridironx/gridchain/x/ammswap"
+	commonversion "github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/dex"
+	dexclient "github.com/gridironx/gridchain/x/dex/client"
+	distr "github.com/gridironx/gridchain/x/distribution"
+	"github.com/gridironx/gridchain/x/erc20"
+	erc20client "github.com/gridironx/gridchain/x/erc20/client"
+	"github.com/gridironx/gridchain/x/evidence"
+	"github.com/gridironx/gridchain/x/evm"
+	evmclient "github.com/gridironx/gridchain/x/evm/client"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/farm"
+	farmclient "github.com/gridironx/gridchain/x/farm/client"
+	"github.com/gridironx/gridchain/x/feesplit"
+	fsclient "github.com/gridironx/gridchain/x/feesplit/client"
+	"github.com/gridironx/gridchain/x/genutil"
+	"github.com/gridironx/gridchain/x/gov"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/infura"
+	"github.com/gridironx/gridchain/x/order"
+	"github.com/gridironx/gridchain/x/params"
+	paramsclient "github.com/gridironx/gridchain/x/params/client"
+	paramstypes "github.com/gridironx/gridchain/x/params/types"
+	"github.com/gridironx/gridchain/x/slashing"
+	"github.com/gridironx/gridchain/x/staking"
+	"github.com/gridironx/gridchain/x/token"
+	"github.com/gridironx/gridchain/x/wasm"
+	wasmclient "github.com/gridironx/gridchain/x/wasm/client"
+	wasmkeeper "github.com/gridironx/gridchain/x/wasm/keeper"
 )
 
 func init() {
 	// set the address prefixes
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	gridchain.SetBech32Prefixes(config)
+	gridchain.SetBip44CoinType(config)
 }
 
 const (
-	appName = "OKExChain"
+	appName = "GRIDIronxChain"
 )
 
 var (
 	// DefaultCLIHome sets the default home directories for the application CLI
-	DefaultCLIHome = os.ExpandEnv("$HOME/.exchaincli")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.gridchaincli")
 
 	// DefaultNodeHome sets the folder where the applcation data and configuration will be stored
-	DefaultNodeHome = os.ExpandEnv("$HOME/.exchaind")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.gridchaind")
 
 	// ModuleBasics defines the module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration
@@ -220,12 +220,12 @@ var (
 	onceLog sync.Once
 )
 
-var _ simapp.App = (*OKExChainApp)(nil)
+var _ simapp.App = (*GRIDIronxChainApp)(nil)
 
-// OKExChainApp implements an extended ABCI application. It is an application
+// GRIDIronxChainApp implements an extended ABCI application. It is an application
 // that may process transactions through Ethereum's EVM running atop of
 // Tendermint consensus.
-type OKExChainApp struct {
+type GRIDIronxChainApp struct {
 	*bam.BaseApp
 
 	invCheckPeriod uint
@@ -287,8 +287,8 @@ type OKExChainApp struct {
 	WasmHandler wasmkeeper.HandlerOption
 }
 
-// NewOKExChainApp returns a reference to a new initialized OKExChain application.
-func NewOKExChainApp(
+// NewGRIDIronxChainApp returns a reference to a new initialized GRIDIronxChain application.
+func NewGRIDIronxChainApp(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -296,7 +296,7 @@ func NewOKExChainApp(
 	skipUpgradeHeights map[int64]bool,
 	invCheckPeriod uint,
 	baseAppOptions ...func(*bam.BaseApp),
-) *OKExChainApp {
+) *GRIDIronxChainApp {
 	logger.Info("Starting "+system.ChainName,
 		"GenesisHeight", tmtypes.GetStartBlockHeight(),
 		"MercuryHeight", tmtypes.GetMercuryHeight(),
@@ -313,9 +313,9 @@ func NewOKExChainApp(
 		logStartingFlags(logger)
 	})
 
-	codecProxy, interfaceReg := okexchaincodec.MakeCodecSuit(ModuleBasics)
+	codecProxy, interfaceReg := gridchaincodec.MakeCodecSuit(ModuleBasics)
 	vmbridge.RegisterInterface(interfaceReg)
-	// NOTE we use custom OKExChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
+	// NOTE we use custom GRIDIronxChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
 	bApp := bam.NewBaseApp(appName, logger, db, evm.TxDecoder(codecProxy), baseAppOptions...)
 
 	bApp.SetCommitMultiStoreTracer(traceStore)
@@ -343,7 +343,7 @@ func NewOKExChainApp(
 	tkeys := sdk.NewTransientStoreKeys(params.TStoreKey)
 	memKeys := sdk.NewMemoryStoreKeys(capabilitytypes.MemStoreKey)
 
-	app := &OKExChainApp{
+	app := &GRIDIronxChainApp{
 		BaseApp:        bApp,
 		invCheckPeriod: invCheckPeriod,
 		keys:           keys,
@@ -380,9 +380,9 @@ func NewOKExChainApp(
 
 	//proxy := codec.NewMarshalProxy(cc, cdc)
 	app.marshal = codecProxy
-	// use custom OKExChain account for contracts
+	// use custom GRIDIronxChain account for contracts
 	app.AccountKeeper = auth.NewAccountKeeper(
-		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], okexchain.ProtoAccount,
+		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], gridchain.ProtoAccount,
 	)
 
 	bankKeeper := bank.NewBaseKeeperWithMarshal(
@@ -799,13 +799,13 @@ func NewOKExChainApp(
 	return app
 }
 
-func (app *OKExChainApp) SetOption(req abci.RequestSetOption) (res abci.ResponseSetOption) {
+func (app *GRIDIronxChainApp) SetOption(req abci.RequestSetOption) (res abci.ResponseSetOption) {
 	if req.Key == "CheckChainID" {
-		if err := okexchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
+		if err := gridchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)
 		}
-		err := okexchain.SetChainId(req.Value)
+		err := gridchain.SetChainId(req.Value)
 		if err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)
@@ -814,25 +814,25 @@ func (app *OKExChainApp) SetOption(req abci.RequestSetOption) (res abci.Response
 	return app.BaseApp.SetOption(req)
 }
 
-func (app *OKExChainApp) LoadStartVersion(height int64) error {
+func (app *GRIDIronxChainApp) LoadStartVersion(height int64) error {
 	return app.LoadVersion(height, app.keys[bam.MainStoreKey])
 }
 
 // Name returns the name of the App
-func (app *OKExChainApp) Name() string { return app.BaseApp.Name() }
+func (app *GRIDIronxChainApp) Name() string { return app.BaseApp.Name() }
 
 // BeginBlocker updates every begin block
-func (app *OKExChainApp) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
+func (app *GRIDIronxChainApp) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
 	return app.mm.BeginBlock(ctx, req)
 }
 
 // EndBlocker updates every end block
-func (app *OKExChainApp) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
+func (app *GRIDIronxChainApp) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
 	return app.mm.EndBlock(ctx, req)
 }
 
 // InitChainer updates at chain initialization
-func (app *OKExChainApp) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
+func (app *GRIDIronxChainApp) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
 
 	var genesisState simapp.GenesisState
 	app.marshal.GetCdc().MustUnmarshalJSON(req.AppStateBytes, &genesisState)
@@ -840,12 +840,12 @@ func (app *OKExChainApp) InitChainer(ctx sdk.Context, req abci.RequestInitChain)
 }
 
 // LoadHeight loads state at a particular height
-func (app *OKExChainApp) LoadHeight(height int64) error {
+func (app *GRIDIronxChainApp) LoadHeight(height int64) error {
 	return app.LoadVersion(height, app.keys[bam.MainStoreKey])
 }
 
 // ModuleAccountAddrs returns all the app's module account addresses.
-func (app *OKExChainApp) ModuleAccountAddrs() map[string]bool {
+func (app *GRIDIronxChainApp) ModuleAccountAddrs() map[string]bool {
 	modAccAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		modAccAddrs[supply.NewModuleAddress(acc).String()] = true
@@ -855,33 +855,33 @@ func (app *OKExChainApp) ModuleAccountAddrs() map[string]bool {
 }
 
 // SimulationManager implements the SimulationApp interface
-func (app *OKExChainApp) SimulationManager() *module.SimulationManager {
+func (app *GRIDIronxChainApp) SimulationManager() *module.SimulationManager {
 	return app.sm
 }
 
 // GetKey returns the KVStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *OKExChainApp) GetKey(storeKey string) *sdk.KVStoreKey {
+func (app *GRIDIronxChainApp) GetKey(storeKey string) *sdk.KVStoreKey {
 	return app.keys[storeKey]
 }
 
-// Codec returns OKExChain's codec.
+// Codec returns GRIDIronxChain's codec.
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *OKExChainApp) Codec() *codec.Codec {
+func (app *GRIDIronxChainApp) Codec() *codec.Codec {
 	return app.marshal.GetCdc()
 }
 
-func (app *OKExChainApp) Marshal() *codec.CodecProxy {
+func (app *GRIDIronxChainApp) Marshal() *codec.CodecProxy {
 	return app.marshal
 }
 
 // GetSubspace returns a param subspace for a given module name.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *OKExChainApp) GetSubspace(moduleName string) params.Subspace {
+func (app *GRIDIronxChainApp) GetSubspace(moduleName string) params.Subspace {
 	return app.subspaces[moduleName]
 }
 

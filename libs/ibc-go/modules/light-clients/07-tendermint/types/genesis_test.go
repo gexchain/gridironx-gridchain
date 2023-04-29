@@ -1,11 +1,11 @@
 package types_test
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	ibctesting "github.com/gridironx/gridchain/libs/ibc-go/testing"
 )
 
 // expected export ordering:

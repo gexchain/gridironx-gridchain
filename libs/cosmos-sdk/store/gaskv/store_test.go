@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/gaskv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/dbadapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/gaskv"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 
 	"github.com/stretchr/testify/require"
 )

@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 // ensure Msg interface compliance at compile time
@@ -249,7 +249,7 @@ func (msg MsgDeposit) GetSignBytes() []byte {
 	return sdk.MustSortJSON(bz)
 }
 
-// MsgWithdraw - structure for withdrawing okt and the corresponding shares from all validators
+// MsgWithdraw - structure for withdrawing fury and the corresponding shares from all validators
 type MsgWithdraw struct {
 	DelegatorAddress sdk.AccAddress `json:"delegator_address" yaml:"delegator_address"`
 	Amount           sdk.SysCoin    `json:"quantity" yaml:"quantity"`

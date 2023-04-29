@@ -6,29 +6,29 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
 
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
+	types2 "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/params"
-	"github.com/okex/exchain/x/staking"
+	"github.com/gridironx/gridchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/params"
+	"github.com/gridironx/gridchain/x/staking"
 )
 
 var (
@@ -121,7 +121,7 @@ func CreateTestInput(
 	err := ms.LoadLatestVersion()
 	require.Nil(t, err)
 
-	ctx := sdk.NewContext(ms, abci.Header{ChainID: "okexchain"}, isCheckTx, log.NewNopLogger())
+	ctx := sdk.NewContext(ms, abci.Header{ChainID: "gridchain"}, isCheckTx, log.NewNopLogger())
 	ctx.SetConsensusParams(
 		&abci.ConsensusParams{
 			Validator: &abci.ValidatorParams{

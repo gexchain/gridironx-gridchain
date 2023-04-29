@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	evm "github.com/okex/exchain/x/evm/watcher"
+	evm "github.com/gridironx/gridchain/x/evm/watcher"
 	"gorm.io/gorm"
 )
 

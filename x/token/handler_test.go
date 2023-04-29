@@ -4,33 +4,33 @@ import (
 	"testing"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	okexchain "github.com/okex/exchain/app"
-	app "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/token"
-	"github.com/okex/exchain/x/token/types"
+	gridchain "github.com/gridironx/gridchain/app"
+	app "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mock"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	"github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/token"
+	"github.com/gridironx/gridchain/x/token/types"
 	"github.com/stretchr/testify/require"
 )
 
 func TestHandlerBlockedContractAddrSend(t *testing.T) {
-	okexapp := initApp(true)
-	ctx := okexapp.BaseApp.NewContext(true, abci.Header{Height: 1})
+	gridironxapp := initApp(true)
+	ctx := gridironxapp.BaseApp.NewContext(true, abci.Header{Height: 1})
 	gAcc := CreateEthAccounts(3, sdk.SysCoins{
 		sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(10000)),
 	})
-	okexapp.AccountKeeper.SetAccount(ctx, gAcc[0])
-	okexapp.AccountKeeper.SetAccount(ctx, gAcc[1])
+	gridironxapp.AccountKeeper.SetAccount(ctx, gAcc[0])
+	gridironxapp.AccountKeeper.SetAccount(ctx, gAcc[1])
 	gAcc[2].CodeHash = []byte("contract code hash")
-	okexapp.AccountKeeper.SetAccount(ctx, gAcc[2])
+	gridironxapp.AccountKeeper.SetAccount(ctx, gAcc[2])
 
 	// multi send
 	multiSendStr := `[{"to":"` + gAcc[1].Address.String() + `","amount":" 10` + common.NativeToken + `"}]`
@@ -44,42 +44,42 @@ func TestHandlerBlockedContractAddrSend(t *testing.T) {
 	sendToContractMsg := types.NewMsgTokenSend(gAcc[0].Address, gAcc[2].Address, sdk.SysCoins{sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1))})
 	successfulMultiSendMsg := types.NewMsgMultiSend(gAcc[0].Address, transfers)
 	multiSendToContractMsg := types.NewMsgMultiSend(gAcc[0].Address, transfers2)
-	handler := token.NewTokenHandler(okexapp.TokenKeeper, version.CurrentProtocolVersion)
-	okexapp.BankKeeper.SetSendEnabled(ctx, true)
+	handler := token.NewTokenHandler(gridironxapp.TokenKeeper, version.CurrentProtocolVersion)
+	gridironxapp.BankKeeper.SetSendEnabled(ctx, true)
 	TestSets := []struct {
 		description string
 		balance     string
 		msg         sdk.Msg
 		account     app.EthAccount
 	}{
-		// 0.01okt as fixed fee in each stdTx
-		{"success to send", "9999.000000000000000000okt", successfulSendMsg, gAcc[0]},
-		{"success to multi-send", "9989.000000000000000000okt", successfulMultiSendMsg, gAcc[0]},
-		{"success to send", "9988.000000000000000000okt", successfulSendMsg, gAcc[0]},
-		{"success to multi-send", "9978.000000000000000000okt", successfulMultiSendMsg, gAcc[0]},
-		//{"fail to send to contract", "9978.000000000000000000okt", failedSendMsg, gAcc[0]},
-		//{"fail to multi-send to contract", "9978.000000000000000000okt", failedMultiSendMsg, gAcc[0]},
-		{"fail to send to contract", "9978.000000000000000000okt", sendToContractMsg, gAcc[0]},
-		{"fail to multi-send to contract", "9978.000000000000000000okt", multiSendToContractMsg, gAcc[0]},
+		// 0.01fury as fixed fee in each stdTx
+		{"success to send", "9999.000000000000000000fury", successfulSendMsg, gAcc[0]},
+		{"success to multi-send", "9989.000000000000000000fury", successfulMultiSendMsg, gAcc[0]},
+		{"success to send", "9988.000000000000000000fury", successfulSendMsg, gAcc[0]},
+		{"success to multi-send", "9978.000000000000000000fury", successfulMultiSendMsg, gAcc[0]},
+		//{"fail to send to contract", "9978.000000000000000000fury", failedSendMsg, gAcc[0]},
+		//{"fail to multi-send to contract", "9978.000000000000000000fury", failedMultiSendMsg, gAcc[0]},
+		{"fail to send to contract", "9978.000000000000000000fury", sendToContractMsg, gAcc[0]},
+		{"fail to multi-send to contract", "9978.000000000000000000fury", multiSendToContractMsg, gAcc[0]},
 	}
 	for i, tt := range TestSets {
 		t.Run(tt.description, func(t *testing.T) {
 			handler(ctx, TestSets[i].msg)
-			acc := okexapp.AccountKeeper.GetAccount(ctx, tt.account.Address)
+			acc := gridironxapp.AccountKeeper.GetAccount(ctx, tt.account.Address)
 			acc.GetCoins().String()
 			require.Equal(t, acc.GetCoins().String(), tt.balance)
 		})
 	}
 }
 
-// Setup initializes a new OKExChainApp. A Nop logger is set in OKExChainApp.
-func initApp(isCheckTx bool) *okexchain.OKExChainApp {
+// Setup initializes a new GRIDIronxChainApp. A Nop logger is set in GRIDIronxChainApp.
+func initApp(isCheckTx bool) *gridchain.GRIDIronxChainApp {
 	db := dbm.NewMemDB()
-	app := okexchain.NewOKExChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
+	app := gridchain.NewGRIDIronxChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
 
 	if !isCheckTx {
 		// init chain must be called to stop deliverState from being nil
-		genesisState := okexchain.NewDefaultGenesisState()
+		genesisState := gridchain.NewDefaultGenesisState()
 		stateBytes, err := codec.MarshalJSONIndent(app.Codec(), genesisState)
 		if err != nil {
 			panic(err)

@@ -6,12 +6,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	"github.com/okex/exchain/libs/tendermint/state/txindex/null"
-	"github.com/okex/exchain/libs/tendermint/types"
+	tmmath "github.com/gridironx/gridchain/libs/tendermint/libs/math"
+	tmquery "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/gridironx/gridchain/libs/tendermint/state/txindex/null"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // Tx allows you to query the transaction results. `nil` could mean the

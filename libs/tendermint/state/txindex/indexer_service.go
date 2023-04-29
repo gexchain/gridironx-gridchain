@@ -3,10 +3,10 @@ package txindex
 import (
 	"context"
 
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/state/indexer"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/state/indexer"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 const (

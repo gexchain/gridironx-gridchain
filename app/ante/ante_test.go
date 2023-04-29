@@ -10,15 +10,15 @@ import (
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmcrypto "github.com/gridironx/gridchain/libs/tendermint/crypto"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/ante"
-	"github.com/okex/exchain/app/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/app/ante"
+	"github.com/gridironx/gridchain/app/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 )
 
 func requireValidTx(

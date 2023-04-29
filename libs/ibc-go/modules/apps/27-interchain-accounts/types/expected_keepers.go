@@ -1,12 +1,12 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	supplyexported "github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	ibcexported "github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	supplyexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	ibcexported "github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 // AccountKeeper defines the expected account keeper

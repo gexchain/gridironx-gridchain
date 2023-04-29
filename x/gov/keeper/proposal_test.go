@@ -3,12 +3,12 @@ package keeper
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	//"github.com/okex/exchain/x/common"
-	//dexTypes "github.com/okex/exchain/x/dex/types"
-	"github.com/okex/exchain/x/gov/types"
+	//"github.com/gridironx/gridchain/x/common"
+	//dexTypes "github.com/gridironx/gridchain/x/dex/types"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 //func TestKeeper_SubmitProposal(t *testing.T) {

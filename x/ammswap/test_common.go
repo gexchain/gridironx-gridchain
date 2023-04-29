@@ -1,9 +1,9 @@
 package ammswap
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	swapkeeper "github.com/okex/exchain/x/ammswap/keeper"
-	"github.com/okex/exchain/x/ammswap/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	swapkeeper "github.com/gridironx/gridchain/x/ammswap/keeper"
+	"github.com/gridironx/gridchain/x/ammswap/types"
 	"github.com/stretchr/testify/require"
 	"testing"
 	"time"

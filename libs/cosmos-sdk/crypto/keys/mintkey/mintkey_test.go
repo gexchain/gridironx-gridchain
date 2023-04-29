@@ -6,13 +6,13 @@ import (
 	"io"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/armor"
-	cryptoAmino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/armor"
+	cryptoAmino "github.com/gridironx/gridchain/libs/tendermint/crypto/encoding/amino"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/keys/mintkey"
 )
 
 func TestArmorUnarmorPrivKey(t *testing.T) {

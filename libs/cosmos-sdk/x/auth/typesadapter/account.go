@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	cryptotypes "github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	cryptotypes "github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 // NewBaseAccountWithAddress - returns a new base account with a given address

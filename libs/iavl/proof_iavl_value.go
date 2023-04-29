@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
 )
 
 const ProofOpIAVLValue = "iavl:v"

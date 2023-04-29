@@ -1,11 +1,11 @@
 package distribution
 
 import (
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/distribution/keeper"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/distribution/keeper"
 )
 
 // BeginBlocker set the proposer for determining distribution during endblock
@@ -22,7 +22,7 @@ func BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock, k keeper.Keeper) 
 	if ctx.BlockHeight() > tmtypes.GetStartBlockHeight()+1 {
 		previousProposer := k.GetPreviousProposerConsAddr(ctx)
 
-		/* allocate tokens by okexchain custom rule */
+		/* allocate tokens by gridchain custom rule */
 		k.AllocateTokens(ctx, previousTotalPower, previousProposer, req.LastCommitInfo.GetVotes())
 	}
 

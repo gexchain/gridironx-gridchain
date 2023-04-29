@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	v038auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/legacy/v0_38"
-	v039auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/legacy/v0_39"
-	v039 "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/legacy/v0_39"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil/types"
+	v038auth "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/legacy/v0_38"
+	v039auth "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/legacy/v0_39"
+	v039 "github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil/legacy/v0_39"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil/types"
 )
 
 var genAuthState = []byte(`{

@@ -1,7 +1,7 @@
 package typesadapter
 
 import (
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 func (p *Params) From(pp types.Params) {

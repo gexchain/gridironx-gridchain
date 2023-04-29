@@ -1,15 +1,15 @@
 package token
 
 import (
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 
-	cliLcd "github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/token/types"
+	cliLcd "github.com/gridironx/gridchain/libs/cosmos-sdk/client/lcd"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/token/types"
 	"github.com/stretchr/testify/require"
 )
 

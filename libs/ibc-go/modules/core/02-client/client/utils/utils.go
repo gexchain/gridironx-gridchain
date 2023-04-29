@@ -3,15 +3,15 @@ package utils
 import (
 	"context"
 
-	clictx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/client"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	ibctmtypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	clictx "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	commitmenttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/23-commitment/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	ibcclient "github.com/gridironx/gridchain/libs/ibc-go/modules/core/client"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
+	ibctmtypes "github.com/gridironx/gridchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // QueryClientState returns a client state. If prove is true, it performs an ABCI store query

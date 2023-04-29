@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
 )
 
 const (

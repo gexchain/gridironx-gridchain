@@ -1,8 +1,8 @@
 package params
 
 import (
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/params/types"
+	sdkparams "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/x/params/types"
 )
 
 // const

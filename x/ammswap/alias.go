@@ -1,8 +1,8 @@
 package ammswap
 
 import (
-	"github.com/okex/exchain/x/ammswap/keeper"
-	"github.com/okex/exchain/x/ammswap/types"
+	"github.com/gridironx/gridchain/x/ammswap/keeper"
+	"github.com/gridironx/gridchain/x/ammswap/types"
 )
 
 const (

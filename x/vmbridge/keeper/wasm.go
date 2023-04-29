@@ -4,19 +4,19 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	ibcadapter "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/vmbridge/types"
-	"github.com/okex/exchain/x/wasm"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	ibcadapter "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/vmbridge/types"
+	"github.com/gridironx/gridchain/x/wasm"
 )
 
 func (k Keeper) SendToWasm(ctx sdk.Context, caller sdk.AccAddress, wasmContractAddr, recipient string, amount sdk.Int) error {
 	// must check recipient is ex address
-	if !sdk.IsOKCAddress(recipient) {
-		return types.ErrIsNotOKCAddr
+	if !sdk.IsGRIDCAddress(recipient) {
+		return types.ErrIsNotGRIDCAddr
 	}
 	to, err := sdk.AccAddressFromBech32(recipient)
 	if err != nil {

@@ -1,16 +1,16 @@
 package wasm
 
 import (
-	"github.com/okex/exchain/app/rpc/simulator"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/x/wasm/keeper"
-	"github.com/okex/exchain/x/wasm/proxy"
-	"github.com/okex/exchain/x/wasm/types"
-	"github.com/okex/exchain/x/wasm/watcher"
+	"github.com/gridironx/gridchain/app/rpc/simulator"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	types2 "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	"github.com/gridironx/gridchain/x/wasm/keeper"
+	"github.com/gridironx/gridchain/x/wasm/proxy"
+	"github.com/gridironx/gridchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/watcher"
 	"sync"
 )
 

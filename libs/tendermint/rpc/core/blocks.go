@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"sort"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 
-	nullblockindexer "github.com/okex/exchain/libs/tendermint/state/indexer/block/null"
+	nullblockindexer "github.com/gridironx/gridchain/libs/tendermint/state/indexer/block/null"
 
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
+	tmquery "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
 
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
+	tmmath "github.com/gridironx/gridchain/libs/tendermint/libs/math"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
+	sm "github.com/gridironx/gridchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // BlockchainInfo gets block headers for minHeight <= height <= maxHeight.

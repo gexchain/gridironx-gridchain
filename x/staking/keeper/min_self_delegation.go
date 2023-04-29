@@ -3,8 +3,8 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 // WithdrawMinSelfDelegation withdraws the msd from validator
@@ -59,10 +59,10 @@ func (k Keeper) WithdrawMinSelfDelegation(ctx sdk.Context, delAddr sdk.AccAddres
 	return
 }
 
-// AddSharesAsMinSelfDelegation adds shares of equal value of default msd (0.001okt) to validator itself during the creation
+// AddSharesAsMinSelfDelegation adds shares of equal value of default msd (0.001fury) to validator itself during the creation
 func (k Keeper) AddSharesAsMinSelfDelegation(ctx sdk.Context, delAddr sdk.AccAddress, validator *types.Validator,
 	defaultMSDToken sdk.SysCoin) (err error) {
-	// 0. transfer account's okt (0.001okt as default) into bondPool
+	// 0. transfer account's fury (0.001fury as default) into bondPool
 	coins := sdk.SysCoins{defaultMSDToken}
 	err = k.supplyKeeper.DelegateCoinsFromAccountToModule(ctx, delAddr, types.BondedPoolName, coins)
 	if err != nil {

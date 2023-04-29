@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	auto "github.com/okex/exchain/libs/tendermint/libs/autofile"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
+	auto "github.com/gridironx/gridchain/libs/tendermint/libs/autofile"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
 )
 
 const Version = "0.0.1"

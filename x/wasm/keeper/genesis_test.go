@@ -13,20 +13,20 @@ import (
 	"time"
 
 	fuzz "github.com/google/gofuzz"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authkeeper "github.com/okex/exchain/libs/cosmos-sdk/x/auth/keeper"
-	paramskeeper "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	paramtypes "github.com/okex/exchain/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authkeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/keeper"
+	paramskeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	paramtypes "github.com/gridironx/gridchain/x/params"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/wasm/types"
-	wasmTypes "github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
+	wasmTypes "github.com/gridironx/gridchain/x/wasm/types"
 )
 
 const firstCodeID = 1

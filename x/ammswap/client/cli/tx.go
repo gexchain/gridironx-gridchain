@@ -6,13 +6,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	client "github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/x/ammswap/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	client "github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/x/ammswap/types"
 	"github.com/spf13/cobra"
 )
 
@@ -62,7 +62,7 @@ func getCmdAddLiquidity(cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`add liquidity.
 
 Example:
-$ exchaincli tx swap add-liquidity --max-base-amount 10eth-355 --quote-amount 100btc-366 --min-liquidity 0.001
+$ gridchaincli tx swap add-liquidity --max-base-amount 10eth-355 --quote-amount 100btc-366 --min-liquidity 0.001
 
 `),
 		),
@@ -117,7 +117,7 @@ func getCmdRemoveLiquidity(cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`remove liquidity.
 
 Example:
-$ exchaincli tx swap remove-liquidity --liquidity 1 --min-base-amount 10eth-355 --min-quote-amount 1btc-366
+$ gridchaincli tx swap remove-liquidity --liquidity 1 --min-base-amount 10eth-355 --min-quote-amount 1btc-366
 
 `),
 		),
@@ -170,7 +170,7 @@ func getCmdCreateExchange(cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`create token pair.
 
 Example:
-$ exchaincli tx swap create-pair --token0 eth-355 --token1 btc-366 --fees 0.01okt 
+$ gridchaincli tx swap create-pair --token0 eth-355 --token1 btc-366 --fees 0.01fury 
 
 `),
 		),
@@ -205,7 +205,7 @@ func getCmdTokenSwap(cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`swap token.
 
 Example:
-$ exchaincli tx swap token --sell-amount 1eth-355 --min-buy-amount 60btc-366
+$ gridchaincli tx swap token --sell-amount 1eth-355 --min-buy-amount 60btc-366
 
 `),
 		),

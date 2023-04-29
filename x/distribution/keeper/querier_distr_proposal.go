@@ -3,12 +3,12 @@ package keeper
 import (
 	"encoding/json"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	comm "github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	comm "github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 func queryDelegationRewards(ctx sdk.Context, _ []string, req abci.RequestQuery, k Keeper) ([]byte, error) {

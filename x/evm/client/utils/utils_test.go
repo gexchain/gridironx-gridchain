@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	okexchain "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/types"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -21,7 +21,7 @@ const (
   "is_added": true,
   "deposit": [
     {
-      "denom": "okt",
+      "denom": "fury",
       "amount": "100.000000000000000000"
     }
   ]
@@ -36,7 +36,7 @@ const (
   "is_added": true,
   "deposit": [
     {
-      "denom": "okt",
+      "denom": "fury",
       "amount": "100.000000000000000000"
     }
   ]
@@ -75,7 +75,7 @@ const (
   "is_added": true,
   "deposit": [
     {
-      "denom": "okt",
+      "denom": "fury",
       "amount": "100.000000000000000000"
     }
   ]
@@ -93,7 +93,7 @@ const (
 
 func init() {
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
+	gridchain.SetBech32Prefixes(config)
 }
 
 func TestParseManageContractDeploymentWhitelistProposalJSON(t *testing.T) {
@@ -192,7 +192,7 @@ func TestParseManageSysContractAddressProposalJSON(t *testing.T) {
   "is_added":true,
   "deposit": [
     {
-      "denom": "okt",
+      "denom": "fury",
       "amount": "100.000000000000000000"
     }
   ]

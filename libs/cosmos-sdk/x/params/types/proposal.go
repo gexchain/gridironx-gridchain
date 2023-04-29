@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
+	govtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
 )
 
 const (

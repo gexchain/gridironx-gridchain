@@ -4,8 +4,8 @@
 package gov
 
 import (
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (

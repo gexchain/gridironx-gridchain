@@ -3,13 +3,13 @@ package cli
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/x/ammswap/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/x/ammswap/types"
 	"github.com/spf13/cobra"
 	"strings"
 )
@@ -47,7 +47,7 @@ func GetCmdSwapTokenPair(queryRoute string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query pool info by token name.
 
 Example:
-$ exchaincli query swap pool eth-355
+$ gridchaincli query swap pool eth-355
 
 `),
 		),
@@ -147,7 +147,7 @@ func GetCmdAllSwapTokenPairs(queryRoute string, cdc *codec.Codec) *cobra.Command
 		Long: strings.TrimSpace(
 			fmt.Sprintf(`Query infomation of all pools.
 Example:
-$ exchaincli query swap pools
+$ gridchaincli query swap pools
 `),
 		),
 		Args: cobra.NoArgs,
@@ -177,7 +177,7 @@ func GetCmdRedeemableAssets(queryRoute string, cdc *codec.Codec) *cobra.Command 
 		Long: strings.TrimSpace(
 			fmt.Sprintf(`Query redeemable assets by specifying pool token amount.
 Example:
-$ exchaincli query swap redeemable-assets eth xxb 1
+$ gridchaincli query swap redeemable-assets eth xxb 1
 `),
 		),
 		Args: cobra.ExactArgs(3),

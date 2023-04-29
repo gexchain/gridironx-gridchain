@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/okex/exchain/x/common/monitor"
+	"github.com/gridironx/gridchain/x/common/monitor"
 )
 
 var (

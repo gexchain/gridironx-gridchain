@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/x/erc20/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/x/erc20/types"
 	"github.com/spf13/cobra"
 )
 
@@ -36,7 +36,7 @@ func GetCmdQueryParams(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query all the modifiable parameters of gov proposal",
 		Long: strings.TrimSpace(`Query the all the parameters for the governance process:
 
-$ exchaincli query erc20 params
+$ gridchaincli query erc20 params
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {
@@ -62,7 +62,7 @@ func GetCmdQueryTokenMapping(queryRoute string, cdc *codec.Codec) *cobra.Command
 		Short: "Query all token mapping of denom and contract",
 		Long: strings.TrimSpace(`Query all mapping of denom and contract:
 
-$ exchaincli query erc20 token-mapping
+$ gridchaincli query erc20 token-mapping
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {
@@ -86,7 +86,7 @@ func GetCmdTemplateContract(queryRoute string, cdc *codec.Codec) *cobra.Command 
 		Use:   "contract-template",
 		Short: "Query contract-template and note the return value is not available to post as proposal",
 		Long: strings.TrimSpace(`Query all mapping of denom and contract:
-$ exchaincli query erc20 contract-template
+$ gridchaincli query erc20 contract-template
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {

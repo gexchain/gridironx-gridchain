@@ -9,27 +9,27 @@ import (
 	"strings"
 	"time"
 
-	authrest "github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/rest"
+	authrest "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/rest"
 
-	"github.com/okex/exchain/x/evm/client/utils"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/gridironx/gridchain/x/evm/client/utils"
+	"github.com/gridironx/gridchain/x/evm/watcher"
 
 	ethcommon "github.com/ethereum/go-ethereum/common"
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/rpc"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	tmliteProxy "github.com/okex/exchain/libs/tendermint/lite/proxy"
-	"github.com/okex/exchain/libs/tendermint/rpc/client"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	"github.com/okex/exchain/x/common"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	govRest "github.com/okex/exchain/x/gov/client/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/rpc"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	tmliteProxy "github.com/gridironx/gridchain/libs/tendermint/lite/proxy"
+	"github.com/gridironx/gridchain/libs/tendermint/rpc/client"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	"github.com/gridironx/gridchain/x/common"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	govRest "github.com/gridironx/gridchain/x/gov/client/rest"
 )
 
 // RegisterRoutes - Central function to define routes that get registered by the main application

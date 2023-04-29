@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/tendermint/lite2/provider"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/lite2/provider"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 type mock struct {

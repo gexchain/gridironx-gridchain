@@ -7,7 +7,7 @@ import (
 	fmt "fmt"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	_ "github.com/regen-network/cosmos-proto"
 	io "io"
 	math "math"
@@ -249,12 +249,12 @@ var xxx_messageInfo_Supply proto.InternalMessageInfo
 // DenomUnit represents a struct that describes a given
 // denomination unit of the basic token.
 type DenomUnit struct {
-	// denom represents the string name of the given denom unit (e.g okt).
+	// denom represents the string name of the given denom unit (e.g fury).
 	Denom string `protobuf:"bytes,1,opt,name=denom,proto3" json:"denom,omitempty"`
 	// exponent represents power of 10 exponent that one must
 	// raise the base_denom to in order to equal the given DenomUnit's denom
 	// 1 denom = 1^exponent base_denom
-	// (e.g. with a base_denom of okt, one can create a DenomUnit of 'okt' with
+	// (e.g. with a base_denom of fury, one can create a DenomUnit of 'fury' with
 	// exponent = 6).
 	Exponent uint32 `protobuf:"varint,2,opt,name=exponent,proto3" json:"exponent,omitempty"`
 	// aliases is a list of string aliases for the given denom

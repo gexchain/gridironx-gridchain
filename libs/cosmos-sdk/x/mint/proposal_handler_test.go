@@ -4,14 +4,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint/internal/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint/internal/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -30,7 +30,7 @@ type MintTestSuite struct {
 	ctx        sdk.Context
 	govHandler govtypes.Handler
 	querier    sdk.Querier
-	app        *app.OKExChainApp
+	app        *app.GRIDIronxChainApp
 	codec      *codec.Codec
 }
 

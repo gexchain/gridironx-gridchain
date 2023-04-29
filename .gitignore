@@ -16,8 +16,8 @@ mpt.db
 /rocksdb/
 dump.rdb
 # Build
-.exchaind
-.exchaincli
+.gridchaind
+.gridchaincli
 vendor*
 build
 tools/
@@ -32,18 +32,18 @@ doc
 # Data - ideally these don't exist
 baseapp/data/*
 client/lcd/keys/*
-cmd/exchaincli/statik/statik.go
+cmd/gridchaincli/statik/statik.go
 mytestnet
 doc/statik/statik.go
 dev/cache
 cmd/launch/launch
-cmd/exchaincli/exchaincli
-cmd/exchaind/exchaind
-cmd/exchaintool/exchaintool
+cmd/gridchaincli/gridchaincli
+cmd/gridchaind/gridchaind
+cmd/gridchaintool/gridchaintool
 cmd/tiger/tiger
-cmd/exchaind/testnet_okchain.go
+cmd/gridchaind/testnet_gridchain.go
 dev/testnet/cache
-testnet_exchain.go
+testnet_gridchain.go
 tools
 
 

@@ -6,9 +6,9 @@ import (
 	"time"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 	"github.com/spf13/viper"
 )
 

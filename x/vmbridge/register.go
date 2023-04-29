@@ -1,10 +1,10 @@
 package vmbridge
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/x/vmbridge/keeper"
-	"github.com/okex/exchain/x/wasm"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	"github.com/gridironx/gridchain/x/vmbridge/keeper"
+	"github.com/gridironx/gridchain/x/wasm"
 )
 
 func RegisterServices(cfg module.Configurator, keeper keeper.Keeper) {

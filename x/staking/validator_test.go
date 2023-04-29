@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/x/staking/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 func TestValidatorMultiCreates(t *testing.T) {

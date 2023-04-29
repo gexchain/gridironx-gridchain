@@ -3,11 +3,11 @@ package dbadapter
 import (
 	"io"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/cachekv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/tracekv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/cachekv"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/tracekv"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 )
 
 // Wrapper type for dbm.Db with implementation of KVStore

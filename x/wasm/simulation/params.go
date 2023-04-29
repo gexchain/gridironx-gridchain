@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	simtypes "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	simtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 func ParamChanges(r *rand.Rand, cdc codec.Codec) []simtypes.ParamChange {

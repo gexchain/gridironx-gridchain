@@ -3,12 +3,12 @@ package simulation
 import (
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/slashing/internal/keeper"
-	"github.com/okex/exchain/x/slashing/internal/types"
-	stakingkeeper "github.com/okex/exchain/x/staking/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	simappparams "github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/x/slashing/internal/keeper"
+	"github.com/gridironx/gridchain/x/slashing/internal/types"
+	stakingkeeper "github.com/gridironx/gridchain/x/staking/keeper"
 )
 
 // Simulation operation weights constants

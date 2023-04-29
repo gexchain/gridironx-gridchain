@@ -3,8 +3,8 @@ package params
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/params/types"
 )
 
 // ClaimReadyForUpgrade tells Keeper that someone has get ready for the upgrade.

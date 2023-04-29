@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bits"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/bits"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

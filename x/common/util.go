@@ -14,14 +14,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/params/subspace"
+	"github.com/gridironx/gridchain/x/params/subspace"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 
-	apptypes "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
+	apptypes "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
 )
 
 const (
@@ -108,7 +108,7 @@ func HasSufficientCoins(addr sdk.AccAddress, availableCoins, amt sdk.Coins) (err
 }
 
 // SkipSysTestChecker is supported to used in System Unit Test
-// (described in http://gitlab.okcoin-inc.com/dex/okexchain/issues/472)
+// (described in http://gitlab.gridcoin-inc.com/dex/gridchain/issues/472)
 // if System environment variables "SYS_TEST_ALL" is set to 1, all of the system test will be enable. \n
 // if System environment variables "ORM_MYSQL_SYS_TEST" is set to 1,
 // 				all of the system test in orm_mysql_sys_test.go will be enble.

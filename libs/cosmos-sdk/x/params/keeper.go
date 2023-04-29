@@ -3,12 +3,12 @@ package params
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/subspace"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/types"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
 )
 
 // Keeper of the global paramstore

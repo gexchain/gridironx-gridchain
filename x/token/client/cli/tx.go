@@ -3,18 +3,18 @@ package cli
 import (
 	"bufio"
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
 	"io/ioutil"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authTypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/x/token/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authTypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/gridironx/gridchain/x/token/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
@@ -278,7 +278,7 @@ func getCmdTokenMultiSend(cdc *codec.Codec) *cobra.Command {
 			return utils.CompleteAndBroadcastTxCLI(txBldr, cliCtx, []sdk.Msg{msg})
 		},
 	}
-	cmd.Flags().String(Transfers, "", `Transfers details, format: [{"to": "addr", "amount": "1okt,2btc"}, ...]`)
+	cmd.Flags().String(Transfers, "", `Transfers details, format: [{"to": "addr", "amount": "1fury,2btc"}, ...]`)
 	cmd.Flags().String(TransfersFile, "", "File of transfers details, if transfers-file is not empty, --transfers will be ignore")
 	//cmd.MarkFlagRequired(Amount)
 	return cmd

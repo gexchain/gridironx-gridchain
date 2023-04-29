@@ -3,15 +3,15 @@ package client
 import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/libs/system"
+	"github.com/gridironx/gridchain/libs/system"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/spf13/cobra"
 )
 
 const (
-	okexPrefix = "okexchain"
+	gridironxPrefix = "gridchain"
 	exPrefix   = "ex"
 	rawPrefix  = "0x"
 )
@@ -36,31 +36,31 @@ func convertCommand() *cobra.Command {
 	return &cobra.Command{
 		Use:   "convert [sourceAddr]",
 		Short: "convert source address to all kind of address in the " + system.ChainName + " network",
-		Long: `sourceAddr must be begin with "okexchain","ex" or "0x".
+		Long: `sourceAddr must be begin with "gridchain","ex" or "0x".
 	
 	When input one of these address, we will convert to the other kinds.`,
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			addrList := make(map[string]string)
-			targetPrefix := []string{okexPrefix, exPrefix, rawPrefix}
+			targetPrefix := []string{gridironxPrefix, exPrefix, rawPrefix}
 			srcAddr := args[0]
 
 			// register func to encode account address to prefix address.
 			toPrefixFunc := map[string]accAddrToPrefixFunc{
-				okexPrefix: bech32FromAccAddr,
+				gridironxPrefix: bech32FromAccAddr,
 				exPrefix:   bech32FromAccAddr,
 				rawPrefix:  hexFromAccAddr,
 			}
 
-			// prefix is "okexchain","ex" or "0x"
+			// prefix is "gridchain","ex" or "0x"
 			// convert srcAddr to accAddr
 			var accAddr sdk.AccAddress
 			var err error
 			switch {
-			case strings.HasPrefix(srcAddr, okexPrefix):
+			case strings.HasPrefix(srcAddr, gridironxPrefix):
 				//source address parse to account address
-				addrList[okexPrefix] = srcAddr
-				accAddr, err = bech32ToAccAddr(okexPrefix, srcAddr)
+				addrList[gridironxPrefix] = srcAddr
+				accAddr, err = bech32ToAccAddr(gridironxPrefix, srcAddr)
 
 			case strings.HasPrefix(srcAddr, exPrefix):
 				//source address parse to account address

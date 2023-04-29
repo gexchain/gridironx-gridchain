@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	log "github.com/okex/exchain/libs/tendermint/libs/log"
-	lerr "github.com/okex/exchain/libs/tendermint/lite/errors"
-	"github.com/okex/exchain/libs/tendermint/types"
+	log "github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	lerr "github.com/gridironx/gridchain/libs/tendermint/lite/errors"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // missingProvider doesn't store anything, always a miss.

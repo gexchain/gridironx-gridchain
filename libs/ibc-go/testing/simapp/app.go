@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	evm2 "github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/evm"
+	evm2 "github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/evm"
 
 	"io"
 	"math/big"
@@ -14,132 +14,132 @@ import (
 	"strings"
 	"sync"
 
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
+	ibctransfer "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer"
 
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/fee"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/fee"
 
-	ica2 "github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/ica"
+	ica2 "github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/ica"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/common"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/apps/common"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
 
-	icahost "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host"
+	icahost "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host"
 
-	icacontroller "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller"
+	icacontroller "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller"
 
-	ibcclienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
+	ibcclienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
 
-	ibccommon "github.com/okex/exchain/libs/ibc-go/modules/core/common"
+	ibccommon "github.com/gridironx/gridchain/libs/ibc-go/modules/core/common"
 
-	icamauthtypes "github.com/okex/exchain/x/icamauth/types"
+	icamauthtypes "github.com/gridironx/gridchain/x/icamauth/types"
 
-	icacontrollertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
-	icahosttypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	icacontrollertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
+	icahosttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
 
 	"github.com/spf13/viper"
 
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	icatypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
 
-	ibckeeper "github.com/okex/exchain/libs/ibc-go/modules/core/keeper"
+	ibckeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/core/keeper"
 
 	"google.golang.org/grpc/encoding"
 	"google.golang.org/grpc/encoding/proto"
 
-	authante "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ante"
-	icacontrollerkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/keeper"
-	icahostkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/keeper"
-	ibcfee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
-	ibcfeekeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/keeper"
-	ibcfeetypes "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	"github.com/okex/exchain/libs/system/trace"
-	"github.com/okex/exchain/x/icamauth"
-	icamauthkeeper "github.com/okex/exchain/x/icamauth/keeper"
-	"github.com/okex/exchain/x/wasm"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	authante "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ante"
+	icacontrollerkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/keeper"
+	icahostkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/keeper"
+	ibcfee "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee"
+	ibcfeekeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/keeper"
+	ibcfeetypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee/types"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	"github.com/gridironx/gridchain/x/icamauth"
+	icamauthkeeper "github.com/gridironx/gridchain/x/icamauth/keeper"
+	"github.com/gridironx/gridchain/x/wasm"
+	wasmkeeper "github.com/gridironx/gridchain/x/wasm/keeper"
 
-	"github.com/okex/exchain/app/ante"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	appconfig "github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/app/refund"
-	ethermint "github.com/okex/exchain/app/types"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/app/utils/sanity"
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	upgradetypes "github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	capabilityModule "github.com/okex/exchain/libs/cosmos-sdk/x/capability"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint"
-	govclient "github.com/okex/exchain/libs/cosmos-sdk/x/mint/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade"
-	ibctransferkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/keeper"
-	ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
-	ibcporttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	ibchost "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/testing/mock"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/capability"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/core"
-	staking2 "github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/staking"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter/transfer"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/ammswap"
-	"github.com/okex/exchain/x/common/monitor"
-	commonversion "github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/dex"
-	dexclient "github.com/okex/exchain/x/dex/client"
-	distr "github.com/okex/exchain/x/distribution"
-	"github.com/okex/exchain/x/erc20"
-	erc20client "github.com/okex/exchain/x/erc20/client"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evm"
-	evmclient "github.com/okex/exchain/x/evm/client"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/farm"
-	farmclient "github.com/okex/exchain/x/farm/client"
-	"github.com/okex/exchain/x/genutil"
-	"github.com/okex/exchain/x/gov"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/order"
-	"github.com/okex/exchain/x/params"
-	paramsclient "github.com/okex/exchain/x/params/client"
-	"github.com/okex/exchain/x/slashing"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/token"
-	wasmclient "github.com/okex/exchain/x/wasm/client"
+	"github.com/gridironx/gridchain/app/ante"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	appconfig "github.com/gridironx/gridchain/app/config"
+	"github.com/gridironx/gridchain/app/refund"
+	ethermint "github.com/gridironx/gridchain/app/types"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/app/utils/sanity"
+	bam "github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	upgradetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types/upgrade"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	capabilityModule "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability"
+	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint"
+	govclient "github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params/subspace"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade"
+	ibctransferkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/keeper"
+	ibctransfertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
+	ibcclient "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client"
+	ibcporttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
+	ibchost "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/mock"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/capability"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/core"
+	staking2 "github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/staking"
+	"github.com/gridironx/gridchain/libs/ibc-go/testing/simapp/adapter/transfer"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	"github.com/gridironx/gridchain/x/ammswap"
+	"github.com/gridironx/gridchain/x/common/monitor"
+	commonversion "github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/dex"
+	dexclient "github.com/gridironx/gridchain/x/dex/client"
+	distr "github.com/gridironx/gridchain/x/distribution"
+	"github.com/gridironx/gridchain/x/erc20"
+	erc20client "github.com/gridironx/gridchain/x/erc20/client"
+	"github.com/gridironx/gridchain/x/evidence"
+	"github.com/gridironx/gridchain/x/evm"
+	evmclient "github.com/gridironx/gridchain/x/evm/client"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/farm"
+	farmclient "github.com/gridironx/gridchain/x/farm/client"
+	"github.com/gridironx/gridchain/x/genutil"
+	"github.com/gridironx/gridchain/x/gov"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/order"
+	"github.com/gridironx/gridchain/x/params"
+	paramsclient "github.com/gridironx/gridchain/x/params/client"
+	"github.com/gridironx/gridchain/x/slashing"
+	"github.com/gridironx/gridchain/x/staking"
+	"github.com/gridironx/gridchain/x/token"
+	wasmclient "github.com/gridironx/gridchain/x/wasm/client"
 )
 
 func init() {
 	// set the address prefixes
 	config := sdk.GetConfig()
 	config.SetCoinType(60)
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	gridchain.SetBech32Prefixes(config)
+	gridchain.SetBip44CoinType(config)
 }
 
 const (
-	appName = "OKExChain"
+	appName = "GRIDIronxChain"
 )
 const (
 	MockFeePort string = mock.ModuleName + ibcfeetypes.ModuleName
@@ -147,10 +147,10 @@ const (
 
 var (
 	// DefaultCLIHome sets the default home directories for the application CLI
-	DefaultCLIHome = os.ExpandEnv("$HOME/.exchaincli")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.gridchaincli")
 
 	// DefaultNodeHome sets the folder where the applcation data and configuration will be stored
-	DefaultNodeHome = os.ExpandEnv("$HOME/.exchaind")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.gridchaind")
 
 	// ModuleBasics defines the module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration
@@ -338,9 +338,9 @@ func NewSimApp(
 	//	logStartingFlags(logger)
 	//})
 
-	codecProxy, interfaceReg := okexchaincodec.MakeCodecSuit(ModuleBasics)
+	codecProxy, interfaceReg := gridchaincodec.MakeCodecSuit(ModuleBasics)
 
-	// NOTE we use custom OKExChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
+	// NOTE we use custom GRIDIronxChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
 	bApp := bam.NewBaseApp(appName, logger, db, evm.TxDecoder(codecProxy), baseAppOptions...)
 
 	bApp.SetCommitMultiStoreTracer(traceStore)
@@ -405,9 +405,9 @@ func NewSimApp(
 
 	//proxy := codec.NewMarshalProxy(cc, cdc)
 	app.marshal = codecProxy
-	// use custom OKExChain account for contracts
+	// use custom GRIDIronxChain account for contracts
 	app.AccountKeeper = auth.NewAccountKeeper(
-		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], okexchain.ProtoAccount,
+		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], gridchain.ProtoAccount,
 	)
 
 	bankKeeper := bank.NewBaseKeeperWithMarshal(
@@ -851,11 +851,11 @@ func getTxFeeHandler() sdk.GetTxFeeHandler {
 
 func (app *SimApp) SetOption(req abci.RequestSetOption) (res abci.ResponseSetOption) {
 	if req.Key == "CheckChainID" {
-		if err := okexchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
+		if err := gridchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)
 		}
-		err := okexchain.SetChainId(req.Value)
+		err := gridchain.SetChainId(req.Value)
 		if err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)

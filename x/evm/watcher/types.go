@@ -17,14 +17,14 @@ import (
 	"github.com/status-im/keycard-go/hexutils"
 	"github.com/tendermint/go-amino"
 
-	app "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	"github.com/okex/exchain/x/evm/types"
+	app "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	"github.com/gridironx/gridchain/x/evm/types"
 )
 
 var (

@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/params"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/params"
 
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 // Keeper of the distribution store

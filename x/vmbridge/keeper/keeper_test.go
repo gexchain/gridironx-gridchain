@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/app"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/vmbridge/keeper"
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	"github.com/gridironx/gridchain/app"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/vmbridge/keeper"
+	wasmtypes "github.com/gridironx/gridchain/x/wasm/types"
 	"github.com/stretchr/testify/suite"
 	"io/ioutil"
 	"math/big"
@@ -32,7 +32,7 @@ type KeeperTestSuite struct {
 	suite.Suite
 
 	ctx sdk.Context
-	app *app.OKExChainApp
+	app *app.GRIDIronxChainApp
 
 	keeper *keeper.Keeper
 

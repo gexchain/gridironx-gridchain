@@ -7,16 +7,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/x/wasm/ioutils"
+	"github.com/gridironx/gridchain/x/wasm/ioutils"
 
-	clientcontext "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/x/evm"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	clientcontext "github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/x/evm"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	wasmtypes "github.com/gridironx/gridchain/x/wasm/types"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	rpctypes "github.com/okex/exchain/app/rpc/types"
+	rpctypes "github.com/gridironx/gridchain/app/rpc/types"
 )
 
 const (

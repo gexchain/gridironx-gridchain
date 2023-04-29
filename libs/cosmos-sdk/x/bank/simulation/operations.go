@@ -3,16 +3,16 @@ package simulation
 import (
 	"math/rand"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/helpers"
+	simappparams "github.com/gridironx/gridchain/libs/cosmos-sdk/simapp/params"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank/internal/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
 )
 
 // Simulation operation weights constants

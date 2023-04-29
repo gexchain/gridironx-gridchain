@@ -6,10 +6,10 @@ package keeper
 import (
 	"testing"
 
-	swaptypes "github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/farm/types"
+	swaptypes "github.com/gridironx/gridchain/x/ammswap/types"
+	"github.com/gridironx/gridchain/x/farm/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 

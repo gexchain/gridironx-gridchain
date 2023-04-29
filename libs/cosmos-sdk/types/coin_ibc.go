@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
 var (
@@ -318,7 +318,7 @@ func ConvWei2TOkt(adapters CoinAdapters) (CoinAdapters, error) {
 		if copyAdapters[index].Denom == DefaultIbcWei {
 			copyAdapters[index].Denom = DefaultBondDenom
 		} else if strings.ToLower(copyAdapters[index].Denom) == DefaultBondDenom {
-			return nil, errors.Wrap(errors.ErrInvalidCoins, "not support okt denom")
+			return nil, errors.Wrap(errors.ErrInvalidCoins, "not support fury denom")
 		}
 	}
 	return copyAdapters, nil

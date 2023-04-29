@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/erc20"
-	"github.com/okex/exchain/x/erc20/types"
+	"github.com/gridironx/gridchain/app"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/erc20"
+	"github.com/gridironx/gridchain/x/erc20/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -17,7 +17,7 @@ type Erc20TestSuite struct {
 
 	ctx     sdk.Context
 	handler sdk.Handler
-	app     *app.OKExChainApp
+	app     *app.GRIDIronxChainApp
 }
 
 func TestErc20TestSuite(t *testing.T) {

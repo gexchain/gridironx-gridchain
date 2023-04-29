@@ -1,9 +1,9 @@
 package params
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/params/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdkparams "github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/x/params/types"
 )
 
 // ModuleCdc is the codec of module
@@ -17,8 +17,8 @@ func init() {
 
 // RegisterCodec registers all necessary param module types with a given codec.
 func RegisterCodec(cdc *codec.Codec) {
-	cdc.RegisterConcrete(types.ParameterChangeProposal{}, "okexchain/params/ParameterChangeProposal", nil)
+	cdc.RegisterConcrete(types.ParameterChangeProposal{}, "gridchain/params/ParameterChangeProposal", nil)
 	cdc.RegisterConcrete(sdkparams.ParameterChangeProposal{}, "cosmos-sdk/params/ParameterChangeProposal", nil)
-	cdc.RegisterConcrete(types.UpgradeProposal{}, "okexchain/params/UpgradeProposal", nil)
-	cdc.RegisterConcrete(types.UpgradeInfo{}, "okexchain/params/UpgradeInfo", nil)
+	cdc.RegisterConcrete(types.UpgradeProposal{}, "gridchain/params/UpgradeProposal", nil)
+	cdc.RegisterConcrete(types.UpgradeInfo{}, "gridchain/params/UpgradeInfo", nil)
 }

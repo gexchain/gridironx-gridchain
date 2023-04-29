@@ -1,14 +1,14 @@
 // nolint
 // aliases generated for the following subdirectories:
-// ALIASGEN: github.com/okex/exchain/x/dex/keeper
-// ALIASGEN: github.com/okex/exchain/x/dex/types
+// ALIASGEN: github.com/gridironx/gridchain/x/dex/keeper
+// ALIASGEN: github.com/gridironx/gridchain/x/dex/types
 package dex
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/dex/keeper"
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/dex/keeper"
+	"github.com/gridironx/gridchain/x/dex/types"
 )
 
 const (

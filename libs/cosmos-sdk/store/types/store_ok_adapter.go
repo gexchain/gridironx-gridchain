@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	ics23 "github.com/confio/ics23/go"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/merkle"
 )
 
 const (

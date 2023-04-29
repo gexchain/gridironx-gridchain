@@ -1,8 +1,8 @@
 #!/bin/bash
 
 KEY="captain"
-CHAINID="exchain-67"
-MONIKER="okc"
+CHAINID="gridchain-67"
+MONIKER="gridc"
 CURDIR=`dirname $0`
 HOME_SERVER=$CURDIR/"_cache_evm"
 
@@ -23,7 +23,7 @@ killbyname() {
 run() {
     LOG_LEVEL=main:debug,iavl:info,*:error,state:info,provider:info
 
-    exchaind start --rpc.unsafe \
+    gridchaind start --rpc.unsafe \
       --local-rpc-port 26657 \
       --log_level $LOG_LEVEL \
       --log_file json \
@@ -42,7 +42,7 @@ run() {
       --rpc.laddr=tcp://0.0.0.0:26657 \
       --rpc.external_laddr=0.0.0.0:26657 \
       --p2p.laddr=tcp://0.0.0.0:26656 \
-      --rest.laddr "tcp://localhost:8545" > okc.txt 2>&1 &
+      --rest.laddr "tcp://localhost:8545" > gridc.txt 2>&1 &
 
 # --iavl-commit-interval-height \
 # --iavl-enable-async-commit \
@@ -59,47 +59,47 @@ run() {
 }
 
 
-killbyname exchaind
-killbyname exchaincli
+killbyname gridchaind
+killbyname gridchaincli
 
 set -x # activate debugging
 
 # run
 
 # remove existing daemon and client
-rm -rf ~/.exchain*
+rm -rf ~/.gridchain*
 rm -rf $HOME_SERVER
 
 (cd .. && make install Venus1Height=1 Venus2Height=1 EarthHeight=1)
 
 # Set up config for CLI
-exchaincli config chain-id $CHAINID
-exchaincli config output json
-exchaincli config indent true
-exchaincli config trust-node true
-exchaincli config keyring-backend test
+gridchaincli config chain-id $CHAINID
+gridchaincli config output json
+gridchaincli config indent true
+gridchaincli config trust-node true
+gridchaincli config keyring-backend test
 
 # if $KEY exists it should be deleted
 #
 #    "eth_address": "0xbbE4733d85bc2b90682147779DA49caB38C0aA1F",
 #     prikey: 8ff3ca2d9985c3a52b459e2f6e7822b23e1af845961e22128d5f372fb9aa5f17
-exchaincli keys add --recover captain -m "puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer" -y
+gridchaincli keys add --recover captain -m "puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer" -y
 
 #    "eth_address": "0x83D83497431C2D3FEab296a9fba4e5FaDD2f7eD0",
-exchaincli keys add --recover admin16 -m "palace cube bitter light woman side pave cereal donor bronze twice work" -y --algo="" --coin-type 118
+gridchaincli keys add --recover admin16 -m "palace cube bitter light woman side pave cereal donor bronze twice work" -y --algo="" --coin-type 118
 
-exchaincli keys add --recover admin17 -m "antique onion adult slot sad dizzy sure among cement demise submit scare" -y
+gridchaincli keys add --recover admin17 -m "antique onion adult slot sad dizzy sure among cement demise submit scare" -y
 
-exchaincli keys add --recover admin18 -m "lazy cause kite fence gravity regret visa fuel tone clerk motor rent" -y
+gridchaincli keys add --recover admin18 -m "lazy cause kite fence gravity regret visa fuel tone clerk motor rent" -y
 
 # Set moniker and chain-id for Ethermint (Moniker can be anything, chain-id must be an integer)
-exchaind init $MONIKER --chain-id $CHAINID --home $HOME_SERVER
+gridchaind init $MONIKER --chain-id $CHAINID --home $HOME_SERVER
 
-# Change parameter token denominations to okt
-cat $HOME_SERVER/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="okt"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
-cat $HOME_SERVER/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="okt"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
-cat $HOME_SERVER/config/genesis.json | jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="okt"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
-cat $HOME_SERVER/config/genesis.json | jq '.app_state["mint"]["params"]["mint_denom"]="okt"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
+# Change parameter token denominations to fury
+cat $HOME_SERVER/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="fury"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
+cat $HOME_SERVER/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="fury"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
+cat $HOME_SERVER/config/genesis.json | jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="fury"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
+cat $HOME_SERVER/config/genesis.json | jq '.app_state["mint"]["params"]["mint_denom"]="fury"' > $HOME_SERVER/config/tmp_genesis.json && mv $HOME_SERVER/config/tmp_genesis.json $HOME_SERVER/config/genesis.json
 
 # Enable EVM
 
@@ -114,19 +114,19 @@ else
 fi
 
 # Allocate genesis accounts (cosmos formatted addresses)
-exchaind add-genesis-account $(exchaincli keys show $KEY    -a) 100000000okt --home $HOME_SERVER
-exchaind add-genesis-account $(exchaincli keys show admin16 -a) 900000000okt --home $HOME_SERVER
-exchaind add-genesis-account $(exchaincli keys show admin17 -a) 900000000okt --home $HOME_SERVER
-exchaind add-genesis-account $(exchaincli keys show admin18 -a) 900000000okt --home $HOME_SERVER
+gridchaind add-genesis-account $(gridchaincli keys show $KEY    -a) 100000000fury --home $HOME_SERVER
+gridchaind add-genesis-account $(gridchaincli keys show admin16 -a) 900000000fury --home $HOME_SERVER
+gridchaind add-genesis-account $(gridchaincli keys show admin17 -a) 900000000fury --home $HOME_SERVER
+gridchaind add-genesis-account $(gridchaincli keys show admin18 -a) 900000000fury --home $HOME_SERVER
 
 # Sign genesis transaction
-exchaind gentx --name $KEY --keyring-backend test --home $HOME_SERVER
+gridchaind gentx --name $KEY --keyring-backend test --home $HOME_SERVER
 
 # Collect genesis tx
-exchaind collect-gentxs --home $HOME_SERVER
+gridchaind collect-gentxs --home $HOME_SERVER
 
 # Run this to ensure everything worked and that the genesis file is setup correctly
-exchaind validate-genesis --home $HOME_SERVER
-exchaincli config keyring-backend test
+gridchaind validate-genesis --home $HOME_SERVER
+gridchaincli config keyring-backend test
 
 run

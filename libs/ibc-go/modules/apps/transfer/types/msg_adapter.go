@@ -1,14 +1,14 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
 )
 
-//for denom convert wei to okt and reject okt direct
+//for denom convert wei to fury and reject fury direct
 func (m *MsgTransfer) RulesFilter() (sdk.Msg, error) {
 	if m.Token.Denom == sdk.DefaultBondDenom {
-		return nil, sdkerrors.Wrap(sdkerrors.ErrInvalidCoins, "ibc MsgTransfer not support okt denom")
+		return nil, sdkerrors.Wrap(sdkerrors.ErrInvalidCoins, "ibc MsgTransfer not support fury denom")
 	}
 	return m, nil
 }

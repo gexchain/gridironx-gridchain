@@ -7,11 +7,11 @@ import (
 
 	"github.com/go-kit/kit/metrics"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cmap"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cmap"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
 
-	tmconn "github.com/okex/exchain/libs/tendermint/p2p/conn"
+	tmconn "github.com/gridironx/gridchain/libs/tendermint/p2p/conn"
 )
 
 const metricsTickerDuration = 10 * time.Second

@@ -12,15 +12,15 @@ import (
 	"sort"
 	"strings"
 
-	stakingtypes "github.com/okex/exchain/x/staking/types"
+	stakingtypes "github.com/gridironx/gridchain/x/staking/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 // GenAppStateFromConfig gets the genesis app state from the config

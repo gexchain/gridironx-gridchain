@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/suite"
 )
@@ -38,8 +38,8 @@ func TestStoreTestSuite(t *testing.T) {
 }
 
 func (suite *StoreTestSuite) SetupTest() {
-	// set exchaind path
-	serverDir, err := ioutil.TempDir("", ".exchaind")
+	// set gridchaind path
+	serverDir, err := ioutil.TempDir("", ".gridchaind")
 	if err != nil {
 		panic(err)
 	}

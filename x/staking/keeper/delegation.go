@@ -3,8 +3,8 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 // UpdateProxy updates the shares by the total delegated and self delegated tokens of a proxy
@@ -35,7 +35,7 @@ func (k Keeper) Delegate(ctx sdk.Context, delAddr sdk.AccAddress, token sdk.SysC
 		return types.ErrInsufficientQuantity(delQuantity.String(), minDelLimit.String())
 	}
 
-	// 1.transfer account's okt into bondPool
+	// 1.transfer account's fury into bondPool
 	coins := sdk.SysCoins{token}
 	if err := k.supplyKeeper.DelegateCoinsFromAccountToModule(ctx, delAddr, types.BondedPoolName, coins); err != nil {
 		return err
@@ -84,7 +84,7 @@ func (k Keeper) Withdraw(ctx sdk.Context, delAddr sdk.AccAddress, token sdk.SysC
 		return time.Time{}, types.ErrInvalidProxyWithdrawTotal(delAddr.String())
 	}
 
-	// 1.some okt transfer bondPool into unbondPool
+	// 1.some fury transfer bondPool into unbondPool
 	k.bondedTokensToNotBonded(ctx, token)
 
 	// 2.delete delegator in store, or set back

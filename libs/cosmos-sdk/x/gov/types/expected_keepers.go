@@ -1,10 +1,10 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	stakingexported "github.com/okex/exchain/libs/cosmos-sdk/x/staking/exported"
-	supplyexported "github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	stakingexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/exported"
+	supplyexported "github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
 )
 
 // ParamSubspace defines the expected Subspace interface for parameters (noalias)

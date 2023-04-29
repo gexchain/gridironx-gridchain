@@ -3,9 +3,9 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/staking/exported"
 )
 
 func (k Keeper) initializeValidatorDistrProposal(ctx sdk.Context, val exported.ValidatorI) {

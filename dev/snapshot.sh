@@ -2,7 +2,7 @@
 
 HOME=$1
 VERSION=$2
-CMD=exchaind
+CMD=gridchaind
 NUM_EXECUTIONS=2
 
 set -e
@@ -18,15 +18,15 @@ killbyname() {
 }
 
 
-killbyname exchaind
-killbyname exchaincli
+killbyname gridchaind
+killbyname gridchaincli
 
 set -x # activate debugging
 
 
 if [ "$1" == "-h" ];
 then
-    echo "Usage: exchaind [home] [s0|s1]"
+    echo "Usage: gridchaind [home] [s0|s1]"
     exit 0
 fi
 

@@ -9,17 +9,17 @@ import (
 	wasmvm "github.com/CosmWasm/wasmvm"
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
 	"github.com/gogo/protobuf/proto"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/innertx"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	paramtypes "github.com/okex/exchain/x/params"
-	"github.com/okex/exchain/x/wasm/ioutils"
-	"github.com/okex/exchain/x/wasm/types"
-	"github.com/okex/exchain/x/wasm/watcher"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/innertx"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	paramtypes "github.com/gridironx/gridchain/x/params"
+	"github.com/gridironx/gridchain/x/wasm/ioutils"
+	"github.com/gridironx/gridchain/x/wasm/types"
+	"github.com/gridironx/gridchain/x/wasm/watcher"
 	"math"
 	"path/filepath"
 	"strconv"
@@ -1286,7 +1286,7 @@ func (k Keeper) QueryGasLimit() sdk.Gas {
 }
 
 // BankCoinTransferrer replicates the cosmos-sdk behaviour as in
-// https://github.com/okex/exchain/libs/cosmos-sdk/blob/v0.41.4/x/bank/keeper/msg_server.go#L26
+// https://github.com/gridironx/gridchain/libs/cosmos-sdk/blob/v0.41.4/x/bank/keeper/msg_server.go#L26
 type BankCoinTransferrer struct {
 	keeper types.BankKeeper
 }

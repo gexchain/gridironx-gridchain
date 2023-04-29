@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-const ChainName = "OKC"
+const ChainName = "GRIDC"
 var once sync.Once
 var pid int
 

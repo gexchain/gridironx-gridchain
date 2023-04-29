@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	client "github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	authtxb "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	client "github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/client/utils"
+	authtxb "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/gridironx/gridchain/x/order/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
@@ -59,7 +59,7 @@ func getCmdNewOrder(cdc *codec.Codec) *cobra.Command {
 		},
 	}
 
-	cmd.Flags().StringVarP(&product, "product", "", "", "Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example \"mycoin_okt\".")
+	cmd.Flags().StringVarP(&product, "product", "", "", "Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example \"mycoin_fury\".")
 	cmd.Flags().StringVarP(&side, "side", "s", "", "BUY or SELL (default \"SELL\")")
 	cmd.Flags().StringVarP(&price, "price", "p", "", "The price of the order")
 	cmd.Flags().StringVarP(&quantity, "quantity", "q", "", "The quantity of the order")

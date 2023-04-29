@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
 )
 
 /* AutoFile usage

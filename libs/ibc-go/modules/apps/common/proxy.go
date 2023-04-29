@@ -3,11 +3,11 @@ package common
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	porttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	channeltypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/04-channel/types"
+	porttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 var (

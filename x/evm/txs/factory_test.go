@@ -1,11 +1,11 @@
 package txs
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/txs/base"
-	"github.com/okex/exchain/x/evm/txs/check"
-	"github.com/okex/exchain/x/evm/txs/deliver"
-	"github.com/okex/exchain/x/evm/txs/tracetxlog"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/evm/txs/base"
+	"github.com/gridironx/gridchain/x/evm/txs/check"
+	"github.com/gridironx/gridchain/x/evm/txs/deliver"
+	"github.com/gridironx/gridchain/x/evm/txs/tracetxlog"
 	"reflect"
 	"testing"
 )

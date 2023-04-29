@@ -4,19 +4,19 @@ import (
 	"encoding/json"
 
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	auth "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/order/client/cli"
-	"github.com/okex/exchain/x/order/client/rest"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/order/client/cli"
+	"github.com/gridironx/gridchain/x/order/client/rest"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/types"
 )
 
 var (

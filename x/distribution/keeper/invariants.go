@@ -2,11 +2,11 @@ package keeper
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking/exported"
+	"github.com/gridironx/gridchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/staking/exported"
 )
 
 // RegisterInvariants registers all distribution invariants

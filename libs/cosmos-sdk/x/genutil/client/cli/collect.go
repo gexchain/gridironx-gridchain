@@ -4,17 +4,17 @@ import (
 	"encoding/json"
 	"path/filepath"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil/types"
 )
 
 const flagGenTxDir = "gentx-dir"

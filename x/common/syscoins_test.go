@@ -1,11 +1,11 @@
 package common
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 	"github.com/stretchr/testify/assert"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -14,7 +14,7 @@ import (
 
 var (
 	syscoinsTestDenom1 = "eos"
-	syscoinsTestDenom2 = "okt"
+	syscoinsTestDenom2 = "fury"
 )
 
 func TestIsZeroCoins(t *testing.T) {

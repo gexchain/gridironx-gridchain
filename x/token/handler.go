@@ -3,13 +3,13 @@ package token
 import (
 	"fmt"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/gridironx/gridchain/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/token/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/common/perf"
+	"github.com/gridironx/gridchain/x/common/version"
+	"github.com/gridironx/gridchain/x/token/types"
 )
 
 // NewTokenHandler returns a handler for "token" type messages.
@@ -145,7 +145,7 @@ func handleMsgTokenIssue(ctx sdk.Context, keeper Keeper, msg types.MsgTokenIssue
 	if logger != nil {
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<Description:%s,Symbol:%s,OriginalSymbol:%s,TotalSupply:%s,Owner:%v,Mintable:%v>\n"+
-			"                           result<Owner have enough okts to issue %s>\n",
+			"                           result<Owner have enough furys to issue %s>\n",
 			ctx.BlockHeight(), name,
 			msg.Description, msg.Symbol, msg.OriginalSymbol, msg.TotalSupply, msg.Owner, msg.Mintable,
 			token.Symbol))
@@ -195,7 +195,7 @@ func handleMsgTokenBurn(ctx sdk.Context, keeper Keeper, msg types.MsgTokenBurn, 
 	if logger != nil {
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<Owner:%s,Symbol:%s,Amount:%s>\n"+
-			"                           result<Owner have enough okts to burn %s>\n",
+			"                           result<Owner have enough furys to burn %s>\n",
 			ctx.BlockHeight(), name,
 			msg.Owner, msg.Amount.Denom, msg.Amount,
 			msg.Amount.Denom))
@@ -252,7 +252,7 @@ func handleMsgTokenMint(ctx sdk.Context, keeper Keeper, msg types.MsgTokenMint, 
 	if logger != nil {
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<Owner:%s,Symbol:%s,Amount:%s>\n"+
-			"                           result<Owner have enough okts to Mint %s>\n",
+			"                           result<Owner have enough furys to Mint %s>\n",
 			ctx.BlockHeight(), name,
 			msg.Owner, msg.Amount.Denom, msg.Amount,
 			msg.Amount.Denom))
@@ -289,7 +289,7 @@ func handleMsgMultiSend(ctx sdk.Context, keeper Keeper, msg types.MsgMultiSend, 
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<From:%s>\n"+
 			transfers+
-			"                           result<Owner have enough okts to send multi txs>\n",
+			"                           result<Owner have enough furys to send multi txs>\n",
 			ctx.BlockHeight(), name,
 			msg.From))
 	}
@@ -314,7 +314,7 @@ func handleMsgSend(ctx sdk.Context, keeper Keeper, msg types.MsgSend, logger log
 	if logger != nil {
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<From:%s,To:%s,Amount:%s>\n"+
-			"                           result<Owner have enough okts to send a tx>\n",
+			"                           result<Owner have enough furys to send a tx>\n",
 			ctx.BlockHeight(), name,
 			msg.FromAddress, msg.ToAddress, msg.Amount))
 	}
@@ -364,7 +364,7 @@ func handleMsgTransferOwnership(ctx sdk.Context, keeper Keeper, msg types.MsgTra
 	if logger != nil {
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<From:%s,To:%s,Symbol:%s>\n"+
-			"                           result<Owner have enough okts to transfer the %s>\n",
+			"                           result<Owner have enough furys to transfer the %s>\n",
 			ctx.BlockHeight(), name,
 			msg.FromAddress, msg.ToAddress, msg.Symbol,
 			msg.Symbol))
@@ -406,7 +406,7 @@ func handleMsgConfirmOwnership(ctx sdk.Context, keeper Keeper, msg types.MsgConf
 	var name = "handleMsgConfirmOwnership"
 	logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 		"                           msg<From:%s,Symbol:%s>\n"+
-		"                           result<Owner have enough okts to transfer the %s>\n",
+		"                           result<Owner have enough furys to transfer the %s>\n",
 		ctx.BlockHeight(), name, msg.Address, msg.Symbol, msg.Symbol))
 
 	ctx.EventManager().EmitEvent(
@@ -449,7 +449,7 @@ func handleMsgTokenModify(ctx sdk.Context, keeper Keeper, msg types.MsgTokenModi
 	if logger != nil {
 		logger.Debug(fmt.Sprintf("BlockHeight<%d>, handler<%s>\n"+
 			"                           msg<Owner:%s,Symbol:%s,WholeName:%s,Description:%s>\n"+
-			"                           result<Owner have enough okts to edit %s>\n",
+			"                           result<Owner have enough furys to edit %s>\n",
 			ctx.BlockHeight(), name,
 			msg.Owner, msg.Symbol, msg.WholeName, msg.Description,
 			msg.Symbol))

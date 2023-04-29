@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 const (
@@ -29,11 +29,11 @@ func init() {
 	govtypes.RegisterProposalType(proposalTypeManageContractMethodBlockedList)
 	govtypes.RegisterProposalType(proposalTypeManageSysContractAddress)
 	govtypes.RegisterProposalType(proposalTypeManageContractByteCode)
-	govtypes.RegisterProposalTypeCodec(ManageContractDeploymentWhitelistProposal{}, "okexchain/evm/ManageContractDeploymentWhitelistProposal")
-	govtypes.RegisterProposalTypeCodec(ManageContractBlockedListProposal{}, "okexchain/evm/ManageContractBlockedListProposal")
-	govtypes.RegisterProposalTypeCodec(ManageContractMethodBlockedListProposal{}, "okexchain/evm/ManageContractMethodBlockedListProposal")
-	govtypes.RegisterProposalTypeCodec(ManageSysContractAddressProposal{}, "okexchain/evm/ManageSysContractAddressProposal")
-	govtypes.RegisterProposalTypeCodec(ManageContractByteCodeProposal{}, "okexchain/evm/ManageContractBytecode")
+	govtypes.RegisterProposalTypeCodec(ManageContractDeploymentWhitelistProposal{}, "gridchain/evm/ManageContractDeploymentWhitelistProposal")
+	govtypes.RegisterProposalTypeCodec(ManageContractBlockedListProposal{}, "gridchain/evm/ManageContractBlockedListProposal")
+	govtypes.RegisterProposalTypeCodec(ManageContractMethodBlockedListProposal{}, "gridchain/evm/ManageContractMethodBlockedListProposal")
+	govtypes.RegisterProposalTypeCodec(ManageSysContractAddressProposal{}, "gridchain/evm/ManageSysContractAddressProposal")
+	govtypes.RegisterProposalTypeCodec(ManageContractByteCodeProposal{}, "gridchain/evm/ManageContractBytecode")
 }
 
 var (
@@ -355,9 +355,9 @@ func (mp ManageContractMethodBlockedListProposal) String() string {
 	return strings.TrimSpace(builder.String())
 }
 
-// FixShortAddr is to fix the short address problem in the OKC test-net.
+// FixShortAddr is to fix the short address problem in the GRIDC test-net.
 // The normal len(BlockedContract.Address) should be 20,
-// but there are some BlockedContract.Address in OKC test-net that have a length of 4.
+// but there are some BlockedContract.Address in GRIDC test-net that have a length of 4.
 // The fix is to pad the leading bits of the short address with zeros until the length is 20.
 func (mp *ManageContractMethodBlockedListProposal) FixShortAddr() {
 	for i := 0; i < len(mp.ContractList); i++ {

@@ -2,21 +2,21 @@ package distribution
 
 import (
 	"encoding/json"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
 	"math/rand"
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/distribution/client/cli"
-	"github.com/okex/exchain/x/distribution/client/rest"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/gridironx/gridchain/x/distribution/client/cli"
+	"github.com/gridironx/gridchain/x/distribution/client/rest"
+	"github.com/gridironx/gridchain/x/distribution/types"
 )
 
 var (

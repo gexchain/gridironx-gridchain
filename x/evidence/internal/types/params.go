@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/x/params"
+	"github.com/gridironx/gridchain/x/params"
 
 	"gopkg.in/yaml.v2"
 )

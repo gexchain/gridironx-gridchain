@@ -5,21 +5,21 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/app"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/keeper"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/x/evidence"
+	"github.com/gridironx/gridchain/x/evidence/exported"
+	"github.com/gridironx/gridchain/x/evidence/internal/keeper"
+	"github.com/gridironx/gridchain/x/evidence/internal/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -58,31 +58,31 @@ type KeeperTestSuite struct {
 	ctx     sdk.Context
 	querier sdk.Querier
 	keeper  keeper.Keeper
-	app     *app.OKExChainApp
+	app     *app.GRIDIronxChainApp
 }
 
-func MakeOKEXApp() *app.OKExChainApp {
+func MakeGRIDIRONXApp() *app.GRIDIronxChainApp {
 	genesisState := app.NewDefaultGenesisState()
 	db := dbm.NewMemDB()
-	okexapp := app.NewOKExChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
+	gridironxapp := app.NewGRIDIronxChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
 
-	stateBytes, err := codec.MarshalJSONIndent(okexapp.Codec(), genesisState)
+	stateBytes, err := codec.MarshalJSONIndent(gridironxapp.Codec(), genesisState)
 	if err != nil {
 		panic(err)
 	}
-	okexapp.InitChain(
+	gridironxapp.InitChain(
 		abci.RequestInitChain{
 			Validators:    []abci.ValidatorUpdate{},
 			AppStateBytes: stateBytes,
 		},
 	)
-	return okexapp
+	return gridironxapp
 }
 
 func (suite *KeeperTestSuite) SetupTest() {
 	checkTx := false
 
-	app := MakeOKEXApp()
+	app := MakeGRIDIRONXApp()
 	// get the app's codec and register custom testing types
 	cdc := app.Codec()
 	cdc.RegisterConcrete(types.TestEquivocationEvidence{}, "test/TestEquivocationEvidence", nil)

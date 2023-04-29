@@ -4,8 +4,8 @@ import (
 	"sync"
 
 	"github.com/ethereum/go-ethereum/common"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
 )
 
 // TxWatcher cache watch data when run tx

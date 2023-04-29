@@ -7,13 +7,13 @@ import (
 	"strings"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	app "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/params"
-	"github.com/okex/exchain/x/token/types"
+	app "github.com/gridironx/gridchain/app/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/x/params"
+	"github.com/gridironx/gridchain/x/token/types"
 )
 
 // Keeper maintains the link to data storage and exposes getter/setter methods for the various parts of the state machine

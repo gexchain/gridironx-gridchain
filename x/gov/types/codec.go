@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
 )
 
 // module codec
@@ -12,12 +12,12 @@ var ModuleCdc = codec.New()
 func RegisterCodec(cdc *codec.Codec) {
 	cdc.RegisterInterface((*Content)(nil), nil)
 
-	cdc.RegisterConcrete(MsgSubmitProposal{}, "okexchain/gov/MsgSubmitProposal", nil)
-	cdc.RegisterConcrete(MsgDeposit{}, "okexchain/gov/MsgDeposit", nil)
-	cdc.RegisterConcrete(MsgVote{}, "okexchain/gov/MsgVote", nil)
+	cdc.RegisterConcrete(MsgSubmitProposal{}, "gridchain/gov/MsgSubmitProposal", nil)
+	cdc.RegisterConcrete(MsgDeposit{}, "gridchain/gov/MsgDeposit", nil)
+	cdc.RegisterConcrete(MsgVote{}, "gridchain/gov/MsgVote", nil)
 
-	cdc.RegisterConcrete(TextProposal{}, "okexchain/gov/TextProposal", nil)
-	cdc.RegisterConcrete(SoftwareUpgradeProposal{}, "okexchain/gov/SoftwareUpgradeProposal", nil)
+	cdc.RegisterConcrete(TextProposal{}, "gridchain/gov/TextProposal", nil)
+	cdc.RegisterConcrete(SoftwareUpgradeProposal{}, "gridchain/gov/SoftwareUpgradeProposal", nil)
 }
 
 // RegisterProposalTypeCodec registers an external proposal content type defined

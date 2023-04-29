@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/wasm/types"
 )
 
 var _ types.ContractOpsKeeper = PermissionedKeeper{}

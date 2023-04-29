@@ -4,27 +4,27 @@ import (
 	"math/rand"
 	"time"
 
-	ica "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
+	ica "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/27-interchain-accounts"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
 
-	ibcfee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
+	ibcfee "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/29-fee"
 
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	ibcmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
-	ibc_tx "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	signing2 "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibcsigning"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	capabilityModule "github.com/okex/exchain/libs/cosmos-sdk/x/capability"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/x/icamauth"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/crypto/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	ibcmsg "github.com/gridironx/gridchain/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/tx/signing"
+	ibc_tx "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibc-tx"
+	signing2 "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ibcsigning"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	capabilityModule "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	ibctransfer "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/x/icamauth"
 )
 
 // SimAppChainID hardcoded chainID for simulation
@@ -133,8 +133,8 @@ func newProxyDecoder() *codec.CodecProxy {
 		ibcfee.AppModuleBasic{},
 		icamauth.AppModuleBasic{},
 	)
-	cdc := okexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := okexchaincodec.MakeIBC(ModuleBasics)
+	cdc := gridchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := gridchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 	return codecProxy

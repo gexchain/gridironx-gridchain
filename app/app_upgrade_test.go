@@ -9,71 +9,71 @@ import (
 	"strconv"
 	"testing"
 
-	ibccommon "github.com/okex/exchain/libs/ibc-go/modules/core/common"
+	ibccommon "github.com/gridironx/gridchain/libs/ibc-go/modules/core/common"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/libs/tm-db/common"
-	"github.com/okex/exchain/x/wasm"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	"github.com/gridironx/gridchain/libs/tm-db/common"
+	"github.com/gridironx/gridchain/x/wasm"
+	wasmkeeper "github.com/gridironx/gridchain/x/wasm/keeper"
 	"github.com/spf13/viper"
 
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	capabilityModule "github.com/okex/exchain/libs/cosmos-sdk/x/capability"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil"
-	"github.com/okex/exchain/libs/system/trace"
-	commonversion "github.com/okex/exchain/x/common/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
+	cosmost "github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	capabilityModule "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/genutil"
+	"github.com/gridironx/gridchain/libs/system/trace"
+	commonversion "github.com/gridironx/gridchain/x/common/version"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/app/ante"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/app/refund"
-	okexchain "github.com/okex/exchain/app/types"
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	upgradetypes "github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade"
-	"github.com/okex/exchain/libs/iavl"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	ibctransferkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/keeper"
-	ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
-	ibcporttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	ibchost "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/ammswap"
-	"github.com/okex/exchain/x/dex"
-	distr "github.com/okex/exchain/x/distribution"
-	"github.com/okex/exchain/x/erc20"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evm"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/farm"
-	"github.com/okex/exchain/x/gov"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/order"
-	"github.com/okex/exchain/x/params"
-	"github.com/okex/exchain/x/slashing"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/token"
+	"github.com/gridironx/gridchain/app/ante"
+	gridchaincodec "github.com/gridironx/gridchain/app/codec"
+	"github.com/gridironx/gridchain/app/refund"
+	gridchain "github.com/gridironx/gridchain/app/types"
+	bam "github.com/gridironx/gridchain/libs/cosmos-sdk/baseapp"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	upgradetypes "github.com/gridironx/gridchain/libs/cosmos-sdk/types/upgrade"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/bank"
+	capabilitykeeper "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/capability/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/crisis"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/mint"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade"
+	"github.com/gridironx/gridchain/libs/iavl"
+	ibctransfer "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer"
+	ibctransferkeeper "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/keeper"
+	ibctransfertypes "github.com/gridironx/gridchain/libs/ibc-go/modules/apps/transfer/types"
+	ibc "github.com/gridironx/gridchain/libs/ibc-go/modules/core"
+	ibcclient "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client"
+	ibcporttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/05-port/types"
+	ibchost "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	tmos "github.com/gridironx/gridchain/libs/tendermint/libs/os"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
+	"github.com/gridironx/gridchain/x/ammswap"
+	"github.com/gridironx/gridchain/x/dex"
+	distr "github.com/gridironx/gridchain/x/distribution"
+	"github.com/gridironx/gridchain/x/erc20"
+	"github.com/gridironx/gridchain/x/evidence"
+	"github.com/gridironx/gridchain/x/evm"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/farm"
+	"github.com/gridironx/gridchain/x/gov"
+	"github.com/gridironx/gridchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/order"
+	"github.com/gridironx/gridchain/x/params"
+	"github.com/gridironx/gridchain/x/slashing"
+	"github.com/gridironx/gridchain/x/staking"
+	"github.com/gridironx/gridchain/x/token"
 )
 
 var (
@@ -247,14 +247,14 @@ func setupModuleBasics(bs ...module.AppModule) *module.Manager {
 }
 
 type testSimApp struct {
-	*OKExChainApp
+	*GRIDIronxChainApp
 	// the module manager
 }
 
 type TestSimAppOption func(a *testSimApp)
 type MangerOption func(m *module.Manager)
 
-func newTestOkcChainApp(
+func newTestGridcChainApp(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -274,9 +274,9 @@ func newTestOkcChainApp(
 		logStartingFlags(logger)
 	})
 
-	codecProxy, interfaceReg := okexchaincodec.MakeCodecSuit(ModuleBasics)
+	codecProxy, interfaceReg := gridchaincodec.MakeCodecSuit(ModuleBasics)
 
-	// NOTE we use custom OKExChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
+	// NOTE we use custom GRIDIronxChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
 	bApp := bam.NewBaseApp(appName, logger, db, evm.TxDecoder(codecProxy))
 
 	bApp.SetCommitMultiStoreTracer(traceStore)
@@ -290,7 +290,7 @@ func newTestOkcChainApp(
 	memKeys := sdk.NewMemoryStoreKeys(capabilitytypes.MemStoreKey)
 
 	ret := &testSimApp{}
-	app := &OKExChainApp{
+	app := &GRIDIronxChainApp{
 		BaseApp:        bApp,
 		invCheckPeriod: invCheckPeriod,
 		keys:           keys,
@@ -298,7 +298,7 @@ func newTestOkcChainApp(
 		subspaces:      make(map[string]params.Subspace),
 		heightTasks:    make(map[int64]*upgradetypes.HeightTasks),
 	}
-	ret.OKExChainApp = app
+	ret.GRIDIronxChainApp = app
 	bApp.SetInterceptors(makeInterceptors())
 
 	// init params keeper and subspaces
@@ -325,9 +325,9 @@ func newTestOkcChainApp(
 
 	//proxy := codec.NewMarshalProxy(cc, cdc)
 	app.marshal = codecProxy
-	// use custom OKExChain account for contracts
+	// use custom GRIDIronxChain account for contracts
 	app.AccountKeeper = auth.NewAccountKeeper(
-		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], okexchain.ProtoAccount,
+		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], gridchain.ProtoAccount,
 	)
 
 	bankKeeper := bank.NewBaseKeeperWithMarshal(
@@ -579,7 +579,7 @@ func newTestOkcChainApp(
 }
 
 func newTestSimApp(name string, logger log.Logger, db dbm.DB, txDecoder sdk.TxDecoder, keys map[string]*sdk.KVStoreKey, ops ...TestSimAppOption) *testSimApp {
-	return newTestOkcChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0, keys, ops...)
+	return newTestGridcChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0, keys, ops...)
 }
 
 type UpgradeCase struct {

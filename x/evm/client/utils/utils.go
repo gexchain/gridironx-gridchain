@@ -1,11 +1,11 @@
 package utils
 
 import (
-	"github.com/okex/exchain/x/evm/types"
+	"github.com/gridironx/gridchain/x/evm/types"
 	"io/ioutil"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 )
 
 type (

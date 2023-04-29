@@ -12,17 +12,17 @@ import (
 
 	"github.com/gogo/protobuf/jsonpb"
 	"github.com/google/gops/agent"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server/config"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	tcmd "github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	tmflags "github.com/okex/exchain/libs/tendermint/libs/cli/flags"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/state"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/lcd"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server/config"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/version"
+	tcmd "github.com/gridironx/gridchain/libs/tendermint/cmd/tendermint/commands"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/cli"
+	tmflags "github.com/gridironx/gridchain/libs/tendermint/libs/cli/flags"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/libs/tendermint/state"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -65,7 +65,7 @@ func PersistentPreRunEFn(context *Context) func(*cobra.Command, []string) error 
 				viper.Set(state.FlagDeliverTxsExecMode, state.DeliverTxsExecModeParallel)
 			}
 		}
-		// okchain
+		// gridchain
 		output := os.Stdout
 		if !config.LogStdout {
 			output, err = os.OpenFile(config.LogFile, os.O_CREATE|os.O_RDWR|os.O_APPEND, 0666)
@@ -129,13 +129,13 @@ func interceptLoadConfig() (conf *cfg.Config, err error) {
 		}
 	}
 
-	appConfigFilePath := filepath.Join(rootDir, "config/exchaind.toml")
+	appConfigFilePath := filepath.Join(rootDir, "config/gridchaind.toml")
 	if _, err := os.Stat(appConfigFilePath); os.IsNotExist(err) {
 		appConf, _ := config.ParseConfig()
 		config.WriteConfigFile(appConfigFilePath, appConf)
 	}
 
-	viper.SetConfigName("exchaind")
+	viper.SetConfigName("gridchaind")
 	err = viper.MergeInConfig()
 
 	return conf, err

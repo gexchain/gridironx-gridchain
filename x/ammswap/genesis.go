@@ -3,9 +3,9 @@ package ammswap
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/ammswap/types"
-	tokentypes "github.com/okex/exchain/x/token/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/ammswap/types"
+	tokentypes "github.com/gridironx/gridchain/x/token/types"
 )
 
 // GenesisState stores genesis data, all slashing state that must be provided at genesis

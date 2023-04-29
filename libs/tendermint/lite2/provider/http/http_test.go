@@ -8,13 +8,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	"github.com/okex/exchain/libs/tendermint/lite2/provider"
-	"github.com/okex/exchain/libs/tendermint/lite2/provider/http"
-	litehttp "github.com/okex/exchain/libs/tendermint/lite2/provider/http"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	rpctest "github.com/okex/exchain/libs/tendermint/rpc/test"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/abci/example/kvstore"
+	"github.com/gridironx/gridchain/libs/tendermint/lite2/provider"
+	"github.com/gridironx/gridchain/libs/tendermint/lite2/provider/http"
+	litehttp "github.com/gridironx/gridchain/libs/tendermint/lite2/provider/http"
+	rpcclient "github.com/gridironx/gridchain/libs/tendermint/rpc/client"
+	rpctest "github.com/gridironx/gridchain/libs/tendermint/rpc/test"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 func TestNewProvider(t *testing.T) {

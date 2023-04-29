@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	coretypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/server"
+	tmquery "github.com/gridironx/gridchain/libs/tendermint/libs/pubsub/query"
+	rpcclient "github.com/gridironx/gridchain/libs/tendermint/rpc/client"
+	coretypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"github.com/spf13/viper"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -18,10 +18,10 @@ import (
 	"github.com/ethereum/go-ethereum/eth/filters"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	rpctypes "github.com/okex/exchain/app/rpc/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	rpctypes "github.com/gridironx/gridchain/app/rpc/types"
+	evmtypes "github.com/gridironx/gridchain/x/evm/types"
 )
 
 var (

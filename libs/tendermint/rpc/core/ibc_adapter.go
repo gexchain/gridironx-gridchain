@@ -1,9 +1,9 @@
 package core
 
 import (
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	ctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 	//coretypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 

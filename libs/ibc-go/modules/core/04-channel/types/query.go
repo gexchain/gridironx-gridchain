@@ -1,9 +1,9 @@
 package types
 
 import (
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	codectypes "github.com/gridironx/gridchain/libs/cosmos-sdk/codec/types"
+	clienttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
 )
 
 var (

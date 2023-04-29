@@ -6,13 +6,13 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/x/common"
-	comm "github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/rest"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/x/common"
+	comm "github.com/gridironx/gridchain/x/common"
+	"github.com/gridironx/gridchain/x/staking/types"
 )
 
 func cm45ParamsHandlerFn(cliCtx context.CLIContext) http.HandlerFunc {

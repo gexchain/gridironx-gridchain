@@ -1,14 +1,14 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/tendermint/global"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/global"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 	"math/rand"
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	exgovtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/types"
+	exgovtypes "github.com/gridironx/gridchain/x/gov/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 )

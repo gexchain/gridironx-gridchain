@@ -6,20 +6,20 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/upgrade"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	ibctmtypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	lite "github.com/okex/exchain/libs/tendermint/lite2"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/params"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/02-client/types"
+	commitmenttypes "github.com/gridironx/gridchain/libs/ibc-go/modules/core/23-commitment/types"
+	host "github.com/gridironx/gridchain/libs/ibc-go/modules/core/24-host"
+	"github.com/gridironx/gridchain/libs/ibc-go/modules/core/exported"
+	ibctmtypes "github.com/gridironx/gridchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	lite "github.com/gridironx/gridchain/libs/tendermint/lite2"
 )
 
 type Keeper struct {

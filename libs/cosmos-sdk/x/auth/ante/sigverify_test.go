@@ -6,22 +6,22 @@ import (
 	"github.com/spf13/viper"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/multisig"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/ante"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	sdkerrors "github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/tx/signing"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/ante"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	tmtypes "github.com/gridironx/gridchain/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/tendermint/crypto/etherhash"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/exported"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/etherhash"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 func TestSetPubKey(t *testing.T) {

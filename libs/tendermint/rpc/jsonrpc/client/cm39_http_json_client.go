@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	coretypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	"github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/errors"
+	coretypes "github.com/gridironx/gridchain/libs/tendermint/rpc/core/types"
+	"github.com/gridironx/gridchain/libs/tendermint/rpc/jsonrpc/types"
 )
 
 type decoder interface {

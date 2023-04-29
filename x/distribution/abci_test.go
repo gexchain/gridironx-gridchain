@@ -3,8 +3,8 @@ package distribution
 import (
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/distribution/keeper"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/distribution/keeper"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,12 +3,12 @@ package gov
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	"github.com/gridironx/gridchain/x/gov/types"
 
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/gov/keeper"
+	"github.com/gridironx/gridchain/x/common/perf"
+	"github.com/gridironx/gridchain/x/gov/keeper"
 )
 
 // EndBlocker called every block, process inflation, update validator set.

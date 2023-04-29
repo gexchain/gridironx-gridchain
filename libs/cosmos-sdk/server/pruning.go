@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/mpt"
 
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	tmiavl "github.com/okex/exchain/libs/iavl"
-	iavlcfg "github.com/okex/exchain/libs/iavl/config"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
+	tmiavl "github.com/gridironx/gridchain/libs/iavl"
+	iavlcfg "github.com/gridironx/gridchain/libs/iavl/config"
 )
 
 // GetPruningOptionsFromFlags parses command flags and returns the correct

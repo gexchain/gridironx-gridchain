@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/client/cli"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/client/rest"
-	govclient "github.com/okex/exchain/libs/cosmos-sdk/x/gov/client"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution/client/cli"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/distribution/client/rest"
+	govclient "github.com/gridironx/gridchain/libs/cosmos-sdk/x/gov/client"
 )
 
 // param change proposal handler

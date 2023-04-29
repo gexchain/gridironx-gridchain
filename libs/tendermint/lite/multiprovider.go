@@ -1,9 +1,9 @@
 package lite
 
 import (
-	log "github.com/okex/exchain/libs/tendermint/libs/log"
-	lerr "github.com/okex/exchain/libs/tendermint/lite/errors"
-	"github.com/okex/exchain/libs/tendermint/types"
+	log "github.com/gridironx/gridchain/libs/tendermint/libs/log"
+	lerr "github.com/gridironx/gridchain/libs/tendermint/lite/errors"
+	"github.com/gridironx/gridchain/libs/tendermint/types"
 )
 
 var _ PersistentProvider = (*multiProvider)(nil)

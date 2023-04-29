@@ -6,12 +6,12 @@ package farm
 import (
 	"testing"
 
-	swaptypes "github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	swaptypes "github.com/gridironx/gridchain/x/ammswap/types"
+	"github.com/gridironx/gridchain/x/farm/keeper"
+	"github.com/gridironx/gridchain/x/farm/types"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 

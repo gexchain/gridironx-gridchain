@@ -6,9 +6,9 @@ import (
 	"sync"
 
 	lru "github.com/hashicorp/golang-lru"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	db "github.com/okex/exchain/libs/tm-db"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/flags"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	db "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/spf13/viper"
 )
 

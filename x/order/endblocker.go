@@ -2,12 +2,12 @@ package order
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/match"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/x/common/perf"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/match"
+	"github.com/gridironx/gridchain/x/order/types"
 )
 
 // EndBlocker called every block

@@ -9,20 +9,20 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	cfg "github.com/gridironx/gridchain/libs/tendermint/config"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	sim "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/client/cli"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/client/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/simulation"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/client/context"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/types/module"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
+	sim "github.com/gridironx/gridchain/libs/cosmos-sdk/x/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/client/cli"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/client/rest"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/simulation"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/staking/types"
 )
 
 var (

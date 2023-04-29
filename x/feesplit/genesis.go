@@ -1,10 +1,10 @@
 package feesplit
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/feesplit/keeper"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/gridironx/gridchain/x/feesplit/keeper"
+	"github.com/gridironx/gridchain/x/feesplit/types"
 )
 
 // InitGenesis import module genesis

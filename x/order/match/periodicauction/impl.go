@@ -1,9 +1,9 @@
 package periodicauction
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/keeper"
 )
 
 // PaEngine is the periodic auction match engine

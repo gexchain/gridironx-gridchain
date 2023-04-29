@@ -1,9 +1,9 @@
 package types // noalias
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/x/supply/exported"
+	govtypes "github.com/gridironx/gridchain/x/gov/types"
 )
 
 // StakingKeeper defines the expected staking keeper

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto/ed25519"
 )
 
 //-------------------------------------------

@@ -8,8 +8,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	authtypes "github.com/gridironx/gridchain/libs/cosmos-sdk/x/auth/types"
 )
 
 // CompiledContract contains compiled bytecode and abi
@@ -22,7 +22,7 @@ var (
 	IbcEvmModuleETHAddr  common.Address
 	IbcEvmModuleBechAddr sdk.AccAddress
 
-	// ModuleERC20Contract is the compiled okc erc20 contract
+	// ModuleERC20Contract is the compiled gridc erc20 contract
 	ModuleERC20Contract CompiledContract
 
 	//go:embed contracts/implement.json
@@ -34,7 +34,7 @@ var (
 const (
 	IbcEvmModuleName = "ibc-evm"
 
-	ContractMintMethod = "mint_by_okc_module"
+	ContractMintMethod = "mint_by_gridc_module"
 
 	ProxyContractUpgradeTo   = "upgradeTo"
 	ProxyContractChangeAdmin = "changeAdmin"

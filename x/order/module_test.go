@@ -5,12 +5,12 @@ package order
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common/version"
+	"github.com/gridironx/gridchain/x/common/version"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/codec"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	"github.com/gridironx/gridchain/x/order/keeper"
+	"github.com/gridironx/gridchain/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

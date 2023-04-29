@@ -6,8 +6,8 @@ package keeper
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/farm/types"
+	sdk "github.com/gridironx/gridchain/libs/cosmos-sdk/types"
+	"github.com/gridironx/gridchain/x/farm/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -219,12 +219,12 @@ func TestCalculateLockRewardsBetween(t *testing.T) {
 			startPeriod: 0,
 			startRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(10)),
+				sdk.NewDecCoin("fury", sdk.NewInt(10)),
 			},
 			endPeriod: 1,
 			endRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(100)),
+				sdk.NewDecCoin("fury", sdk.NewInt(100)),
 			},
 			amount:       sdk.NewDecCoin("xxb", sdk.NewInt(10)),
 			expectedFunc: expectSuccess,
@@ -233,12 +233,12 @@ func TestCalculateLockRewardsBetween(t *testing.T) {
 			startPeriod: 0,
 			startRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(10)),
+				sdk.NewDecCoin("fury", sdk.NewInt(10)),
 			},
 			endPeriod: 1,
 			endRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(7)),
+				sdk.NewDecCoin("fury", sdk.NewInt(7)),
 			},
 			amount:       sdk.NewDecCoin("xxb", sdk.NewInt(10)),
 			expectedFunc: expectPanic,
@@ -247,12 +247,12 @@ func TestCalculateLockRewardsBetween(t *testing.T) {
 			startPeriod: 0,
 			startRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(10)),
+				sdk.NewDecCoin("fury", sdk.NewInt(10)),
 			},
 			endPeriod: 1,
 			endRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(100)),
+				sdk.NewDecCoin("fury", sdk.NewInt(100)),
 			},
 			amount:       sdk.SysCoin{"xxb", sdk.NewDec(-1)},
 			expectedFunc: expectPanic,
@@ -261,12 +261,12 @@ func TestCalculateLockRewardsBetween(t *testing.T) {
 			startPeriod: 1,
 			startRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(10)),
+				sdk.NewDecCoin("fury", sdk.NewInt(10)),
 			},
 			endPeriod: 0,
 			endRatio: sdk.SysCoins{
 				sdk.NewDecCoin("wwb", sdk.NewInt(10)),
-				sdk.NewDecCoin("okt", sdk.NewInt(100)),
+				sdk.NewDecCoin("fury", sdk.NewInt(100)),
 			},
 			amount:       sdk.NewDecCoin("xxb", sdk.NewInt(10)),
 			expectedFunc: expectPanic,

@@ -15,11 +15,11 @@ import (
 	"time"
 
 	"github.com/minio/highwayhash"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/p2p"
+	"github.com/gridironx/gridchain/libs/tendermint/crypto"
+	tmmath "github.com/gridironx/gridchain/libs/tendermint/libs/math"
+	tmrand "github.com/gridironx/gridchain/libs/tendermint/libs/rand"
+	"github.com/gridironx/gridchain/libs/tendermint/libs/service"
+	"github.com/gridironx/gridchain/libs/tendermint/p2p"
 )
 
 const (

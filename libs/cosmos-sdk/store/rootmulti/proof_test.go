@@ -1,15 +1,15 @@
 package rootmulti
 
 import (
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	types2 "github.com/gridironx/gridchain/libs/tendermint/types"
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/gridironx/gridchain/libs/tendermint/abci/types"
+	dbm "github.com/gridironx/gridchain/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/iavl"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/iavl"
+	"github.com/gridironx/gridchain/libs/cosmos-sdk/store/types"
 )
 
 func TestVerifyIAVLStoreQueryProof(t *testing.T) {

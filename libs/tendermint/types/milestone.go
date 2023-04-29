@@ -52,8 +52,8 @@ var (
 )
 
 const (
-	MainNet = "exchain-66"
-	TestNet = "exchain-65"
+	MainNet = "gridchain-66"
+	TestNet = "gridchain-65"
 )
 
 const (
@@ -70,7 +70,7 @@ const (
 	TestNetGenesisHeight = 1121818
 
 	TestNetChangeChainId = 2270901
-	TestNetChainName1    = "okexchain-65"
+	TestNetChainName1    = "gridchain-65"
 )
 
 func init() {
