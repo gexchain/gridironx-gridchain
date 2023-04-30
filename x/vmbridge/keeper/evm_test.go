@@ -194,7 +194,7 @@ func (suite *KeeperTestSuite) TestKeeper_SendToEvm() {
 }
 
 func (suite *KeeperTestSuite) TestSendToWasmEventHandler_Handle() {
-	contractAccAddr, err := sdk.AccAddressFromBech32("did:fury:gridex1fnkz39vpxmukf6mp78essh8g0hrzp3gylyd2u8")
+	contractAccAddr, err := sdk.AccAddressFromBech32("did:fury:ex1fnkz39vpxmukf6mp78essh8g0hrzp3gylyd2u8")
 	suite.Require().NoError(err)
 	contract := common.BytesToAddress(contractAccAddr.Bytes())
 	//addr := sdk.AccAddress{0x1}
@@ -282,7 +282,7 @@ func (suite *KeeperTestSuite) TestSendToWasmEventHandler_Handle() {
 			"recipient  is a error addr",
 			func() {
 				wasmAddrStr := suite.wasmContract.String()
-				input, err := getSendToWasmEventData(wasmAddrStr, "did:fury:gridex111", big.NewInt(1))
+				input, err := getSendToWasmEventData(wasmAddrStr, "did:fury:ex111", big.NewInt(1))
 				suite.Require().NoError(err)
 				data = input
 			},
@@ -543,7 +543,7 @@ func (suite *KeeperTestSuite) TestKeeper_CallToEvm() {
 				suite.Require().Equal(sdk.Coins{}.String(), balance.String())
 			},
 			nil,
-			fmt.Sprintf(evmReturnPrefix, "did:fury:gridex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc") + fmt.Sprintf(callDataFormat, contract, "init-to-call-evm"),
+			fmt.Sprintf(evmReturnPrefix, "did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc") + fmt.Sprintf(callDataFormat, contract, "init-to-call-evm"),
 		},
 		{
 			"caller(0x),contract(ex),calldata(normal),amount(0)",
@@ -649,7 +649,7 @@ func (suite *KeeperTestSuite) TestKeeper_CallToEvm() {
 }
 
 func (suite *KeeperTestSuite) TestCallToWasmEventHandler_Handle() {
-	tempAddr, err := sdk.AccAddressFromBech32("did:fury:gridex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq")
+	tempAddr, err := sdk.AccAddressFromBech32("did:fury:ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq")
 	suite.Require().NoError(err)
 
 	caller := suite.freeCallEvmContract
@@ -820,7 +820,7 @@ func (suite *KeeperTestSuite) TestCallToWasmEventHandler_Handle() {
 		{
 			"caller(exist),wasmContract(0x 20),value(-1),data(nofound method msg)",
 			func() {
-				calldata := "{\"transfer1\":{\"amount\":\"100\",\"recipient\":\"did:fury:gridex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"
+				calldata := "{\"transfer1\":{\"amount\":\"100\",\"recipient\":\"did:fury:ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"
 				value := sdk.NewInt(0)
 				data, err = getCallToWasmEventData(wasmContractAddr, value.BigInt(), hex.EncodeToString([]byte(calldata)))
 				require.NoError(suite.T(), err)
@@ -832,7 +832,7 @@ func (suite *KeeperTestSuite) TestCallToWasmEventHandler_Handle() {
 		{
 			"caller(exist),wasmContract(0x 20),value(-1),data(multi method msg)",
 			func() {
-				calldata := "{\"transfer\":{\"amount\":\"100\",\"recipient\":\"did:fury:gridex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"},\"transfer\":{\"amount\":\"100\",\"recipient\":\"did:fury:gridex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"
+				calldata := "{\"transfer\":{\"amount\":\"100\",\"recipient\":\"did:fury:ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"},\"transfer\":{\"amount\":\"100\",\"recipient\":\"did:fury:ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"
 				value := sdk.NewInt(0)
 				data, err = getCallToWasmEventData(wasmContractAddr, value.BigInt(), hex.EncodeToString([]byte(calldata)))
 				require.NoError(suite.T(), err)
@@ -844,7 +844,7 @@ func (suite *KeeperTestSuite) TestCallToWasmEventHandler_Handle() {
 		{
 			"caller(exist),wasmContract(0x 20),value(-1),data(other method msg)",
 			func() {
-				calldata := "{\"transfer_from\":{\"amount\":\"100\",\"recipient\":\"did:fury:gridex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"
+				calldata := "{\"transfer_from\":{\"amount\":\"100\",\"recipient\":\"did:fury:ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"
 				value := sdk.NewInt(0)
 				data, err = getCallToWasmEventData(wasmContractAddr, value.BigInt(), hex.EncodeToString([]byte(calldata)))
 				require.NoError(suite.T(), err)

@@ -15,8 +15,8 @@ const (
   "title": "default title",
   "description": "default description",
   "distributor_addresses": [
-    "did:fury:gridex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
-    "did:fury:gridex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+    "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
+    "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
   ],
   "is_added": true,
   "deposit": [
@@ -30,8 +30,8 @@ const (
   "title": "default title",
   "description": "default description",
   "contract_addresses": [
-    "did:fury:gridex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
-    "did:fury:gridex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+    "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
+    "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
   ],
   "is_added": true,
   "deposit": [
@@ -46,7 +46,7 @@ const (
   "description": "default description",
   "contract_addresses":[
         {
-            "address": "did:fury:gridex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
+            "address": "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -59,7 +59,7 @@ const (
             ]
         },
 		{
-            "address": "did:fury:gridex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
+            "address": "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -83,8 +83,8 @@ const (
 	fileName                 = "./proposal.json"
 	expectedTitle            = "default title"
 	expectedDescription      = "default description"
-	expectedDistributorAddr1 = "did:fury:gridex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02"
-	expectedDistributorAddr2 = "did:fury:gridex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+	expectedDistributorAddr1 = "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02"
+	expectedDistributorAddr2 = "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
 	expectedMethodSign1      = "0x371303c0"
 	expectedMethodExtra1     = "inc()"
 	expectedMethodSign2      = "0x579be378"

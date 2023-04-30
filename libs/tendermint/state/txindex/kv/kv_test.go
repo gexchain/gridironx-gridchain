@@ -358,8 +358,8 @@ func benchmarkTxIndex(txsCount int64, b *testing.B) {
 	}
 }
 
-func BenchmarkTxInddid:fury:gridex1(b *testing.B)     { benchmarkTxIndex(1, b) }
+func BenchmarkTxInddid:fury:ex1(b *testing.B)     { benchmarkTxIndex(1, b) }
 func BenchmarkTxIndex500(b *testing.B)   { benchmarkTxIndex(500, b) }
-func BenchmarkTxInddid:fury:gridex1000(b *testing.B)  { benchmarkTxIndex(1000, b) }
+func BenchmarkTxInddid:fury:ex1000(b *testing.B)  { benchmarkTxIndex(1000, b) }
 func BenchmarkTxIndex2000(b *testing.B)  { benchmarkTxIndex(2000, b) }
-func BenchmarkTxInddid:fury:gridex10000(b *testing.B) { benchmarkTxIndex(10000, b) }
+func BenchmarkTxInddid:fury:ex10000(b *testing.B) { benchmarkTxIndex(10000, b) }
