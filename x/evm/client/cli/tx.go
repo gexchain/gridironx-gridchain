@@ -176,7 +176,7 @@ Where proposal.json contains:
             ]
         },
         {
-            "address":"did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
+            "address":"did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lks92wkrm",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -320,7 +320,7 @@ Where proposal.json contains:
             ]
         },
         {
-            "address":"did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
+            "address":"did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lks92wkrm",
             "block_methods": [
                 {
                     "sign": "0x371303c0",

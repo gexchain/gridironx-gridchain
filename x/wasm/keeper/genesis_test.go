@@ -473,7 +473,7 @@ func TestImportContractWithCodeHistoryReset(t *testing.T) {
       "contract_info": {
         "code_id": "1",
         "creator": "did:fury:ex1fsfwwvl93qv6r56jpu084hxxzn9zphnyqr93e2",
-        "admin": "did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
+        "admin": "did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lks92wkrm",
         "label": "ȀĴnZV芢毤"
       }
     }
@@ -529,7 +529,7 @@ func TestImportContractWithCodeHistoryReset(t *testing.T) {
 	gotContractInfo := keeper.GetContractInfo(ctx, contractAddr)
 	require.NotNil(t, gotContractInfo)
 	contractCreatorAddr := "did:fury:ex1fsfwwvl93qv6r56jpu084hxxzn9zphnyqr93e2"
-	adminAddr := "did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9"
+	adminAddr := "did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lks92wkrm"
 
 	expContractInfo := types.ContractInfo{
 		CodeID:  firstCodeID,
