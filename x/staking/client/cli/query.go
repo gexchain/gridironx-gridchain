@@ -185,7 +185,7 @@ func GetCmdQueryProxy(storeName string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query the addresses of delegators by a specific proxy
 
 Example:
-$ %s query staking proxy did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
+$ %s query staking proxy did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05
 `,
 				version.ClientName,
 			),
@@ -240,7 +240,7 @@ func GetCmdQueryDelegator(storeName string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query the information of delegations and all shares recently added by a delegator
 
 Example:
-$ %s query staking delegator did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
+$ %s query staking delegator did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05
 `,
 				version.ClientName,
 			),

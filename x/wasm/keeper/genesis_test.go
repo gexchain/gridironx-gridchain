@@ -458,10 +458,10 @@ func TestImportContractWithCodeHistoryReset(t *testing.T) {
       "code_id": "1",
       "code_info": {
         "code_hash": %q,
-        "creator": "did:fury:ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0",
+        "creator": "did:fury:ex190227rqaps5nplhg2tg8hww7slvvquzyf5ggl3",
         "instantiate_config": {
           "permission": "OnlyAddress",
-          "address": "did:fury:ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0"
+          "address": "did:fury:ex190227rqaps5nplhg2tg8hww7slvvquzyf5ggl3"
         }
       },
       "code_bytes": %q
@@ -513,7 +513,7 @@ func TestImportContractWithCodeHistoryReset(t *testing.T) {
 	// verify code info
 	gotCodeInfo := keeper.GetCodeInfo(ctx, 1)
 	require.NotNil(t, gotCodeInfo)
-	codeCreatorAddr := "did:fury:ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0"
+	codeCreatorAddr := "did:fury:ex190227rqaps5nplhg2tg8hww7slvvquzyf5ggl3"
 	expCodeInfo := types.CodeInfo{
 		CodeHash: wasmCodeHash[:],
 		Creator:  codeCreatorAddr,

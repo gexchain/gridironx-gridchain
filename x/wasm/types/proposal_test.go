@@ -637,9 +637,9 @@ func TestProposalStrings(t *testing.T) {
 			src: &UpdateDeploymentWhitelistProposal{
 				Title:            "Foo",
 				Description:      "Bar",
-				DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"},
+				DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"},
 			},
-			exp: `title:"Foo" description:"Bar" distributorAddrs:"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02" distributorAddrs:"did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh" `,
+			exp: `title:"Foo" description:"Bar" distributorAddrs:"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05" distributorAddrs:"did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh" `,
 		},
 	}
 	for msg, spec := range specs {
@@ -749,12 +749,12 @@ code_ids:
 			src: &UpdateDeploymentWhitelistProposal{
 				Title:            "Foo",
 				Description:      "Bar",
-				DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"},
+				DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"},
 			},
 			exp: `title: Foo
 description: Bar
 distributor_addresses:
-- did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
+- did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05
 - did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh
 `,
 		},
@@ -860,13 +860,13 @@ func TestUnmarshalContentFromJson(t *testing.T) {
 {
 	"title": "foo",
 	"description": "bar",
-	"distributorAddrs": ["did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"]
+	"distributorAddrs": ["did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"]
 }`,
 			got: &UpdateDeploymentWhitelistProposal{},
 			exp: &UpdateDeploymentWhitelistProposal{
 				Title:            "foo",
 				Description:      "bar",
-				DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"},
+				DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"},
 			},
 		},
 	}
@@ -901,11 +901,11 @@ func TestProposalJsonSignBytes(t *testing.T) {
 }`,
 		},
 		"update wasm deployment whitelist": {
-			src: &UpdateDeploymentWhitelistProposal{DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"}},
+			src: &UpdateDeploymentWhitelistProposal{DistributorAddrs: []string{"did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05", "did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"}},
 			exp: `
 {	
 	"type":"gridchain/gov/MsgSubmitProposal",
-	"value":{"content":{"type":"wasm/UpdateDeploymentWhitelistProposal","value":{"distributorAddrs":["did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02","did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"]}},"initial_deposit":[],"proposer":""}
+	"value":{"content":{"type":"wasm/UpdateDeploymentWhitelistProposal","value":{"distributorAddrs":["did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05","did:fury:ex10q0rk5qnyag7wfvvt7rtphlw589m7frshre8mh"]}},"initial_deposit":[],"proposer":""}
 }`,
 		},
 	}

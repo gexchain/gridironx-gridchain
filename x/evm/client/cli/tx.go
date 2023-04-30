@@ -38,8 +38,8 @@ Where proposal.json contains:
   "title": "update contract proposal whitelist with a distributor address list",
   "description": "add a distributor address list into the whitelist",
   "distributor_addresses": [
-    "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
-    "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+    "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05",
+    "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286awhuzqx"
   ],
   "is_added": true,
   "deposit": [
@@ -100,8 +100,8 @@ Where proposal.json contains:
   "title": "update contract blocked list proposal with a contract address list",
   "description": "add a contract address list into the blocked list",
   "contract_addresses": [
-    "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
-    "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+    "did:fury:ex1cftp8q8g4aa65nw9s5trwexe77d9t6crp8cm05",
+    "did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286awhuzqx"
   ],
   "is_added": true,
   "deposit": [
@@ -163,7 +163,7 @@ Where proposal.json contains:
     "description":"add a contract address list into the blocked list",
     "contract_addresses":[
         {
-            "address":"did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
+            "address":"did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286awhuzqx",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -307,7 +307,7 @@ Where proposal.json contains:
     "description":"add a contract method gu-factor list into chain",
     "contract_addresses":[
         {
-            "address":"did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
+            "address":"did:fury:ex1k0wwsg7xf9tjt3rvxdewz42e74sp286awhuzqx",
             "block_methods": [
                 {
                     "sign": "0x371303c0",

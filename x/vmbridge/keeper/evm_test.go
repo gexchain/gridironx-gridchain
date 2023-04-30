@@ -543,7 +543,7 @@ func (suite *KeeperTestSuite) TestKeeper_CallToEvm() {
 				suite.Require().Equal(sdk.Coins{}.String(), balance.String())
 			},
 			nil,
-			fmt.Sprintf(evmReturnPrefix, "did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc") + fmt.Sprintf(callDataFormat, contract, "init-to-call-evm"),
+			fmt.Sprintf(evmReturnPrefix, "did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqghgnx") + fmt.Sprintf(callDataFormat, contract, "init-to-call-evm"),
 		},
 		{
 			"caller(0x),contract(ex),calldata(normal),amount(0)",

@@ -639,7 +639,7 @@ func (suite *KeeperTestSuite) TestMsgServer_CallToEvmEvent() {
 			func() {
 			},
 			nil,
-			fmt.Sprintf(evmReturnPrefix, "did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpxuz0nc") + fmt.Sprintf(callDataFormat, contract, "init-to-call-evm"),
+			fmt.Sprintf(evmReturnPrefix, "did:fury:ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqghgnx") + fmt.Sprintf(callDataFormat, contract, "init-to-call-evm"),
 		},
 		{
 			"caller(0x 20),contract(ex 20),calldata(normal),amount(0)",
