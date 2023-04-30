@@ -472,7 +472,7 @@ func TestImportContractWithCodeHistoryReset(t *testing.T) {
       "contract_address": "0x5A8D648DEE57b2fc90D98DC17fa887159b69638b",
       "contract_info": {
         "code_id": "1",
-        "creator": "did:fury:ex1fsfwwvl93qv6r56jpu084hxxzn9zphnyxhske5",
+        "creator": "did:fury:ex1fsfwwvl93qv6r56jpu084hxxzn9zphnyqr93e2",
         "admin": "did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
         "label": "ȀĴnZV芢毤"
       }
@@ -528,7 +528,7 @@ func TestImportContractWithCodeHistoryReset(t *testing.T) {
 	contractAddr, _ := sdk.WasmAddressFromBech32("0x5A8D648DEE57b2fc90D98DC17fa887159b69638b")
 	gotContractInfo := keeper.GetContractInfo(ctx, contractAddr)
 	require.NotNil(t, gotContractInfo)
-	contractCreatorAddr := "did:fury:ex1fsfwwvl93qv6r56jpu084hxxzn9zphnyxhske5"
+	contractCreatorAddr := "did:fury:ex1fsfwwvl93qv6r56jpu084hxxzn9zphnyqr93e2"
 	adminAddr := "did:fury:ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9"
 
 	expContractInfo := types.ContractInfo{
