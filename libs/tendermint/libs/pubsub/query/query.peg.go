@@ -559,14 +559,14 @@ func (p *QueryParser) Init() {
 						}
 					l9:
 						{
-							position11, tokenIndex1, depth11 := position, tokenIndex, depth
+							position11, tokenIndex11, depth11 := position, tokenIndex, depth
 							if buffer[position] != rune('d') {
 								goto l12
 							}
 							position++
 							goto l11
 						l12:
-							position, tokenIndex, depth = position11, tokenIndex1, depth11
+							position, tokenIndex, depth = position11, tokenIndex11, depth11
 							if buffer[position] != rune('D') {
 								goto l3
 							}
